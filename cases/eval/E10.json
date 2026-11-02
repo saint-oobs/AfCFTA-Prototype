@@ -1,0 +1,264 @@
+{
+ "meta": {
+  "case_id": "E10",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "E10",
+   "product": "malt_extract",
+   "share_pct": "0",
+   "defects": [
+    "D07_above_tolerance",
+    "D10_packaging_unknown_origin"
+   ],
+   "process": "substantive",
+   "language": "en",
+   "format": "typed",
+   "messiness": 0.3,
+   "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated."
+  },
+  "defects": [
+   "D07_above_tolerance",
+   "D10_packaging_unknown_origin"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": [
+   "18.3"
+  ]
+ },
+ "truth": {
+  "case_id": "E10",
+  "synthetic": true,
+  "exporter": {
+   "name": "Akwaaba Provisions Ltd",
+   "address": "Plot 19, Light Industrial Area, Kumasi, Ghana",
+   "registration_no": "GEPA/EXP/2026/4507",
+   "registration_status": "Registered company (Office of the Registrar of Companies)",
+   "tin": "C0010581016",
+   "phone": "+233 37 211 5992"
+  },
+  "consignee": {
+   "name": "Niger Delta Distribution SARL",
+   "address": "24 Avenue de la Paix, Abidjan",
+   "country": "Côte d’Ivoire"
+  },
+  "destination_country": "Côte d’Ivoire",
+  "product": {
+   "description": "Malt extract, liquid, in 1 kg plastic jars",
+   "declared_hs": "1901.90",
+   "quantity": "1000",
+   "unit": "jars",
+   "gross_weight_kg": "1150",
+   "marks": "AP/CÔT/1-1000",
+   "packaging_count": "83 cartons",
+   "transport": "Road – truck AS 6833-25, via Aflao border",
+   "statistical_measure": "1150 kg"
+  },
+  "ex_works_price": {
+   "amount": "60000",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Malt, not roasted",
+    "hs_code": "11.07",
+    "quantity": {
+     "value": "800",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "13486.10",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "13486.10",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ejura Malt Traders",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Glucose syrup",
+    "hs_code": "17.02",
+    "quantity": {
+     "value": "150",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "4001.72",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "4001.72",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Faso Sweeteners SARL",
+    "supplier_country": "Burkina Faso",
+    "origin_class": "state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "certificate_of_origin",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "X1",
+    "description": "Malt extract concentrate",
+    "hs_code": "1901.90",
+    "quantity": {
+     "value": "36",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "10980.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "10980.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Westbrook Nutrition Ingredients GmbH",
+    "supplier_country": "New Zealand",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S2",
+    "description": "Filtration and vacuum evaporation to a concentrate",
+    "operation_code": "evaporation_concentration",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S3",
+    "description": "Filling into jars",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S4",
+    "description": "Labelling",
+    "operation_code": "labelling",
+    "location_country": "Ghana"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Plastic jar with lid, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "unknown",
+    "country": null
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (12 jars)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-5260",
+   "date": "2026-10-15",
+   "value": "64800.00",
+   "currency": "GHS",
+   "incoterm": "CPT"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Akwaaba Provisions Ltd\nAddress: Plot 19, Light Industrial Area, Kumasi, Ghana\nPhone: +233 37 211 5992\nTIN: C0010581016\nRegistration no: GEPA/EXP/2026/4507\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Akwaaba Provisions Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2626-62\nPrepared by: Production manager, Akwaaba Provisions Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kgs | 13486.10 | 13486.10 | GHS | Ejura Malt Traders | Ghana | 11.07 | Ghana\nI2 | Glucose syrup | 150 | kg | 4,001.72 | 4,001.72 | GHS | Faso Sweeteners SARL | Burkina Faso | 17.02 | AfCFTA State Party\nX1 | Malt extract concentrate | 36 | kilos | 10980.00 | 10980.00 | GH₵ | Westbrook Nutrition Ingredients GmbH | New Zealand | 1901.90 | Imported (non-State Party)\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | —\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "appendix_iii_a",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ejura Malt Traders\nCountry of origin: Ghana\nInvoice no: EJU-76890\nDate: 2026-08-11\nBuyer: Akwaaba Provisions Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 16.86 GHS\nInvoice value: 13486.10 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "certificate_of_origin",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Faso Sweeteners SARL\nCountry of origin: Burkina Faso\nInvoice no: FAS-34989\nDate: 2026-07-02\nBuyer: Akwaaba Provisions Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 26.68 GHS\nInvoice value: 4001.72 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-X1",
+   "type": "supplier_invoice",
+   "input_id": "X1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: New Zealand\nInvoice no: WES-10992\nDate: 2026-07-20\nBuyer: Akwaaba Provisions Ltd\nGoods: Malt extract concentrate\nQuantity: 36 kg\nUnit price: 305.00 GHS\nCustoms value: 10980.00 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2626-62\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2626-62\nBatch: 1000 jars\nMaterials: 28467.82 GHS\nPackaging: 3153.22 GHS\nDirect labour: 9459.65 GHS\nEnergy and water: 4729.83 GHS\nFactory overheads: 6306.44 GHS\nMargin: 7883.04 GHS\nEx-works price per batch: 60,000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-5260\nDate: 2026-10-15\nExporter: Akwaaba Provisions Ltd\nExporter TIN: C0010581016\nConsignee: Niger Delta Distribution SARL\nConsignee address: 24 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: AP/CÔT/1-1000\nPackages: 83 cartons\nTransport: Road – truck AS 6833-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+  }
+ ]
+}

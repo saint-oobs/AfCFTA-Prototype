@@ -1,0 +1,900 @@
+{
+ "case_id": "E11",
+ "meta": {
+  "case_id": "E11",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "E11",
+   "product": "bread_mix",
+   "share_pct": "0",
+   "defects": [
+    "D13_missing_exporter_registration",
+    "D06_unstated_origin_other"
+   ],
+   "process": "substantive",
+   "language": "en",
+   "format": "mixed_units",
+   "messiness": 0.3,
+   "scenario": "Bread mix. No exporter registration number; the origin of one ingredient is not stated."
+  },
+  "defects": [
+   "D13_missing_exporter_registration",
+   "D06_unstated_origin_other"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": []
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Akwaaba Foods Ltd\nAddress: Plot 4, Light Industrial Area, Tema, Ghana\nPhone: +233 37 854 6167\nTIN: C0097310973\nRegistration no: \nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Akwaaba Foods Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2680-71\nPrepared by: Production manager, Akwaaba Foods Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Wheat flour | 1100 | kilos | 5391.65 | 5,391.65 | GHS | Bouaké Flour Mills SA | Côte d’Ivoire | 11.01 | AfCFTA State Party\nI2 | Malt, not roasted | 250 | Kg | 1,422.01 | 1422.01 | GHS | Ségou Malt SARL | — | 11.07 | —\nI3 | Baking powder | 40 | kilos | 398.94 | 398.94 | GHS | Akatsi Bakery Supplies Ltd | Ghana | 21.02 | Ghana\nI4 | Cane sugar | 80 | kg | 652.75 | 600.53 | GHS | Southern Cross Sugar Ltd | New Zealand | Chapter 17 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "certificate_of_origin",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Bouaké Flour Mills SA\nCountry of origin: Côte d’Ivoire\nInvoice no: BOU-69913\nDate: 2026-07-24\nBuyer: Akwaaba Foods Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 4.90 GHS\nCustoms value: 5391.65 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I3",
+   "type": "appendix_iii_a",
+   "input_id": "I3",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Bakery Supplies Ltd\nCountry of origin: Ghana\nInvoice no: AKA-81138\nDate: 2026-07-03\nBuyer: Akwaaba Foods Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 9.97 GHS\nCustoms value: 398.94 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I4",
+   "type": "supplier_invoice",
+   "input_id": "I4",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Sugar Ltd\nCountry of origin: New Zealand\nInvoice no: SOU-66587\nDate: 2026-07-06\nBuyer: Akwaaba Foods Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 8.16 GHS\nCustoms value: 652.75 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2680-71\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Drum drying of the malt extract with part of the flour – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n3. Simple mixing with flour, sugar and baking powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n4. Filling into bags – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2680-71\nBatch: 1500 bags of 1 kg\nMaterials: 7865.35 GHS\nPackaging: 1213.46 GHS\nDirect labour: 3640.40 GHS\nEnergy and water: 1820.20 GHS\nFactory overheads: 2426.93 GHS\nMargin: 3033.66 GHS\nEx-works price per batch: 20,000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-2239\nDate: 2026-10-15\nExporter: Akwaaba Foods Ltd\nExporter TIN: C0097310973\nConsignee: Kilimanjaro Foods Ltd\nConsignee address: 42 Avenue de la Paix, Dakar\nDestination: Senegal\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: AF/SEN/1-1500\nPackages: 150 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+  }
+ ],
+ "adapter": {
+  "mode": "stub",
+  "label": "Prototype transcription (synthetic documents)",
+  "adapter_version": "1.2.0",
+  "field_tags": [
+   {
+    "field": "exporter.registration_no",
+    "status": "missing",
+    "snippet": "",
+    "doc_id": "DOC-EXP"
+   },
+   {
+    "field": "product.declared_hs",
+    "status": "stated",
+    "snippet": "Declared HS: 1901.20",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Product: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.customs_value",
+    "status": "stated",
+    "snippet": "I1 | Wheat flour | … 5391.65",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.fob_value",
+    "status": "stated",
+    "snippet": "I1 | Wheat flour | … 5,391.65",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.hs_code",
+    "status": "stated",
+    "snippet": "I1 | Wheat flour | … 11.01",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.origin_class",
+    "status": "stated",
+    "snippet": "I1 | Wheat flour | … AfCFTA State Party",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.customs_value",
+    "status": "stated",
+    "snippet": "I2 | Malt, not roasted | … 1,422.01",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.fob_value",
+    "status": "stated",
+    "snippet": "I2 | Malt, not roasted | … 1422.01",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.hs_code",
+    "status": "stated",
+    "snippet": "I2 | Malt, not roasted | … 11.07",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.origin_class",
+    "status": "missing",
+    "snippet": "I2 | Malt, not roasted | … —",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.customs_value",
+    "status": "stated",
+    "snippet": "I3 | Baking powder | … 398.94",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.fob_value",
+    "status": "stated",
+    "snippet": "I3 | Baking powder | … 398.94",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.hs_code",
+    "status": "stated",
+    "snippet": "I3 | Baking powder | … 21.02",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.origin_class",
+    "status": "stated",
+    "snippet": "I3 | Baking powder | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.customs_value",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … 652.75",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.fob_value",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … 600.53",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.hs_code",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … Chapter 17",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.origin_class",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P1.origin",
+    "status": "stated",
+    "snippet": "P1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P2.origin",
+    "status": "stated",
+    "snippet": "P2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I3"
+   },
+   {
+    "field": "I1.declaration",
+    "status": "stated",
+    "snippet": "AfCFTA CERTIFICATE OF ORIGIN – COPY",
+    "doc_id": "DOC-SUP-I1"
+   },
+   {
+    "field": "I4.declaration",
+    "status": "stated",
+    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
+    "doc_id": "DOC-SUP-I4"
+   },
+   {
+    "field": "S1.operation_code",
+    "status": "inferred",
+    "snippet": "1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S2.operation_code",
+    "status": "inferred",
+    "snippet": "2. Drum drying of the malt extract with part of the flour – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S3.operation_code",
+    "status": "inferred",
+    "snippet": "3. Simple mixing with flour, sugar and baking powder – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S4.operation_code",
+    "status": "inferred",
+    "snippet": "4. Filling into bags – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "inputs.food_aid",
+    "status": "stated",
+    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "ex_works_price",
+    "status": "stated",
+    "snippet": "Ex-works price per batch: 20,000.00 GHS",
+    "doc_id": "DOC-COST"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Goods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+    "doc_id": "DOC-INV"
+   }
+  ]
+ },
+ "extracted": {
+  "synthetic": true,
+  "exporter": {
+   "name": "Akwaaba Foods Ltd",
+   "address": "Plot 4, Light Industrial Area, Tema, Ghana",
+   "registration_no": null
+  },
+  "consignee": {
+   "name": "Kilimanjaro Foods Ltd",
+   "address": "42 Avenue de la Paix, Dakar",
+   "country": "Senegal"
+  },
+  "product": {
+   "description": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+   "declared_hs": "1901.20",
+   "quantity": "1500",
+   "unit": "bags",
+   "gross_weight_kg": "1560",
+   "marks": "AF/SEN/1-1500",
+   "packaging_count": "150 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1560 kg"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Wheat flour",
+    "quantity": {
+     "value": "1100",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "5391.65",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "5391.65",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Bouaké Flour Mills SA",
+    "supplier_country": "Côte d’Ivoire",
+    "origin_class": "state_party",
+    "hs_code": "11.01",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "certificate_of_origin",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I2",
+    "description": "Malt, not roasted",
+    "quantity": {
+     "value": "250",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1422.01",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1422.01",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ségou Malt SARL",
+    "supplier_country": null,
+    "origin_class": "unknown",
+    "hs_code": "11.07",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": false
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I3",
+    "description": "Baking powder",
+    "quantity": {
+     "value": "40",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "398.94",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "398.94",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Akatsi Bakery Supplies Ltd",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "21.02",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I4",
+    "description": "Cane sugar",
+    "quantity": {
+     "value": "80",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "652.75",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "600.53",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Southern Cross Sugar Ltd",
+    "supplier_country": "New Zealand",
+    "origin_class": "non_state_party",
+    "hs_code": "Chapter 17",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S2",
+    "description": "Drum drying of the malt extract with part of the flour",
+    "operation_code": "drying_drum_spray",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S3",
+    "description": "Simple mixing with flour, sugar and baking powder",
+    "operation_code": "simple_mixing",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S4",
+    "description": "Filling into bags",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana",
+    "status": "inferred"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Printed paper bag, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (10 bags)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-2239",
+   "date": "2026-10-15",
+   "value": "21600.00",
+   "currency": "GHS",
+   "incoterm": "CPT"
+  },
+  "ex_works_price": {
+   "amount": "20000.00",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "destination_country": "Senegal",
+  "case_id": "E11"
+ },
+ "result": {
+  "engine_version": "1.2.0",
+  "rulebase_version": "1.1.0",
+  "case_id": "E11",
+  "valuation_basis": "customs_value",
+  "disclaimer": "Synthetic data – prototype – indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.",
+  "outcome": {
+   "label": "Likely to qualify",
+   "sub_reasons": []
+  },
+  "components": {
+   "rule_1901": {
+    "status": "met",
+    "rule_id": "APPIV-1901",
+    "tolerance_rule_id": "EXCL-AN-3",
+    "tolerance_legal_status": "Draft decision text, adoption not confirmed in attached sources"
+   },
+   "tolerance": {
+    "basis": "customs_value",
+    "items": [],
+    "counted_ids": [],
+    "unresolved_ids": [],
+    "total": "0",
+    "limit_percent": "15",
+    "ex_works_price": "20000.00",
+    "currency": "GHS",
+    "share_display": "0.000",
+    "margin_pp_display": "15.000",
+    "comparison": "0 × 100 = 0  vs  15 × 20000.00 = 300000.00",
+    "within_limit": true,
+    "share_fraction": "0 / 20000.00",
+    "headroom": "3000.00",
+    "status": "met",
+    "alternative": {
+     "basis": "fob",
+     "status": "met",
+     "share_display": "0.000",
+     "differs": false
+    }
+   },
+   "article7": {
+    "steps": [
+     {
+      "id": "S1",
+      "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+      "operation_code": "mashing_enzymatic",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S2",
+      "description": "Drum drying of the malt extract with part of the flour",
+      "operation_code": "drying_drum_spray",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S3",
+      "description": "Simple mixing with flour, sugar and baking powder",
+      "operation_code": "simple_mixing",
+      "map_status": "listed",
+      "art7_letter": "m",
+      "location": "Ghana"
+     },
+     {
+      "id": "S4",
+      "description": "Filling into bags",
+      "operation_code": "simple_packaging",
+      "map_status": "listed",
+      "art7_letter": "k",
+      "location": "Ghana"
+     }
+    ],
+    "status": "met",
+    "explanation": "At least one step carried out in Ghana is not an Article 7(1) operation (group interpretation of the operation map)."
+   },
+   "food_aid": {
+    "status": "no food-aid input declared"
+   },
+   "evidence": {
+    "status": "complete for the 19.01 rule",
+    "critical": 0,
+    "major": 0,
+    "minor": 2
+   },
+   "hs_confidence": {
+    "declared_hs": "1901.20",
+    "heading": "19.01",
+    "status": "declared 19.01, no doubt flagged (SME-declared, not verified)"
+   }
+  },
+  "findings": [
+   {
+    "id": "F1",
+    "severity": "minor",
+    "category": "origin_proof",
+    "title": "Origin evidence incomplete for 'Malt, not roasted'",
+    "input_ref": "I2",
+    "explanation": "Line I2: origin not stated. The ingredient is not in heading 19.01, so this does not change the result. The authority can ask for this proof.",
+    "rule_ids": [
+     "A2-22",
+     "A2-31-2"
+    ],
+    "provisions": [
+     "Annex 2, Art. 22",
+     "Annex 2, Art. 31(2)"
+    ],
+    "fix": "Obtain a supplier declaration (Appendix III) or invoice showing origin.",
+    "sub_reason": null,
+    "sme_action": "Send the supplier declaration or certificate of origin for malt, not roasted."
+   },
+   {
+    "id": "F2",
+    "severity": "minor",
+    "category": "form",
+    "title": "Exporter registration number missing",
+    "input_ref": null,
+    "explanation": "The certificate form (Box 1) asks for the exporter registration number.",
+    "rule_ids": [
+     "APPI-BOX-1"
+    ],
+    "provisions": [
+     "Annex 2, Appendix I, Box 1"
+    ],
+    "fix": "Add the exporter registration number.",
+    "sub_reason": null,
+    "sme_action": null
+   }
+  ],
+  "notes": [
+   {
+    "rule_id": "APPIV-EXCH19",
+    "input_ref": "I1",
+    "text": "Information for the adviser: a Chapter 11 wheat input is present. The Ex-Chapter 19 condition ('wheat Products of Chapter 11 used must be originating') is NOT applied (group decision); the 19.01 row governs."
+   }
+  ],
+  "trace": [
+   {
+    "step": "retrieval",
+    "detail": "declared HS '1901.20' -> heading 19.01"
+   },
+   {
+    "step": "retrieval",
+    "detail": "rule APPIV-1901 retrieved; tolerance EXCL-AN-3 (draft) attached; Art. 7 attached"
+   },
+   {
+    "step": "tolerance",
+    "detail": "basis=customs_value; 0 × 100 = 0  vs  15 × 20000.00 = 300000.00; status=met"
+   },
+   {
+    "step": "article7",
+    "detail": "status=met"
+   }
+  ],
+  "requirements": [
+   {
+    "requirement": "The product is in HS heading 19.01.",
+    "evidence": "The declared HS code is 1901.20. The product description fits heading 19.01: “Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags”.",
+    "status": "met",
+    "source": "Appendix IV, heading 19.01",
+    "rule_ids": [
+     "APPIV-1901",
+     "A2-10"
+    ]
+   },
+   {
+    "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
+    "evidence": "No imported ingredient is classified in heading 19.01.",
+    "status": "met",
+    "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
+    "rule_ids": [
+     "APPIV-1901",
+     "EXCL-AN-3"
+    ]
+   },
+   {
+    "requirement": "The work done in Ghana is more than simple operations such as mixing or packing.",
+    "evidence": "These steps in Ghana are more than simple operations: mashing of malt with hot water in a mash tun (enzymatic conversion) and drum drying of the malt extract with part of the flour.",
+    "status": "met",
+    "source": "Annex 2, Art. 7",
+    "rule_ids": [
+     "A2-7-1",
+     "A2-7-3"
+    ]
+   },
+   {
+    "requirement": "No ingredient comes from food aid.",
+    "evidence": "The production notes state that no ingredient comes from food aid.",
+    "status": "met",
+    "source": "Annex 2, Art. 7(2)",
+    "rule_ids": [
+     "A2-7-2"
+    ]
+   },
+   {
+    "requirement": "There is proof of origin for local and AfCFTA ingredients.",
+    "evidence": "Supplier declarations or certificates are on file for 2 of 2 ingredients from Ghana or other AfCFTA countries.",
+    "status": "met",
+    "source": "Annex 2, Art. 31 and Appendix III",
+    "rule_ids": [
+     "A2-31-1",
+     "A2-APPIII-A"
+    ]
+   }
+  ],
+  "missing_info_request": null,
+  "folder": {
+   "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
+   "boxes": [
+    {
+     "box": 1,
+     "rule_id": "APPI-BOX-1",
+     "value": {
+      "name": "Akwaaba Foods Ltd",
+      "address": "Plot 4, Light Industrial Area, Tema, Ghana",
+      "registration_no": null
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 2,
+     "rule_id": "APPI-BOX-2",
+     "value": {
+      "name": "Kilimanjaro Foods Ltd",
+      "address": "42 Avenue de la Paix, Dakar",
+      "country": "Senegal"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 3,
+     "rule_id": "APPI-BOX-3",
+     "value": "Completed by the issuing authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 4,
+     "rule_id": "APPI-BOX-4",
+     "value": "Sea – MV Gulf Trader, from Tema port",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 5,
+     "rule_id": "APPI-BOX-5",
+     "value": {
+      "marks": "AF/SEN/1-1500",
+      "quantity": "1500",
+      "unit": "bags"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 6,
+     "rule_id": "APPI-BOX-6",
+     "value": {
+      "invoice_no": "EXP-2239",
+      "date": "2026-10-15",
+      "value": "21600.00",
+      "currency": "GHS",
+      "incoterm": "CPT"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 7,
+     "rule_id": "APPI-BOX-7",
+     "value": "150 cartons",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 8,
+     "rule_id": "APPI-BOX-8",
+     "value": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 9,
+     "rule_id": "APPI-BOX-9",
+     "value": "1560",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 10,
+     "rule_id": "APPI-BOX-10",
+     "value": "1560 kg",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 11,
+     "rule_id": "APPI-BOX-11",
+     "value": "1901.20",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 12,
+     "rule_id": "APPI-BOX-12",
+     "value": "SX",
+     "filled_by": "tool",
+     "detail": "Substantial transformation — Change of Tariff Heading (Article 6.1(c))",
+     "indicative": true,
+     "note": "INDICATIVE SUGGESTION ONLY – to be confirmed by the adviser and the Designated Competent Authority.",
+     "missing": false
+    },
+    {
+     "box": 13,
+     "rule_id": "APPI-BOX-13",
+     "value": "To be completed and signed by the exporter (not signed by the tool)",
+     "filled_by": "exporter",
+     "missing": false
+    },
+    {
+     "box": 14,
+     "rule_id": "APPI-BOX-14",
+     "value": "Completed by the Designated Competent Authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 15,
+     "rule_id": "APPI-BOX-15",
+     "value": "Completed by the Customs officer at the port of clearance or exit",
+     "filled_by": "customs",
+     "missing": false
+    }
+   ],
+   "readiness": [
+    {
+     "item": "Keep supporting documents (production, costs, origin of all materials, shipment)",
+     "status": "check",
+     "rule_id": "A2-22"
+    }
+   ]
+  }
+ },
+ "explanation": {
+  "text": "Your product is likely to meet the AfCFTA rules of origin.\n\nMain reasons:\n- No imported ingredient is classified in heading 19.01.\n- These steps in Ghana are more than simple operations: mashing of malt with hot water in a mash tun (enzymatic conversion) and drum drying of the malt extract with part of the flour.\n\nWhat to do next:\n- Keep your supplier declarations, invoices and production records together.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Prototype transcription (synthetic documents)",
+  "citation_check": {
+   "ok": true,
+   "valid": [
+    "heading 19.01"
+   ],
+   "rejected": []
+  }
+ },
+ "expected": {
+  "case_id": "E11",
+  "defects": [
+   "D13_missing_exporter_registration",
+   "D06_unstated_origin_other"
+  ],
+  "expected_findings": [
+   {
+    "defect": "D13_missing_exporter_registration",
+    "severity": "minor",
+    "category": "form",
+    "effect": null,
+    "rule": "APPI-BOX-1"
+   },
+   {
+    "defect": "D06_unstated_origin_other",
+    "severity": "minor",
+    "category": "origin_proof",
+    "effect": null,
+    "rule": "A2-22"
+   }
+  ],
+  "outcome": "Likely to qualify",
+  "sub_reasons": [],
+  "rule_1901": "met",
+  "share_percent": "0.0",
+  "box12": "SX"
+ },
+ "comparison": {
+  "outcome_correct": true,
+  "expected_outcome": "Likely to qualify",
+  "expected_sub_reasons": [],
+  "detected": [
+   "D13_missing_exporter_registration",
+   "D06_unstated_origin_other"
+  ],
+  "missed": [],
+  "false_alarms": []
+ },
+ "transcription": {
+  "fields": 28,
+  "correct": 28,
+  "flagged_unreadable": 0,
+  "wrong": 0,
+  "errors": []
+ },
+ "set": "eval"
+}

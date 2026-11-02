@@ -1,0 +1,5 @@
+Write a plain-language explanation (max 120 words) of this indicative pre-check result for a Ghanaian SME owner.
+Use only the facts in RESULT. Cite only rule ids that appear in ALLOWED_RULE_IDS, in brackets, e.g. [APPIV-1901].
+Do not cite any other article, box or heading. Do not give a probability. End with: "This is indicative only; GRA Customs and the National AfCFTA Approval Committee decide."
+ALLOWED_RULE_IDS: {rule_ids}
+RESULT: {result}

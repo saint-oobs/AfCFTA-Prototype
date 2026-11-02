@@ -1,0 +1,53 @@
+@import '@fontsource-variable/public-sans';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* One type family, one scale. Navy accent, neutral surfaces. */
+:root {
+  --bg: 250 250 248; --panel: 243 243 239; --surface: 255 255 255; --ink: 23 23 23; --muted: 96 96 92; --line: 228 228 222;
+  --accent: 15 107 92; --accent-soft: 228 241 237; --crit: 180 35 24; --major: 160 72 8; --minor: 23 92 211; --ok: 6 118 71;
+  --s1: 42 120 214; --s2: 235 104 52;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) { --bg: 14 15 15; --panel: 30 31 31; --surface: 24 25 25; --ink: 236 236 232; --muted: 160 160 154; --line: 48 50 50;
+    --accent: 72 196 170; --accent-soft: 22 50 44; --crit: 249 112 102; --major: 247 165 85; --minor: 120 170 250; --ok: 74 210 140;
+    --s1: 57 135 229; --s2: 217 89 38; color-scheme: dark; }
+}
+:root.dark { --bg: 14 15 15; --panel: 30 31 31; --surface: 24 25 25; --ink: 236 236 232; --muted: 160 160 154; --line: 48 50 50;
+  --accent: 72 196 170; --accent-soft: 22 50 44; --crit: 249 112 102; --major: 247 165 85; --minor: 120 170 250; --ok: 74 210 140;
+  --s1: 57 135 229; --s2: 217 89 38; color-scheme: dark; }
+
+html, body { background: rgb(var(--bg)); color: rgb(var(--ink)); }
+body { font-family: 'Public Sans Variable', system-ui, sans-serif; font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; border-radius: 4px; }
+
+@layer components {
+  .h1 { @apply text-[1.9rem] leading-tight font-semibold tracking-tight; }
+  .h2 { @apply text-xl font-semibold; }
+  .h3 { @apply text-base font-semibold; }
+  .lead { @apply text-base text-muted; }
+  .note { @apply text-sm text-muted; }
+  .label { @apply text-xs font-semibold uppercase tracking-wide text-muted; }
+  .card { @apply rounded-lg border border-line bg-surface; }
+  .btn { @apply inline-flex items-center gap-2 rounded-md border border-line bg-surface px-3.5 py-2 text-sm font-medium hover:border-accent transition-colors disabled:opacity-40 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn border-accent bg-accent text-white hover:opacity-90 dark:text-[rgb(14,15,15)]; }
+  .chip { @apply inline-flex items-center gap-1 rounded border px-1.5 py-0.5 text-xs font-medium whitespace-nowrap; }
+  .field { @apply rounded-md border border-line bg-bg px-2 py-1.5 text-sm; }
+  .pre { @apply text-xs leading-relaxed whitespace-pre-wrap break-words rounded-md bg-panel border border-line p-3 font-mono; }
+  table.data { @apply w-full text-sm border-collapse; }
+  table.data th { @apply text-left align-bottom text-xs font-semibold uppercase tracking-wide text-muted px-3 py-2 border-b border-line bg-panel whitespace-nowrap; }
+  table.data td { @apply px-3 py-2.5 border-b border-line align-top text-left; }
+  table.data td.num, table.data th.num { @apply text-right tabular-nums; }
+}
+.grid-bg { background-image: radial-gradient(rgb(var(--line)) 1px, transparent 1px); background-size: 22px 22px; }
+@media print { header, footer, nav, .no-print { display: none !important; } body { font-size: 12px; } .card { border: none; } }
+
+.paper { background: rgb(var(--surface)); box-shadow: 0 1px 2px rgb(0 0 0 / .06), 0 8px 24px -12px rgb(0 0 0 / .18); }
+.watermark { position: relative; overflow: hidden; }
+.watermark::after { content: 'SYNTHETIC'; position: absolute; right: -10px; top: 18px; transform: rotate(18deg); font-size: 42px; font-weight: 800;
+  letter-spacing: .1em; color: rgb(var(--ink) / .05); pointer-events: none; }
+@keyframes flow { to { stroke-dashoffset: -24; } }
+.flow-line { stroke-dasharray: 6 6; animation: flow 1.2s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .flow-line { animation: none; } }

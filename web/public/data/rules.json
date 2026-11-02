@@ -1,0 +1,1344 @@
+{
+ "schema_version": "1.0",
+ "rulebase_version": "1.1.0",
+ "compiled": "2026-11-01",
+ "product_heading": "19.01",
+ "sources": {
+  "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf": {
+   "title": "Agreement Establishing the African Continental Free Trade Area (Laws.Africa, as at 21 March 2018)",
+   "licence": "CC-BY (Laws.Africa and contributors)"
+  },
+  "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf": {
+   "title": "Appendix IV to Annex 2 on Rules of Origin as approved by the 12th AfCFTA Council of Ministers, December 2023"
+  },
+  "EX_CL_1329_XL_E_1.pdf": {
+   "title": "EX.CL/1329(XL) Report of the Secretary General of the AfCFTA, January 2022, incl. draft decision and annex"
+  }
+ },
+ "parameters": {
+  "tolerance": {
+   "rule_id": "EXCL-AN-3",
+   "percent": "15",
+   "base": "ex_works_price",
+   "comparison": "<=",
+   "excluded_chapters": "50-63",
+   "always_on": true
+  },
+  "valuation_basis_default": "customs_value",
+  "valuation_basis_alternative": "fob",
+  "currency": "GHS",
+  "repeated_error_threshold": 2
+ },
+ "rules": [
+  {
+   "id": "A2-1-h",
+   "title": "Definition: Customs Value",
+   "text": "“Customs Value” means the value as determined in accordance with the WTO Agreement on implementation of Article VII of the General Agreement on Tariffs and Trade 1994 (WTO Agreement on customs valuation);",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "12",
+   "provision": "Annex 2, Art. 1(h)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Defines the Customs Value field stored for every input.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-1-k",
+   "title": "Definition: Ex-works Price",
+   "text": "“Ex-works Price” means the price paid for the Product ex-works to the manufacturer in the States Party in whose undertaking the last working or processing is carried out, provided the price includes the value of all the Materials used minus any internal taxes paid which are, or may be, repaid when the Product obtained is exported;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "12",
+   "provision": "Annex 2, Art. 1(k)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Denominator of the tolerance share. Missing ex-works price -> 'Further information required (missing)' when the share is needed.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-1-q",
+   "title": "Definition: Material",
+   "text": "“Material” means any ingredient, raw material, component or part used in the Manufacture of a Product;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "12",
+   "provision": "Annex 2, Art. 1(q)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Every bill-of-materials line is treated as a Material.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-1-x",
+   "title": "Definition: Value Added",
+   "text": "\"Value Added\" means the difference between the ex-works price of a finished Product and the Customs Value of the Material imported from outside the State Parties and used in the production; [footnote 2: This definition is an outstanding provision]",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "13",
+   "provision": "Annex 2, Art. 1(x)",
+   "version_date": "2018-03-21",
+   "legal_status": "Outstanding provision (footnoted in the Agreement text; see Annex 2 Art. 42)",
+   "engine_behaviour": "Not used in the calculation (19.01 rule has no value-added test). Shown for reference only.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "A2-1-y",
+   "title": "Definition: Value of Materials",
+   "text": "“Value of Materials” means the Customs Value at the time of importation of the non-originating Materials used, or if this is not known and cannot be ascertained, the first ascertainable price paid for the Materials in any State Party.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "13",
+   "provision": "Annex 2, Art. 1(y)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Default valuation basis for the 15% tolerance (group decision Q1): Customs Value; if not known, the stated first ascertainable price in a State Party, labelled as fallback.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-4",
+   "title": "Origin conferring criteria",
+   "text": "A Product shall be considered as originating from a State Party if it has: (a) been wholly obtained in that State Party within the meaning of Article 5 of this Annex; or (b) undergone substantial transformation in that State Party within the meaning of Article 6 of this Annex.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "13",
+   "provision": "Annex 2, Art. 4",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Frames the assessment: 19.01 products are assessed under Art. 4(b) via Art. 6(2).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-5-1",
+   "title": "Wholly obtained products (chapeau and (b), (m))",
+   "text": "1. The following Products shall be considered as wholly obtained in a State Party when exported to another State Party: … (b) plants, including aquatic plants and plant Products, vegetables and fruits, grown or harvested therein; … (m) Goods produced therein exclusively from the Products specified in subparagraphs (a) to (l); …",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "13–14",
+   "provision": "Annex 2, Art. 5(1)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Reference only: explains why a manufactured 19.01 preparation with imported inputs is not 'WP'.",
+   "applied": true,
+   "notes": "Excerpt; omitted sub-paragraphs marked with '…'."
+  },
+  {
+   "id": "A2-6-1",
+   "title": "Sufficiently worked or processed Products – criteria",
+   "text": "1. For purposes of Article 4(b) of this Annex, Products which are not wholly obtained are considered to be sufficiently worked or processed when they fulfil one of the following criteria: (a) Value Added; (b) non-originating Material content; (c) change in tariff Heading; or (d) specific processes.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 6(1)(a)–(d)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Art. 6(1)(c) change in tariff heading is the criterion type of the 19.01 rule -> Box 12 code SX.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-6-2",
+   "title": "Goods listed in Appendix IV",
+   "text": "2. Notwithstanding paragraph 1 of this Article, Goods listed in Appendix IV shall qualify as originating Goods if they satisfy the specific rules set out therein.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 6(2)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Routes the assessment to the Appendix IV row for heading 19.01.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1",
+   "title": "Working or processing not conferring origin (chapeau)",
+   "text": "1. The following operations are insufficient to confer origin on a Product, whether or not the requirements of Article 4 of this Annex are satisfied:",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Checked in every case, including when the 19.01 rule is met with or without the tolerance. If every production step maps to Art. 7(1)(a)–(n) (alone or combined, (o)), the result is 'Likely not to qualify' (critical).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-a",
+   "title": "Art. 7(1)(a)",
+   "text": "(a) operations exclusively intended to preserve Products in good condition during storage and transportation;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(a)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-b",
+   "title": "Art. 7(1)(b)",
+   "text": "(b) breaking-up or assembly of packages;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(b)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-c",
+   "title": "Art. 7(1)(c)",
+   "text": "(c) washing, cleaning or operations to remove dust, oxide, oil, paint or other coverings from a Product;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(c)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-d",
+   "title": "Art. 7(1)(d)",
+   "text": "(d) simple ironing or pressing operations;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(d)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-e",
+   "title": "Art. 7(1)(e)",
+   "text": "(e) simple painting or polishing operations;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(e)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-f",
+   "title": "Art. 7(1)(f)",
+   "text": "(f) husking, partial or total bleaching, polishing or glazing of cereals and rice;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(f)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-g",
+   "title": "Art. 7(1)(g)",
+   "text": "(g) operations to colour sugar or form sugar lumps, partial or total milling of crystal sugar;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(g)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-h",
+   "title": "Art. 7(1)(h)",
+   "text": "(h) peeling, stoning or shelling of vegetables of Chapter 7, fruits of Chapter 8, nuts of Heading 08.01 or 08.02 or groundnuts of Heading 12.02, fruits, nuts or vegetables;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(h)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-i",
+   "title": "Art. 7(1)(i)",
+   "text": "(i) sharpening, simple grinding or simple cutting;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(i)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-j",
+   "title": "Art. 7(1)(j)",
+   "text": "(j) simple sifting, screening, sorting, classifying, grading or matching;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(j)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-k",
+   "title": "Art. 7(1)(k)",
+   "text": "(k) simple packaging operations, such as placing in bottles, cans, flasks, bags, cases, boxes or fixing on cards or boards;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(k)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-l",
+   "title": "Art. 7(1)(l)",
+   "text": "(l) affixing or printing marks, labels, logos, and other like distinguishing signs on the Products or their packaging;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(l)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-m",
+   "title": "Art. 7(1)(m)",
+   "text": "(m) simple mixing of Materials, whether or not of different kinds; which does not include an operation that causes a chemical reaction;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(m)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-n",
+   "title": "Art. 7(1)(n)",
+   "text": "(n) simple assembling of parts of articles to constitute a complete article;",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(n)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-o",
+   "title": "Art. 7(1)(o)",
+   "text": "(o) a combination of two or more operations specified in sub-paragraphs (a) to (n); and",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(o)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Applied when all production steps are listed operations of (a)–(n).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-1-p",
+   "title": "Art. 7(1)(p)",
+   "text": "(p) slaughter of animals.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(1)(p)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Production steps mapped to this letter are 'listed operations' (see operation map).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-2",
+   "title": "Food aid",
+   "text": "2. Notwithstanding any provision of this Annex, agricultural Products whether or not processed in anyway, obtained or partially obtained from Food Aid or monetisation or similar assistance measures, including arrangements based on non-commercial terms, shall not be considered as originating in a State Party.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "15",
+   "provision": "Annex 2, Art. 7(2)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Any input flagged as food aid -> critical finding, 'Likely not to qualify' (group decision Q10: 'partially obtained' read as covering the whole product).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-7-3",
+   "title": "Definition of 'simple'",
+   "text": "3. For purposes of paragraph 1 of this Article, an operation shall be considered simple when neither special skills, nor machines, apparatus nor tools especially produced or installed for those operations are required for their performance or when those skills, machines, apparatus or tools do not contribute to the Product’s essential characteristics or properties.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "16",
+   "provision": "Annex 2, Art. 7(3)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Basis for the operation map. Steps whose 'simple' character cannot be judged from the description are 'unclear' and routed to the adviser.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-8",
+   "title": "Cumulation of origin within the AfCFTA",
+   "text": "1. For purposes of implementing this Article, all State Parties shall be considered as a single Territory. 2. Raw Materials or semi-finished Goods originating in any of the State Parties and undergoing working or processing in another State Party, shall be deemed to have originated in the State Party where the final processing or manufacturing takes place. 3. Working or processing carried out in any of the State Parties shall be considered as having been carried out in the State Parties when the Materials undergo further working or processing in a State Party. 4. Notwithstanding paragraphs 1 and 2 of this Article, Products further manufactured in a State Party shall be considered as originating in a State Party where the last manufacturing process takes place provided that the last working or processing operations exceed those operations under Article 7 of this Annex.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "16",
+   "provision": "Annex 2, Art. 8",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "A 19.01 input originating in another State Party counts as originating only with proof under Art. 31(1). Box 12 code SC is suggested when this is relied on.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-10",
+   "title": "Unit of qualification",
+   "text": "1. The unit of qualification for the application of the provisions of this Annex shall be the particular Product, which is considered as a basic unit when determining classification. 2. For purposes of this Annex: (a) the tariff classification of a particular Product or Material shall be determined according to the Harmonized System; (b) a Product composed of a group or assembly of articles or components is classified pursuant to the terms of the HS under a single Heading or Sub-heading, the whole shall constitute a unit of qualification; and (c) where a shipment consists of a number of identical Products classified under the same Heading or Sub-heading of the Harmonised System, each Product shall be considered separately.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "16",
+   "provision": "Annex 2, Art. 10",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "One product per case; HS codes are taken as declared and checked for plausibility only.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-11-1",
+   "title": "Treatment of packing (separate determination)",
+   "text": "1. Where for purposes of assessing customs duties, a State Party treats Goods separately from their packing, it may also, in respect of its imports consigned from another State Party, determine separately the origin of such packing.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "17",
+   "provision": "Annex 2, Art. 11(1)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Limitation note: the importing State Party may determine packing origin separately; the tool cannot know this.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-11-2",
+   "title": "Treatment of packing (transport/storage packing)",
+   "text": "2. Where paragraph 1 of this Article is not applicable, packing shall be considered as forming a whole with the Goods and no part of any packing required for their transportation or storage shall be considered as having been imported from outside the State Party when determining the origin of the Goods as a whole.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "17",
+   "provision": "Annex 2, Art. 11(2)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Transport/storage packing is not treated as imported; no finding.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-11-3",
+   "title": "Treatment of packing (retail packing)",
+   "text": "3. For purposes of paragraph 2 of this Article, packing with which Goods are ordinarily sold at retail shall not be regarded as packing required for the transportation or storage of Goods.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "17",
+   "provision": "Annex 2, Art. 11(3)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Retail packing is treated as a Material. It is not classified in heading 19.01, so it cannot breach the 19.01 heading-change rule; unknown origin is a minor documentation finding (group decision Q4).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-21-3",
+   "title": "Documents proving originating status",
+   "text": "3. The Exporter applying for the issue of a Certificate of Origin shall submit at the request of the Designated Competent Authority of the exporting State Party where the Certificate of Origin is issued, all appropriate documents proving the originating status of the Products concerned as well as the fulfilment of the other requirements specified in this Annex.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "20",
+   "provision": "Annex 2, Art. 21(3)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Basis for evidence-completeness findings.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-22",
+   "title": "Supporting documents",
+   "text": "The documents, referred to in paragraph 3 of Article 21 of this Annex, to be submitted to the Designated Competent Authority of the exporting State Party may include documents relating to the following: (a) production processes carried out on the originating Product or on Materials used in the production of that Product; (b) purchase, cost, value of and payment for the Product; (c) origin, purchase, cost, value of and payment for all Materials, including neutral elements, used in the production of the Product; (d) shipment of the Product; and (e) any other documents that the Designated Competent Authority may consider necessary.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "20",
+   "provision": "Annex 2, Art. 22",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Drives the readiness checklist.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-31-1",
+   "title": "Proof of origin of Materials from a State Party (cumulation)",
+   "text": "1. For purposes of paragraph 2 of Article 8 of this Annex, the proof of origin of the Materials coming from a State Party shall be given by a Certificate of Origin or an Origin Declaration in the form of Appendix I or II of this Annex.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "23",
+   "provision": "Annex 2, Art. 31(1)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "A 19.01 input claimed as originating in another State Party without this proof -> 'Further information required (missing)', major.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-31-2",
+   "title": "Supplier or Producer's declaration (working or processing)",
+   "text": "2. For purposes of paragraph 3 of Article 8 of this Annex, the evidence of the working or processing shall be given by the supplier or Producer’s declaration, in the State Party in which the Materials are exported in the form set out in Appendix III of this Annex.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "23",
+   "provision": "Annex 2, Art. 31(2)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Accepted supporting declaration type for inputs.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-31-3",
+   "title": "Cumulation endorsement",
+   "text": "3. A Certificate of Origin issued pursuant to Article 8 of this Annex shall be endorsed with the word: “CUMULATION.” 4. The endorsement referred to in paragraph 3 of this Article shall be inserted in Box 3 of the Certificate of Origin.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "23",
+   "provision": "Annex 2, Art. 31(3)–(4)",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Box 3 is completed by the issuing authority; the tool only notes that the endorsement may apply.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-42",
+   "title": "Transitional arrangements – outstanding issues",
+   "text": "1. State Parties agree that the following issues are outstanding: (a) Implementing decisions on the definitions of “Value Added” in Article 1 (x) and requirements for “their vessels” and “their factory ships” in Article 5(2) and criteria and issues pertaining to Special Economic Arrangements/Zones In Article 9 in Annex 2 on Rules of Origin; (b) Drafting of additional definitions in Annex 2 on Rules of Origin; (c) Drafting hybrid rules in Appendix IV to Annex 2 on the Rules of Origin; (d) Drafting Regulations for Goods produced under Special Economic Arrangements/Zones; (e) Drafting of additional provisions in Annex 2 on Rules of Origin on value tolerance, absorption principle and accounting segregation/GAAP; and (f) Drafting AfCFTA Rules of Origin Manuals/Guidelines. 2. The outstanding provisions referred to in paragraph 1 of this Article shall, upon adoption by the Assembly, form an integral part of this Annex. 3. Pending the adoption of the outstanding provisions, State Parties agree that the Rules of Origin in existing trade regimes shall be applicable.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "26",
+   "provision": "Annex 2, Art. 42",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Used for status labels: value tolerance is listed as outstanding in 42(1)(e). Shown next to every tolerance result.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-APPIII-A",
+   "title": "Appendix III – Supplier or Producer's Declaration (preferential origin)",
+   "text": "I, the undersigned, declare that the Goods listed on invoice ______________ (1) were produced in ______________ (2) and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties. I undertake to make available to the Designated Competent Authority, if required, evidence in support of this declaration.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "30",
+   "provision": "Annex 2, Appendix III, Part A",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Accepted evidence that a Ghanaian or State-Party input is originating.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "A2-APPIII-B",
+   "title": "Appendix III – Supplier or Producer's Declaration (no preferential origin)",
+   "text": "I, the undersigned, declare that the Goods listed on this invoice ______________ (1) were produced in ______________ (2) and incorporate the following components or Materials which do not have an African Continental Free Trade Area origin for preferential trade:",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "31",
+   "provision": "Annex 2, Appendix III, Part B",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Evidence that an input is non-originating.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-1",
+   "title": "Appendix I – Box 1",
+   "text": "The Exporter must be a natural or legal person ordinarily resident in a State Party or a person whose place of business is in a State Party. In addition, the Exporter’s registration number should be inserted, where applicable.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 1",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-2",
+   "title": "Appendix I – Box 2",
+   "text": "Insert the name and office address of the consignee in the State Party of destination.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 2",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-3",
+   "title": "Appendix I – Box 3",
+   "text": "To be completed by the issuing authority inserting one or more of the following endorsements where necessary: a) “Duplicate” … b) “Issued Retrospectively” … c) “Replacement” … d) “Cumulation”",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 3",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Never completed by the tool (issuing authority).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-4",
+   "title": "Appendix I – Box 4",
+   "text": "Insert particulars of transport details for the vehicle, train, ship, aircraft or other vessel used in removing Goods from the last port in the exporting State Party.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 4",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-5",
+   "title": "Appendix I – Box 5",
+   "text": "a) Enter identifying marks and numbers on the packages against each Good being exported. b) If the packages are not marked, state “No Marks and Numbers” or “As Addressed”. c) For Goods in bulk that are not packed, insert “In Bulk”. d) The quantity stated must agree with the quantities on the invoice. e) Where both originating and non-originating Goods are packed together, describe only the originating Goods and add at the end “Part Contents Only”.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 5",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-6",
+   "title": "Appendix I – Box 6",
+   "text": "Insert serial numbers of invoices, their dates, values and Incoterms, issued for the Goods.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 6",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-7",
+   "title": "Appendix I – Box 7",
+   "text": "State the number of type of packaging containing the Goods.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 7",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-8",
+   "title": "Appendix I – Box 8",
+   "text": "The Goods must be identified by giving a reasonably full commercial description in order for the appropriate HS Code to be determined.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 8",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-9",
+   "title": "Appendix I – Box 9",
+   "text": "Insert the gross weight of the Goods that should correspond with the transporters’ documents.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 9",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-10",
+   "title": "Appendix I – Box 10",
+   "text": "State an additional statistical measure as may be applicable under the chosen HS Code",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "27",
+   "provision": "Annex 2, Appendix I, Box 10",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-11",
+   "title": "Appendix I – Box 11",
+   "text": "Enter the six-digit HS Code in respect of each line of Goods described in Box 8.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "28",
+   "provision": "Annex 2, Appendix I, Box 11",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled in the draft compliance folder from case data.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-12",
+   "title": "Appendix I – Box 12",
+   "text": "Insert the appropriate Origin Criteria Code applicable to the Goods being exported. WP Wholly produced (Article 5); SV Substantial transformation — Value Added Content (Article 6.1(a)); SM Substantial transformation — Material Content (Article 6.1(b)); SX Substantial transformation — Change of Tariff Heading (Article 6.1(c)); SP Substantial transformation — Process Rule (Article 6.1(d)); SC Substantial transformation — Cumulation; and state the States Parties with which Cumulation was used. (Article 8)",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "28",
+   "provision": "Annex 2, Appendix I, Box 12",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Pre-filled with an INDICATIVE suggestion only (SX or SC).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-13",
+   "title": "Appendix I – Box 13",
+   "text": "a) The Exporter, or the authorized representative, must complete all details required for a complete declaration of the correctness of the application for a Certificate of Origin. b) The signature must not be mechanically reproduced or made with a rubber stamp but can be electronically inserted or replaced with an electronic identifying code in accordance with the national laws of each State Party.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "28",
+   "provision": "Annex 2, Appendix I, Box 13",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Not signed by the tool; listed in the readiness checklist for the exporter.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-14",
+   "title": "Appendix I – Box 14",
+   "text": "This must be filled by the Designated Competent Authority in the State Party of export. …",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "28",
+   "provision": "Annex 2, Appendix I, Box 14",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Never completed by the tool (issuing authority).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-BOX-15",
+   "title": "Appendix I – Box 15",
+   "text": "The Customs Officer at the port of clearance or exit must insert the export document number, date and office of clearance as provided.",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "28",
+   "provision": "Annex 2, Appendix I, Box 15",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Never completed by the tool (Customs).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPI-NOTE",
+   "title": "Appendix I – form not reproduced",
+   "text": "[Please note: The certificates have not been reproduced. Please refer to the publication document.]",
+   "source_file": "Agreement_Establishing_the_African_Continental_Free_Trade_Area_1.pdf",
+   "page": "29",
+   "provision": "Annex 2, Appendix I",
+   "version_date": "2018-03-21",
+   "legal_status": "Agreement text as published by Laws.Africa ('as at 21 March 2018')",
+   "engine_behaviour": "Folder labelled: 'based on the Appendix I box notes; the official form is not in the attached sources'.",
+   "applied": true,
+   "notes": "The Appendix I heading in the source reads '(Article 19(1)(a))'; cited as printed."
+  },
+  {
+   "id": "APPIV-N1.1",
+   "title": "Introductory Note 1.1",
+   "text": "1.1 The rules set out in Column 3 of this Appendix are the minimum conditions required for the concerned Products to be considered as sufficiently worked or processed within the meaning of paragraph 2 of Article 6 of Annex 2 on Rules of Origin.",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "page": "1",
+   "provision": "Appendix IV, Introductory Note 1.1",
+   "version_date": "2023-12",
+   "legal_status": "Approved by the 12th AfCFTA Council of Ministers, December 2023",
+   "engine_behaviour": "Explains that the 19.01 row is a minimum condition.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPIV-N2.1",
+   "title": "Introductory Note 2.1",
+   "text": "2.1: The first two columns in the Appendix describe the Product obtained. The first column gives the Chapter, Heading or Sub-heading as it is used in the Harmonized System (HS). The second column gives the description of Goods as it is used in the HS for that Chapter, Heading or Sub-heading. For each entry in the first two columns a rule is specified in Column 3. Where, in some cases, the entry in the first column is preceded by an “ex”, this signifies that the rules in Column 3 apply only to the part of that Chapter, Heading or Sub-as described in Column 2.",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "page": "1",
+   "provision": "Appendix IV, Introductory Note 2.1",
+   "version_date": "2023-12",
+   "legal_status": "Approved by the 12th AfCFTA Council of Ministers, December 2023",
+   "engine_behaviour": "Basis for using Column 2 descriptions as HS descriptions for input classification (group decision Q7).",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPIV-N2.4",
+   "title": "Introductory Note 2.4",
+   "text": "2.4: Where a Chapter, Heading or Sub-heading, in Column 1, or any text of this Appendix, is in square brackets that is an indication that the rule for that Chapter, Heading or Sub-heading in Column 3, or that text, is yet to be agreed by the AfCFTA Negotiating Institutions.",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "page": "2",
+   "provision": "Appendix IV, Introductory Note 2.4",
+   "version_date": "2023-12",
+   "legal_status": "Approved by the 12th AfCFTA Council of Ministers, December 2023",
+   "engine_behaviour": "19.01 row is not in square brackets -> agreed.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "APPIV-N2.5",
+   "title": "Introductory Note 2.5",
+   "text": "2.5: Where a Chapter, Heading or Sub-heading, in Column 1 has an asterisk, the value of non-originating materials will be automatically reduced from 60% to 55% threshold at the end of a five (5) year period starting 1 January 2021.",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "page": "2",
+   "provision": "Appendix IV, Introductory Note 2.5",
+   "version_date": "2023-12",
+   "legal_status": "Approved by the 12th AfCFTA Council of Ministers, December 2023",
+   "engine_behaviour": "19.01 row has no asterisk -> not applicable.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "APPIV-EXCH19",
+   "title": "Ex-Chapter 19 row",
+   "text": "Ex-Chapter 19 | Preparations of cereals, flour, starch, or milk; pastrycooks products | Manufacture from Materials of any Heading other that of the Product provided that the wheat Products of Chapter 11 used must be originating",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "page": "28",
+   "provision": "Appendix IV, Ex-Chapter 19",
+   "version_date": "2023-12",
+   "legal_status": "not applied – group decision",
+   "engine_behaviour": "Not applied: the 19.01 row governs (group decision). Shown as an information note to the adviser when a Chapter 11 wheat input is present.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "APPIV-1901",
+   "title": "Heading 19.01 product-specific rule",
+   "text": "19.01 | Malt extract: food preparations of flour, groats, meal, starch or malt extract, not containing cocoa or containing less than 40 per cent by mass of cocoa calculated on a totally defatted basis, not elsewhere specified or included; food preparations of goods of headings 04.01 to 04.04, not containing cocoa or containing less than 5 per cent by mass of cocoa calculated on a totally defatted basis, not elsewhere specified or included | Manufacture from Materials of any Heading other that of the Product",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "page": "29",
+   "provision": "Appendix IV, heading 19.01, Column 3",
+   "version_date": "2023-12",
+   "legal_status": "Approved by the 12th AfCFTA Council of Ministers, December 2023",
+   "engine_behaviour": "Retrieved by product heading 19.01. A non-originating Material classified in heading 19.01 breaches the rule unless the tolerance (EXCL-AN-3) applies. Applies to every subheading of 19.01.",
+   "applied": true,
+   "notes": ""
+  },
+  {
+   "id": "EXCL-AN-1",
+   "title": "Absorption Principle (draft)",
+   "text": "The value of the non-originating Materials used by the Producer in the production of a Product shall not include, for purposes of calculating the value of the product, the value of non-originating Materials used to produce originating Materials that are subsequently used in the production of the Product.",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Annex p. 1",
+   "provision": "EX.CL/Draft/Dec…(XL) Annex, item 1",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Reference only: inputs declared originating are not decomposed.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "EXCL-AN-2",
+   "title": "Accounting Segregation (draft)",
+   "text": "Where originating and non-originating fungible Materials are used in the production of Products, the following methods shall be adopted in determining whether the Materials used are originating: a) physical separation of the Materials; or b) an inventory management method recognized in the Generally Accepted Accounting Principles of the exporting State Party, provided that the inventory management method selected is used for at least one (1) fiscal year.”",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Annex p. 1",
+   "provision": "EX.CL/Draft/Dec…(XL) Annex, item 2",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Reference only: mixed-origin stock of the same input is flagged for the adviser.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "EXCL-AN-3",
+   "title": "Tolerance Rule (draft) – APPLIED",
+   "text": "1. Notwithstanding the provisions of Article 6, non-originating Materials which, according to the conditions set out in Appendix IV to this Annex shall not be used in the Manufacture of a given Product, may, nevertheless be used, provided that: b) Their total value does not exceed 15 per cent of the Ex-works Price of the final Product; c) The percentage given in paragraphs (a) of this paragraph shall not exceed any of the percentages for the maximum content of non-originating Materials as outlined in the Product Specific Rules laid out in Appendix IV. 1. Paragraph 1 of this Article shall not apply to Products falling within Chapters 50 through 63. 2. The tolerance in this Article shall be applied subject to the provisions of Article 7.",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Annex p. 1",
+   "provision": "EX.CL/Draft/Dec…(XL) Annex, item 3 (lettering as printed: b), c) with no a))",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "APPLIED, always on (group decision). Sum ALL non-originating 19.01 materials; share = sum / ex-works price compared exactly (sum*100 <= 15*price). Paragraph (c) has no effect for 19.01 (no maximum percentage in the row). Article 7 is checked in every case.",
+   "applied": true,
+   "notes": "Value tolerance is also listed as outstanding in Annex 2 Art. 42(1)(e)."
+  },
+  {
+   "id": "EXCL-AN-4",
+   "title": "Additional introductory note on CTSH (draft)",
+   "text": "Pursuant to paragraph 2 of Article 6 of the Annex, in this Appendix the Change of Tariff Sub-Heading (CTSH) shall apply as follows: i. The non-originating materials used must be classified under a sub-heading other than that of the final product. ii. Sub-headings may appear in the same heading or in different headings.",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Annex pp. 1–2",
+   "provision": "EX.CL/Draft/Dec…(XL) Annex, item 4",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Reference only: the 19.01 rule is a heading change, not CTSH.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "EXCL-AN-6",
+   "title": "Definition of Value Added (draft)",
+   "text": "Value Added means the difference between the ex-works price of a finished Product and the Customs Value of the Material imported from outside the State Parties and used in the Production.",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Annex p. 2",
+   "provision": "EX.CL/Draft/Dec…(XL) Annex, item 6",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Reference only.",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "EXCL-AN-7",
+   "title": "FOB as basis of calculation of VNOM (draft)",
+   "text": "FOB shall be the basis of the calculation of the Value of Non-originating materials (VNOM).",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Annex p. 2",
+   "provision": "EX.CL/Draft/Dec…(XL) Annex, item 7",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Alternative valuation basis. Computed alongside Customs Value; shown when it changes the outcome (group decision Q1).",
+   "applied": false,
+   "notes": ""
+  },
+  {
+   "id": "EXCL-DD-7",
+   "title": "State Party list (draft decision, Jan 2022)",
+   "text": "REITERATES its congratulations to the thirty nine (39) State Parties who deposited their instruments of ratification of the AfCFTA Agreement with the Chairperson of the Commission, namely: Angola, Burkina Faso, Cameroon, Central African Republic, Chad, Côte d’Ivoire, Congo, Djibouti, Egypt, Eswatini, Ethiopia, Equatorial Guinea, Gabon, The Gambia, Ghana, Guinea, Kenya, Lesotho, Mali, Mauritania, Mauritius, Namibia, Niger, Nigeria, Rwanda, Saharawi Arab Democratic Republic, Sao Tome and Principe, Senegal, Sierra Leone, South Africa, Togo, Tunisia, Uganda and Zimbabwe;",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Draft decision p. 1",
+   "provision": "EX.CL/Draft/Dec…(XL), para. 7",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Only the 34 named countries are used as State Party suppliers (group decision Q2). Dated January 2022; may be outdated.",
+   "applied": true,
+   "notes": "Text says 39 but names 34; para. 6 adds Burundi and Seychelles; report para. 3 says 40. Not resolved in attached sources."
+  },
+  {
+   "id": "EXCL-DD-23",
+   "title": "Provisional application of REC rules (draft decision)",
+   "text": "ENDORSES the Guidelines for the Provisional Application of Rules of Origin for the remaining outstanding tariff lines in accordance with existing trade regimes or Regional Economic Communities, pending the adoption of all outstanding issues in the Rules of Origin negotiations, in line with Article 42(3) of Annex 2 of the Protocol on Trade in Goods",
+   "source_file": "EX_CL_1329_XL_E_1.pdf",
+   "page": "Draft decision p. 4",
+   "provision": "EX.CL/Draft/Dec…(XL), para. 23",
+   "version_date": "2022-01",
+   "legal_status": "Draft decision text, adoption not confirmed in attached sources",
+   "engine_behaviour": "Limitation note only.",
+   "applied": false,
+   "notes": ""
+  }
+ ],
+ "state_parties": {
+  "rule_id": "EXCL-DD-7",
+  "countries": [
+   "Angola",
+   "Burkina Faso",
+   "Cameroon",
+   "Central African Republic",
+   "Chad",
+   "Côte d’Ivoire",
+   "Congo",
+   "Djibouti",
+   "Egypt",
+   "Eswatini",
+   "Ethiopia",
+   "Equatorial Guinea",
+   "Gabon",
+   "The Gambia",
+   "Ghana",
+   "Guinea",
+   "Kenya",
+   "Lesotho",
+   "Mali",
+   "Mauritania",
+   "Mauritius",
+   "Namibia",
+   "Niger",
+   "Nigeria",
+   "Rwanda",
+   "Saharawi Arab Democratic Republic",
+   "Sao Tome and Principe",
+   "Senegal",
+   "Sierra Leone",
+   "South Africa",
+   "Togo",
+   "Tunisia",
+   "Uganda",
+   "Zimbabwe"
+  ]
+ },
+ "operation_map": [
+  {
+   "code": "preserve_storage",
+   "label": "Preservation for storage/transport only",
+   "status": "listed",
+   "art7_letter": "a",
+   "rule_id": "A2-7-1-a",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "break_up_packages",
+   "label": "Breaking-up or assembly of packages",
+   "status": "listed",
+   "art7_letter": "b",
+   "rule_id": "A2-7-1-b",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "cleaning_washing",
+   "label": "Washing / cleaning",
+   "status": "listed",
+   "art7_letter": "c",
+   "rule_id": "A2-7-1-c",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "husking_polishing_cereals",
+   "label": "Husking / polishing of cereals",
+   "status": "listed",
+   "art7_letter": "f",
+   "rule_id": "A2-7-1-f",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "simple_grinding",
+   "label": "Simple grinding (no special installation)",
+   "status": "listed",
+   "art7_letter": "i",
+   "rule_id": "A2-7-1-i",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "simple_sifting_sorting",
+   "label": "Simple sifting / sorting / grading",
+   "status": "listed",
+   "art7_letter": "j",
+   "rule_id": "A2-7-1-j",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "simple_packaging",
+   "label": "Simple packaging (bagging, bottling)",
+   "status": "listed",
+   "art7_letter": "k",
+   "rule_id": "A2-7-1-k",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "labelling",
+   "label": "Labelling / marking",
+   "status": "listed",
+   "art7_letter": "l",
+   "rule_id": "A2-7-1-l",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "simple_mixing",
+   "label": "Simple mixing / blending",
+   "status": "listed",
+   "art7_letter": "m",
+   "rule_id": "A2-7-1-m",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "mashing_enzymatic",
+   "label": "Mashing / enzymatic conversion of malt",
+   "status": "not_listed",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "evaporation_concentration",
+   "label": "Vacuum evaporation / concentration",
+   "status": "not_listed",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "roasting_toasting",
+   "label": "Roasting / toasting",
+   "status": "not_listed",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "cooking_extrusion",
+   "label": "Cooking / extrusion cooking",
+   "status": "not_listed",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "drying_drum_spray",
+   "label": "Drum or spray drying of a cooked preparation",
+   "status": "not_listed",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "fermentation",
+   "label": "Fermentation",
+   "status": "not_listed",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "industrial_milling",
+   "label": "Milling on specially installed equipment",
+   "status": "unclear",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  },
+  {
+   "code": "unspecified_processing",
+   "label": "Unspecified 'processing' / 'preparation'",
+   "status": "unclear",
+   "art7_letter": null,
+   "rule_id": "A2-7-3",
+   "legal_status": "group interpretation"
+  }
+ ],
+ "hs_reference": [
+  {
+   "code": "Chapter 4",
+   "level": "chapter",
+   "description": "Dairy produce; birds' eggs; natural honey; edible Products of animal origin, not elsewhere specified or included",
+   "page": "16",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "04.01",
+   "level": "heading",
+   "description": "Milk and cream, not concentrated nor containing added sugar or other sweetening matter",
+   "page": "17",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "Chapter 10",
+   "level": "chapter",
+   "description": "Cereals",
+   "page": "19",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "Ex-Chapter 11",
+   "level": "chapter",
+   "description": "Products of the milling industry; malt; starches; inulin; wheat gluten",
+   "page": "19",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "11.01",
+   "level": "heading",
+   "description": "Wheat or meslin flour",
+   "page": "19",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "11.04",
+   "level": "heading",
+   "description": "Cereal grains otherwise worked (for example, hulled, rolled, flaked, pearled, sliced or kibbled) (excluding rice of Heading 10.06); germ of cereals, whole, rolled, flaked or ground",
+   "page": "20",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "11.07",
+   "level": "heading",
+   "description": "Malt, whether or not roasted",
+   "page": "20",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "Chapter 12",
+   "level": "chapter",
+   "description": "Oil seeds and oleaginous fruits; miscellaneous grains, seeds and fruit; industrial or medicinal plants; straw and fodder",
+   "page": "21",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "Chapter 17",
+   "level": "chapter",
+   "description": "Sugars and sugar confectionery",
+   "page": "27",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "17.02",
+   "level": "heading",
+   "description": "Other sugars, including chemically pure lactose, maltose, glucose and fructose, in solid form; sugar syrups not containing added flavouring or colouring matter; artificial honey, whether or not mixed with natural honey; caramel",
+   "page": "27–28",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "21.02",
+   "level": "heading",
+   "description": "Yeasts (active or inactive); other single-cell micro-organisms, dead (but not including vaccines of Heading 30.02); prepared baking powders",
+   "page": "32",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "19.01",
+   "level": "heading",
+   "description": "Malt extract: food preparations of flour, groats, meal, starch or malt extract, … not elsewhere specified or included",
+   "page": "29",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "Ex-Chapter 39",
+   "level": "chapter",
+   "description": "Plastics and articles thereof",
+   "page": "48",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  },
+  {
+   "code": "Chapter 48",
+   "level": "chapter",
+   "description": "Paper and paperboard; articles of paper pulp, of paper or of paperboard",
+   "page": "55",
+   "source_file": "EN-APPENDIX-IV-AS-AT-COM-12-DECEMBER-2023_1.pdf",
+   "rule_id": "APPIV-N2.1"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "GD-1",
+   "decision": "The 15% tolerance (EXCL-AN-3) is applied, always on, although it is draft decision text.",
+   "rule_ids": [
+    "EXCL-AN-3",
+    "A2-42"
+   ],
+   "source": "Group decision (confirmed by project lead, 2026-11-01)"
+  },
+  {
+   "id": "GD-2",
+   "decision": "The Ex-Chapter 19 wheat condition is not applied because the 19.01 row governs; shown as an information note.",
+   "rule_ids": [
+    "APPIV-EXCH19"
+   ],
+   "source": "Group decision"
+  },
+  {
+   "id": "GD-Q1",
+   "decision": "Valuation basis for the tolerance: Customs Value (Art. 1(y)); FOB (EXCL-AN-7) computed alongside and shown when it changes the outcome.",
+   "rule_ids": [
+    "A2-1-y",
+    "EXCL-AN-7"
+   ],
+   "source": "Group decision Q1"
+  },
+  {
+   "id": "GD-Q2",
+   "decision": "State Party suppliers are drawn only from the 34 countries named in EX.CL draft decision para. 7; non-State-Party suppliers are non-African countries.",
+   "rule_ids": [
+    "EXCL-DD-7"
+   ],
+   "source": "Group decision Q2"
+  },
+  {
+   "id": "GD-Q4",
+   "decision": "Severity: critical = rule text says the certificate would fail; major = cannot be assessed without new evidence; minor = resolvable form or consistency issue.",
+   "rule_ids": [],
+   "source": "Group decision Q4"
+  },
+  {
+   "id": "GD-Q5",
+   "decision": "A determinate critical failure overrides missing data; missing items are still listed.",
+   "rule_ids": [],
+   "source": "Group decision Q5"
+  },
+  {
+   "id": "GD-Q6",
+   "decision": "Operation map (Art. 7(1) letters vs. not-listed vs. unclear) is a group interpretation of Art. 7(1) and 7(3).",
+   "rule_ids": [
+    "A2-7-1",
+    "A2-7-3"
+   ],
+   "source": "Group decision Q6"
+  },
+  {
+   "id": "GD-Q7",
+   "decision": "Input HS codes use Appendix IV Column 1–2 descriptions (Note 2.1) at heading level where a row exists, otherwise chapter level.",
+   "rule_ids": [
+    "APPIV-N2.1"
+   ],
+   "source": "Group decision Q7"
+  },
+  {
+   "id": "GD-Q10",
+   "decision": "Any food-aid input makes the product fail (Art. 7(2) 'partially obtained').",
+   "rule_ids": [
+    "A2-7-2"
+   ],
+   "source": "Group decision Q10"
+  },
+  {
+   "id": "GD-Q11",
+   "decision": "All values in GHS; mixed currency on a relevant input = contradictory (no exchange-rate source).",
+   "rule_ids": [
+    "A2-1-y"
+   ],
+   "source": "Group decision Q11"
+  },
+  {
+   "id": "GD-Q12",
+   "decision": "Box 12 suggestion: SX; SC when a State-Party 19.01 input is counted as originating. Always indicative.",
+   "rule_ids": [
+    "APPI-BOX-12",
+    "A2-8"
+   ],
+   "source": "Group decision Q12"
+  },
+  {
+   "id": "GD-Q13",
+   "decision": "Repeated error = same error type on same field logged twice or more -> bug report to model development team.",
+   "rule_ids": [],
+   "source": "Group decision Q13; Service_Blueprint_1.pdf"
+  }
+ ]
+}

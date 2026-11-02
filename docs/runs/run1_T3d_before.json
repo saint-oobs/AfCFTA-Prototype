@@ -1,0 +1,920 @@
+{
+ "case_id": "T3d",
+ "meta": {
+  "case_id": "T3d",
+  "seed": 2026,
+  "generator_version": "1.0.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME, generated for testing",
+  "spec": {
+   "case_id": "T3d",
+   "test": 3,
+   "case_type": "Edge",
+   "product": "malt_extract",
+   "split_1901": [
+    "8.0",
+    "8.0"
+   ],
+   "exw": "40000",
+   "origins": {
+    "malt": "ghana",
+    "glucose": "ghana"
+   },
+   "scenario": "Two separate 19.01 inputs at 8.0% each (each under 15%, together 16.0%)."
+  },
+  "defects": [],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": [
+   "8.0",
+   "8.0"
+  ]
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "EXPORTER PROFILE (SYNTHETIC)\nName: Ahomka Provisions Ltd (SYNTHETIC)\nAddress: Plot 33, Industrial Area, Ho, Ghana\nRegistration no: SYN-GH-41813\nStatus: formally registered (synthetic)"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "BILL OF MATERIALS (SYNTHETIC)\nExporter: Ahomka Provisions Ltd (SYNTHETIC)\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 7275.27 | 7275.27 | GHS | Synthetic Malt Supplier | Ghana | 11.07 | Ghana\nI2 | Glucose syrup | 150 | kg | 1971.22 | 1971.22 | GHS | Synthetic Glucose Supplier | Ghana | 17.02 | Ghana\nX1 | Malt extract concentrate | 77 | kg | 3200.00 | 3,200.00 | GHS | Synthetic Ingredients BV 1 | Brazil | 1901.90 | Imported (non-State Party)\nX2 | Malt extract concentrate | 76 | kg | 3,200.00 | 3200.00 | GHS | Synthetic Ingredients BV 2 | Brazil | 1901.90 | Imported (non-State Party)\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "appendix_iii_a",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A) – SYNTHETIC\nSupplier: Synthetic Malt Supplier\nCountry of origin: Ghana\nGoods: Malt, not roasted\nQuantity: 800 kg\nCustoms value: 7275.27 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A) – SYNTHETIC\nSupplier: Synthetic Glucose Supplier\nCountry of origin: Ghana\nGoods: Glucose syrup\nQuantity: 150 kg\nCustoms value: 1971.22 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-X1",
+   "type": "supplier_invoice",
+   "input_id": "X1",
+   "language": "en",
+   "format": "typed",
+   "text": "SUPPLIER INVOICE / CUSTOMS ENTRY – SYNTHETIC\nSupplier: Synthetic Ingredients BV 1\nCountry of origin: Brazil\nGoods: Malt extract concentrate\nQuantity: 77 kg\nCustoms value: 3200.00 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-X2",
+   "type": "supplier_invoice",
+   "input_id": "X2",
+   "language": "en",
+   "format": "typed",
+   "text": "SUPPLIER INVOICE / CUSTOMS ENTRY – SYNTHETIC\nSupplier: Synthetic Ingredients BV 2\nCountry of origin: Brazil\nGoods: Malt extract concentrate\nQuantity: 76 kg\nCustoms value: 3200.00 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "PRODUCTION PROCESS (SYNTHETIC)\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n3. Filling into jars – Factory, Ghana\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "COSTING SHEET (SYNTHETIC)\nEx-works price per batch: 40,000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "EXPORT INVOICE (SYNTHETIC)\nInvoice no: EXP-8690\nDate: 2026-10-15\nConsignee: Synthetic Distribution Ltd\nConsignee address: 116 Market Road, Lomé\nDestination: Togo\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: SYN/882/1-1000\nPackages: 83 cartons\nTransport: Sea – vessel (synthetic)\nValue: 43200.00 GHS\nIncoterm: EXW"
+  }
+ ],
+ "adapter": {
+  "mode": "stub",
+  "label": "STUB – synthetic transcription",
+  "adapter_version": "1.0.0",
+  "field_tags": [
+   {
+    "field": "exporter.registration_no",
+    "status": "stated",
+    "snippet": "SYN-GH-41813",
+    "doc_id": "DOC-EXP"
+   },
+   {
+    "field": "product.declared_hs",
+    "status": "stated",
+    "snippet": "Declared HS: 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.customs_value",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … 7275.27",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.fob_value",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … 7275.27",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.hs_code",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … 11.07",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.origin_class",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.customs_value",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … 1971.22",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.fob_value",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … 1971.22",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.hs_code",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … 17.02",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.origin_class",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.customs_value",
+    "status": "stated",
+    "snippet": "X1 | Malt extract concentrate | … 3200.00",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.fob_value",
+    "status": "stated",
+    "snippet": "X1 | Malt extract concentrate | … 3,200.00",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.hs_code",
+    "status": "stated",
+    "snippet": "X1 | Malt extract concentrate | … 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.origin_class",
+    "status": "stated",
+    "snippet": "X1 | Malt extract concentrate | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X2.customs_value",
+    "status": "stated",
+    "snippet": "X2 | Malt extract concentrate | … 3,200.00",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X2.fob_value",
+    "status": "stated",
+    "snippet": "X2 | Malt extract concentrate | … 3200.00",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X2.hs_code",
+    "status": "stated",
+    "snippet": "X2 | Malt extract concentrate | … 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X2.origin_class",
+    "status": "stated",
+    "snippet": "X2 | Malt extract concentrate | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P1.origin",
+    "status": "stated",
+    "snippet": "P1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P2.origin",
+    "status": "stated",
+    "snippet": "P2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A) – SYNTHETIC",
+    "doc_id": "DOC-SUP-I1"
+   },
+   {
+    "field": "I2.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A) – SYNTHETIC",
+    "doc_id": "DOC-SUP-I2"
+   },
+   {
+    "field": "X2.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER INVOICE / CUSTOMS ENTRY – SYNTHETIC",
+    "doc_id": "DOC-SUP-X1"
+   },
+   {
+    "field": "X2.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER INVOICE / CUSTOMS ENTRY – SYNTHETIC",
+    "doc_id": "DOC-SUP-X2"
+   },
+   {
+    "field": "S1.operation_code",
+    "status": "inferred",
+    "snippet": "1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S2.operation_code",
+    "status": "inferred",
+    "snippet": "2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S3.operation_code",
+    "status": "inferred",
+    "snippet": "3. Filling into jars – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S4.operation_code",
+    "status": "inferred",
+    "snippet": "4. Labelling – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "inputs.food_aid",
+    "status": "stated",
+    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "ex_works_price",
+    "status": "stated",
+    "snippet": "Ex-works price per batch: 40,000.00 GHS",
+    "doc_id": "DOC-COST"
+   }
+  ]
+ },
+ "extracted": {
+  "synthetic": true,
+  "exporter": {
+   "name": "Ahomka Provisions Ltd (SYNTHETIC)",
+   "address": "Plot 33, Industrial Area, Ho, Ghana",
+   "registration_no": "SYN-GH-41813"
+  },
+  "consignee": {
+   "name": "Synthetic Distribution Ltd",
+   "address": "116 Market Road, Lomé",
+   "country": "Togo"
+  },
+  "product": {
+   "description": "Malt extract, liquid, in 1 kg plastic jars",
+   "declared_hs": "1901.90",
+   "quantity": "1000",
+   "unit": "jars",
+   "gross_weight_kg": "1150",
+   "marks": "SYN/882/1-1000",
+   "packaging_count": "83 cartons",
+   "transport": "Sea – vessel (synthetic)",
+   "statistical_measure": "1150 kg"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Malt, not roasted",
+    "quantity": {
+     "value": "800",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "7275.27",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "7275.27",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Synthetic Malt Supplier",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "11.07",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I2",
+    "description": "Glucose syrup",
+    "quantity": {
+     "value": "150",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1971.22",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1971.22",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Synthetic Glucose Supplier",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "17.02",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "X1",
+    "description": "Malt extract concentrate",
+    "quantity": {
+     "value": "77",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Synthetic Ingredients BV 1",
+    "supplier_country": "Brazil",
+    "origin_class": "non_state_party",
+    "hs_code": "1901.90",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": false
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "X2",
+    "description": "Malt extract concentrate",
+    "quantity": {
+     "value": "76",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Synthetic Ingredients BV 2",
+    "supplier_country": "Brazil",
+    "origin_class": "non_state_party",
+    "hs_code": "1901.90",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": [
+     {
+      "field": "quantity",
+      "values": [
+       "76 kg (BOM)",
+       "77 kg (DOC-SUP-X1)"
+      ],
+      "sources": [
+       "DOC-BOM",
+       "DOC-SUP-X1"
+      ],
+      "note": "quantity/unit differs between BOM and supplier document"
+     }
+    ],
+    "food_aid": false
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S2",
+    "description": "Filtration and vacuum evaporation to a concentrate",
+    "operation_code": "evaporation_concentration",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S3",
+    "description": "Filling into jars",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S4",
+    "description": "Labelling",
+    "operation_code": "labelling",
+    "location_country": "Ghana",
+    "status": "inferred"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Plastic jar with lid, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (12 jars)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-8690",
+   "date": "2026-10-15",
+   "value": "43200.00",
+   "currency": "GHS",
+   "incoterm": "EXW"
+  },
+  "ex_works_price": {
+   "amount": "40000.00",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "destination_country": "Togo",
+  "case_id": "T3d"
+ },
+ "result": {
+  "engine_version": "1.0.0",
+  "rulebase_version": "1.0.0",
+  "case_id": "T3d",
+  "valuation_basis": "customs_value",
+  "disclaimer": "Synthetic data – prototype – indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.",
+  "outcome": {
+   "label": "Further information required",
+   "sub_reasons": [
+    "contradictory"
+   ]
+  },
+  "components": {
+   "rule_1901": {
+    "status": "unclear",
+    "rule_id": "APPIV-1901",
+    "tolerance_rule_id": "EXCL-AN-3",
+    "tolerance_legal_status": "Draft decision text, adoption not confirmed in attached sources"
+   },
+   "tolerance": {
+    "basis": "customs_value",
+    "items": [
+     {
+      "input_id": "X1",
+      "description": "Malt extract concentrate",
+      "value": "3200.00",
+      "value_field": "customs_value",
+      "currency": "GHS"
+     }
+    ],
+    "counted_ids": [
+     "X1"
+    ],
+    "unresolved_ids": [
+     "X2"
+    ],
+    "total": "3200.00",
+    "limit_percent": "15",
+    "ex_works_price": "40000.00",
+    "currency": "GHS",
+    "share_display": "8.000",
+    "margin_pp_display": "7.000",
+    "comparison": "3200.00 × 100 = 320000.00  vs  15 × 40000.00 = 600000.00",
+    "within_limit": true,
+    "share_fraction": "3200.00 / 40000.00",
+    "status": "unclear",
+    "alternative": {
+     "basis": "fob",
+     "status": "unclear",
+     "share_display": "8.000",
+     "differs": false
+    }
+   },
+   "article7": {
+    "steps": [
+     {
+      "id": "S1",
+      "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+      "operation_code": "mashing_enzymatic",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S2",
+      "description": "Filtration and vacuum evaporation to a concentrate",
+      "operation_code": "evaporation_concentration",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S3",
+      "description": "Filling into jars",
+      "operation_code": "simple_packaging",
+      "map_status": "listed",
+      "art7_letter": "k",
+      "location": "Ghana"
+     },
+     {
+      "id": "S4",
+      "description": "Labelling",
+      "operation_code": "labelling",
+      "map_status": "listed",
+      "art7_letter": "l",
+      "location": "Ghana"
+     }
+    ],
+    "status": "met",
+    "explanation": "At least one step carried out in Ghana is not an Article 7(1) operation (group interpretation of the operation map)."
+   },
+   "food_aid": {
+    "status": "no food-aid input declared"
+   },
+   "evidence": {
+    "status": "gaps affect the result",
+    "critical": 0,
+    "major": 1,
+    "minor": 0
+   },
+   "hs_confidence": {
+    "declared_hs": "1901.90",
+    "heading": "19.01",
+    "status": "declared 19.01, no doubt flagged (SME-declared, not verified)"
+   }
+  },
+  "findings": [
+   {
+    "id": "F1",
+    "severity": "major",
+    "category": "consistency",
+    "title": "Contradictory quantity for 'Malt extract concentrate'",
+    "input_ref": "X2",
+    "explanation": "Input X2: quantity/unit differs between BOM and supplier document (76 kg (BOM), 77 kg (DOC-SUP-X1)). This input matters for the 19.01 rule, so the value cannot be used until it is clarified.",
+    "rule_ids": [
+     "APPIV-1901",
+     "A2-22"
+    ],
+    "provisions": [
+     "Appendix IV, heading 19.01, Column 3",
+     "Annex 2, Art. 22"
+    ],
+    "fix": "Ask the SME which document is correct.",
+    "sub_reason": "contradictory"
+   }
+  ],
+  "notes": [],
+  "trace": [
+   {
+    "step": "retrieval",
+    "detail": "declared HS '1901.90' -> heading 19.01"
+   },
+   {
+    "step": "retrieval",
+    "detail": "rule APPIV-1901 retrieved; tolerance EXCL-AN-3 (draft) attached; Art. 7 attached"
+   },
+   {
+    "step": "tolerance",
+    "detail": "basis=customs_value; 3200.00 × 100 = 320000.00  vs  15 × 40000.00 = 600000.00; status=unclear"
+   },
+   {
+    "step": "article7",
+    "detail": "status=met"
+   }
+  ],
+  "requirements": [
+   {
+    "requirement": "Product is in heading 19.01 (rule retrieved)",
+    "rule_ids": [
+     "APPIV-1901",
+     "A2-6-2"
+    ],
+    "evidence": "Declared HS 1901.90; declared 19.01, no doubt flagged (SME-declared, not verified)",
+    "status": "met"
+   },
+   {
+    "requirement": "No non-originating 19.01 material, or total ≤ 15% of ex-works price",
+    "rule_ids": [
+     "APPIV-1901",
+     "EXCL-AN-3"
+    ],
+    "evidence": "1 non-originating 19.01 material(s); total 3200.00 GHS; share 8.000% of ex-works price 40000.00",
+    "status": "unclear"
+   },
+   {
+    "requirement": "Processing goes beyond Article 7(1) operations",
+    "rule_ids": [
+     "A2-7-1",
+     "A2-7-3"
+    ],
+    "evidence": "Mashing of malt with hot water in a mash tun (enzymatic conversion) → not_listed; Filtration and vacuum evaporation to a concentrate → not_listed; Filling into jars → listed; Labelling → listed",
+    "status": "met"
+   },
+   {
+    "requirement": "No input from food aid",
+    "rule_ids": [
+     "A2-7-2"
+    ],
+    "evidence": "no food-aid input declared",
+    "status": "met"
+   },
+   {
+    "requirement": "Proof of origin for inputs counted as originating",
+    "rule_ids": [
+     "A2-31-1",
+     "A2-21-3"
+    ],
+    "evidence": "—",
+    "status": "met"
+   }
+  ],
+  "missing_info_request": "Dear Ahomka Provisions Ltd (SYNTHETIC),\n\nThank you for your documents. To complete the indicative pre-check we need the following:\n1. Ask the SME which document is correct. (concerns: Contradictory quantity for 'Malt extract concentrate'; basis: Appendix IV, heading 19.01, Column 3, Annex 2, Art. 22)\n\nThis pre-check is indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
+  "folder": {
+   "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
+   "boxes": [
+    {
+     "box": 1,
+     "rule_id": "APPI-BOX-1",
+     "value": {
+      "name": "Ahomka Provisions Ltd (SYNTHETIC)",
+      "address": "Plot 33, Industrial Area, Ho, Ghana",
+      "registration_no": "SYN-GH-41813"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 2,
+     "rule_id": "APPI-BOX-2",
+     "value": {
+      "name": "Synthetic Distribution Ltd",
+      "address": "116 Market Road, Lomé",
+      "country": "Togo"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 3,
+     "rule_id": "APPI-BOX-3",
+     "value": "Completed by the issuing authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 4,
+     "rule_id": "APPI-BOX-4",
+     "value": "Sea – vessel (synthetic)",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 5,
+     "rule_id": "APPI-BOX-5",
+     "value": {
+      "marks": "SYN/882/1-1000",
+      "quantity": "1000",
+      "unit": "jars"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 6,
+     "rule_id": "APPI-BOX-6",
+     "value": {
+      "invoice_no": "EXP-8690",
+      "date": "2026-10-15",
+      "value": "43200.00",
+      "currency": "GHS",
+      "incoterm": "EXW"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 7,
+     "rule_id": "APPI-BOX-7",
+     "value": "83 cartons",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 8,
+     "rule_id": "APPI-BOX-8",
+     "value": "Malt extract, liquid, in 1 kg plastic jars",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 9,
+     "rule_id": "APPI-BOX-9",
+     "value": "1150",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 10,
+     "rule_id": "APPI-BOX-10",
+     "value": "1150 kg",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 11,
+     "rule_id": "APPI-BOX-11",
+     "value": "1901.90",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 12,
+     "rule_id": "APPI-BOX-12",
+     "value": null,
+     "filled_by": "tool",
+     "indicative": true,
+     "note": "No origin criteria code proposed while the result is 'Further information required'.",
+     "missing": true
+    },
+    {
+     "box": 13,
+     "rule_id": "APPI-BOX-13",
+     "value": "To be completed and signed by the exporter (not signed by the tool)",
+     "filled_by": "exporter",
+     "missing": false
+    },
+    {
+     "box": 14,
+     "rule_id": "APPI-BOX-14",
+     "value": "Completed by the Designated Competent Authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 15,
+     "rule_id": "APPI-BOX-15",
+     "value": "Completed by the Customs officer at the port of clearance or exit",
+     "filled_by": "customs",
+     "missing": false
+    }
+   ],
+   "readiness": [
+    {
+     "item": "Box 12 information",
+     "status": "missing",
+     "rule_id": "APPI-BOX-12"
+    },
+    {
+     "item": "Contradictory quantity for 'Malt extract concentrate'",
+     "status": "open (major)",
+     "rule_id": "APPIV-1901"
+    },
+    {
+     "item": "Keep supporting documents (production, costs, origin of all materials, shipment)",
+     "status": "check",
+     "rule_id": "A2-22"
+    }
+   ]
+  }
+ },
+ "explanation": {
+  "text": "Indicative result: Further information required (contradictory).\nNon-originating heading 19.01 materials make up 8.000% of the ex-works price; the limit is 15% (draft tolerance, EXCL-AN-3).\nArticle 7 check (A2-7-1): met.\n- MAJOR: Contradictory quantity for 'Malt extract concentrate' (APPIV-1901, A2-22).\nThis is indicative only; GRA Customs and the National AfCFTA Approval Committee decide.",
+  "label": "STUB – synthetic transcription",
+  "citation_check": {
+   "ok": true,
+   "valid": [
+    "EXCL-AN-3",
+    "A2-7-1",
+    "APPIV-1901",
+    "A2-22",
+    "Article 7",
+    "heading 19.01"
+   ],
+   "rejected": []
+  }
+ },
+ "expected": {
+  "case_id": "T3d",
+  "test": 3,
+  "case_type": "Edge",
+  "outcome": "Likely not to qualify",
+  "sub_reasons": [],
+  "rule_1901": "not met",
+  "share_percent": "16.0",
+  "article7": "met",
+  "box12": null,
+  "derivation": "Two 19.01 inputs of 3,200.00 each: each 8.0%, but the tolerance counts their TOTAL value: 6,400.00 / 40,000.00 = 16.0% > 15% → not met.",
+  "rule_ids": [
+   "APPIV-1901",
+   "EXCL-AN-3",
+   "A2-7-1",
+   "A2-1-y"
+  ],
+  "checked_by_1": "",
+  "checked_on_1": "",
+  "verdict_1": "",
+  "checked_by_2": "",
+  "checked_on_2": "",
+  "verdict_2": "",
+  "notes": "",
+  "expected_findings": [
+   {
+    "defect": "(share above 15% by design)",
+    "category": "rule_1901",
+    "severity": "critical"
+   }
+  ]
+ },
+ "comparison": {
+  "outcome_correct": false,
+  "expected_outcome": "Likely not to qualify",
+  "expected_sub_reasons": [],
+  "detected": [],
+  "missed": [
+   "(share above 15% by design)"
+  ],
+  "false_alarms": [
+   "Contradictory quantity for 'Malt extract concentrate'"
+  ]
+ },
+ "transcription": {
+  "fields": 28,
+  "correct": 28,
+  "flagged_unreadable": 0,
+  "wrong": 0,
+  "errors": []
+ },
+ "set": "fixed"
+}

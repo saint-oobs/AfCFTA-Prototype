@@ -1,0 +1,31 @@
+{
+ "generator_version": "1.2.0",
+ "seed": 2026,
+ "messiness": 0.3,
+ "fixed": [
+  "T1",
+  "T2",
+  "T3a",
+  "T3b",
+  "T3c",
+  "T3d",
+  "T4",
+  "T5a",
+  "T5b"
+ ],
+ "eval": [
+  "E01",
+  "E02",
+  "E03",
+  "E04",
+  "E05",
+  "E06",
+  "E07",
+  "E08",
+  "E09",
+  "E10",
+  "E11",
+  "E12"
+ ],
+ "note": "Synthetic data reflects the team's assumptions about SME records, not observed Ghanaian practice."
+}

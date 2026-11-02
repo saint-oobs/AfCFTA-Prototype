@@ -1,0 +1,225 @@
+{
+ "meta": {
+  "case_id": "T1",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "T1",
+   "test": 1,
+   "case_type": "Typical",
+   "product": "malt_extract",
+   "share_pct": "0",
+   "exw": "40000",
+   "origins": {
+    "malt": "ghana",
+    "glucose": "state_party"
+   },
+   "countries": {
+    "glucose": "Nigeria"
+   },
+   "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a certificate of origin. Mashing and evaporation in Ghana."
+  },
+  "defects": [],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": []
+ },
+ "truth": {
+  "case_id": "T1",
+  "synthetic": true,
+  "exporter": {
+   "name": "Nkabom Grains Ltd",
+   "address": "Plot 65, Light Industrial Area, Takoradi, Ghana",
+   "registration_no": "GEPA/EXP/2026/4701",
+   "registration_status": "Registered company (Office of the Registrar of Companies)",
+   "tin": "C0015884962",
+   "phone": "+233 30 757 5255"
+  },
+  "consignee": {
+   "name": "Niger Delta Trading SA",
+   "address": "141 Avenue de la Paix, Abidjan",
+   "country": "Côte d’Ivoire"
+  },
+  "destination_country": "Côte d’Ivoire",
+  "product": {
+   "description": "Malt extract, liquid, in 1 kg plastic jars",
+   "declared_hs": "1901.90",
+   "quantity": "1000",
+   "unit": "jars",
+   "gross_weight_kg": "1150",
+   "marks": "NG/CÔT/1-1000",
+   "packaging_count": "83 cartons",
+   "transport": "Road – truck GR 4394-26, from Tema",
+   "statistical_measure": "1150 kg"
+  },
+  "ex_works_price": {
+   "amount": "40000",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Malt, not roasted",
+    "hs_code": "11.07",
+    "quantity": {
+     "value": "800",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "8161.64",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "8161.64",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Brong Malt Cooperative",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Glucose syrup",
+    "hs_code": "17.02",
+    "quantity": {
+     "value": "150",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2958.30",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2958.30",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ogun Sweeteners Ltd",
+    "supplier_country": "Nigeria",
+    "origin_class": "state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "certificate_of_origin",
+     "present": true
+    },
+    "conflicts": []
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S2",
+    "description": "Filtration and vacuum evaporation to a concentrate",
+    "operation_code": "evaporation_concentration",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S3",
+    "description": "Filling into jars",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S4",
+    "description": "Labelling",
+    "operation_code": "labelling",
+    "location_country": "Ghana"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Plastic jar with lid, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (12 jars)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-5969",
+   "date": "2026-10-15",
+   "value": "43200.00",
+   "currency": "GHS",
+   "incoterm": "CPT"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Nkabom Grains Ltd\nAddress: Plot 65, Light Industrial Area, Takoradi, Ghana\nPhone: +233 30 757 5255\nTIN: C0015884962\nRegistration no: GEPA/EXP/2026/4701\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Nkabom Grains Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2672-69\nPrepared by: Production manager, Nkabom Grains Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 8161.64 | 8161.64 | GHS | Brong Malt Cooperative | Ghana | 11.07 | Ghana\nI2 | Glucose syrup | 150 | kg | 2,958.30 | 2,958.30 | GHS | Ogun Sweeteners Ltd | Nigeria | 17.02 | AfCFTA State Party\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "appendix_iii_a",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Malt Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-97558\nDate: 2026-07-08\nBuyer: Nkabom Grains Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 10.20 GHS\nInvoice value: 8161.64 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "certificate_of_origin",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Ogun Sweeteners Ltd\nCountry of origin: Nigeria\nInvoice no: OGU-85077\nDate: 2026-08-19\nBuyer: Nkabom Grains Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 19.72 GHS\nInvoice value: 2958.30 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2672-69\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2672-69\nBatch: 1000 jars\nMaterials: 11119.94 GHS\nPackaging: 2888.01 GHS\nDirect labour: 8664.02 GHS\nEnergy and water: 4332.01 GHS\nFactory overheads: 5776.01 GHS\nMargin: 7220.01 GHS\nEx-works price per batch: 40000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-5969\nDate: 2026-10-15\nExporter: Nkabom Grains Ltd\nExporter TIN: C0015884962\nConsignee: Niger Delta Trading SA\nConsignee address: 141 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: NG/CÔT/1-1000\nPackages: 83 cartons\nTransport: Road – truck GR 4394-26, from Tema\nValue: 43200.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+  }
+ ]
+}

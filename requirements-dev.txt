@@ -1,0 +1,2 @@
+pytest>=8
+pillow>=10   # only for generator/render.py (handwriting-style images)

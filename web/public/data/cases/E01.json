@@ -1,0 +1,810 @@
+{
+ "case_id": "E01",
+ "meta": {
+  "case_id": "E01",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "E01",
+   "product": "malt_extract",
+   "share_pct": "0",
+   "defects": [
+    "D01_missing_supplier_declaration"
+   ],
+   "process": "substantive",
+   "language": "en",
+   "format": "typed",
+   "messiness": 0.3,
+   "scenario": "Malt extract with a lot from Togo. The certificate of origin for that lot is missing."
+  },
+  "defects": [
+   "D01_missing_supplier_declaration"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": []
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Nkabom Provisions Ltd\nAddress: Plot 90, Light Industrial Area, Koforidua, Ghana\nPhone: +233 55 131 7730\nTIN: C0093158497\nRegistration no: GEPA/EXP/2026/6830\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Nkabom Provisions Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2617-22\nPrepared by: Production manager, Nkabom Provisions Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 8974.49 | 8,974.49 | GH₵ | Brong Malt Cooperative | Ghana | 11.07 | Ghana\nI2 | Glucose syrup | 150 | kg | 2481.54 | 2481.54 | GHS | Brong Sweeteners Cooperative | Ghana | 17.02 | Ghana\nSP1 | Malt extract concentrate | 35 | kg | 2480.00 | 2480.00 | Ghc | Brasserie des Plateaux SARL | Togo | 1901.90 | AfCFTA State Party\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "appendix_iii_a",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Malt Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-14789\nDate: 2026-08-17\nBuyer: Nkabom Provisions Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 11.22 GHS\nCustoms value: 8974.49 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Sweeteners Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-94127\nDate: 2026-09-18\nBuyer: Nkabom Provisions Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 16.54 GHS\nCustoms value: 2481.54 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2617-22\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2617-22\nBatch: 1000 jars\nMaterials: 13936.03 GHS\nPackaging: 2606.40 GHS\nDirect labour: 7819.19 GHS\nEnergy and water: 3909.60 GHS\nFactory overheads: 5212.79 GHS\nMargin: 6515.99 GHS\nEx-works price per batch: 40000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-1278\nDate: 2026-10-15\nExporter: Nkabom Provisions Ltd\nExporter TIN: C0093158497\nConsignee: Lagune Distribution SARL\nConsignee address: 48 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: NP/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 43200.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+  }
+ ],
+ "adapter": {
+  "mode": "stub",
+  "label": "Prototype transcription (synthetic documents)",
+  "adapter_version": "1.2.0",
+  "field_tags": [
+   {
+    "field": "exporter.registration_no",
+    "status": "stated",
+    "snippet": "GEPA/EXP/2026/6830",
+    "doc_id": "DOC-EXP"
+   },
+   {
+    "field": "product.declared_hs",
+    "status": "stated",
+    "snippet": "Declared HS: 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Product: Malt extract, liquid, in 1 kg plastic jars",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.customs_value",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … 8974.49",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.fob_value",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … 8,974.49",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.hs_code",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … 11.07",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.origin_class",
+    "status": "stated",
+    "snippet": "I1 | Malt, not roasted | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.customs_value",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … 2481.54",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.fob_value",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … 2481.54",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.hs_code",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … 17.02",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.origin_class",
+    "status": "stated",
+    "snippet": "I2 | Glucose syrup | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "SP1.customs_value",
+    "status": "stated",
+    "snippet": "SP1 | Malt extract concentrate | … 2480.00",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "SP1.fob_value",
+    "status": "stated",
+    "snippet": "SP1 | Malt extract concentrate | … 2480.00",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "SP1.hs_code",
+    "status": "stated",
+    "snippet": "SP1 | Malt extract concentrate | … 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "SP1.origin_class",
+    "status": "stated",
+    "snippet": "SP1 | Malt extract concentrate | … AfCFTA State Party",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P1.origin",
+    "status": "stated",
+    "snippet": "P1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P2.origin",
+    "status": "stated",
+    "snippet": "P2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I1"
+   },
+   {
+    "field": "I2.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I2"
+   },
+   {
+    "field": "S1.operation_code",
+    "status": "inferred",
+    "snippet": "1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S2.operation_code",
+    "status": "inferred",
+    "snippet": "2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S3.operation_code",
+    "status": "inferred",
+    "snippet": "3. Filling into jars – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S4.operation_code",
+    "status": "inferred",
+    "snippet": "4. Labelling – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "inputs.food_aid",
+    "status": "stated",
+    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "ex_works_price",
+    "status": "stated",
+    "snippet": "Ex-works price per batch: 40000.00 GHS",
+    "doc_id": "DOC-COST"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Goods: Malt extract, liquid, in 1 kg plastic jars",
+    "doc_id": "DOC-INV"
+   }
+  ]
+ },
+ "extracted": {
+  "synthetic": true,
+  "exporter": {
+   "name": "Nkabom Provisions Ltd",
+   "address": "Plot 90, Light Industrial Area, Koforidua, Ghana",
+   "registration_no": "GEPA/EXP/2026/6830"
+  },
+  "consignee": {
+   "name": "Lagune Distribution SARL",
+   "address": "48 Market Road, Abidjan",
+   "country": "Côte d’Ivoire"
+  },
+  "product": {
+   "description": "Malt extract, liquid, in 1 kg plastic jars",
+   "declared_hs": "1901.90",
+   "quantity": "1000",
+   "unit": "jars",
+   "gross_weight_kg": "1150",
+   "marks": "NP/CÔT/1-1000",
+   "packaging_count": "83 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1150 kg"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Malt, not roasted",
+    "quantity": {
+     "value": "800",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "8974.49",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "8974.49",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Brong Malt Cooperative",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "11.07",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I2",
+    "description": "Glucose syrup",
+    "quantity": {
+     "value": "150",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2481.54",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2481.54",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Brong Sweeteners Cooperative",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "17.02",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "SP1",
+    "description": "Malt extract concentrate",
+    "quantity": {
+     "value": "35",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2480.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2480.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Brasserie des Plateaux SARL",
+    "supplier_country": "Togo",
+    "origin_class": "state_party",
+    "hs_code": "1901.90",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": false
+    },
+    "conflicts": [],
+    "food_aid": false
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S2",
+    "description": "Filtration and vacuum evaporation to a concentrate",
+    "operation_code": "evaporation_concentration",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S3",
+    "description": "Filling into jars",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S4",
+    "description": "Labelling",
+    "operation_code": "labelling",
+    "location_country": "Ghana",
+    "status": "inferred"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Plastic jar with lid, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (12 jars)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-1278",
+   "date": "2026-10-15",
+   "value": "43200.00",
+   "currency": "GHS",
+   "incoterm": "EXW"
+  },
+  "ex_works_price": {
+   "amount": "40000.00",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "destination_country": "Côte d’Ivoire",
+  "case_id": "E01"
+ },
+ "result": {
+  "engine_version": "1.2.0",
+  "rulebase_version": "1.1.0",
+  "case_id": "E01",
+  "valuation_basis": "customs_value",
+  "disclaimer": "Synthetic data – prototype – indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.",
+  "outcome": {
+   "label": "Further information required",
+   "sub_reasons": [
+    "missing"
+   ]
+  },
+  "components": {
+   "rule_1901": {
+    "status": "unclear",
+    "rule_id": "APPIV-1901",
+    "tolerance_rule_id": "EXCL-AN-3",
+    "tolerance_legal_status": "Draft decision text, adoption not confirmed in attached sources"
+   },
+   "tolerance": {
+    "basis": "customs_value",
+    "items": [],
+    "counted_ids": [],
+    "unresolved_ids": [
+     "SP1"
+    ],
+    "total": "0",
+    "limit_percent": "15",
+    "ex_works_price": "40000.00",
+    "currency": "GHS",
+    "share_display": "0.000",
+    "margin_pp_display": "15.000",
+    "comparison": "0 × 100 = 0  vs  15 × 40000.00 = 600000.00",
+    "within_limit": true,
+    "share_fraction": "0 / 40000.00",
+    "headroom": "6000.00",
+    "status": "unclear",
+    "share_is_lower_bound": true,
+    "alternative": {
+     "basis": "fob",
+     "status": "unclear",
+     "share_display": "0.000",
+     "differs": false
+    }
+   },
+   "article7": {
+    "steps": [
+     {
+      "id": "S1",
+      "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+      "operation_code": "mashing_enzymatic",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S2",
+      "description": "Filtration and vacuum evaporation to a concentrate",
+      "operation_code": "evaporation_concentration",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S3",
+      "description": "Filling into jars",
+      "operation_code": "simple_packaging",
+      "map_status": "listed",
+      "art7_letter": "k",
+      "location": "Ghana"
+     },
+     {
+      "id": "S4",
+      "description": "Labelling",
+      "operation_code": "labelling",
+      "map_status": "listed",
+      "art7_letter": "l",
+      "location": "Ghana"
+     }
+    ],
+    "status": "met",
+    "explanation": "At least one step carried out in Ghana is not an Article 7(1) operation (group interpretation of the operation map)."
+   },
+   "food_aid": {
+    "status": "no food-aid input declared"
+   },
+   "evidence": {
+    "status": "gaps affect the result",
+    "critical": 0,
+    "major": 1,
+    "minor": 0
+   },
+   "hs_confidence": {
+    "declared_hs": "1901.90",
+    "heading": "19.01",
+    "status": "declared 19.01, no doubt flagged (SME-declared, not verified)"
+   }
+  },
+  "findings": [
+   {
+    "id": "F1",
+    "severity": "major",
+    "category": "origin_proof",
+    "title": "Origin of 'Malt extract concentrate' cannot be confirmed",
+    "input_ref": "SP1",
+    "explanation": "Line SP1 (heading 19.01): no supplier declaration / proof of origin on file. Without proof, the tool cannot count it as local.",
+    "rule_ids": [
+     "A2-31-1",
+     "A2-8"
+    ],
+    "provisions": [
+     "Annex 2, Art. 31(1)",
+     "Annex 2, Art. 8"
+    ],
+    "fix": "Obtain the proof of origin (Certificate of Origin / Origin Declaration, or Appendix III supplier declaration).",
+    "sub_reason": "missing",
+    "sme_action": "Send the supplier declaration or certificate of origin for malt extract concentrate."
+   }
+  ],
+  "notes": [],
+  "trace": [
+   {
+    "step": "retrieval",
+    "detail": "declared HS '1901.90' -> heading 19.01"
+   },
+   {
+    "step": "retrieval",
+    "detail": "rule APPIV-1901 retrieved; tolerance EXCL-AN-3 (draft) attached; Art. 7 attached"
+   },
+   {
+    "step": "tolerance",
+    "detail": "basis=customs_value; 0 × 100 = 0  vs  15 × 40000.00 = 600000.00; status=unclear"
+   },
+   {
+    "step": "article7",
+    "detail": "status=met"
+   }
+  ],
+  "requirements": [
+   {
+    "requirement": "The product is in HS heading 19.01.",
+    "evidence": "The declared HS code is 1901.90. The product description fits heading 19.01: “Malt extract, liquid, in 1 kg plastic jars”.",
+    "status": "met",
+    "source": "Appendix IV, heading 19.01",
+    "rule_ids": [
+     "APPIV-1901",
+     "A2-10"
+    ]
+   },
+   {
+    "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
+    "evidence": "Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.",
+    "status": "unclear",
+    "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
+    "rule_ids": [
+     "APPIV-1901",
+     "EXCL-AN-3"
+    ]
+   },
+   {
+    "requirement": "The work done in Ghana is more than simple operations such as mixing or packing.",
+    "evidence": "These steps in Ghana are more than simple operations: mashing of malt with hot water in a mash tun (enzymatic conversion) and filtration and vacuum evaporation to a concentrate.",
+    "status": "met",
+    "source": "Annex 2, Art. 7",
+    "rule_ids": [
+     "A2-7-1",
+     "A2-7-3"
+    ]
+   },
+   {
+    "requirement": "No ingredient comes from food aid.",
+    "evidence": "The production notes state that no ingredient comes from food aid.",
+    "status": "met",
+    "source": "Annex 2, Art. 7(2)",
+    "rule_ids": [
+     "A2-7-2"
+    ]
+   },
+   {
+    "requirement": "There is proof of origin for local and AfCFTA ingredients.",
+    "evidence": "Supplier declarations or certificates are on file for 2 of 3 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.",
+    "status": "unclear",
+    "source": "Annex 2, Art. 31 and Appendix III",
+    "rule_ids": [
+     "A2-31-1",
+     "A2-APPIII-A"
+    ]
+   }
+  ],
+  "missing_info_request": "Dear Nkabom Provisions Ltd,\n\nThank you for your documents. To complete the pre-check, please send us the items below:\n1. Send the supplier declaration or certificate of origin for malt extract concentrate.\n\nThe pre-check is indicative only. GRA Customs and the National AfCFTA Approval Committee make the official decision.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
+  "folder": {
+   "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
+   "boxes": [
+    {
+     "box": 1,
+     "rule_id": "APPI-BOX-1",
+     "value": {
+      "name": "Nkabom Provisions Ltd",
+      "address": "Plot 90, Light Industrial Area, Koforidua, Ghana",
+      "registration_no": "GEPA/EXP/2026/6830"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 2,
+     "rule_id": "APPI-BOX-2",
+     "value": {
+      "name": "Lagune Distribution SARL",
+      "address": "48 Market Road, Abidjan",
+      "country": "Côte d’Ivoire"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 3,
+     "rule_id": "APPI-BOX-3",
+     "value": "Completed by the issuing authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 4,
+     "rule_id": "APPI-BOX-4",
+     "value": "Sea – MV Gulf Trader, from Tema port",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 5,
+     "rule_id": "APPI-BOX-5",
+     "value": {
+      "marks": "NP/CÔT/1-1000",
+      "quantity": "1000",
+      "unit": "jars"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 6,
+     "rule_id": "APPI-BOX-6",
+     "value": {
+      "invoice_no": "EXP-1278",
+      "date": "2026-10-15",
+      "value": "43200.00",
+      "currency": "GHS",
+      "incoterm": "EXW"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 7,
+     "rule_id": "APPI-BOX-7",
+     "value": "83 cartons",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 8,
+     "rule_id": "APPI-BOX-8",
+     "value": "Malt extract, liquid, in 1 kg plastic jars",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 9,
+     "rule_id": "APPI-BOX-9",
+     "value": "1150",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 10,
+     "rule_id": "APPI-BOX-10",
+     "value": "1150 kg",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 11,
+     "rule_id": "APPI-BOX-11",
+     "value": "1901.90",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 12,
+     "rule_id": "APPI-BOX-12",
+     "value": null,
+     "filled_by": "tool",
+     "indicative": true,
+     "note": "No origin criteria code proposed while the result is 'Further information required'.",
+     "missing": false
+    },
+    {
+     "box": 13,
+     "rule_id": "APPI-BOX-13",
+     "value": "To be completed and signed by the exporter (not signed by the tool)",
+     "filled_by": "exporter",
+     "missing": false
+    },
+    {
+     "box": 14,
+     "rule_id": "APPI-BOX-14",
+     "value": "Completed by the Designated Competent Authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 15,
+     "rule_id": "APPI-BOX-15",
+     "value": "Completed by the Customs officer at the port of clearance or exit",
+     "filled_by": "customs",
+     "missing": false
+    }
+   ],
+   "readiness": [
+    {
+     "item": "Origin of 'Malt extract concentrate' cannot be confirmed",
+     "status": "open (major)",
+     "rule_id": "A2-31-1"
+    },
+    {
+     "item": "Keep supporting documents (production, costs, origin of all materials, shipment)",
+     "status": "check",
+     "rule_id": "A2-22"
+    }
+   ]
+  }
+ },
+ "explanation": {
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.\n- Supplier declarations or certificates are on file for 2 of 3 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.\n\nWhat to do next:\n- Send the supplier declaration or certificate of origin for malt extract concentrate.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Prototype transcription (synthetic documents)",
+  "citation_check": {
+   "ok": true,
+   "valid": [
+    "heading 19.01"
+   ],
+   "rejected": []
+  }
+ },
+ "expected": {
+  "case_id": "E01",
+  "defects": [
+   "D01_missing_supplier_declaration"
+  ],
+  "expected_findings": [
+   {
+    "defect": "D01_missing_supplier_declaration",
+    "severity": "major",
+    "category": "origin_proof",
+    "effect": "missing",
+    "rule": "A2-31-1"
+   }
+  ],
+  "outcome": "Further information required",
+  "sub_reasons": [
+   "missing"
+  ],
+  "rule_1901": "unclear",
+  "share_percent": null,
+  "box12": null
+ },
+ "comparison": {
+  "outcome_correct": true,
+  "expected_outcome": "Further information required",
+  "expected_sub_reasons": [
+   "missing"
+  ],
+  "detected": [
+   "D01_missing_supplier_declaration"
+  ],
+  "missed": [],
+  "false_alarms": []
+ },
+ "transcription": {
+  "fields": 21,
+  "correct": 21,
+  "flagged_unreadable": 0,
+  "wrong": 0,
+  "errors": []
+ },
+ "set": "eval"
+}

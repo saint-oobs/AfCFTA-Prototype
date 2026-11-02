@@ -1,0 +1,1097 @@
+{
+ "case_id": "T5b",
+ "meta": {
+  "case_id": "T5b",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "T5b",
+   "test": 5,
+   "case_type": "Key assumption",
+   "product": "infant_cereal",
+   "share_pct": "6.0",
+   "exw": "60000",
+   "origins": {
+    "millet": "state_party",
+    "soya": "ghana",
+    "milk": "non_state_party",
+    "sugar": "non_state_party"
+   },
+   "countries": {
+    "millet": "Burkina Faso"
+   },
+   "language": "fr_mixed",
+   "format": "handwritten",
+   "messiness": 0.8,
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "scenario": "Same records as T5a, but the value of the imported premix of heading 19.01 is smudged and cannot be read."
+  },
+  "defects": [
+   "D05_unreadable_cost_1901"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": [
+   "6.0"
+  ]
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Nyame Grains Ltd\nAddress: Plot 97, Light Industrial Area, Accra, Ghana\nPhone: +233 30 946 4645\nTIN: C0085947423\nRegistration no: GEPA/EXP/2026/3798\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "handwritten",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Nyame Grains Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2633-79\nPrepared by: Production manager, Nyame Grains Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 550 | kilos | 10307.89 | 10,307.89 | GH₵ | Houet Grains SARL | Burkina Faso | Chapter 10 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 4,217.34 | 4,217.34 | GHS | Akatsi Agro Ltd | Ghana | Chapter 12 | Ghana\nI3 | Skimmed milk powder | 120 | kg | 5,683.83 | 5,229.12 | GH₵ | Deccan Dairy Pvt Ltd | Belgium | Chapter 4 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kgs | 1,526.73 | 1,404.59 | GH₵ | Paraná Sugar Ltda | Netherlands | Chapter 17 | Imported (non-State Party)\nX1 | Cereal-based premix preparation | 110 | kilos | [illegible] | [illegible] | GHS | Westbrook Nutrition Ingredients GmbH | France | 1901.90 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Chapter 48 | Ghana",
+   "illegible_fields": [
+    "X1.customs_value",
+    "X1.fob_value"
+   ]
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "certificate_of_origin",
+   "input_id": "I1",
+   "language": "fr",
+   "format": "typed",
+   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nCERTIFICAT D'ORIGINE ZLECAf – COPIE\nFournisseur : Houet Grains SARL\nPays d'origine : Burkina Faso\nFacture n° : HOU-33714\nDate : 2026-08-02\nClient : Nyame Grains Ltd\nMarchandises : Mil en grains\nQuantité : 550 kg\nPrix unitaire : 18.74 GHS\nValeur en douane : 10307.89 GHS\nLes marchandises satisfont aux règles d'origine de la ZLECAf."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Agro Ltd\nCountry of origin: Ghana\nInvoice no: AKA-37116\nDate: 2026-07-26\nBuyer: Nyame Grains Ltd\nGoods: Soya beans\nQuantity: 250 kg\nUnit price: 16.87 GHS\nCustoms value: 4217.34 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I3",
+   "type": "supplier_invoice",
+   "input_id": "I3",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Dairy Pvt Ltd\nCountry of origin: Belgium\nInvoice no: DEC-75217\nDate: 2026-09-18\nBuyer: Nyame Grains Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 47.37 GHS\nCustoms value: 5683.83 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-I4",
+   "type": "supplier_invoice",
+   "input_id": "I4",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Sugar Ltda\nCountry of origin: Netherlands\nInvoice no: PAR-21935\nDate: 2026-09-02\nBuyer: Nyame Grains Ltd\nGoods: Cane sugar\nQuantity: 60 kg\nUnit price: 25.45 GHS\nCustoms value: 1526.73 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-X1",
+   "type": "supplier_invoice",
+   "input_id": "X1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: France\nInvoice no: WES-66090\nDate: 2026-08-13\nBuyer: Nyame Grains Ltd\nGoods: Cereal-based premix preparation\nQuantity: 110 kg\nUnit price: [illegible] GHS\nCustoms value: [illegible] GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "fr",
+   "format": "handwritten",
+   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nPROCÉDÉ DE PRODUCTION\nLot : B-2633-79\n1. Nettoyage du mil – Usine, Ghana\n   Équipement: vibrating sieve and destoner\n2. Torréfaction du mil et du soja – Usine, Ghana\n   Équipement: rotary drum roaster, 300 kg/h\n3. Cuisson par extrusion – Usine, Ghana\n   Équipement: twin-screw cooking extruder\n4. Séchage sur cylindre de la pâte cuite – Usine, Ghana\n   Équipement: steam-heated double drum dryer\n5. Simple broyage – Usine, Ghana\n   Équipement: hammer mill\n6. Simple mélange avec lait en poudre et sucre – Usine, Ghana\n   Équipement: ribbon blender, 500 kg\n7. Remplissage des boîtes – Usine, Ghana\n   Équipement: semi-automatic filling and sealing machine\nAide alimentaire : aucun intrant"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2633-79\nBatch: 2400 cartons of 400 g\nMaterials: 25335.79 GHS\nPackaging: 3466.42 GHS\nDirect labour: 10399.26 GHS\nEnergy and water: 5199.63 GHS\nFactory overheads: 6932.84 GHS\nMargin: 8666.06 GHS\nEx-works price per batch: 60,000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-9247\nDate: 2026-10-15\nExporter: Nyame Grains Ltd\nExporter TIN: C0085947423\nConsignee: Kilimanjaro Foods Ltd\nConsignee address: 146 Avenue de la Paix, Dakar\nDestination: Senegal\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: NG/SEN/1-2400\nPackages: 100 cartons\nTransport: Road – truck AS 3684-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+  }
+ ],
+ "adapter": {
+  "mode": "stub",
+  "label": "Prototype transcription (synthetic documents)",
+  "adapter_version": "1.2.0",
+  "field_tags": [
+   {
+    "field": "exporter.registration_no",
+    "status": "stated",
+    "snippet": "GEPA/EXP/2026/3798",
+    "doc_id": "DOC-EXP"
+   },
+   {
+    "field": "product.declared_hs",
+    "status": "stated",
+    "snippet": "Declared HS: 1901.10",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Product: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.customs_value",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … 10307.89",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.fob_value",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … 10,307.89",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.hs_code",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … Chapter 10",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.origin_class",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … AfCFTA State Party",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.customs_value",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … 4,217.34",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.fob_value",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … 4,217.34",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.hs_code",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … Chapter 12",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.origin_class",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.customs_value",
+    "status": "stated",
+    "snippet": "I3 | Skimmed milk powder | … 5,683.83",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.fob_value",
+    "status": "stated",
+    "snippet": "I3 | Skimmed milk powder | … 5,229.12",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.hs_code",
+    "status": "stated",
+    "snippet": "I3 | Skimmed milk powder | … Chapter 4",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.origin_class",
+    "status": "stated",
+    "snippet": "I3 | Skimmed milk powder | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.customs_value",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … 1,526.73",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.fob_value",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … 1,404.59",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.hs_code",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … Chapter 17",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.origin_class",
+    "status": "stated",
+    "snippet": "I4 | Cane sugar | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.customs_value",
+    "status": "unreadable",
+    "snippet": "X1 | Cereal-based premix preparation | … [illegible]",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.fob_value",
+    "status": "unreadable",
+    "snippet": "X1 | Cereal-based premix preparation | … [illegible]",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.hs_code",
+    "status": "stated",
+    "snippet": "X1 | Cereal-based premix preparation | … 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "X1.origin_class",
+    "status": "stated",
+    "snippet": "X1 | Cereal-based premix preparation | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P1.origin",
+    "status": "stated",
+    "snippet": "P1 | Printed paperboard carton with inner bag, 400 g | retail | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P2.origin",
+    "status": "stated",
+    "snippet": "P2 | Corrugated carton (24 cartons) | transport | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I2"
+   },
+   {
+    "field": "I1.declaration",
+    "status": "stated",
+    "snippet": "CERTIFICAT D'ORIGINE ZLECAf – COPIE",
+    "doc_id": "DOC-SUP-I1"
+   },
+   {
+    "field": "I3.declaration",
+    "status": "stated",
+    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
+    "doc_id": "DOC-SUP-I3"
+   },
+   {
+    "field": "I4.declaration",
+    "status": "stated",
+    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
+    "doc_id": "DOC-SUP-I4"
+   },
+   {
+    "field": "X1.declaration",
+    "status": "stated",
+    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
+    "doc_id": "DOC-SUP-X1"
+   },
+   {
+    "field": "S1.description",
+    "status": "inferred",
+    "snippet": "translated from French: Nettoyage du mil",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S1.operation_code",
+    "status": "inferred",
+    "snippet": "1. Nettoyage du mil – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S2.description",
+    "status": "inferred",
+    "snippet": "translated from French: Torréfaction du mil et du soja",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S2.operation_code",
+    "status": "inferred",
+    "snippet": "2. Torréfaction du mil et du soja – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S3.description",
+    "status": "inferred",
+    "snippet": "translated from French: Cuisson par extrusion",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S3.operation_code",
+    "status": "inferred",
+    "snippet": "3. Cuisson par extrusion – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S4.description",
+    "status": "inferred",
+    "snippet": "translated from French: Séchage sur cylindre de la pâte cuite",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S4.operation_code",
+    "status": "inferred",
+    "snippet": "4. Séchage sur cylindre de la pâte cuite – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S5.description",
+    "status": "inferred",
+    "snippet": "translated from French: Simple broyage",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S5.operation_code",
+    "status": "inferred",
+    "snippet": "5. Simple broyage – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S6.description",
+    "status": "inferred",
+    "snippet": "translated from French: Simple mélange avec lait en poudre et sucre",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S6.operation_code",
+    "status": "inferred",
+    "snippet": "6. Simple mélange avec lait en poudre et sucre – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S7.description",
+    "status": "inferred",
+    "snippet": "translated from French: Remplissage des boîtes",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S7.operation_code",
+    "status": "inferred",
+    "snippet": "7. Remplissage des boîtes – Usine, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "inputs.food_aid",
+    "status": "stated",
+    "snippet": "Aide alimentaire : aucun intrant",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "ex_works_price",
+    "status": "stated",
+    "snippet": "Ex-works price per batch: 60,000.00 GHS",
+    "doc_id": "DOC-COST"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Goods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons",
+    "doc_id": "DOC-INV"
+   }
+  ]
+ },
+ "extracted": {
+  "synthetic": true,
+  "exporter": {
+   "name": "Nyame Grains Ltd",
+   "address": "Plot 97, Light Industrial Area, Accra, Ghana",
+   "registration_no": "GEPA/EXP/2026/3798"
+  },
+  "consignee": {
+   "name": "Kilimanjaro Foods Ltd",
+   "address": "146 Avenue de la Paix, Dakar",
+   "country": "Senegal"
+  },
+  "product": {
+   "description": "Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons",
+   "declared_hs": "1901.10",
+   "quantity": "2400",
+   "unit": "cartons",
+   "gross_weight_kg": "1050",
+   "marks": "NG/SEN/1-2400",
+   "packaging_count": "100 cartons",
+   "transport": "Road – truck AS 3684-25, via Aflao border",
+   "statistical_measure": "1050 kg"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Millet grain",
+    "quantity": {
+     "value": "550",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "10307.89",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "10307.89",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Houet Grains SARL",
+    "supplier_country": "Burkina Faso",
+    "origin_class": "state_party",
+    "hs_code": "Chapter 10",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "certificate_of_origin",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I2",
+    "description": "Soya beans",
+    "quantity": {
+     "value": "250",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "4217.34",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "4217.34",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Akatsi Agro Ltd",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "Chapter 12",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I3",
+    "description": "Skimmed milk powder",
+    "quantity": {
+     "value": "120",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "5683.83",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "5229.12",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Deccan Dairy Pvt Ltd",
+    "supplier_country": "Belgium",
+    "origin_class": "non_state_party",
+    "hs_code": "Chapter 4",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I4",
+    "description": "Cane sugar",
+    "quantity": {
+     "value": "60",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1526.73",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1404.59",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Paraná Sugar Ltda",
+    "supplier_country": "Netherlands",
+    "origin_class": "non_state_party",
+    "hs_code": "Chapter 17",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "X1",
+    "description": "Cereal-based premix preparation",
+    "quantity": {
+     "value": "110",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": null,
+     "currency": "GHS",
+     "status": "unreadable"
+    },
+    "fob_value": {
+     "amount": null,
+     "currency": "GHS",
+     "status": "unreadable"
+    },
+    "supplier": "Westbrook Nutrition Ingredients GmbH",
+    "supplier_country": "France",
+    "origin_class": "non_state_party",
+    "hs_code": "1901.90",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Cleaning of millet",
+    "operation_code": "cleaning_washing",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S2",
+    "description": "Roasting of millet and soya",
+    "operation_code": "roasting_toasting",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S3",
+    "description": "Cooking by extrusion",
+    "operation_code": "cooking_extrusion",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S4",
+    "description": "Drum drying of the cooked paste",
+    "operation_code": "drying_drum_spray",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S5",
+    "description": "Simple grinding",
+    "operation_code": "simple_grinding",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S6",
+    "description": "Simple mixing with milk powder and sugar",
+    "operation_code": "simple_mixing",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S7",
+    "description": "Filling into cartons",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana",
+    "status": "inferred"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Printed paperboard carton with inner bag, 400 g",
+    "packing_type": "retail",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (24 cartons)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-9247",
+   "date": "2026-10-15",
+   "value": "64800.00",
+   "currency": "GHS",
+   "incoterm": "CPT"
+  },
+  "ex_works_price": {
+   "amount": "60000.00",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "destination_country": "Senegal",
+  "case_id": "T5b"
+ },
+ "result": {
+  "engine_version": "1.2.0",
+  "rulebase_version": "1.1.0",
+  "case_id": "T5b",
+  "valuation_basis": "customs_value",
+  "disclaimer": "Synthetic data – prototype – indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.",
+  "outcome": {
+   "label": "Further information required",
+   "sub_reasons": [
+    "missing"
+   ]
+  },
+  "components": {
+   "rule_1901": {
+    "status": "unclear",
+    "rule_id": "APPIV-1901",
+    "tolerance_rule_id": "EXCL-AN-3",
+    "tolerance_legal_status": "Draft decision text, adoption not confirmed in attached sources"
+   },
+   "tolerance": {
+    "basis": "customs_value",
+    "items": [],
+    "counted_ids": [],
+    "unresolved_ids": [
+     "X1"
+    ],
+    "total": "0",
+    "limit_percent": "15",
+    "ex_works_price": "60000.00",
+    "currency": "GHS",
+    "share_display": "0.000",
+    "margin_pp_display": "15.000",
+    "comparison": "0 × 100 = 0  vs  15 × 60000.00 = 900000.00",
+    "within_limit": true,
+    "share_fraction": "0 / 60000.00",
+    "headroom": "9000.00",
+    "status": "unclear",
+    "share_is_lower_bound": true,
+    "alternative": {
+     "basis": "fob",
+     "status": "unclear",
+     "share_display": "0.000",
+     "differs": false
+    }
+   },
+   "article7": {
+    "steps": [
+     {
+      "id": "S1",
+      "description": "Cleaning of millet",
+      "operation_code": "cleaning_washing",
+      "map_status": "listed",
+      "art7_letter": "c",
+      "location": "Ghana"
+     },
+     {
+      "id": "S2",
+      "description": "Roasting of millet and soya",
+      "operation_code": "roasting_toasting",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S3",
+      "description": "Cooking by extrusion",
+      "operation_code": "cooking_extrusion",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S4",
+      "description": "Drum drying of the cooked paste",
+      "operation_code": "drying_drum_spray",
+      "map_status": "not_listed",
+      "art7_letter": null,
+      "location": "Ghana"
+     },
+     {
+      "id": "S5",
+      "description": "Simple grinding",
+      "operation_code": "simple_grinding",
+      "map_status": "listed",
+      "art7_letter": "i",
+      "location": "Ghana"
+     },
+     {
+      "id": "S6",
+      "description": "Simple mixing with milk powder and sugar",
+      "operation_code": "simple_mixing",
+      "map_status": "listed",
+      "art7_letter": "m",
+      "location": "Ghana"
+     },
+     {
+      "id": "S7",
+      "description": "Filling into cartons",
+      "operation_code": "simple_packaging",
+      "map_status": "listed",
+      "art7_letter": "k",
+      "location": "Ghana"
+     }
+    ],
+    "status": "met",
+    "explanation": "At least one step carried out in Ghana is not an Article 7(1) operation (group interpretation of the operation map)."
+   },
+   "food_aid": {
+    "status": "no food-aid input declared"
+   },
+   "evidence": {
+    "status": "gaps affect the result",
+    "critical": 0,
+    "major": 1,
+    "minor": 0
+   },
+   "hs_confidence": {
+    "declared_hs": "1901.10",
+    "heading": "19.01",
+    "status": "declared 19.01, no doubt flagged (SME-declared, not verified)"
+   }
+  },
+  "findings": [
+   {
+    "id": "F1",
+    "severity": "major",
+    "category": "value",
+    "title": "Value missing or unreadable for 'Cereal-based premix preparation'",
+    "input_ref": "X1",
+    "explanation": "Line X1 is an imported ingredient of heading 19.01. The 15% calculation needs its value. The tool does not use zero for a missing value.",
+    "rule_ids": [
+     "A2-1-y",
+     "EXCL-AN-3"
+    ],
+    "provisions": [
+     "Annex 2, Art. 1(y)",
+     "EX.CL/Draft/Dec…(XL) Annex, item 3 (lettering as printed: b), c) with no a))"
+    ],
+    "fix": "Ask the SME for the customs entry / invoice showing this value.",
+    "sub_reason": "missing",
+    "sme_action": "Send the customs entry or supplier invoice that shows the value of cereal-based premix preparation."
+   }
+  ],
+  "notes": [],
+  "trace": [
+   {
+    "step": "retrieval",
+    "detail": "declared HS '1901.10' -> heading 19.01"
+   },
+   {
+    "step": "retrieval",
+    "detail": "rule APPIV-1901 retrieved; tolerance EXCL-AN-3 (draft) attached; Art. 7 attached"
+   },
+   {
+    "step": "tolerance",
+    "detail": "basis=customs_value; 0 × 100 = 0  vs  15 × 60000.00 = 900000.00; status=unclear"
+   },
+   {
+    "step": "article7",
+    "detail": "status=met"
+   }
+  ],
+  "requirements": [
+   {
+    "requirement": "The product is in HS heading 19.01.",
+    "evidence": "The declared HS code is 1901.10. The product description fits heading 19.01: “Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons”.",
+    "status": "met",
+    "source": "Appendix IV, heading 19.01",
+    "rule_ids": [
+     "APPIV-1901",
+     "A2-10"
+    ]
+   },
+   {
+    "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
+    "evidence": "Cereal-based premix preparation may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.",
+    "status": "unclear",
+    "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
+    "rule_ids": [
+     "APPIV-1901",
+     "EXCL-AN-3"
+    ]
+   },
+   {
+    "requirement": "The work done in Ghana is more than simple operations such as mixing or packing.",
+    "evidence": "These steps in Ghana are more than simple operations: roasting of millet and soya, cooking by extrusion and drum drying of the cooked paste.",
+    "status": "met",
+    "source": "Annex 2, Art. 7",
+    "rule_ids": [
+     "A2-7-1",
+     "A2-7-3"
+    ]
+   },
+   {
+    "requirement": "No ingredient comes from food aid.",
+    "evidence": "The production notes state that no ingredient comes from food aid.",
+    "status": "met",
+    "source": "Annex 2, Art. 7(2)",
+    "rule_ids": [
+     "A2-7-2"
+    ]
+   },
+   {
+    "requirement": "There is proof of origin for local and AfCFTA ingredients.",
+    "evidence": "Supplier declarations or certificates are on file for 2 of 2 ingredients from Ghana or other AfCFTA countries.",
+    "status": "met",
+    "source": "Annex 2, Art. 31 and Appendix III",
+    "rule_ids": [
+     "A2-31-1",
+     "A2-APPIII-A"
+    ]
+   }
+  ],
+  "missing_info_request": "Dear Nyame Grains Ltd,\n\nThank you for your documents. To complete the pre-check, please send us the items below:\n1. Send the customs entry or supplier invoice that shows the value of cereal-based premix preparation.\n\nThe pre-check is indicative only. GRA Customs and the National AfCFTA Approval Committee make the official decision.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
+  "folder": {
+   "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
+   "boxes": [
+    {
+     "box": 1,
+     "rule_id": "APPI-BOX-1",
+     "value": {
+      "name": "Nyame Grains Ltd",
+      "address": "Plot 97, Light Industrial Area, Accra, Ghana",
+      "registration_no": "GEPA/EXP/2026/3798"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 2,
+     "rule_id": "APPI-BOX-2",
+     "value": {
+      "name": "Kilimanjaro Foods Ltd",
+      "address": "146 Avenue de la Paix, Dakar",
+      "country": "Senegal"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 3,
+     "rule_id": "APPI-BOX-3",
+     "value": "Completed by the issuing authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 4,
+     "rule_id": "APPI-BOX-4",
+     "value": "Road – truck AS 3684-25, via Aflao border",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 5,
+     "rule_id": "APPI-BOX-5",
+     "value": {
+      "marks": "NG/SEN/1-2400",
+      "quantity": "2400",
+      "unit": "cartons"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 6,
+     "rule_id": "APPI-BOX-6",
+     "value": {
+      "invoice_no": "EXP-9247",
+      "date": "2026-10-15",
+      "value": "64800.00",
+      "currency": "GHS",
+      "incoterm": "CPT"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 7,
+     "rule_id": "APPI-BOX-7",
+     "value": "100 cartons",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 8,
+     "rule_id": "APPI-BOX-8",
+     "value": "Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 9,
+     "rule_id": "APPI-BOX-9",
+     "value": "1050",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 10,
+     "rule_id": "APPI-BOX-10",
+     "value": "1050 kg",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 11,
+     "rule_id": "APPI-BOX-11",
+     "value": "1901.10",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 12,
+     "rule_id": "APPI-BOX-12",
+     "value": null,
+     "filled_by": "tool",
+     "indicative": true,
+     "note": "No origin criteria code proposed while the result is 'Further information required'.",
+     "missing": false
+    },
+    {
+     "box": 13,
+     "rule_id": "APPI-BOX-13",
+     "value": "To be completed and signed by the exporter (not signed by the tool)",
+     "filled_by": "exporter",
+     "missing": false
+    },
+    {
+     "box": 14,
+     "rule_id": "APPI-BOX-14",
+     "value": "Completed by the Designated Competent Authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 15,
+     "rule_id": "APPI-BOX-15",
+     "value": "Completed by the Customs officer at the port of clearance or exit",
+     "filled_by": "customs",
+     "missing": false
+    }
+   ],
+   "readiness": [
+    {
+     "item": "Value missing or unreadable for 'Cereal-based premix preparation'",
+     "status": "open (major)",
+     "rule_id": "A2-1-y"
+    },
+    {
+     "item": "Keep supporting documents (production, costs, origin of all materials, shipment)",
+     "status": "check",
+     "rule_id": "A2-22"
+    }
+   ]
+  }
+ },
+ "explanation": {
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Cereal-based premix preparation may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.\n\nWhat to do next:\n- Send the customs entry or supplier invoice that shows the value of cereal-based premix preparation.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Prototype transcription (synthetic documents)",
+  "citation_check": {
+   "ok": true,
+   "valid": [
+    "heading 19.01"
+   ],
+   "rejected": []
+  }
+ },
+ "expected": {
+  "case_id": "T5b",
+  "test": 5,
+  "case_type": "Key assumption",
+  "product": "Infant cereal",
+  "declared_hs": "1901.10",
+  "outcome": "Further information required",
+  "sub_reasons": [
+   "missing"
+  ],
+  "rule_1901": "unclear",
+  "share_percent": null,
+  "article7": "met",
+  "box12": null,
+  "derivation": "The value of the only imported heading 19.01 ingredient cannot be read. The tool must not use zero. Result: further information required (missing).",
+  "rule_ids": [
+   "APPIV-1901",
+   "EXCL-AN-3",
+   "A2-7-1",
+   "A2-1-y"
+  ],
+  "checked_by_1": "",
+  "checked_on_1": "",
+  "verdict_1": "",
+  "checked_by_2": "",
+  "checked_on_2": "",
+  "verdict_2": "",
+  "notes": "",
+  "expected_findings": [
+   {
+    "defect": "D05_unreadable_cost_1901",
+    "category": "value",
+    "severity": "major"
+   }
+  ]
+ },
+ "comparison": {
+  "outcome_correct": true,
+  "expected_outcome": "Further information required",
+  "expected_sub_reasons": [
+   "missing"
+  ],
+  "detected": [
+   "D05_unreadable_cost_1901"
+  ],
+  "missed": [],
+  "false_alarms": []
+ },
+ "transcription": {
+  "fields": 35,
+  "correct": 33,
+  "flagged_unreadable": 2,
+  "wrong": 0,
+  "errors": []
+ },
+ "set": "fixed"
+}

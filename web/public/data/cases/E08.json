@@ -1,0 +1,839 @@
+{
+ "case_id": "E08",
+ "meta": {
+  "case_id": "E08",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "E08",
+   "product": "millet_porridge_mix",
+   "share_pct": "0",
+   "defects": [
+    "D12_doubtful_product_hs"
+   ],
+   "process": "substantive",
+   "language": "en",
+   "format": "typed",
+   "messiness": 0.3,
+   "scenario": "The product description reads like plain millet flour."
+  },
+  "defects": [
+   "D12_doubtful_product_hs"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": []
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Sika Agro-Processing Ltd\nAddress: Plot 44, Light Industrial Area, Koforidua, Ghana\nPhone: +233 32 817 5608\nTIN: C0014998071\nRegistration no: GEPA/EXP/2026/4687\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Sika Agro-Processing Ltd\nProduct: Millet flour, ground millet only, no other ingredient, 500 g bags\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2668-89\nPrepared by: Production manager, Sika Agro-Processing Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 600 | kg | 3580.59 | 3,580.59 | GHS | Akatsi Grains Ltd | Ghana | Chapter 10 | Ghana\nI2 | Soya beans | 200 | kg | 1512.95 | 1512.95 | GHS | Ejura Agro Traders | Ghana | Chapter 12 | Ghana\nI3 | Cane sugar | 120 | kg | 959.05 | 959.05 | Ghc | Ségou Sugar SARL | Mali | Chapter 17 | AfCFTA State Party\nI4 | Skimmed milk powder | 80 | Kg | 1274.72 | 1172.74 | GHS | Paraná Dairy Ltda | Brazil | Chapter 4 | Imported (non-State Party)\nPACKAGING\nP1 | Printed plastic pouch, 500 g | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "appendix_iii_a",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Grains Ltd\nCountry of origin: Ghana\nInvoice no: AKA-66598\nDate: 2026-08-06\nBuyer: Sika Agro-Processing Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 5.97 GHS\nCustoms value: 3580.59 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ejura Agro Traders\nCountry of origin: Ghana\nInvoice no: EJU-50232\nDate: 2026-08-11\nBuyer: Sika Agro-Processing Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 7.56 GHS\nCustoms value: 1512.95 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I3",
+   "type": "certificate_of_origin",
+   "input_id": "I3",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Ségou Sugar SARL\nCountry of origin: Mali\nInvoice no: SÉG-19057\nDate: 2026-09-07\nBuyer: Sika Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 7.99 GHS\nCustoms value: 959.05 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I4",
+   "type": "supplier_invoice",
+   "input_id": "I4",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Dairy Ltda\nCountry of origin: Brazil\nInvoice no: PAR-54587\nDate: 2026-07-06\nBuyer: Sika Agro-Processing Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 15.93 GHS\nCustoms value: 1274.72 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2668-89\n1. Cleaning of millet – Factory, Ghana\n   Equipment: vibrating sieve and destoner\n2. Roasting of millet and soya – Factory, Ghana\n   Equipment: rotary drum roaster, 300 kg/h\n3. Cooking by extrusion – Factory, Ghana\n   Equipment: twin-screw cooking extruder\n4. Drum drying of the cooked paste – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n5. Simple grinding – Factory, Ghana\n   Equipment: hammer mill\n6. Simple mixing with sugar and milk powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n7. Filling into pouches – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2668-89\nBatch: 2000 pouches\nMaterials: 7327.31 GHS\nPackaging: 1267.27 GHS\nDirect labour: 3801.81 GHS\nEnergy and water: 1900.90 GHS\nFactory overheads: 2534.54 GHS\nMargin: 3168.17 GHS\nEx-works price per batch: 20,000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-8318\nDate: 2026-10-15\nExporter: Sika Agro-Processing Ltd\nExporter TIN: C0014998071\nConsignee: Teranga Foods Ltd\nConsignee address: 108 Market Road, Lomé\nDestination: Togo\nGoods: Millet flour, ground millet only, no other ingredient, 500 g bags\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: SA/TOG/1-2000\nPackages: 100 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+  }
+ ],
+ "adapter": {
+  "mode": "stub",
+  "label": "Prototype transcription (synthetic documents)",
+  "adapter_version": "1.2.0",
+  "field_tags": [
+   {
+    "field": "exporter.registration_no",
+    "status": "stated",
+    "snippet": "GEPA/EXP/2026/4687",
+    "doc_id": "DOC-EXP"
+   },
+   {
+    "field": "product.declared_hs",
+    "status": "stated",
+    "snippet": "Declared HS: 1901.90",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Product: Millet flour, ground millet only, no other ingredient, 500 g bags",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.customs_value",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … 3580.59",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.fob_value",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … 3,580.59",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.hs_code",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … Chapter 10",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.origin_class",
+    "status": "stated",
+    "snippet": "I1 | Millet grain | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.customs_value",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … 1512.95",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.fob_value",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … 1512.95",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.hs_code",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … Chapter 12",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I2.origin_class",
+    "status": "stated",
+    "snippet": "I2 | Soya beans | … Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.customs_value",
+    "status": "stated",
+    "snippet": "I3 | Cane sugar | … 959.05",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.fob_value",
+    "status": "stated",
+    "snippet": "I3 | Cane sugar | … 959.05",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.hs_code",
+    "status": "stated",
+    "snippet": "I3 | Cane sugar | … Chapter 17",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I3.origin_class",
+    "status": "stated",
+    "snippet": "I3 | Cane sugar | … AfCFTA State Party",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.customs_value",
+    "status": "stated",
+    "snippet": "I4 | Skimmed milk powder | … 1274.72",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.fob_value",
+    "status": "stated",
+    "snippet": "I4 | Skimmed milk powder | … 1172.74",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.hs_code",
+    "status": "stated",
+    "snippet": "I4 | Skimmed milk powder | … Chapter 4",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I4.origin_class",
+    "status": "stated",
+    "snippet": "I4 | Skimmed milk powder | … Imported (non-State Party)",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P1.origin",
+    "status": "stated",
+    "snippet": "P1 | Printed plastic pouch, 500 g | retail | Ex-Chapter 39 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "P2.origin",
+    "status": "stated",
+    "snippet": "P2 | Corrugated carton (20 pouches) | transport | Chapter 48 | Ghana",
+    "doc_id": "DOC-BOM"
+   },
+   {
+    "field": "I1.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I1"
+   },
+   {
+    "field": "I2.declaration",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I2"
+   },
+   {
+    "field": "I3.declaration",
+    "status": "stated",
+    "snippet": "AfCFTA CERTIFICATE OF ORIGIN – COPY",
+    "doc_id": "DOC-SUP-I3"
+   },
+   {
+    "field": "I4.declaration",
+    "status": "stated",
+    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
+    "doc_id": "DOC-SUP-I4"
+   },
+   {
+    "field": "S1.operation_code",
+    "status": "inferred",
+    "snippet": "1. Cleaning of millet – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S2.operation_code",
+    "status": "inferred",
+    "snippet": "2. Roasting of millet and soya – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S3.operation_code",
+    "status": "inferred",
+    "snippet": "3. Cooking by extrusion – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S4.operation_code",
+    "status": "inferred",
+    "snippet": "4. Drum drying of the cooked paste – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S5.operation_code",
+    "status": "inferred",
+    "snippet": "5. Simple grinding – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S6.operation_code",
+    "status": "inferred",
+    "snippet": "6. Simple mixing with sugar and milk powder – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "S7.operation_code",
+    "status": "inferred",
+    "snippet": "7. Filling into pouches – Factory, Ghana",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "inputs.food_aid",
+    "status": "stated",
+    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "doc_id": "DOC-PROC"
+   },
+   {
+    "field": "ex_works_price",
+    "status": "stated",
+    "snippet": "Ex-works price per batch: 20,000.00 GHS",
+    "doc_id": "DOC-COST"
+   },
+   {
+    "field": "product.description",
+    "status": "stated",
+    "snippet": "Goods: Millet flour, ground millet only, no other ingredient, 500 g bags",
+    "doc_id": "DOC-INV"
+   },
+   {
+    "field": "product.declared_hs",
+    "status": "inferred",
+    "snippet": "HS plausibility: doubt",
+    "doc_id": "DOC-BOM"
+   }
+  ]
+ },
+ "extracted": {
+  "synthetic": true,
+  "exporter": {
+   "name": "Sika Agro-Processing Ltd",
+   "address": "Plot 44, Light Industrial Area, Koforidua, Ghana",
+   "registration_no": "GEPA/EXP/2026/4687"
+  },
+  "consignee": {
+   "name": "Teranga Foods Ltd",
+   "address": "108 Market Road, Lomé",
+   "country": "Togo"
+  },
+  "product": {
+   "description": "Millet flour, ground millet only, no other ingredient, 500 g bags",
+   "declared_hs": "1901.90",
+   "quantity": "2000",
+   "unit": "pouches",
+   "gross_weight_kg": "1080",
+   "marks": "SA/TOG/1-2000",
+   "packaging_count": "100 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1080 kg",
+   "hs_doubt": true,
+   "hs_doubt_reason": "the description reads like a single ground cereal, not a food preparation"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Millet grain",
+    "quantity": {
+     "value": "600",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3580.59",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3580.59",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Akatsi Grains Ltd",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "Chapter 10",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I2",
+    "description": "Soya beans",
+    "quantity": {
+     "value": "200",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1512.95",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1512.95",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ejura Agro Traders",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "hs_code": "Chapter 12",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I3",
+    "description": "Cane sugar",
+    "quantity": {
+     "value": "120",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "959.05",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "959.05",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ségou Sugar SARL",
+    "supplier_country": "Mali",
+    "origin_class": "state_party",
+    "hs_code": "Chapter 17",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": "certificate_of_origin",
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   },
+   {
+    "id": "I4",
+    "description": "Skimmed milk powder",
+    "quantity": {
+     "value": "80",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1274.72",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1172.74",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Paraná Dairy Ltda",
+    "supplier_country": "Brazil",
+    "origin_class": "non_state_party",
+    "hs_code": "Chapter 4",
+    "hs_field": {
+     "status": "stated"
+    },
+    "declaration": {
+     "type": null,
+     "present": true
+    },
+    "conflicts": [],
+    "food_aid": false
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Cleaning of millet",
+    "operation_code": "cleaning_washing",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S2",
+    "description": "Roasting of millet and soya",
+    "operation_code": "roasting_toasting",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S3",
+    "description": "Cooking by extrusion",
+    "operation_code": "cooking_extrusion",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S4",
+    "description": "Drum drying of the cooked paste",
+    "operation_code": "drying_drum_spray",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S5",
+    "description": "Simple grinding",
+    "operation_code": "simple_grinding",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S6",
+    "description": "Simple mixing with sugar and milk powder",
+    "operation_code": "simple_mixing",
+    "location_country": "Ghana",
+    "status": "inferred"
+   },
+   {
+    "id": "S7",
+    "description": "Filling into pouches",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana",
+    "status": "inferred"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Printed plastic pouch, 500 g",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (20 pouches)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-8318",
+   "date": "2026-10-15",
+   "value": "21600.00",
+   "currency": "GHS",
+   "incoterm": "CPT"
+  },
+  "ex_works_price": {
+   "amount": "20000.00",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "destination_country": "Togo",
+  "case_id": "E08"
+ },
+ "result": {
+  "engine_version": "1.2.0",
+  "rulebase_version": "1.1.0",
+  "case_id": "E08",
+  "valuation_basis": "customs_value",
+  "disclaimer": "Synthetic data – prototype – indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.",
+  "outcome": {
+   "label": "Further information required",
+   "sub_reasons": [
+    "out_of_rule_base"
+   ]
+  },
+  "components": {
+   "rule_1901": {
+    "status": "not assessed"
+   },
+   "tolerance": {
+    "status": "not assessed"
+   },
+   "article7": {
+    "status": "not assessed"
+   },
+   "food_aid": {
+    "status": "no food-aid input declared"
+   },
+   "evidence": {
+    "status": "gaps affect the result",
+    "critical": 0,
+    "major": 1,
+    "minor": 0
+   },
+   "hs_confidence": {
+    "declared_hs": "1901.90",
+    "heading": "19.01",
+    "status": "doubt flagged – routed to adviser"
+   }
+  },
+  "findings": [
+   {
+    "id": "F1",
+    "severity": "major",
+    "category": "hs",
+    "title": "Doubt whether the product belongs to heading 19.01",
+    "input_ref": null,
+    "explanation": "The product description does not clearly fit heading 19.01: the description reads like a single ground cereal, not a food preparation. The tool does not select another heading.",
+    "rule_ids": [
+     "APPIV-1901",
+     "APPIV-N2.1",
+     "A2-10"
+    ],
+    "provisions": [
+     "Appendix IV, heading 19.01, Column 3",
+     "Appendix IV, Introductory Note 2.1",
+     "Annex 2, Art. 10"
+    ],
+    "fix": "Adviser verifies the HS classification (blueprint: 'HS-code correct?'); re-run with the confirmed code.",
+    "sub_reason": "out_of_rule_base",
+    "sme_action": "Confirm the HS code of your product with the adviser and send a full product description."
+   }
+  ],
+  "notes": [],
+  "trace": [
+   {
+    "step": "retrieval",
+    "detail": "declared HS '1901.90' -> heading 19.01"
+   }
+  ],
+  "requirements": [
+   {
+    "requirement": "The product is in HS heading 19.01.",
+    "evidence": "The declared HS code is 1901.90, but the description “Millet flour, ground millet only, no other ingredient, 500 g bags” does not clearly fit heading 19.01.",
+    "status": "unclear",
+    "source": "Appendix IV, heading 19.01",
+    "rule_ids": [
+     "APPIV-1901",
+     "A2-10"
+    ]
+   },
+   {
+    "requirement": "No ingredient comes from food aid.",
+    "evidence": "The production notes state that no ingredient comes from food aid.",
+    "status": "met",
+    "source": "Annex 2, Art. 7(2)",
+    "rule_ids": [
+     "A2-7-2"
+    ]
+   }
+  ],
+  "missing_info_request": null,
+  "folder": {
+   "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
+   "boxes": [
+    {
+     "box": 1,
+     "rule_id": "APPI-BOX-1",
+     "value": {
+      "name": "Sika Agro-Processing Ltd",
+      "address": "Plot 44, Light Industrial Area, Koforidua, Ghana",
+      "registration_no": "GEPA/EXP/2026/4687"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 2,
+     "rule_id": "APPI-BOX-2",
+     "value": {
+      "name": "Teranga Foods Ltd",
+      "address": "108 Market Road, Lomé",
+      "country": "Togo"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 3,
+     "rule_id": "APPI-BOX-3",
+     "value": "Completed by the issuing authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 4,
+     "rule_id": "APPI-BOX-4",
+     "value": "Sea – MV Gulf Trader, from Tema port",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 5,
+     "rule_id": "APPI-BOX-5",
+     "value": {
+      "marks": "SA/TOG/1-2000",
+      "quantity": "2000",
+      "unit": "pouches"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 6,
+     "rule_id": "APPI-BOX-6",
+     "value": {
+      "invoice_no": "EXP-8318",
+      "date": "2026-10-15",
+      "value": "21600.00",
+      "currency": "GHS",
+      "incoterm": "CPT"
+     },
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 7,
+     "rule_id": "APPI-BOX-7",
+     "value": "100 cartons",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 8,
+     "rule_id": "APPI-BOX-8",
+     "value": "Millet flour, ground millet only, no other ingredient, 500 g bags",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 9,
+     "rule_id": "APPI-BOX-9",
+     "value": "1080",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 10,
+     "rule_id": "APPI-BOX-10",
+     "value": "1080 kg",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 11,
+     "rule_id": "APPI-BOX-11",
+     "value": "1901.90",
+     "filled_by": "tool",
+     "missing": false
+    },
+    {
+     "box": 12,
+     "rule_id": "APPI-BOX-12",
+     "value": null,
+     "filled_by": "tool",
+     "indicative": true,
+     "note": "No origin criteria code proposed while the result is 'Further information required'.",
+     "missing": false
+    },
+    {
+     "box": 13,
+     "rule_id": "APPI-BOX-13",
+     "value": "To be completed and signed by the exporter (not signed by the tool)",
+     "filled_by": "exporter",
+     "missing": false
+    },
+    {
+     "box": 14,
+     "rule_id": "APPI-BOX-14",
+     "value": "Completed by the Designated Competent Authority",
+     "filled_by": "authority",
+     "missing": false
+    },
+    {
+     "box": 15,
+     "rule_id": "APPI-BOX-15",
+     "value": "Completed by the Customs officer at the port of clearance or exit",
+     "filled_by": "customs",
+     "missing": false
+    }
+   ],
+   "readiness": [
+    {
+     "item": "Doubt whether the product belongs to heading 19.01",
+     "status": "open (major)",
+     "rule_id": "APPIV-1901"
+    },
+    {
+     "item": "Keep supporting documents (production, costs, origin of all materials, shipment)",
+     "status": "check",
+     "rule_id": "A2-22"
+    }
+   ]
+  }
+ },
+ "explanation": {
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- The declared HS code is 1901.90, but the description “Millet flour, ground millet only, no other ingredient, 500 g bags” does not clearly fit heading 19.01.\n\nWhat to do next:\n- Confirm the HS code of your product with the adviser and send a full product description.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Prototype transcription (synthetic documents)",
+  "citation_check": {
+   "ok": true,
+   "valid": [
+    "heading 19.01"
+   ],
+   "rejected": []
+  }
+ },
+ "expected": {
+  "case_id": "E08",
+  "defects": [
+   "D12_doubtful_product_hs"
+  ],
+  "expected_findings": [
+   {
+    "defect": "D12_doubtful_product_hs",
+    "severity": "major",
+    "category": "hs",
+    "effect": "out_of_rule_base",
+    "rule": "APPIV-1901"
+   }
+  ],
+  "outcome": "Further information required",
+  "sub_reasons": [
+   "out_of_rule_base"
+  ],
+  "rule_1901": "not assessed",
+  "share_percent": null,
+  "box12": null
+ },
+ "comparison": {
+  "outcome_correct": true,
+  "expected_outcome": "Further information required",
+  "expected_sub_reasons": [
+   "out_of_rule_base"
+  ],
+  "detected": [
+   "D12_doubtful_product_hs"
+  ],
+  "missed": [],
+  "false_alarms": []
+ },
+ "transcription": {
+  "fields": 28,
+  "correct": 28,
+  "flagged_unreadable": 0,
+  "wrong": 0,
+  "errors": []
+ },
+ "set": "eval"
+}

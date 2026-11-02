@@ -1,0 +1,334 @@
+{
+ "meta": {
+  "case_id": "T3c",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "T3c",
+   "test": 3,
+   "case_type": "Edge",
+   "product": "bread_mix",
+   "share_pct": "15.1",
+   "exw": "40000",
+   "origins": {
+    "wheat": "non_state_party",
+    "malt": "ghana",
+    "baking": "ghana",
+    "sugar": "non_state_party"
+   },
+   "scenario": "Malted bread mix (HS 1901.20). Imported bakery premix of heading 19.01 = 15.1%."
+  },
+  "defects": [],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": [
+   "15.1"
+  ]
+ },
+ "truth": {
+  "case_id": "T3c",
+  "synthetic": true,
+  "exporter": {
+   "name": "Kente Food Works Ltd",
+   "address": "Plot 1, Light Industrial Area, Takoradi, Ghana",
+   "registration_no": "GEPA/EXP/2026/3041",
+   "registration_status": "Registered company (Office of the Registrar of Companies)",
+   "tin": "C0030915651",
+   "phone": "+233 32 972 6580"
+  },
+  "consignee": {
+   "name": "Kilimanjaro Foods Ltd",
+   "address": "168 Industrial Layout, Ouagadougou",
+   "country": "Burkina Faso"
+  },
+  "destination_country": "Burkina Faso",
+  "product": {
+   "description": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+   "declared_hs": "1901.20",
+   "quantity": "1500",
+   "unit": "bags of 1 kg",
+   "gross_weight_kg": "1560",
+   "marks": "KF/BUR/1-1500",
+   "packaging_count": "150 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1560 kg"
+  },
+  "ex_works_price": {
+   "amount": "40000",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Wheat flour",
+    "hs_code": "11.01",
+    "quantity": {
+     "value": "1100",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "9569.88",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "8804.29",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Deccan Flour Mills Pvt Ltd",
+    "supplier_country": "Belgium",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Malt, not roasted",
+    "hs_code": "11.07",
+    "quantity": {
+     "value": "250",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2464.84",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2464.84",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Nkwanta Malt Enterprise",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I3",
+    "description": "Baking powder",
+    "hs_code": "21.02",
+    "quantity": {
+     "value": "40",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "725.43",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "725.43",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ejura Bakery Supplies Traders",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I4",
+    "description": "Cane sugar",
+    "hs_code": "Chapter 17",
+    "quantity": {
+     "value": "80",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1342.28",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1234.90",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Paraná Sugar Ltda",
+    "supplier_country": "Belgium",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "X1",
+    "description": "Bakery premix preparation",
+    "hs_code": "1901.20",
+    "quantity": {
+     "value": "108",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "6040.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "6040.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Lowlands Malt Ingredients GmbH",
+    "supplier_country": "India",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S2",
+    "description": "Drum drying of the malt extract with part of the flour",
+    "operation_code": "drying_drum_spray",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S3",
+    "description": "Simple mixing with flour, sugar and baking powder",
+    "operation_code": "simple_mixing",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S4",
+    "description": "Filling into bags",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Printed paper bag, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (10 bags)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-7496",
+   "date": "2026-10-15",
+   "value": "43200.00",
+   "currency": "GHS",
+   "incoterm": "EXW"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Kente Food Works Ltd\nAddress: Plot 1, Light Industrial Area, Takoradi, Ghana\nPhone: +233 32 972 6580\nTIN: C0030915651\nRegistration no: GEPA/EXP/2026/3041\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Kente Food Works Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2656-53\nPrepared by: Production manager, Kente Food Works Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Wheat flour | 1100 | kg | 9569.88 | 8804.29 | GHS | Deccan Flour Mills Pvt Ltd | Belgium | 11.01 | Imported (non-State Party)\nI2 | Malt, not roasted | 250 | kg | 2464.84 | 2,464.84 | GHS | Nkwanta Malt Enterprise | Ghana | 11.07 | Ghana\nI3 | Baking powder | 40 | kg | 725.43 | 725.43 | Ghc | Ejura Bakery Supplies Traders | Ghana | 21.02 | Ghana\nI4 | Cane sugar | 80 | kg | 1342.28 | 1234.90 | GH₵ | Paraná Sugar Ltda | Belgium | Chapter 17 | Imported (non-State Party)\nX1 | Bakery premix preparation | 108 | kg | 6,040.00 | 6040.00 | GHS | Lowlands Malt Ingredients GmbH | India | 1901.20 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "supplier_invoice",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Flour Mills Pvt Ltd\nCountry of origin: Belgium\nInvoice no: DEC-71891\nDate: 2026-07-17\nBuyer: Kente Food Works Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 8.70 GHS\nCustoms value: 9569.88 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Malt Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-78312\nDate: 2026-09-24\nBuyer: Kente Food Works Ltd\nGoods: Malt, not roasted\nQuantity: 250 kg\nUnit price: 9.86 GHS\nInvoice value: 2464.84 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I3",
+   "type": "appendix_iii_a",
+   "input_id": "I3",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ejura Bakery Supplies Traders\nCountry of origin: Ghana\nInvoice no: EJU-94139\nDate: 2026-09-19\nBuyer: Kente Food Works Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 18.14 GHS\nInvoice value: 725.43 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I4",
+   "type": "supplier_invoice",
+   "input_id": "I4",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Sugar Ltda\nCountry of origin: Belgium\nInvoice no: PAR-89835\nDate: 2026-08-23\nBuyer: Kente Food Works Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 16.78 GHS\nCustoms value: 1342.28 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-X1",
+   "type": "supplier_invoice",
+   "input_id": "X1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Malt Ingredients GmbH\nCountry of origin: India\nInvoice no: LOW-48898\nDate: 2026-07-25\nBuyer: Kente Food Works Ltd\nGoods: Bakery premix preparation\nQuantity: 108 kg\nUnit price: 55.93 GHS\nCustoms value: 6040.00 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2656-53\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Drum drying of the malt extract with part of the flour – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n3. Simple mixing with flour, sugar and baking powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n4. Filling into bags – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2656-53\nBatch: 1500 bags of 1 kg\nMaterials: 20142.43 GHS\nPackaging: 1985.76 GHS\nDirect labour: 5957.27 GHS\nEnergy and water: 2978.64 GHS\nFactory overheads: 3971.51 GHS\nMargin: 4964.39 GHS\nEx-works price per batch: 40000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-7496\nDate: 2026-10-15\nExporter: Kente Food Works Ltd\nExporter TIN: C0030915651\nConsignee: Kilimanjaro Foods Ltd\nConsignee address: 168 Industrial Layout, Ouagadougou\nDestination: Burkina Faso\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: KF/BUR/1-1500\nPackages: 150 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 43200.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+  }
+ ]
+}

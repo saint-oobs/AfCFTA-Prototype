@@ -1,0 +1,374 @@
+{
+ "meta": {
+  "case_id": "T3d",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "T3d",
+   "test": 3,
+   "case_type": "Edge",
+   "product": "bread_mix",
+   "split_1901": [
+    "8.0",
+    "8.0"
+   ],
+   "exw": "40000",
+   "origins": {
+    "wheat": "non_state_party",
+    "malt": "ghana",
+    "baking": "ghana",
+    "sugar": "non_state_party"
+   },
+   "scenario": "Malted bread mix (HS 1901.20). Two imported premix lots of heading 19.01, 8.0% each. Each lot is below 15%, together 16.0%."
+  },
+  "defects": [],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": [
+   "8.0",
+   "8.0"
+  ]
+ },
+ "truth": {
+  "case_id": "T3d",
+  "synthetic": true,
+  "exporter": {
+   "name": "Ahomka Provisions Ltd",
+   "address": "Plot 33, Light Industrial Area, Ho, Ghana",
+   "registration_no": "GEPA/EXP/2026/4976",
+   "registration_status": "Registered company (Office of the Registrar of Companies)",
+   "tin": "C0071260857",
+   "phone": "+233 24 124 4913"
+  },
+  "consignee": {
+   "name": "Lagune Wholesale Ltd",
+   "address": "115 Harbour Road, Lomé",
+   "country": "Togo"
+  },
+  "destination_country": "Togo",
+  "product": {
+   "description": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+   "declared_hs": "1901.20",
+   "quantity": "1500",
+   "unit": "bags of 1 kg",
+   "gross_weight_kg": "1560",
+   "marks": "AP/TOG/1-1500",
+   "packaging_count": "150 cartons",
+   "transport": "Road – truck GR 2708-26, from Tema",
+   "statistical_measure": "1560 kg"
+  },
+  "ex_works_price": {
+   "amount": "40000",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Wheat flour",
+    "hs_code": "11.01",
+    "quantity": {
+     "value": "1100",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "8991.85",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "8272.50",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Deccan Flour Mills Pvt Ltd",
+    "supplier_country": "New Zealand",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Malt, not roasted",
+    "hs_code": "11.07",
+    "quantity": {
+     "value": "250",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3719.54",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3719.54",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Ejura Malt Traders",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I3",
+    "description": "Baking powder",
+    "hs_code": "21.02",
+    "quantity": {
+     "value": "40",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "543.46",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "543.46",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Nkwanta Bakery Supplies Enterprise",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I4",
+    "description": "Cane sugar",
+    "hs_code": "Chapter 17",
+    "quantity": {
+     "value": "80",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "922.78",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "848.96",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Deccan Sugar Pvt Ltd",
+    "supplier_country": "New Zealand",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "X1",
+    "description": "Bakery premix preparation",
+    "hs_code": "1901.20",
+    "quantity": {
+     "value": "63",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Atlantica Bakery Ingredients GmbH (lot 1)",
+    "supplier_country": "India",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "X2",
+    "description": "Bakery premix preparation",
+    "hs_code": "1901.20",
+    "quantity": {
+     "value": "109",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3200.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Lowlands Malt Ingredients Ltd (lot 2)",
+    "supplier_country": "Belgium",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S2",
+    "description": "Drum drying of the malt extract with part of the flour",
+    "operation_code": "drying_drum_spray",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S3",
+    "description": "Simple mixing with flour, sugar and baking powder",
+    "operation_code": "simple_mixing",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S4",
+    "description": "Filling into bags",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Printed paper bag, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (10 bags)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-6951",
+   "date": "2026-10-15",
+   "value": "43200.00",
+   "currency": "GHS",
+   "incoterm": "FCA"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Ahomka Provisions Ltd\nAddress: Plot 33, Light Industrial Area, Ho, Ghana\nPhone: +233 24 124 4913\nTIN: C0071260857\nRegistration no: GEPA/EXP/2026/4976\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Ahomka Provisions Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2627-36\nPrepared by: Production manager, Ahomka Provisions Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Wheat flour | 1100 | kilos | 8991.85 | 8,272.50 | GHS | Deccan Flour Mills Pvt Ltd | New Zealand | 11.01 | Imported (non-State Party)\nI2 | Malt, not roasted | 250 | kg | 3719.54 | 3,719.54 | GHS | Ejura Malt Traders | Ghana | 11.07 | Ghana\nI3 | Baking powder | 40 | kg | 543.46 | 543.46 | GHS | Nkwanta Bakery Supplies Enterprise | Ghana | 21.02 | Ghana\nI4 | Cane sugar | 80 | kg | 922.78 | 848.96 | Ghc | Deccan Sugar Pvt Ltd | New Zealand | Chapter 17 | Imported (non-State Party)\nX1 | Bakery premix preparation | 63 | kg | 3200.00 | 3,200.00 | GHS | Atlantica Bakery Ingredients GmbH (lot 1) | India | 1901.20 | Imported (non-State Party)\nX2 | Bakery premix preparation | 109 | kg | 3200.00 | 3200.00 | GHS | Lowlands Malt Ingredients Ltd (lot 2) | Belgium | 1901.20 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "supplier_invoice",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Flour Mills Pvt Ltd\nCountry of origin: New Zealand\nInvoice no: DEC-20877\nDate: 2026-09-14\nBuyer: Ahomka Provisions Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 8.17 GHS\nCustoms value: 8991.85 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ejura Malt Traders\nCountry of origin: Ghana\nInvoice no: EJU-20576\nDate: 2026-09-04\nBuyer: Ahomka Provisions Ltd\nGoods: Malt, not roasted\nQuantity: 250 kg\nUnit price: 14.88 GHS\nInvoice value: 3719.54 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I3",
+   "type": "appendix_iii_a",
+   "input_id": "I3",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Bakery Supplies Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-95533\nDate: 2026-07-04\nBuyer: Ahomka Provisions Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 13.59 GHS\nInvoice value: 543.46 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I4",
+   "type": "supplier_invoice",
+   "input_id": "I4",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Sugar Pvt Ltd\nCountry of origin: New Zealand\nInvoice no: DEC-47222\nDate: 2026-07-08\nBuyer: Ahomka Provisions Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 11.53 GHS\nCustoms value: 922.78 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-X1",
+   "type": "supplier_invoice",
+   "input_id": "X1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Atlantica Bakery Ingredients GmbH (lot 1)\nCountry of origin: India\nInvoice no: ATL-33136\nDate: 2026-07-04\nBuyer: Ahomka Provisions Ltd\nGoods: Bakery premix preparation\nQuantity: 63 kg\nUnit price: 50.79 GHS\nCustoms value: 3200.00 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-X2",
+   "type": "supplier_invoice",
+   "input_id": "X2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Malt Ingredients Ltd (lot 2)\nCountry of origin: Belgium\nInvoice no: LOW-23530\nDate: 2026-07-24\nBuyer: Ahomka Provisions Ltd\nGoods: Bakery premix preparation\nQuantity: 109 kg\nUnit price: 29.36 GHS\nCustoms value: 3200.00 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2627-36\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Drum drying of the malt extract with part of the flour – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n3. Simple mixing with flour, sugar and baking powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n4. Filling into bags – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2627-36\nBatch: 1500 bags of 1 kg\nMaterials: 20577.63 GHS\nPackaging: 1942.24 GHS\nDirect labour: 5826.71 GHS\nEnergy and water: 2913.36 GHS\nFactory overheads: 3884.47 GHS\nMargin: 4855.59 GHS\nEx-works price per batch: 40000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-6951\nDate: 2026-10-15\nExporter: Ahomka Provisions Ltd\nExporter TIN: C0071260857\nConsignee: Lagune Wholesale Ltd\nConsignee address: 115 Harbour Road, Lomé\nDestination: Togo\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: AP/TOG/1-1500\nPackages: 150 cartons\nTransport: Road – truck GR 2708-26, from Tema\nValue: 43200.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
+  }
+ ]
+}

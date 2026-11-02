@@ -1,0 +1,444 @@
+{
+ "tests": [
+  {
+   "#": "1",
+   "case_type": "Typical",
+   "product": "Malt extract",
+   "hs": "1901.90",
+   "cases": [
+    {
+     "case_id": "T1",
+     "scenario": "Malt from Ghana. Glucose syrup from Nigeria, with a certificate of origin. Mashing and evaporation in Ghana.",
+     "expected": "Likely to qualify"
+    }
+   ]
+  },
+  {
+   "#": "2",
+   "case_type": "Typical",
+   "product": "Infant cereal",
+   "hs": "1901.10",
+   "cases": [
+    {
+     "case_id": "T2",
+     "scenario": "Imported milk powder and sugar. Soya from Togo, with a French certificate. Roasting, extrusion cooking and drum drying in Ghana.",
+     "expected": "Likely to qualify"
+    }
+   ]
+  },
+  {
+   "#": "3",
+   "case_type": "Edge",
+   "product": "Malted bread mix",
+   "hs": "1901.20",
+   "cases": [
+    {
+     "case_id": "T3a",
+     "scenario": "Imported bakery premix of heading 19.01 = 14.9% of the ex-works price.",
+     "expected": "Likely to qualify"
+    },
+    {
+     "case_id": "T3b",
+     "scenario": "Imported bakery premix of heading 19.01 = exactly 15.0%.",
+     "expected": "Likely to qualify"
+    },
+    {
+     "case_id": "T3c",
+     "scenario": "Imported bakery premix of heading 19.01 = 15.1%.",
+     "expected": "Likely not to qualify"
+    },
+    {
+     "case_id": "T3d",
+     "scenario": "Two imported premix lots of heading 19.01, 8.0% each. Each lot is below 15%, together 16.0%.",
+     "expected": "Likely not to qualify"
+    }
+   ]
+  },
+  {
+   "#": "4",
+   "case_type": "Failure",
+   "product": "Millet porridge mix",
+   "hs": "1901.90",
+   "cases": [
+    {
+     "case_id": "T4",
+     "scenario": "Only cleaning, simple grinding, simple mixing and bagging. No imported ingredient of heading 19.01.",
+     "expected": "Likely not to qualify"
+    }
+   ]
+  },
+  {
+   "#": "5",
+   "case_type": "Key assumption",
+   "product": "Infant cereal",
+   "hs": "1901.10",
+   "cases": [
+    {
+     "case_id": "T5a",
+     "scenario": "Handwritten bill of materials, French production notes and a French certificate from Burkina Faso. All values can be read.",
+     "expected": "Likely to qualify"
+    },
+    {
+     "case_id": "T5b",
+     "scenario": "Same records as T5a, but the value of the imported premix of heading 19.01 is smudged and cannot be read.",
+     "expected": "Further information required (information missing)"
+    }
+   ]
+  }
+ ],
+ "success": {
+  "tiles": [
+   {
+    "case_id": "T1",
+    "set": "Test cases",
+    "result": "Likely to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T2",
+    "set": "Test cases",
+    "result": "Likely to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T3a",
+    "set": "Test cases",
+    "result": "Likely to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T3b",
+    "set": "Test cases",
+    "result": "Likely to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T3c",
+    "set": "Test cases",
+    "result": "Likely not to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T3d",
+    "set": "Test cases",
+    "result": "Likely not to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T4",
+    "set": "Test cases",
+    "result": "Likely not to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T5a",
+    "set": "Test cases",
+    "result": "Likely to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "T5b",
+    "set": "Test cases",
+    "result": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E01",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E02",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E03",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E04",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E05",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E06",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E07",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E08",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "out_of_rule_base"
+    ],
+    "agrees": true
+   },
+   {
+    "case_id": "E09",
+    "set": "Evaluation set",
+    "result": "Likely not to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "E10",
+    "set": "Evaluation set",
+    "result": "Likely not to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "E11",
+    "set": "Evaluation set",
+    "result": "Likely to qualify",
+    "sub_reasons": [],
+    "agrees": true
+   },
+   {
+    "case_id": "E12",
+    "set": "Evaluation set",
+    "result": "Further information required",
+    "sub_reasons": [
+     "contradictory",
+     "missing"
+    ],
+    "agrees": true
+   }
+  ],
+  "deficiencies": [
+   {
+    "type": "Imported 19.01 ingredients above 15%",
+    "count": 3
+   },
+   {
+    "type": "Value missing, unreadable or in another currency",
+    "count": 3
+   },
+   {
+    "type": "Proof of origin missing",
+    "count": 3
+   },
+   {
+    "type": "Documents do not agree",
+    "count": 3
+   },
+   {
+    "type": "HS code missing or in doubt",
+    "count": 2
+   },
+   {
+    "type": "Only simple operations",
+    "count": 1
+   },
+   {
+    "type": "Production step not clear",
+    "count": 1
+   },
+   {
+    "type": "Ingredient from food aid",
+    "count": 1
+   },
+   {
+    "type": "Origin of packing not stated",
+    "count": 1
+   },
+   {
+    "type": "Form data missing",
+    "count": 1
+   }
+  ],
+  "severity": {
+   "critical": 5,
+   "major": 11,
+   "minor": 3
+  },
+  "confusion": {
+   "Likely to qualify": {
+    "Likely to qualify": 6,
+    "Likely not to qualify": 0,
+    "Further information required": 0
+   },
+   "Likely not to qualify": {
+    "Likely to qualify": 0,
+    "Likely not to qualify": 5,
+    "Further information required": 0
+   },
+   "Further information required": {
+    "Likely to qualify": 0,
+    "Likely not to qualify": 0,
+    "Further information required": 10
+   }
+  },
+  "labels": [
+   "Likely to qualify",
+   "Likely not to qualify",
+   "Further information required"
+  ],
+  "transcription": [
+   {
+    "group": "Typed records",
+    "fields": 413,
+    "correct": 413,
+    "flagged_unreadable": 0,
+    "wrong": 0
+   },
+   {
+    "group": "Handwritten or French records",
+    "fields": 217,
+    "correct": 213,
+    "flagged_unreadable": 4,
+    "wrong": 0
+   }
+  ]
+ },
+ "evaluation_cases": [
+  {
+   "case_id": "E01",
+   "product": "malt_extract",
+   "scenario": "Malt extract with a lot from Togo. The certificate of origin for that lot is missing.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "information missing"
+  },
+  {
+   "case_id": "E02",
+   "product": "bread_mix",
+   "scenario": "Bread mix. The value of the imported premix is smudged.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "information missing"
+  },
+  {
+   "case_id": "E03",
+   "product": "millet_porridge_mix",
+   "scenario": "Porridge mix. The production notes only say 'processed at the factory'.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "information missing"
+  },
+  {
+   "case_id": "E04",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal. The premix is in kg in the bill of materials but in bags on the invoice.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "documents do not agree"
+  },
+  {
+   "case_id": "E05",
+   "product": "malt_extract",
+   "scenario": "Malt extract. The bill of materials and the supplier invoice show different values for the concentrate.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "documents do not agree"
+  },
+  {
+   "case_id": "E06",
+   "product": "bread_mix",
+   "scenario": "Bread mix. The premix value is in EUR, the ex-works price in GHS.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "documents do not agree"
+  },
+  {
+   "case_id": "E07",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal. The premix has the HS code of malt (11.07).",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "documents do not agree"
+  },
+  {
+   "case_id": "E08",
+   "product": "millet_porridge_mix",
+   "scenario": "The product description reads like plain millet flour.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "HS code in doubt"
+  },
+  {
+   "case_id": "E09",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal. The millet comes from a food assistance programme.",
+   "expected": "Likely not to qualify",
+   "observed": "Likely not to qualify",
+   "sub": ""
+  },
+  {
+   "case_id": "E10",
+   "product": "malt_extract",
+   "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated.",
+   "expected": "Likely not to qualify",
+   "observed": "Likely not to qualify",
+   "sub": ""
+  },
+  {
+   "case_id": "E11",
+   "product": "bread_mix",
+   "scenario": "Bread mix. No exporter registration number; the origin of one ingredient is not stated.",
+   "expected": "Likely to qualify",
+   "observed": "Likely to qualify",
+   "sub": ""
+  },
+  {
+   "case_id": "E12",
+   "product": "malt_extract",
+   "scenario": "Malt extract. A certificate is missing and the units of the concentrate do not agree.",
+   "expected": "Further information required",
+   "observed": "Further information required",
+   "sub": "documents do not agree, information missing"
+  }
+ ]
+}

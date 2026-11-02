@@ -1,0 +1,289 @@
+{
+ "derived_by": "answer_key/derive.py (independent of engine)",
+ "rules_threshold_percent": "15",
+ "cases": [
+  {
+   "case_id": "E01",
+   "defects": [
+    "D01_missing_supplier_declaration"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D01_missing_supplier_declaration",
+     "severity": "major",
+     "category": "origin_proof",
+     "effect": "missing",
+     "rule": "A2-31-1"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "missing"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E02",
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D05_unreadable_cost_1901",
+     "severity": "major",
+     "category": "value",
+     "effect": "missing",
+     "rule": "A2-1-y"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "missing"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E03",
+   "defects": [
+    "D11_ambiguous_process"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D11_ambiguous_process",
+     "severity": "major",
+     "category": "process",
+     "effect": "missing",
+     "rule": "A2-7-3"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "missing"
+   ],
+   "rule_1901": "met",
+   "share_percent": "0.0",
+   "box12": null
+  },
+  {
+   "case_id": "E04",
+   "defects": [
+    "D03_inconsistent_units_1901"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D03_inconsistent_units_1901",
+     "severity": "major",
+     "category": "consistency",
+     "effect": "contradictory",
+     "rule": "A2-22"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "contradictory"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E05",
+   "defects": [
+    "D04_invoice_value_mismatch"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D04_invoice_value_mismatch",
+     "severity": "major",
+     "category": "consistency",
+     "effect": "contradictory",
+     "rule": "A2-22"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "contradictory"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E06",
+   "defects": [
+    "D14_currency_mismatch_1901"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D14_currency_mismatch_1901",
+     "severity": "major",
+     "category": "value",
+     "effect": "contradictory",
+     "rule": "A2-1-y"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "contradictory"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E07",
+   "defects": [
+    "D02_wrong_input_hs"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D02_wrong_input_hs",
+     "severity": "major",
+     "category": "hs",
+     "effect": "contradictory",
+     "rule": "APPIV-1901"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "contradictory"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E08",
+   "defects": [
+    "D12_doubtful_product_hs"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D12_doubtful_product_hs",
+     "severity": "major",
+     "category": "hs",
+     "effect": "out_of_rule_base",
+     "rule": "APPIV-1901"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "out_of_rule_base"
+   ],
+   "rule_1901": "not assessed",
+   "share_percent": null,
+   "box12": null
+  },
+  {
+   "case_id": "E09",
+   "defects": [
+    "D09_food_aid_input"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D09_food_aid_input",
+     "severity": "critical",
+     "category": "food_aid",
+     "effect": "fail",
+     "rule": "A2-7-2"
+    }
+   ],
+   "outcome": "Likely not to qualify",
+   "sub_reasons": [],
+   "rule_1901": "met",
+   "share_percent": "0.0",
+   "box12": null
+  },
+  {
+   "case_id": "E10",
+   "defects": [
+    "D07_above_tolerance",
+    "D10_packaging_unknown_origin"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D07_above_tolerance",
+     "severity": "critical",
+     "category": "rule_1901",
+     "effect": "fail",
+     "rule": "EXCL-AN-3"
+    },
+    {
+     "defect": "D10_packaging_unknown_origin",
+     "severity": "minor",
+     "category": "packaging",
+     "effect": null,
+     "rule": "A2-11-3"
+    }
+   ],
+   "outcome": "Likely not to qualify",
+   "sub_reasons": [],
+   "rule_1901": "not met",
+   "share_percent": "18.3",
+   "box12": null
+  },
+  {
+   "case_id": "E11",
+   "defects": [
+    "D13_missing_exporter_registration",
+    "D06_unstated_origin_other"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D13_missing_exporter_registration",
+     "severity": "minor",
+     "category": "form",
+     "effect": null,
+     "rule": "APPI-BOX-1"
+    },
+    {
+     "defect": "D06_unstated_origin_other",
+     "severity": "minor",
+     "category": "origin_proof",
+     "effect": null,
+     "rule": "A2-22"
+    }
+   ],
+   "outcome": "Likely to qualify",
+   "sub_reasons": [],
+   "rule_1901": "met",
+   "share_percent": "0.0",
+   "box12": "SX"
+  },
+  {
+   "case_id": "E12",
+   "defects": [
+    "D01_missing_supplier_declaration",
+    "D03_inconsistent_units_1901"
+   ],
+   "expected_findings": [
+    {
+     "defect": "D01_missing_supplier_declaration",
+     "severity": "major",
+     "category": "origin_proof",
+     "effect": "missing",
+     "rule": "A2-31-1"
+    },
+    {
+     "defect": "D03_inconsistent_units_1901",
+     "severity": "major",
+     "category": "consistency",
+     "effect": "contradictory",
+     "rule": "A2-22"
+    }
+   ],
+   "outcome": "Further information required",
+   "sub_reasons": [
+    "contradictory",
+    "missing"
+   ],
+   "rule_1901": "unclear",
+   "share_percent": null,
+   "box12": null
+  }
+ ]
+}

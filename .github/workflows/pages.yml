@@ -1,0 +1,54 @@
+name: Test, build and deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install test dependencies
+        run: pip install pytest==8.3.3
+      - name: Validate rules.json
+        run: python rules/validate.py
+      - name: Regenerate cases (determinism check) and answer key
+        run: |
+          python -m generator.build
+          python -m answer_key.derive
+          git diff --exit-code -- cases/fixed cases/eval answer_key/eval_key.json
+      - name: Run pipeline (stub -> engine) and build test log
+        run: |
+          python -m pipeline.run_cases
+          python -m pipeline.test_log
+      - name: pytest
+        run: python -m pytest -q
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Engine parity under Pyodide
+        working-directory: tests/js
+        run: npm install && node pyodide_parity.mjs
+      - name: Build site
+        working-directory: web
+        run: npm ci && npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: web/dist }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

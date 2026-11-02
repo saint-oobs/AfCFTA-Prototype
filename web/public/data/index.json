@@ -1,0 +1,416 @@
+{
+ "engine_version": "1.2.0",
+ "rulebase_version": "1.1.0",
+ "adapter": "Prototype transcription (synthetic documents)",
+ "cases": [
+  {
+   "case_id": "T1",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a certificate of origin. Mashing and evaporation in Ghana.",
+   "test": 1,
+   "case_type": "Typical",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T2",
+   "set": "fixed",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French certificate. Roasting, extrusion cooking and drum drying in Ghana.",
+   "test": 2,
+   "case_type": "Typical",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3a",
+   "set": "fixed",
+   "product": "bread_mix",
+   "scenario": "Malted bread mix (HS 1901.20). Imported bakery premix of heading 19.01 = 14.9% of the ex-works price.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3b",
+   "set": "fixed",
+   "product": "bread_mix",
+   "scenario": "Malted bread mix (HS 1901.20). Imported bakery premix of heading 19.01 = exactly 15.0%.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3c",
+   "set": "fixed",
+   "product": "bread_mix",
+   "scenario": "Malted bread mix (HS 1901.20). Imported bakery premix of heading 19.01 = 15.1%.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3d",
+   "set": "fixed",
+   "product": "bread_mix",
+   "scenario": "Malted bread mix (HS 1901.20). Two imported premix lots of heading 19.01, 8.0% each. Each lot is below 15%, together 16.0%.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T4",
+   "set": "fixed",
+   "product": "millet_porridge_mix",
+   "scenario": "Millet porridge mix (HS 1901.90). Only cleaning, simple grinding, simple mixing and bagging. No imported ingredient of heading 19.01.",
+   "test": 4,
+   "case_type": "Failure",
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T5a",
+   "set": "fixed",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French certificate from Burkina Faso. All values can be read.",
+   "test": 5,
+   "case_type": "Key assumption",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "T5b",
+   "set": "fixed",
+   "product": "infant_cereal",
+   "scenario": "Same records as T5a, but the value of the imported premix of heading 19.01 is smudged and cannot be read.",
+   "test": 5,
+   "case_type": "Key assumption",
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E01",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": "Malt extract with a lot from Togo. The certificate of origin for that lot is missing.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D01_missing_supplier_declaration"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E02",
+   "set": "eval",
+   "product": "bread_mix",
+   "scenario": "Bread mix. The value of the imported premix is smudged.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E03",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": "Porridge mix. The production notes only say 'processed at the factory'.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D11_ambiguous_process"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E04",
+   "set": "eval",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal. The premix is in kg in the bill of materials but in bags on the invoice.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D03_inconsistent_units_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E05",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": "Malt extract. The bill of materials and the supplier invoice show different values for the concentrate.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D04_invoice_value_mismatch"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E06",
+   "set": "eval",
+   "product": "bread_mix",
+   "scenario": "Bread mix. The premix value is in EUR, the ex-works price in GHS.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D14_currency_mismatch_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E07",
+   "set": "eval",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal. The premix has the HS code of malt (11.07).",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D02_wrong_input_hs"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E08",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": "The product description reads like plain millet flour.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D12_doubtful_product_hs"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "out_of_rule_base"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E09",
+   "set": "eval",
+   "product": "infant_cereal",
+   "scenario": "Infant cereal. The millet comes from a food assistance programme.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D09_food_aid_input"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E10",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D07_above_tolerance",
+    "D10_packaging_unknown_origin"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E11",
+   "set": "eval",
+   "product": "bread_mix",
+   "scenario": "Bread mix. No exporter registration number; the origin of one ingredient is not stated.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D13_missing_exporter_registration",
+    "D06_unstated_origin_other"
+   ],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E12",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": "Malt extract. A certificate is missing and the units of the concentrate do not agree.",
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D01_missing_supplier_declaration",
+    "D03_inconsistent_units_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory",
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  }
+ ]
+}

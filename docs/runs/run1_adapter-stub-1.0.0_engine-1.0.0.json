@@ -1,0 +1,1021 @@
+{
+ "engine_version": "1.0.0",
+ "rulebase_version": "1.0.0",
+ "adapter": "STUB – synthetic transcription",
+ "cases": [
+  {
+   "case_id": "T1",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Malt extract from Ghanaian malt and Nigerian glucose syrup (State Party, certificate on file); mashing and evaporation in Ghana.",
+   "test": 1,
+   "case_type": "Typical",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T2",
+   "set": "fixed",
+   "product": "millet_porridge_mix",
+   "scenario": "Millet porridge mix; imported sugar and milk powder (other headings); Togolese soya with French certificate; roasting, extrusion cooking and drum drying in Ghana.",
+   "test": 2,
+   "case_type": "Typical",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3a",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Tolerance boundary: imported 19.01 malt extract concentrate = 14.9% of ex-works price.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3b",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Tolerance boundary: exactly 15.0%.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3c",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Tolerance boundary: 15.1%.",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T3d",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Two separate 19.01 inputs at 8.0% each (each under 15%, together 16.0%).",
+   "test": 3,
+   "case_type": "Edge",
+   "defects": [],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Likely not to qualify",
+   "correct": false,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T4",
+   "set": "fixed",
+   "product": "millet_porridge_mix",
+   "scenario": "Porridge mix made only by cleaning, simple grinding, simple mixing and bagging; 0% non-originating 19.01 content.",
+   "test": 4,
+   "case_type": "Failure",
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "T5a",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Handwritten BOM and French production notes; French certificate from Burkina Faso; abbreviations and mixed number formats. All values legible.",
+   "test": 5,
+   "case_type": "Key assumption",
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "T5b",
+   "set": "fixed",
+   "product": "malt_extract",
+   "scenario": "Same as T5a but the value of the imported 19.01 input is smudged (illegible).",
+   "test": 5,
+   "case_type": "Key assumption",
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E01",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D09_food_aid_input"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E02",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E03",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D12_doubtful_product_hs",
+    "D09_food_aid_input"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "out_of_rule_base"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E04",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory",
+     "missing"
+    ]
+   },
+   "expected": "Likely to qualify",
+   "correct": false,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E05",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D09_food_aid_input"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E06",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D09_food_aid_input",
+    "D11_ambiguous_process"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E07",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E08",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E09",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E10",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D13_missing_exporter_registration"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E11",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D04_invoice_value_mismatch"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory",
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": false,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E12",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Likely not to qualify",
+   "correct": false,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E13",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D03_inconsistent_units_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E14",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D13_missing_exporter_registration",
+    "D10_packaging_unknown_origin"
+   ],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E15",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D02_wrong_input_hs"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E16",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E17",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D06_unstated_origin_other"
+   ],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E18",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E19",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E20",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D07_above_tolerance",
+    "D06_unstated_origin_other"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E21",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E22",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D11_ambiguous_process",
+    "D06_unstated_origin_other"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E23",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Likely to qualify",
+   "correct": false,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E24",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E25",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory",
+     "missing"
+    ]
+   },
+   "expected": "Likely to qualify",
+   "correct": false,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E26",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E27",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D06_unstated_origin_other",
+    "D10_packaging_unknown_origin"
+   ],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E28",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D14_currency_mismatch_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E29",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E30",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "typed"
+  },
+  {
+   "case_id": "E31",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D07_above_tolerance"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E32",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D13_missing_exporter_registration",
+    "D03_inconsistent_units_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E33",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D10_packaging_unknown_origin",
+    "D02_wrong_input_hs"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E34",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D04_invoice_value_mismatch"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E35",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E36",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E37",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E38",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D07_above_tolerance"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E39",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D05_unreadable_cost_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "fr_suppliers",
+   "format": "handwritten"
+  },
+  {
+   "case_id": "E40",
+   "set": "eval",
+   "product": "millet_porridge_mix",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely not to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E41",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D01_missing_supplier_declaration"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "typed"
+  },
+  {
+   "case_id": "E42",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D04_invoice_value_mismatch"
+   ],
+   "outcome": {
+    "label": "Likely not to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Further information required",
+   "correct": false,
+   "language": "fr_suppliers",
+   "format": "mixed_units"
+  },
+  {
+   "case_id": "E43",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D10_packaging_unknown_origin"
+   ],
+   "outcome": {
+    "label": "Likely to qualify",
+    "sub_reasons": []
+   },
+   "expected": "Likely to qualify",
+   "correct": true,
+   "language": "fr_mixed",
+   "format": "typed"
+  },
+  {
+   "case_id": "E44",
+   "set": "eval",
+   "product": "malt_extract",
+   "scenario": null,
+   "test": null,
+   "case_type": null,
+   "defects": [
+    "D11_ambiguous_process",
+    "D14_currency_mismatch_1901"
+   ],
+   "outcome": {
+    "label": "Further information required",
+    "sub_reasons": [
+     "contradictory",
+     "missing"
+    ]
+   },
+   "expected": "Further information required",
+   "correct": true,
+   "language": "en",
+   "format": "mixed_units"
+  }
+ ]
+}

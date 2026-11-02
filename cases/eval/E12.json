@@ -1,0 +1,292 @@
+{
+ "meta": {
+  "case_id": "E12",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "E12",
+   "product": "malt_extract",
+   "share_pct": "0",
+   "defects": [
+    "D01_missing_supplier_declaration",
+    "D03_inconsistent_units_1901"
+   ],
+   "process": "substantive",
+   "language": "en",
+   "format": "typed",
+   "messiness": 0.3,
+   "scenario": "Malt extract. A certificate is missing and the units of the concentrate do not agree."
+  },
+  "defects": [
+   "D01_missing_supplier_declaration",
+   "D03_inconsistent_units_1901"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": [
+   "2"
+  ]
+ },
+ "truth": {
+  "case_id": "E12",
+  "synthetic": true,
+  "exporter": {
+   "name": "Akwaaba Grains Ltd",
+   "address": "Plot 24, Light Industrial Area, Tamale, Ghana",
+   "registration_no": "GEPA/EXP/2026/1813",
+   "registration_status": "Registered company (Office of the Registrar of Companies)",
+   "tin": "C0037993082",
+   "phone": "+233 37 486 5380"
+  },
+  "consignee": {
+   "name": "Kilimanjaro Distribution SARL",
+   "address": "147 Market Road, Abidjan",
+   "country": "Côte d’Ivoire"
+  },
+  "destination_country": "Côte d’Ivoire",
+  "product": {
+   "description": "Malt extract, liquid, in 1 kg plastic jars",
+   "declared_hs": "1901.90",
+   "quantity": "1000",
+   "unit": "jars",
+   "gross_weight_kg": "1150",
+   "marks": "AG/CÔT/1-1000",
+   "packaging_count": "83 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1150 kg"
+  },
+  "ex_works_price": {
+   "amount": "50000",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Malt, not roasted",
+    "hs_code": "11.07",
+    "quantity": {
+     "value": "800",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "11915.77",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "11915.77",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Delta Malt Co.",
+    "supplier_country": "Egypt",
+    "origin_class": "state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "certificate_of_origin",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Glucose syrup",
+    "hs_code": "17.02",
+    "quantity": {
+     "value": "150",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2790.46",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2567.22",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Deccan Sweeteners Pvt Ltd",
+    "supplier_country": "India",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "X1",
+    "description": "Malt extract concentrate",
+    "hs_code": "1901.90",
+    "quantity": {
+     "value": "38",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1000.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1000.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Rhinefield Food Ingredients GmbH",
+    "supplier_country": "India",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "SP1",
+    "description": "Malt extract concentrate",
+    "hs_code": "1901.90",
+    "quantity": {
+     "value": "69",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3700.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "3700.00",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Brasserie des Plateaux SARL",
+    "supplier_country": "Togo",
+    "origin_class": "state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": null,
+     "present": false
+    },
+    "conflicts": []
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S2",
+    "description": "Filtration and vacuum evaporation to a concentrate",
+    "operation_code": "evaporation_concentration",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S3",
+    "description": "Filling into jars",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S4",
+    "description": "Labelling",
+    "operation_code": "labelling",
+    "location_country": "Ghana"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Plastic jar with lid, 1 kg",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (12 jars)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-8855",
+   "date": "2026-10-15",
+   "value": "54000.00",
+   "currency": "GHS",
+   "incoterm": "FCA"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Akwaaba Grains Ltd\nAddress: Plot 24, Light Industrial Area, Tamale, Ghana\nPhone: +233 37 486 5380\nTIN: C0037993082\nRegistration no: GEPA/EXP/2026/1813\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Akwaaba Grains Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2641-37\nPrepared by: Production manager, Akwaaba Grains Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 11915.77 | 11915.77 | GHS | Delta Malt Co. | Egypt | 11.07 | AfCFTA State Party\nI2 | Glucose syrup | 150 | kgs | 2,790.46 | 2567.22 | GHS | Deccan Sweeteners Pvt Ltd | India | 17.02 | Imported (non-State Party)\nX1 | Malt extract concentrate | 38 | kg | 1000.00 | 1,000.00 | GHS | Rhinefield Food Ingredients GmbH | India | 1901.90 | Imported (non-State Party)\nSP1 | Malt extract concentrate | 69 | kg | 3700.00 | 3700.00 | Ghc | Brasserie des Plateaux SARL | Togo | 1901.90 | AfCFTA State Party\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "certificate_of_origin",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Delta Malt Co.\nCountry of origin: Egypt\nInvoice no: DEL-19856\nDate: 2026-07-01\nBuyer: Akwaaba Grains Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 14.89 GHS\nInvoice value: 11915.77 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "supplier_invoice",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Sweeteners Pvt Ltd\nCountry of origin: India\nInvoice no: DEC-80690\nDate: 2026-09-17\nBuyer: Akwaaba Grains Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 18.60 GHS\nCustoms value: 2790.46 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-X1",
+   "type": "supplier_invoice",
+   "input_id": "X1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: India\nInvoice no: RHI-58807\nDate: 2026-07-06\nBuyer: Akwaaba Grains Ltd\nGoods: Malt extract concentrate\nQuantity: 1 bags\nUnit price: 26.32 GHS\nCustoms value: 1000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2641-37\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2641-37\nBatch: 1000 jars\nMaterials: 19406.23 GHS\nPackaging: 3059.38 GHS\nDirect labour: 9178.13 GHS\nEnergy and water: 4589.07 GHS\nFactory overheads: 6118.75 GHS\nMargin: 7648.44 GHS\nEx-works price per batch: 50000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-8855\nDate: 2026-10-15\nExporter: Akwaaba Grains Ltd\nExporter TIN: C0037993082\nConsignee: Kilimanjaro Distribution SARL\nConsignee address: 147 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: AG/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 54000.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
+  }
+ ]
+}

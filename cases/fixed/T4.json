@@ -1,0 +1,301 @@
+{
+ "meta": {
+  "case_id": "T4",
+  "seed": 2026,
+  "generator_version": "1.2.0",
+  "synthetic": true,
+  "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
+  "spec": {
+   "case_id": "T4",
+   "test": 4,
+   "case_type": "Failure",
+   "product": "millet_porridge_mix",
+   "share_pct": "0",
+   "exw": "50000",
+   "origins": {
+    "millet": "ghana",
+    "soya": "ghana",
+    "sugar": "non_state_party",
+    "milk": "non_state_party"
+   },
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "scenario": "Millet porridge mix (HS 1901.90). Only cleaning, simple grinding, simple mixing and bagging. No imported ingredient of heading 19.01."
+  },
+  "defects": [
+   "D08_simple_operations_only"
+  ],
+  "tolerance_percent_used": "15",
+  "imported_1901_shares_pct": []
+ },
+ "truth": {
+  "case_id": "T4",
+  "synthetic": true,
+  "exporter": {
+   "name": "Osei Foods Ltd",
+   "address": "Plot 33, Light Industrial Area, Kumasi, Ghana",
+   "registration_no": "GEPA/EXP/2026/8387",
+   "registration_status": "Registered company (Office of the Registrar of Companies)",
+   "tin": "C0035216539",
+   "phone": "+233 37 602 6832"
+  },
+  "consignee": {
+   "name": "Teranga Trading SA",
+   "address": "39 Harbour Road, Dakar",
+   "country": "Senegal"
+  },
+  "destination_country": "Senegal",
+  "product": {
+   "description": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
+   "declared_hs": "1901.90",
+   "quantity": "2000",
+   "unit": "pouches",
+   "gross_weight_kg": "1080",
+   "marks": "OF/SEN/1-2000",
+   "packaging_count": "100 cartons",
+   "transport": "Road – truck AS 4799-25, via Aflao border",
+   "statistical_measure": "1080 kg"
+  },
+  "ex_works_price": {
+   "amount": "50000",
+   "currency": "GHS",
+   "status": "stated"
+  },
+  "inputs": [
+   {
+    "id": "I1",
+    "description": "Millet grain",
+    "hs_code": "Chapter 10",
+    "quantity": {
+     "value": "600",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "7569.38",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "7569.38",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Nkwanta Grains Enterprise",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Soya beans",
+    "hs_code": "Chapter 12",
+    "quantity": {
+     "value": "200",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2852.25",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2852.25",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Brong Agro Cooperative",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
+    "food_aid": false,
+    "declaration": {
+     "type": "appendix_iii_a",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I3",
+    "description": "Cane sugar",
+    "hs_code": "Chapter 17",
+    "quantity": {
+     "value": "120",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "2423.03",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2229.19",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Paraná Sugar Ltda",
+    "supplier_country": "New Zealand",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I4",
+    "description": "Skimmed milk powder",
+    "hs_code": "Chapter 4",
+    "quantity": {
+     "value": "80",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "3220.24",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "2962.62",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Lowlands Dairy B.V.",
+    "supplier_country": "Netherlands",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   }
+  ],
+  "production_steps": [
+   {
+    "id": "S1",
+    "description": "Cleaning of millet",
+    "operation_code": "cleaning_washing",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S2",
+    "description": "Simple grinding",
+    "operation_code": "simple_grinding",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S3",
+    "description": "Simple mixing with sugar and milk powder",
+    "operation_code": "simple_mixing",
+    "location_country": "Ghana"
+   },
+   {
+    "id": "S4",
+    "description": "Filling into pouches",
+    "operation_code": "simple_packaging",
+    "location_country": "Ghana"
+   }
+  ],
+  "packaging": [
+   {
+    "id": "P1",
+    "description": "Printed plastic pouch, 500 g",
+    "packing_type": "retail",
+    "hs_code": "Ex-Chapter 39",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   },
+   {
+    "id": "P2",
+    "description": "Corrugated carton (20 pouches)",
+    "packing_type": "transport",
+    "hs_code": "Chapter 48",
+    "origin_class": "ghana",
+    "country": "Ghana"
+   }
+  ],
+  "invoice": {
+   "number": "EXP-7100",
+   "date": "2026-10-15",
+   "value": "54000.00",
+   "currency": "GHS",
+   "incoterm": "EXW"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "DOC-EXP",
+   "type": "exporter_profile",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Osei Foods Ltd\nAddress: Plot 33, Light Industrial Area, Kumasi, Ghana\nPhone: +233 37 602 6832\nTIN: C0035216539\nRegistration no: GEPA/EXP/2026/8387\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+  },
+  {
+   "doc_id": "DOC-BOM",
+   "type": "bill_of_materials",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Osei Foods Ltd\nProduct: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2670-31\nPrepared by: Production manager, Osei Foods Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 600 | kgs | 7569.38 | 7569.38 | GHS | Nkwanta Grains Enterprise | Ghana | Chapter 10 | Ghana\nI2 | Soya beans | 200 | kg | 2,852.25 | 2852.25 | GHS | Brong Agro Cooperative | Ghana | Chapter 12 | Ghana\nI3 | Cane sugar | 120 | kg | 2423.03 | 2229.19 | GHS | Paraná Sugar Ltda | New Zealand | Chapter 17 | Imported (non-State Party)\nI4 | Skimmed milk powder | 80 | kilos | 3220.24 | 2,962.62 | GHS | Lowlands Dairy B.V. | Netherlands | Chapter 4 | Imported (non-State Party)\nPACKAGING\nP1 | Printed plastic pouch, 500 g | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Chapter 48 | Ghana",
+   "illegible_fields": []
+  },
+  {
+   "doc_id": "DOC-SUP-I1",
+   "type": "appendix_iii_a",
+   "input_id": "I1",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Grains Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-83484\nDate: 2026-09-05\nBuyer: Osei Foods Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 12.62 GHS\nInvoice value: 7569.38 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I2",
+   "type": "appendix_iii_a",
+   "input_id": "I2",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Agro Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-18547\nDate: 2026-07-27\nBuyer: Osei Foods Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 14.26 GHS\nInvoice value: 2852.25 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+  },
+  {
+   "doc_id": "DOC-SUP-I3",
+   "type": "supplier_invoice",
+   "input_id": "I3",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Sugar Ltda\nCountry of origin: New Zealand\nInvoice no: PAR-40519\nDate: 2026-09-22\nBuyer: Osei Foods Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 20.19 GHS\nCustoms value: 2423.03 GHS"
+  },
+  {
+   "doc_id": "DOC-SUP-I4",
+   "type": "supplier_invoice",
+   "input_id": "I4",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Dairy B.V.\nCountry of origin: Netherlands\nInvoice no: LOW-43916\nDate: 2026-07-21\nBuyer: Osei Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 40.25 GHS\nCustoms value: 3220.24 GHS"
+  },
+  {
+   "doc_id": "DOC-PROC",
+   "type": "production_notes",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2670-31\n1. Cleaning of millet – Factory, Ghana\n   Equipment: vibrating sieve and destoner\n2. Simple grinding – Factory, Ghana\n   Equipment: hammer mill\n3. Simple mixing with sugar and milk powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n4. Filling into pouches – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+  },
+  {
+   "doc_id": "DOC-COST",
+   "type": "costing_sheet",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2670-31\nBatch: 2000 pouches\nMaterials: 16064.90 GHS\nPackaging: 3393.51 GHS\nDirect labour: 10180.53 GHS\nEnergy and water: 5090.26 GHS\nFactory overheads: 6787.02 GHS\nMargin: 8483.78 GHS\nEx-works price per batch: 50000.00 GHS"
+  },
+  {
+   "doc_id": "DOC-INV",
+   "type": "export_invoice",
+   "language": "en",
+   "format": "typed",
+   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-7100\nDate: 2026-10-15\nExporter: Osei Foods Ltd\nExporter TIN: C0035216539\nConsignee: Teranga Trading SA\nConsignee address: 39 Harbour Road, Dakar\nDestination: Senegal\nGoods: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: OF/SEN/1-2000\nPackages: 100 cartons\nTransport: Road – truck AS 4799-25, via Aflao border\nValue: 54000.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+  }
+ ]
+}
