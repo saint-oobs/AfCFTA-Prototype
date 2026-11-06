@@ -26,7 +26,7 @@
    "product": "millet_porridge_mix",
    "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
    "test": 2,
-   "case_type": "Failure",
+   "case_type": "Typical",
    "defects": [
     "D08_simple_operations_only"
    ],

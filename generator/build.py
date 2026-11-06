@@ -10,7 +10,7 @@ FIXED = [
  {"case_id": "T1", "test": 1, "case_type": "Typical", "product": "malt_extract", "share_pct": "0", "exw": "40000",
   "origins": {"malt": "ghana", "glucose": "state_party"}, "countries": {"glucose": "Nigeria"},
   "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a supplier declaration. Mashing and evaporation in Ghana."},
- {"case_id": "T2", "test": 2, "case_type": "Failure", "product": "millet_porridge_mix", "share_pct": "0", "exw": "50000",
+ {"case_id": "T2", "test": 2, "case_type": "Typical", "product": "millet_porridge_mix", "share_pct": "0", "exw": "50000",
   "origins": {"millet": "ghana", "soya": "ghana", "sugar": "non_state_party", "milk": "non_state_party"},
   "defects": ["D08_simple_operations_only"],
   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."},

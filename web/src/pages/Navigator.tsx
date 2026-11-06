@@ -16,7 +16,7 @@ import { ArrowLeft, ArrowRight } from '../components/icons'
 
 const TABS = [['upload', 'Upload'], ['inputs', '1 Inputs'], ['ai', '2 AI task'], ['model', '3 Model'], ['adviser', '4 Adviser view'], ['sme', '5 SME view']] as const
 const TEST_LABEL: Record<string, string> = {
-  '1': 'Test 1 – Typical: malt extract (1901.90)', '2': 'Test 2 – Failure: millet porridge mix (1901.90)',
+  '1': 'Test 1 – Typical: malt extract (1901.90)', '2': 'Test 2 – Typical: millet porridge mix (1901.90)',
   '3': 'Test 3 – Edge: 15% limit, bread mix (1901.20)', '4': 'Test 4 – Edge: HS code in doubt, cassava flour (1901.20)',
   '5': 'Test 5 – Key assumption: handwritten infant cereal records (1901.10)', eval: 'Miscellaneous test logs – missing and contradictory information', manual: 'Manual entry – your own data',
 }

@@ -8,7 +8,7 @@ import { Activity, ArrowRight, Cpu, FileText, Scale, Scan, User } from '../compo
 
 export const TESTS = [
   ['1', 'Typical', 'Malt extract', '1901.90', 'Local and AfCFTA ingredients, full processing in Ghana.', 'T1'],
-  ['2', 'Failure', 'Millet porridge mix', '1901.90', 'No eligible manufacturing process: only cleaning, grinding, mixing and packing.', 'T2'],
+  ['2', 'Typical', 'Millet porridge mix', '1901.90', 'No eligible manufacturing process: only cleaning, grinding, mixing and packing.', 'T2'],
   ['3', 'Edge', 'Malted bread mix', '1901.20', 'Imported 19.01 premix at 14.9%, 15.0% and 15.1%, and two lots of 8% each.', 'T3a'],
   ['4', 'Edge / difficult', 'Cassava flour for baking', '1901.20', 'HS code in doubt: declared as a baking mix, but the description reads like plain ground cassava.', 'T4'],
   ['5', 'Key assumption', 'Infant cereal', '1901.10', 'Handwritten and multilingual records; one value cannot be read.', 'T5a'],

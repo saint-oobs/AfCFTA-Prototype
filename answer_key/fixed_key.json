@@ -31,7 +31,7 @@
   {
    "case_id": "T2",
    "test": 2,
-   "case_type": "Failure",
+   "case_type": "Typical",
    "product": "Millet porridge mix",
    "declared_hs": "1901.90",
    "outcome": "Likely not to qualify",
