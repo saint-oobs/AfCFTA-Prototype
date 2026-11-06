@@ -65,18 +65,6 @@ export const STAGES = [
 
 export const DISCLAIMER = 'Indicative pre-check only. It is not an origin decision. The National AfCFTA Approval Committee decides on origin and GRA Customs issues the certificate.'
 
-/** Version of the rule data that Tessera uses. Rules can change over time; update this with rules/rules.json. */
-export const RULE_DATA = [
-  ['Agreement', 'Agreement Establishing the AfCFTA, Annex 2 on Rules of Origin (Laws.Africa text)'],
-  ['Product rule', 'Appendix IV to Annex 2, as approved by the 12th AfCFTA Council of Ministers, December 2023'],
-  ['15% tolerance', 'EX.CL/1329(XL), Annex, January 2022 (draft decision; adoption not confirmed)'],
-] as const
-export const RULE_DATA_SHORT = 'AfCFTA Annex 2 on Rules of Origin · Appendix IV (December 2023) · tolerance from EX.CL/1329(XL) (January 2022, draft)'
+// Date = 'compiled' in rules/rules.json. Update both when the rule data is refreshed.
+export const RULE_DATA_SHORT = 'AfCFTA guidelines as of 1 November 2026'
 
-export function RuleData({ version }: { version?: string }) {
-  return <div className="rounded-lg bg-panel p-4 text-sm">
-    <p className="label mb-2">Rule data used{version ? ` · rule base v${version}` : ''}</p>
-    <dl className="grid sm:grid-cols-[130px_1fr] gap-x-4 gap-y-1">{RULE_DATA.map(([k, v]) => <div key={k} className="contents"><dt className="text-muted">{k}</dt><dd>{v}</dd></div>)}</dl>
-    <p className="note mt-2">The AfCFTA rules can change. A result is valid only for the rule versions listed here.</p>
-  </div>
-}

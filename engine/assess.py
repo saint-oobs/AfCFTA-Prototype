@@ -535,8 +535,13 @@ def _requirements(rule, tol, art7, food, hs_conf, ctx, case):
     local = [i for i in inputs.values() if i.get("origin_class") in ("ghana", "state_party")]
     proof = [i for i in local if (i.get("declaration") or {}).get("present")]
     major_proof = any(f["category"] == "origin_proof" and f["severity"] == "major" for f in ctx.findings)
-    ev5 = (f"Supplier declarations are on file for {len(proof)} of {len(local)} ingredients from Ghana or other AfCFTA countries."
-           if local else "No ingredient comes from Ghana or another AfCFTA country.")
+    no_proof = [i.get("description", "").lower() for i in local if i not in proof]
+    if not local:
+        ev5 = "No ingredient comes from Ghana or another AfCFTA country, so no supplier declaration is needed."
+    elif not no_proof:
+        ev5 = f"Each ingredient from Ghana or another AfCFTA country has a supplier declaration ({_names([i.get('description', '').lower() for i in local])})."
+    else:
+        ev5 = f"No supplier declaration was sent for: {_names(no_proof)}."
     if major_proof:
         ev5 += " Proof is missing for an ingredient that the result depends on."
     rows.append({"requirement": "There is proof of origin for local and AfCFTA ingredients.", "evidence": ev5,

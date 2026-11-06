@@ -23,3 +23,9 @@
 - "Simple operations" renamed "eligible manufacturing processes under AfCFTA guidelines" (wording only; no rule change). Engine 1.3.0, stub 1.3.0, generator 1.3.0.
 - Manual entry opens an empty form; the check runs on the typed data.
 - Adviser view ends after the technical overview. Test log: misc set moved up, assessment accuracy = confusion matrix, severity legend, four record types.
+
+## v4.1 (2026-11-06)
+- Overview: "How Tessera works", no rule-data box, stage 6 tasks = error log, bug reports, support insights.
+- All tables and document fields left-aligned with one label width per document.
+- Rule data shown as "AfCFTA guidelines as of 1 November 2026" (date of rules.json "compiled").
+- Proof-of-origin sentence names the ingredients. Test log: one row per case, red/orange/yellow severity palette, record-type matrix.

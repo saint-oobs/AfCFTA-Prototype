@@ -1,5 +1,5 @@
 import { useEffect, useState, useSyncExternalStore } from 'react'
-import { Section, Tag } from './ui'
+import { RULE_DATA_SHORT, Section, Tag } from './ui'
 import { log } from '../lib/log'
 import { docName } from './Inputs'
 import { Check, Message, Refresh, Send } from './icons'
@@ -89,7 +89,7 @@ export function AdviserView({ caseId, rec, extracted, result, canRun, rerun, onR
       <Section title="Technical overview">
         <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
           <div><dt className="label">Model</dt><dd>Tessera prototype</dd></div>
-          <div><dt className="label">Rule data</dt><dd>Rule base v{result.rulebase_version}: Annex 2, Appendix IV (Dec 2023), EX.CL/1329(XL) tolerance (draft)</dd></div>
+          <div><dt className="label">Rule data</dt><dd>{RULE_DATA_SHORT}</dd></div>
           <div><dt className="label">Values read</dt><dd className="flex flex-wrap gap-1"><Tag s="stated" /><span className="tabular-nums mr-2">{count('stated')}</span><Tag s="inferred" /><span className="tabular-nums mr-2">{count('inferred')}</span><Tag s="missing" /><span className="tabular-nums mr-2">{count('missing')}</span><Tag s="unreadable" /><span className="tabular-nums">{count('unreadable')}</span></dd></div>
           <div><dt className="label">Processing</dt><dd>{errors.length ? <span className="text-crit">{errors.length} error(s)</span> : <span className="text-ok">No errors</span>}
             {conflicts > 0 && <span className="block">{conflicts} ingredient(s) with contradictory information</span>}

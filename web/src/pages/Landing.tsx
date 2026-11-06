@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import anime from 'animejs'
 import HeroMosaic from '../components/HeroMosaic'
-import { RuleData, STAGES } from '../components/ui'
+import { STAGES } from '../components/ui'
 import { reduced } from '../lib/motion'
 import { Activity, ArrowRight, Cpu, FileText, Scale, Scan, User } from '../components/icons'
 
@@ -16,7 +16,7 @@ export const TESTS = [
 
 const ICONS = [FileText, Scan, Cpu, Scale, User, Activity]
 const TASKS: [string, string][][] = [
-  [['Data', 'Invoices, bills of materials, costing sheets and supplier records from the SME. AfCFTA rules of origin and HS schedules as the knowledge base.']],
+  [['Data', 'The SME’s invoices, bills of materials, costing sheets and supplier records. The knowledge base holds the AfCFTA rules of origin and the HS schedules.']],
   [['Extraction', 'SME records come in many layouts, often handwritten or multilingual. Fixed templates fail on such records; a language model can read them.'],
    ['Classification', 'Most SMEs find HS classification difficult. The model suggests the HS code with the text it comes from, and the adviser confirms it.'],
    ['Process evaluation', 'Each production step is checked against the accepted operations in the AfCFTA guidelines.']],
@@ -26,7 +26,7 @@ const TASKS: [string, string][][] = [
   [['Matching', 'The extracted values and steps are compared with the rule for heading 19.01.'],
    ['Generation', 'A plain-language summary and a list of gaps with actions for the SME.']],
   [['Human review', 'If the HS code is confirmed, the result is sent to the SME; if not, the SME is asked for more information.']],
-  [['Feedback', 'The SME and the adviser flag hallucinations and values that were extracted or identified wrongly.'], ['Monitoring and updates', 'The feedback goes to the development team, which fixes the model and releases an updated version.']],
+  [['Error log', 'Every correction, new run and processing error is logged with the case and the model version.'], ['Bug reports', 'When the same error occurs twice, a bug report goes to the development team automatically.'], ['Support insights', 'Aggregated, de-identified data shows which documents SMEs most often get wrong, so the Centre can target its support.']],
 ]
 
 function Pipeline() {
@@ -97,8 +97,7 @@ export default function Landing() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
-        <h2 className="h2">How the service works</h2>
-        <p className="note mt-1 mb-5">Select a stage to see the AI tasks and why they fit.</p>
+        <h2 className="h2 mb-5">How Tessera works</h2>
         <Pipeline />
       </section>
 
@@ -110,7 +109,6 @@ export default function Landing() {
             ['Eligible manufacturing processes', 'Mixing, grinding or packaging alone are not sufficient production processes for a certificate of origin under AfCFTA requirements. Real processing, such as cooking, roasting or drying, must take place in Ghana.']].map(([t, d]) => (
             <div key={t} className="card p-5"><p className="h3">{t}</p><p className="mt-2 text-sm">{d}</p></div>))}
         </div>
-        <div className="mt-4"><RuleData /></div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6">

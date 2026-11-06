@@ -57,7 +57,7 @@ function Paper({ text }: { text: string }) {
     if (s.includes(' | ')) return push('table', s.split('|').map(c => c.trim()))
     if (i === 0 || (/^[A-ZÀ-Ý ()’'–,\-]+$/.test(s) && s.length > 3)) return blocks.push({ t: 'h', v: s, first: i === 0 })
     const m = s.match(/^([^:]{2,40}?)\s?:\s(.*)$/)
-    if (m && s.length < 160) return push(isAmount(m[2]) ? 'kvm' : 'kv', [m[1], m[2]])
+    if (m && s.length < 160) return push('kv', [m[1], m[2]])
     blocks.push({ t: 'p', v: s })
   })
   return (
@@ -65,11 +65,10 @@ function Paper({ text }: { text: string }) {
       {blocks.map((b, i) => {
         if (b.t === 'h') return <p key={i} className={b.first ? 'text-base font-semibold tracking-wide mb-4 pb-3 border-b border-line' : 'font-semibold tracking-wide mt-5 mb-2'}>{b.v}</p>
         if (b.t === 'kv' || b.t === 'kvm') {
-          const money = b.t === 'kvm'
-          return <dl key={i} className={`grid ${money ? 'grid-cols-[minmax(0,1fr)_max-content]' : 'grid-cols-[max-content_minmax(0,1fr)]'} gap-x-8 gap-y-1 my-2 ${money ? 'max-w-md' : ''}`}>
+          return <dl key={i} className="grid grid-cols-[11rem_minmax(0,1fr)] gap-x-6 gap-y-1.5 my-2">
             {b.rows.map(([k, v]: string[], j: number) => <div key={j} className="contents">
               <dt className="text-muted">{k}</dt>
-              <dd className={money ? 'text-right tabular-nums' : ''}>{v.includes('[illegible]') ? ILL : v}</dd></div>)}
+              <dd className={isAmount(v) ? 'tabular-nums' : ''}>{v.includes('[illegible]') ? ILL : v}</dd></div>)}
           </dl>
         }
         if (b.t === 'table') {
@@ -121,7 +120,7 @@ export function AiTask({ rec }: { rec: any }) {
     <Section kicker="Stage 2 · AI task" title="Read, extract and check">
       <p className="text-sm max-w-3xl">The model reads each document, whether it is typed, handwritten or multilingual, and puts every value into a fixed field together with the text it comes from.
         Each value gets a tag: <b>stated</b> when it is written in a document, <b>inferred</b> when it is derived, or <b>missing</b> or <b>unreadable</b>. Missing values are never guessed.
-        The model then identifies the HS codes and then finds the rule for the declared HS heading.</p>
+        The model then identifies the HS codes and retrieves the rule for the declared HS heading.</p>
       <div className="flex flex-wrap gap-2 my-4" role="group" aria-label="Filter by tag">
         {TAGS.map(t => (
           <button key={t} aria-pressed={show.includes(t)} onClick={() => setShow(s => s.includes(t) ? s.filter(x => x !== t) : [...s, t])}

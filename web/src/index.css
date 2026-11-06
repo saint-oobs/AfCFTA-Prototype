@@ -39,7 +39,7 @@ body { font-family: 'Public Sans Variable', system-ui, sans-serif; font-size: 15
   table.data { @apply w-full text-sm border-collapse; }
   table.data th { @apply text-left align-bottom text-xs font-semibold uppercase tracking-wide text-muted px-3 py-2 border-b border-line bg-panel whitespace-nowrap; }
   table.data td { @apply px-3 py-2.5 border-b border-line align-top text-left; }
-  table.data td.num, table.data th.num { @apply text-right tabular-nums; }
+  table.data td.num, table.data th.num { @apply text-left tabular-nums; }
 }
 .grid-bg { background-image: radial-gradient(rgb(var(--line)) 1px, transparent 1px); background-size: 22px 22px; }
 @media print { header, footer, nav, .no-print { display: none !important; } body { font-size: 12px; } .card { border: none; } }

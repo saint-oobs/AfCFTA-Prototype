@@ -799,7 +799,7 @@
    },
    {
     "requirement": "There is proof of origin for local and AfCFTA ingredients.",
-    "evidence": "Supplier declarations are on file for 3 of 3 ingredients from Ghana or other AfCFTA countries.",
+    "evidence": "Each ingredient from Ghana or another AfCFTA country has a supplier declaration (wheat flour, malt, not roasted and baking powder).",
     "status": "met",
     "source": "Annex 2, Art. 31 and Appendix III",
     "rule_ids": [
