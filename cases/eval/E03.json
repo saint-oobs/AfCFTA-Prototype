@@ -2,7 +2,7 @@
  "meta": {
   "case_id": "E03",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -61,7 +61,7 @@
    {
     "id": "I1",
     "description": "Millet grain",
-    "hs_code": "Chapter 10",
+    "hs_code": "1008.29",
     "quantity": {
      "value": "600",
      "unit": "kg"
@@ -81,7 +81,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -89,7 +89,7 @@
    {
     "id": "I2",
     "description": "Soya beans",
-    "hs_code": "Chapter 12",
+    "hs_code": "1201.90",
     "quantity": {
      "value": "200",
      "unit": "kg"
@@ -109,7 +109,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -117,7 +117,7 @@
    {
     "id": "I3",
     "description": "Cane sugar",
-    "hs_code": "Chapter 17",
+    "hs_code": "1701.99",
     "quantity": {
      "value": "120",
      "unit": "kg"
@@ -137,7 +137,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -145,7 +145,7 @@
    {
     "id": "I4",
     "description": "Skimmed milk powder",
-    "hs_code": "Chapter 4",
+    "hs_code": "0402.10",
     "quantity": {
      "value": "80",
      "unit": "kg"
@@ -160,7 +160,7 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Deccan Dairy Pvt Ltd",
+    "supplier": "Brabant Dairy NV",
     "supplier_country": "Belgium",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -190,7 +190,6 @@
     "id": "P1",
     "description": "Printed plastic pouch, 500 g",
     "packing_type": "retail",
-    "hs_code": "Ex-Chapter 39",
     "origin_class": "ghana",
     "country": "Ghana"
    },
@@ -198,7 +197,6 @@
     "id": "P2",
     "description": "Corrugated carton (20 pouches)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    }
@@ -217,39 +215,39 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Volta Agro-Processing Ltd\nAddress: Plot 47, Light Industrial Area, Tema, Ghana\nPhone: +233 55 903 2020\nTIN: C0078262019\nRegistration no: GEPA/EXP/2026/2257\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Volta Agro-Processing Ltd\nAddress: Plot 47, Light Industrial Area, Tema, Ghana\nPhone: +233 55 903 2020\nTIN: C0078262019\nRegistration no: GEPA/EXP/2026/2257\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Volta Agro-Processing Ltd\nProduct: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2669-45\nPrepared by: Production manager, Volta Agro-Processing Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 600 | kg | 10421.46 | 10421.46 | GHS | Thiès Grains SA | Senegal | Chapter 10 | AfCFTA State Party\nI2 | Soya beans | 200 | kg | 4342.50 | 4342.50 | GHS | Rift Agro Ltd | Kenya | Chapter 12 | AfCFTA State Party\nI3 | Cane sugar | 120 | kg | 2,485.40 | 2,485.40 | GHS | Thiès Sugar SA | Senegal | Chapter 17 | AfCFTA State Party\nI4 | Skimmed milk powder | 80 | kg | 5175.51 | 4,761.47 | GHS | Deccan Dairy Pvt Ltd | Belgium | Chapter 4 | Imported (non-State Party)\nPACKAGING\nP1 | Printed plastic pouch, 500 g | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Volta Agro-Processing Ltd\nProduct: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2669-45\nPrepared by: Production manager, Volta Agro-Processing Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 600 | kg | 10421.46 | 10421.46 | GHS | Thiès Grains SA | Senegal | 1008.29 | AfCFTA State Party\nI2 | Soya beans | 200 | kg | 4342.50 | 4342.50 | GHS | Rift Agro Ltd | Kenya | 1201.90 | AfCFTA State Party\nI3 | Cane sugar | 120 | kg | 2,485.40 | 2,485.40 | GHS | Thiès Sugar SA | Senegal | 1701.99 | AfCFTA State Party\nI4 | Skimmed milk powder | 80 | kg | 5175.51 | 4,761.47 | GHS | Brabant Dairy NV | Belgium | 0402.10 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed plastic pouch, 500 g | retail | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Thiès Grains SA\nCountry of origin: Senegal\nInvoice no: THI-59787\nDate: 2026-08-10\nBuyer: Volta Agro-Processing Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 17.37 GHS\nInvoice value: 10421.46 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Thiès Grains SA\nCountry of origin: Senegal\nInvoice no: THI-59787\nDate: 2026-08-10\nBuyer: Volta Agro-Processing Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 17.37 GHS\nInvoice value: 10421.46 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Senegal and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Rift Agro Ltd\nCountry of origin: Kenya\nInvoice no: RIF-52333\nDate: 2026-08-24\nBuyer: Volta Agro-Processing Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 21.71 GHS\nInvoice value: 4342.50 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Rift Agro Ltd\nCountry of origin: Kenya\nInvoice no: RIF-52333\nDate: 2026-08-24\nBuyer: Volta Agro-Processing Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 21.71 GHS\nInvoice value: 4342.50 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Kenya and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I3",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Thiès Sugar SA\nCountry of origin: Senegal\nInvoice no: THI-97305\nDate: 2026-07-14\nBuyer: Volta Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 20.71 GHS\nInvoice value: 2485.40 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Thiès Sugar SA\nCountry of origin: Senegal\nInvoice no: THI-97305\nDate: 2026-07-14\nBuyer: Volta Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 20.71 GHS\nInvoice value: 2485.40 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Senegal and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I4",
@@ -257,28 +255,28 @@
    "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Dairy Pvt Ltd\nCountry of origin: Belgium\nInvoice no: DEC-86274\nDate: 2026-08-06\nBuyer: Volta Agro-Processing Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 64.69 GHS\nCustoms value: 5175.51 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Brabant Dairy NV\nCountry of origin: Belgium\nInvoice no: BRA-86274\nDate: 2026-08-06\nBuyer: Volta Agro-Processing Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 64.69 GHS\nCustoms value: 5175.51 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2669-45\n1. Product is processed at the factory – Factory, Ghana\n2. Filling into pouches – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2669-45\nStep | Description | Location | Equipment\n1 | Product is processed at the factory | Factory, Ghana | —\n2 | Filling into pouches | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2669-45\nBatch: 2000 pouches\nMaterials: 22424.87 GHS\nPackaging: 3757.51 GHS\nDirect labour: 11272.54 GHS\nEnergy and water: 5636.27 GHS\nFactory overheads: 7515.03 GHS\nMargin: 9393.78 GHS\nEx-works price per batch: 60,000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2669-45\nBatch: 2000 pouches\nMaterials: 22,424.87 GHS\nPackaging: 3,757.51 GHS\nDirect labour: 11,272.54 GHS\nEnergy and water: 5,636.27 GHS\nFactory overheads: 7,515.03 GHS\nMargin: 9,393.78 GHS\nEx-works price per batch: 60,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-8308\nDate: 2026-10-15\nExporter: Volta Agro-Processing Ltd\nExporter TIN: C0078262019\nConsignee: Teranga Foods Ltd\nConsignee address: 100 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: VA/CÔT/1-2000\nPackages: 100 cartons\nTransport: Road – truck AS 4710-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-8308\nDate: 2026-10-15\nExporter: Volta Agro-Processing Ltd\nExporter TIN: C0078262019\nConsignee: Teranga Foods Ltd\nConsignee address: 100 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: VA/CÔT/1-2000\nPackages: 100 cartons\nTransport: Road – truck AS 4710-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ]
 }

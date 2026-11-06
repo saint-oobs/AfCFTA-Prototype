@@ -2,7 +2,7 @@
  "meta": {
   "case_id": "E07",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -16,7 +16,7 @@
    "language": "en",
    "format": "typed",
    "messiness": 0.3,
-   "scenario": "Infant cereal. The premix has the HS code of malt (11.07)."
+   "scenario": "Infant cereal. The premix has the HS code of malt (1107.10)."
   },
   "defects": [
    "D02_wrong_input_hs"
@@ -63,7 +63,7 @@
    {
     "id": "I1",
     "description": "Millet grain",
-    "hs_code": "Chapter 10",
+    "hs_code": "1008.29",
     "quantity": {
      "value": "550",
      "unit": "kg"
@@ -83,7 +83,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -91,7 +91,7 @@
    {
     "id": "I2",
     "description": "Soya beans",
-    "hs_code": "Chapter 12",
+    "hs_code": "1201.90",
     "quantity": {
      "value": "250",
      "unit": "kg"
@@ -111,7 +111,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -119,7 +119,7 @@
    {
     "id": "I3",
     "description": "Skimmed milk powder",
-    "hs_code": "Chapter 4",
+    "hs_code": "0402.10",
     "quantity": {
      "value": "120",
      "unit": "kg"
@@ -134,7 +134,7 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Southern Cross Dairy Ltd",
+    "supplier": "Deccan Dairy Pvt Ltd",
     "supplier_country": "India",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -147,7 +147,7 @@
    {
     "id": "I4",
     "description": "Cane sugar",
-    "hs_code": "Chapter 17",
+    "hs_code": "1701.99",
     "quantity": {
      "value": "60",
      "unit": "kg"
@@ -162,7 +162,7 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Southern Cross Sugar Ltd",
+    "supplier": "Lowlands Sugar B.V.",
     "supplier_country": "Netherlands",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -250,7 +250,6 @@
     "id": "P1",
     "description": "Printed paperboard carton with inner bag, 400 g",
     "packing_type": "retail",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    },
@@ -258,7 +257,6 @@
     "id": "P2",
     "description": "Corrugated carton (24 cartons)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    }
@@ -277,31 +275,31 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Nkabom Agro-Processing Ltd\nAddress: Plot 44, Light Industrial Area, Accra, Ghana\nPhone: +233 24 570 9195\nTIN: C0046139881\nRegistration no: GEPA/EXP/2026/6498\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Nkabom Agro-Processing Ltd\nAddress: Plot 44, Light Industrial Area, Accra, Ghana\nPhone: +233 24 570 9195\nTIN: C0046139881\nRegistration no: GEPA/EXP/2026/6498\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Nkabom Agro-Processing Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2636-12\nPrepared by: Production manager, Nkabom Agro-Processing Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 550 | kgs | 11079.89 | 11079.89 | GHS | Ségou Grains SARL | Mali | Chapter 10 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 4,694.74 | 4694.74 | GHS | Ogun Agro Ltd | Nigeria | Chapter 12 | AfCFTA State Party\nI3 | Skimmed milk powder | 120 | kgs | 9,181.17 | 8446.68 | GH₵ | Southern Cross Dairy Ltd | India | Chapter 4 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kg | 1721.38 | 1583.67 | GHS | Southern Cross Sugar Ltd | Netherlands | Chapter 17 | Imported (non-State Party)\nX1 | Cereal-based premix preparation | 84 | kg | 4160.00 | 4160.00 | GHS | Westbrook Nutrition Ingredients GmbH | Netherlands | 11.07 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Nkabom Agro-Processing Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2636-12\nPrepared by: Production manager, Nkabom Agro-Processing Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 550 | kgs | 11079.89 | 11079.89 | GHS | Ségou Grains SARL | Mali | 1008.29 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 4,694.74 | 4694.74 | GHS | Ogun Agro Ltd | Nigeria | 1201.90 | AfCFTA State Party\nI3 | Skimmed milk powder | 120 | kgs | 9,181.17 | 8446.68 | GH₵ | Deccan Dairy Pvt Ltd | India | 0402.10 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kg | 1721.38 | 1583.67 | GHS | Lowlands Sugar B.V. | Netherlands | 1701.99 | Imported (non-State Party)\nX1 | Cereal-based premix preparation | 84 | kg | 4160.00 | 4160.00 | GHS | Westbrook Nutrition Ingredients GmbH | Netherlands | 1107.10 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Ségou Grains SARL\nCountry of origin: Mali\nInvoice no: SÉG-97379\nDate: 2026-09-22\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Millet grain\nQuantity: 550 kg\nUnit price: 20.15 GHS\nInvoice value: 11079.89 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ségou Grains SARL\nCountry of origin: Mali\nInvoice no: SÉG-97379\nDate: 2026-09-22\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Millet grain\nQuantity: 550 kg\nUnit price: 20.15 GHS\nInvoice value: 11079.89 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Mali and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Ogun Agro Ltd\nCountry of origin: Nigeria\nInvoice no: OGU-15411\nDate: 2026-08-02\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Soya beans\nQuantity: 250 kg\nUnit price: 18.78 GHS\nInvoice value: 4694.74 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ogun Agro Ltd\nCountry of origin: Nigeria\nInvoice no: OGU-15411\nDate: 2026-08-02\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Soya beans\nQuantity: 250 kg\nUnit price: 18.78 GHS\nInvoice value: 4694.74 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Nigeria and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I3",
@@ -309,7 +307,7 @@
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Dairy Ltd\nCountry of origin: India\nInvoice no: SOU-69269\nDate: 2026-09-26\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 76.51 GHS\nCustoms value: 9181.17 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Dairy Pvt Ltd\nCountry of origin: India\nInvoice no: DEC-69269\nDate: 2026-09-26\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 76.51 GHS\nCustoms value: 9181.17 GHS"
   },
   {
    "doc_id": "DOC-SUP-I4",
@@ -317,7 +315,7 @@
    "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Sugar Ltd\nCountry of origin: Netherlands\nInvoice no: SOU-37930\nDate: 2026-07-01\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 60 kg\nUnit price: 28.69 GHS\nCustoms value: 1721.38 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Sugar B.V.\nCountry of origin: Netherlands\nInvoice no: LOW-37930\nDate: 2026-07-01\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 60 kg\nUnit price: 28.69 GHS\nCustoms value: 1721.38 GHS"
   },
   {
    "doc_id": "DOC-SUP-X1",
@@ -325,28 +323,28 @@
    "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: Netherlands\nInvoice no: WES-11570\nDate: 2026-09-24\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Cereal-based premix preparation\nQuantity: 84 kg\nUnit price: 49.52 GHS\nCustoms value: 4160.00 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: Netherlands\nInvoice no: WES-11570\nDate: 2026-09-24\nBuyer: Nkabom Agro-Processing Ltd\nGoods: Cereal-based premix preparation\nQuantity: 84 kg\nUnit price: 49.52 GHS\nCustoms value: 4160.00 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2636-12\n1. Cleaning of millet – Factory, Ghana\n   Equipment: vibrating sieve and destoner\n2. Roasting of millet and soya – Factory, Ghana\n   Equipment: rotary drum roaster, 300 kg/h\n3. Cooking by extrusion – Factory, Ghana\n   Equipment: twin-screw cooking extruder\n4. Drum drying of the cooked paste – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n5. Simple grinding – Factory, Ghana\n   Equipment: hammer mill\n6. Simple mixing with milk powder and sugar – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n7. Filling into cartons – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2636-12\nStep | Description | Location | Equipment\n1 | Cleaning of millet | Factory, Ghana | vibrating sieve and destoner\n2 | Roasting of millet and soya | Factory, Ghana | rotary drum roaster, 300 kg/h\n3 | Cooking by extrusion | Factory, Ghana | twin-screw cooking extruder\n4 | Drum drying of the cooked paste | Factory, Ghana | steam-heated double drum dryer\n5 | Simple grinding | Factory, Ghana | hammer mill\n6 | Simple mixing with milk powder and sugar | Factory, Ghana | ribbon blender, 500 kg\n7 | Filling into cartons | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2636-12\nBatch: 2400 cartons of 400 g\nMaterials: 30837.18 GHS\nPackaging: 4916.28 GHS\nDirect labour: 14748.85 GHS\nEnergy and water: 7374.42 GHS\nFactory overheads: 9832.56 GHS\nMargin: 12290.71 GHS\nEx-works price per batch: 80000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2636-12\nBatch: 2400 cartons of 400 g\nMaterials: 30,837.18 GHS\nPackaging: 4,916.28 GHS\nDirect labour: 14,748.85 GHS\nEnergy and water: 7,374.42 GHS\nFactory overheads: 9,832.56 GHS\nMargin: 12,290.71 GHS\nEx-works price per batch: 80000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-8516\nDate: 2026-10-15\nExporter: Nkabom Agro-Processing Ltd\nExporter TIN: C0046139881\nConsignee: Lagune Wholesale Ltd\nConsignee address: 144 Avenue de la Paix, Nairobi\nDestination: Kenya\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: NA/KEN/1-2400\nPackages: 100 cartons\nTransport: Road – truck AS 5893-25, via Aflao border\nValue: 86400.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-8516\nDate: 2026-10-15\nExporter: Nkabom Agro-Processing Ltd\nExporter TIN: C0046139881\nConsignee: Lagune Wholesale Ltd\nConsignee address: 144 Avenue de la Paix, Nairobi\nDestination: Kenya\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: NA/KEN/1-2400\nPackages: 100 cartons\nTransport: Road – truck AS 5893-25, via Aflao border\nValue: 86400.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ]
 }

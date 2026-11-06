@@ -1,5 +1,5 @@
 import { Requirements, ShareGauge, Stamp, InfoRequest } from './Result'
-import { DISCLAIMER, Section } from './ui'
+import { DISCLAIMER, RULE_DATA_SHORT, Section } from './ui'
 import { useDecision } from './Adviser'
 import { LogoMark } from './Logo'
 import { Printer } from './icons'
@@ -39,7 +39,7 @@ export default function SmeView({ caseId, extracted, result, summary }: { caseId
         <p className="text-sm mb-3">If a statement in this table is wrong, tell us before you apply.</p>
         <Requirements result={result} sme />
       </Section>
-      <p className="note">{DISCLAIMER}</p>
+      <p className="note">{DISCLAIMER} Rule data: {RULE_DATA_SHORT}.</p>
     </div>
   )
 }

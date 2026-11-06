@@ -3,7 +3,7 @@
  "meta": {
   "case_id": "E01",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -17,7 +17,7 @@
    "language": "en",
    "format": "typed",
    "messiness": 0.3,
-   "scenario": "Malt extract with a lot from Togo. The certificate of origin for that lot is missing."
+   "scenario": "Malt extract with a lot from Togo. The supplier declaration for that lot is missing."
   },
   "defects": [
    "D01_missing_supplier_declaration"
@@ -31,14 +31,14 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Nkabom Provisions Ltd\nAddress: Plot 90, Light Industrial Area, Koforidua, Ghana\nPhone: +233 55 131 7730\nTIN: C0093158497\nRegistration no: GEPA/EXP/2026/6830\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Nkabom Provisions Ltd\nAddress: Plot 90, Light Industrial Area, Koforidua, Ghana\nPhone: +233 55 131 7730\nTIN: C0093158497\nRegistration no: GEPA/EXP/2026/6830\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Nkabom Provisions Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2617-22\nPrepared by: Production manager, Nkabom Provisions Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 8974.49 | 8,974.49 | GH₵ | Brong Malt Cooperative | Ghana | 11.07 | Ghana\nI2 | Glucose syrup | 150 | kg | 2481.54 | 2481.54 | GHS | Brong Sweeteners Cooperative | Ghana | 17.02 | Ghana\nSP1 | Malt extract concentrate | 35 | kg | 2480.00 | 2480.00 | Ghc | Brasserie des Plateaux SARL | Togo | 1901.90 | AfCFTA State Party\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Nkabom Provisions Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2617-22\nPrepared by: Production manager, Nkabom Provisions Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Malt, not roasted | 800 | kg | 8974.49 | 8,974.49 | GH₵ | Brong Malt Cooperative | Ghana | 1107.10 | Ghana\nI2 | Glucose syrup | 150 | kg | 2481.54 | 2481.54 | GHS | Brong Sweeteners Cooperative | Ghana | 1702.30 | Ghana\nSP1 | Malt extract concentrate | 35 | kg | 2480.00 | 2480.00 | Ghc | Brasserie des Plateaux SARL | Togo | 1901.90 | AfCFTA State Party\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Plastic jar with lid, 1 kg | retail | Ghana\nP2 | Corrugated carton (12 jars) | transport | Ghana",
    "illegible_fields": []
   },
   {
@@ -47,7 +47,7 @@
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Malt Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-14789\nDate: 2026-08-17\nBuyer: Nkabom Provisions Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 11.22 GHS\nCustoms value: 8974.49 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Malt Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-14789\nDate: 2026-08-17\nBuyer: Nkabom Provisions Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 11.22 GHS\nInvoice value: 8974.49 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
@@ -55,189 +55,215 @@
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Sweeteners Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-94127\nDate: 2026-09-18\nBuyer: Nkabom Provisions Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 16.54 GHS\nCustoms value: 2481.54 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Sweeteners Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-94127\nDate: 2026-09-18\nBuyer: Nkabom Provisions Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 16.54 GHS\nInvoice value: 2481.54 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2617-22\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2617-22\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Filtration and vacuum evaporation to a concentrate | Factory, Ghana | plate filter and single-effect vacuum evaporator\n3 | Filling into jars | Factory, Ghana | semi-automatic filling and sealing machine\n4 | Labelling | Factory, Ghana | —\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2617-22\nBatch: 1000 jars\nMaterials: 13936.03 GHS\nPackaging: 2606.40 GHS\nDirect labour: 7819.19 GHS\nEnergy and water: 3909.60 GHS\nFactory overheads: 5212.79 GHS\nMargin: 6515.99 GHS\nEx-works price per batch: 40000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2617-22\nBatch: 1000 jars\nMaterials: 13,936.03 GHS\nPackaging: 2,606.40 GHS\nDirect labour: 7,819.19 GHS\nEnergy and water: 3,909.60 GHS\nFactory overheads: 5,212.79 GHS\nMargin: 6,515.99 GHS\nEx-works price per batch: 40000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-1278\nDate: 2026-10-15\nExporter: Nkabom Provisions Ltd\nExporter TIN: C0093158497\nConsignee: Lagune Distribution SARL\nConsignee address: 48 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: NP/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 43200.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-1278\nDate: 2026-10-15\nExporter: Nkabom Provisions Ltd\nExporter TIN: C0093158497\nConsignee: Lagune Distribution SARL\nConsignee address: 48 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: NP/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 43200.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
   }
  ],
  "adapter": {
   "mode": "stub",
-  "label": "Prototype transcription (synthetic documents)",
-  "adapter_version": "1.2.0",
+  "label": "Tessera prototype",
+  "adapter_version": "1.3.0",
   "field_tags": [
    {
     "field": "exporter.registration_no",
+    "label": "Exporter registration number",
     "status": "stated",
     "snippet": "GEPA/EXP/2026/6830",
     "doc_id": "DOC-EXP"
    },
    {
     "field": "product.declared_hs",
+    "label": "Product HS code",
     "status": "stated",
-    "snippet": "Declared HS: 1901.90",
+    "snippet": "1901.90",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "product.description",
+    "label": "Product description",
     "status": "stated",
-    "snippet": "Product: Malt extract, liquid, in 1 kg plastic jars",
+    "snippet": "Malt extract, liquid, in 1 kg plastic jars",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.customs_value",
+    "label": "Malt, not roasted · value",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … 8974.49",
+    "snippet": "8974.49 GH₵",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.fob_value",
+    "label": "Malt, not roasted · FOB value",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … 8,974.49",
+    "snippet": "8,974.49 GH₵",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.hs_code",
+    "label": "Malt, not roasted · HS code",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … 11.07",
+    "snippet": "1107.10",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.origin_class",
+    "label": "Malt, not roasted · origin",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.customs_value",
+    "label": "Glucose syrup · value",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … 2481.54",
+    "snippet": "2481.54 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.fob_value",
+    "label": "Glucose syrup · FOB value",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … 2481.54",
+    "snippet": "2481.54 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.hs_code",
+    "label": "Glucose syrup · HS code",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … 17.02",
+    "snippet": "1702.30",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.origin_class",
+    "label": "Glucose syrup · origin",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.customs_value",
+    "label": "Malt extract concentrate · value",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … 2480.00",
+    "snippet": "2480.00 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.fob_value",
+    "label": "Malt extract concentrate · FOB value",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … 2480.00",
+    "snippet": "2480.00 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.hs_code",
+    "label": "Malt extract concentrate · HS code",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … 1901.90",
+    "snippet": "1901.90",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.origin_class",
+    "label": "Malt extract concentrate · origin",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … AfCFTA State Party",
+    "snippet": "AfCFTA State Party",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P1.origin",
+    "label": "Plastic jar with lid, 1 kg · made in",
     "status": "stated",
-    "snippet": "P1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P2.origin",
+    "label": "Corrugated carton (12 jars) · made in",
     "status": "stated",
-    "snippet": "P2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.declaration",
+    "label": "Malt, not roasted · proof of origin",
     "status": "stated",
     "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
     "doc_id": "DOC-SUP-I1"
    },
    {
     "field": "I2.declaration",
+    "label": "Glucose syrup · proof of origin",
     "status": "stated",
     "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
     "doc_id": "DOC-SUP-I2"
    },
    {
     "field": "S1.operation_code",
+    "label": "Step 1 · type of operation",
     "status": "inferred",
-    "snippet": "1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana",
+    "snippet": "Mashing of malt with hot water in a mash tun (enzymatic conversion) (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S2.operation_code",
+    "label": "Step 2 · type of operation",
     "status": "inferred",
-    "snippet": "2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana",
+    "snippet": "Filtration and vacuum evaporation to a concentrate (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S3.operation_code",
+    "label": "Step 3 · type of operation",
     "status": "inferred",
-    "snippet": "3. Filling into jars – Factory, Ghana",
+    "snippet": "Filling into jars (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S4.operation_code",
+    "label": "Step 4 · type of operation",
     "status": "inferred",
-    "snippet": "4. Labelling – Factory, Ghana",
+    "snippet": "Labelling (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "inputs.food_aid",
+    "label": "Food aid",
     "status": "stated",
-    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "snippet": "none of the inputs was obtained from food aid",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "ex_works_price",
+    "label": "Ex-works price",
     "status": "stated",
-    "snippet": "Ex-works price per batch: 40000.00 GHS",
+    "snippet": "40000.00 GHS",
     "doc_id": "DOC-COST"
    },
    {
     "field": "product.description",
+    "label": "Product description (export invoice)",
     "status": "stated",
-    "snippet": "Goods: Malt extract, liquid, in 1 kg plastic jars",
+    "snippet": "Malt extract, liquid, in 1 kg plastic jars",
     "doc_id": "DOC-INV"
    }
   ]
@@ -286,7 +312,7 @@
     "supplier": "Brong Malt Cooperative",
     "supplier_country": "Ghana",
     "origin_class": "ghana",
-    "hs_code": "11.07",
+    "hs_code": "1107.10",
     "hs_field": {
      "status": "stated"
     },
@@ -317,7 +343,7 @@
     "supplier": "Brong Sweeteners Cooperative",
     "supplier_country": "Ghana",
     "origin_class": "ghana",
-    "hs_code": "17.02",
+    "hs_code": "1702.30",
     "hs_field": {
      "status": "stated"
     },
@@ -395,14 +421,12 @@
     "id": "P1",
     "description": "Plastic jar with lid, 1 kg",
     "packing_type": "retail",
-    "hs_code": "Ex-Chapter 39",
     "origin_class": "ghana"
    },
    {
     "id": "P2",
     "description": "Corrugated carton (12 jars)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana"
    }
   ],
@@ -422,7 +446,7 @@
   "case_id": "E01"
  },
  "result": {
-  "engine_version": "1.2.0",
+  "engine_version": "1.3.0",
   "rulebase_version": "1.1.0",
   "case_id": "E01",
   "valuation_basis": "customs_value",
@@ -526,7 +550,7 @@
     "category": "origin_proof",
     "title": "Origin of 'Malt extract concentrate' cannot be confirmed",
     "input_ref": "SP1",
-    "explanation": "Line SP1 (heading 19.01): no supplier declaration / proof of origin on file. Without proof, the tool cannot count it as local.",
+    "explanation": "Malt extract concentrate (heading 19.01): no supplier declaration / proof of origin on file. Without proof, the tool cannot count it as local.",
     "rule_ids": [
      "A2-31-1",
      "A2-8"
@@ -537,7 +561,7 @@
     ],
     "fix": "Obtain the proof of origin (Certificate of Origin / Origin Declaration, or Appendix III supplier declaration).",
     "sub_reason": "missing",
-    "sme_action": "Send the supplier declaration or certificate of origin for malt extract concentrate."
+    "sme_action": "Send the supplier declaration for malt extract concentrate."
    }
   ],
   "notes": [],
@@ -572,7 +596,7 @@
    },
    {
     "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
-    "evidence": "Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.",
+    "evidence": "Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. The share cannot be calculated yet.",
     "status": "unclear",
     "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
     "rule_ids": [
@@ -581,8 +605,8 @@
     ]
    },
    {
-    "requirement": "The work done in Ghana is more than simple operations such as mixing or packing.",
-    "evidence": "These steps in Ghana are more than simple operations: mashing of malt with hot water in a mash tun (enzymatic conversion) and filtration and vacuum evaporation to a concentrate.",
+    "requirement": "The work done in Ghana includes eligible manufacturing processes under AfCFTA guidelines, not only mixing, grinding or packing.",
+    "evidence": "These manufacturing processes are eligible under AfCFTA guidelines: mashing of malt with hot water in a mash tun (enzymatic conversion) and filtration and vacuum evaporation to a concentrate.",
     "status": "met",
     "source": "Annex 2, Art. 7",
     "rule_ids": [
@@ -591,7 +615,7 @@
     ]
    },
    {
-    "requirement": "No ingredient comes from food aid.",
+    "requirement": "No ingredient comes from food aid (donated or non-commercial supplies).",
     "evidence": "The production notes state that no ingredient comes from food aid.",
     "status": "met",
     "source": "Annex 2, Art. 7(2)",
@@ -601,7 +625,7 @@
    },
    {
     "requirement": "There is proof of origin for local and AfCFTA ingredients.",
-    "evidence": "Supplier declarations or certificates are on file for 2 of 3 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.",
+    "evidence": "Supplier declarations are on file for 2 of 3 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.",
     "status": "unclear",
     "source": "Annex 2, Art. 31 and Appendix III",
     "rule_ids": [
@@ -610,7 +634,7 @@
     ]
    }
   ],
-  "missing_info_request": "Dear Nkabom Provisions Ltd,\n\nThank you for your documents. To complete the pre-check, please send us the items below:\n1. Send the supplier declaration or certificate of origin for malt extract concentrate.\n\nThe pre-check is indicative only. GRA Customs and the National AfCFTA Approval Committee make the official decision.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
+  "missing_info_request": "Dear Nkabom Provisions Ltd,\n\nThank you for your documents. To complete the pre-check, please send us the items below:\n1. Send the supplier declaration for malt extract concentrate.\n\nThe pre-check is indicative only. GRA Customs and the National AfCFTA Approval Committee make the official decision.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
   "folder": {
    "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
    "boxes": [
@@ -755,8 +779,8 @@
   }
  },
  "explanation": {
-  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.\n- Supplier declarations or certificates are on file for 2 of 3 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.\n\nWhat to do next:\n- Send the supplier declaration or certificate of origin for malt extract concentrate.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
-  "label": "Prototype transcription (synthetic documents)",
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. The share cannot be calculated yet.\n- Supplier declarations are on file for 2 of 3 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.\n\nWhat to do next:\n- Send the supplier declaration for malt extract concentrate.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Tessera prototype",
   "citation_check": {
    "ok": true,
    "valid": [

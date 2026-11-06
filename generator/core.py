@@ -15,7 +15,8 @@ from .recipes import (RECIPES, EU_SUPPLIERS, BUYER_FIRST, BUYER_SECOND, SUPPLIER
                       FIRST, SECOND, TOWNS, CONSIGNEE_CITIES)
 from .defects import DEFECTS, NEEDS_IMPORTED_1901
 
-GENERATOR_VERSION = "1.2.0"  # 1.2.0: realistic document layout (letterheads, TIN, unit prices, cost breakdown, equipment)
+GENERATOR_VERSION = "1.3.0"  # 1.3.0: six-digit ingredient HS codes, supplier declarations instead of certificates, no watermark line, table layout for packaging and production notes
+# 1.2.0: realistic document layout (letterheads, TIN, unit prices, cost breakdown, equipment)
 # 1.1.0  # 1.1.0: four products across subheadings 1901.10 / 1901.20 / 1901.90
 RULES_PATH = pathlib.Path(__file__).resolve().parent.parent / "rules" / "rules.json"
 STEP_CODES = {
@@ -75,7 +76,7 @@ def generate_case(spec, seed):
         country = spec.get("countries", {}).get(ing["key"], country)
         cv = (exw * Decimal(str(rng.uniform(*ing["share"])))).quantize(C2, ROUND_HALF_UP)
         fob = cv if origin != "non_state_party" else (cv * Decimal("0.92")).quantize(C2, ROUND_HALF_UP)
-        decl = {"ghana": "appendix_iii_a", "state_party": "certificate_of_origin", "non_state_party": "supplier_invoice"}[origin]
+        decl = {"ghana": "appendix_iii_a", "state_party": "appendix_iii_a", "non_state_party": "supplier_invoice"}[origin]
         inputs.append({"id": f"I{i}", "description": ing["description"], "hs_code": ing["hs"],
                        "quantity": {"value": ing["qty"], "unit": ing["unit"]},
                        "customs_value": _m(cv), "fob_value": _m(fob), "supplier": _supplier(country, ing["key"], rng),
@@ -103,7 +104,7 @@ def generate_case(spec, seed):
         inputs.append({"id": "SP1", "description": imp["description"], "hs_code": imp["hs"],
                        "quantity": {"value": str(rng.randint(20, 80)), "unit": "kg"}, "customs_value": _m(cv), "fob_value": _m(cv),
                        "supplier": "Brasserie des Plateaux SARL", "supplier_country": "Togo", "origin_class": "state_party",
-                       "food_aid": False, "declaration": {"type": "certificate_of_origin" if has_proof else None, "present": has_proof},
+                       "food_aid": False, "declaration": {"type": "appendix_iii_a" if has_proof else None, "present": has_proof},
                        "conflicts": [], "_desc_fr": imp["desc_fr"]})
 
     # reality-changing defects
@@ -124,7 +125,7 @@ def generate_case(spec, seed):
     packaging = []
     for i, p in enumerate(rec["packaging"], 1):
         unknown = p["packing_type"] == "retail" and "D10_packaging_unknown_origin" in defects
-        packaging.append({"id": f"P{i}", "description": p["description"], "packing_type": p["packing_type"], "hs_code": p["hs"],
+        packaging.append({"id": f"P{i}", "description": p["description"], "packing_type": p["packing_type"],
                           "origin_class": "unknown" if unknown else "ghana", "country": None if unknown else "Ghana"})
 
     product_desc = rec.get("hs_doubt_description") if "D12_doubtful_product_hs" in defects else rec["product_description"]
@@ -175,8 +176,6 @@ def _supplier(country, key, rng):
                                           "sugar": "Sugar", "milk": "Dairy", "wheat": "Flour Mills", "baking": "Bakery Supplies"}.get(key, "Agro"))
 
 
-HEAD = "SYNTHETIC DOCUMENT – fictional company, created for prototype testing"
-HEAD_FR = "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype"
 
 
 def _documents(t, steps, spec, defects, lang, fmt, mess, rng, fr_names):
@@ -185,16 +184,16 @@ def _documents(t, steps, spec, defects, lang, fmt, mess, rng, fr_names):
     exp = t["exporter"]
     batch = f"B-{rng.randint(2600, 2699)}-{rng.randint(10, 99)}"
     docs.append({"doc_id": "DOC-EXP", "type": "exporter_profile", "language": "en", "format": "typed", "text": "\n".join([
-        HEAD, "EXPORTER PROFILE", f"Name: {exp['name']}", f"Address: {exp['address']}", f"Phone: {exp['phone']}",
+        "EXPORTER PROFILE", f"Name: {exp['name']}", f"Address: {exp['address']}", f"Phone: {exp['phone']}",
         f"TIN: {exp['tin']}", f"Registration no: {exp['registration_no'] or ''}", f"Status: {exp['registration_status']}",
         "Activity: manufacture of food preparations"])})
-    lines = [HEAD, "BILL OF MATERIALS", f"Exporter: {exp['name']}", f"Product: {t['product']['description']}",
+    lines = ["BILL OF MATERIALS", f"Exporter: {exp['name']}", f"Product: {t['product']['description']}",
              f"Declared HS: {t['product']['declared_hs']}", f"Batch: {t['product']['quantity']} {t['product']['unit']}",
              f"Batch no: {batch}", f"Prepared by: Production manager, {exp['name']}",
-             "ID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin"]
+             "Item | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin"]
     illegible = []
     for x in t["inputs"]:
-        hs = "11.07" if ("D02_wrong_input_hs" in defects and x["id"] == "X1") else x["hs_code"]
+        hs = "1107.10" if ("D02_wrong_input_hs" in defects and x["id"] == "X1") else x["hs_code"]
         cur = "EUR" if ("D14_currency_mismatch_1901" in defects and x["id"] == "X1") else _cur(mess, rng)
         cv, fob = _num(x["customs_value"]["amount"], mess, rng), _num(x["fob_value"]["amount"], mess, rng)
         if "D05_unreadable_cost_1901" in defects and x["id"] == "X1":
@@ -205,8 +204,9 @@ def _documents(t, steps, spec, defects, lang, fmt, mess, rng, fr_names):
         lines.append(" | ".join([x["id"], x["description"], x["quantity"]["value"], unit, cv, fob, cur, x["supplier"],
                                  x["supplier_country"] or "—", hs, origin]))
     lines.append("PACKAGING")
+    lines.append("Item | Description | Packing type | Made in")
     for p in t["packaging"]:
-        lines.append(" | ".join([p["id"], p["description"], p["packing_type"], p["hs_code"], p["country"] or "—"]))
+        lines.append(" | ".join([p["id"], p["description"], p["packing_type"], p["country"] or "—"]))
     docs.append({"doc_id": "DOC-BOM", "type": "bill_of_materials", "language": "en", "format": "handwritten" if hand else "typed",
                  "text": "\n".join(lines), "illegible_fields": illegible})
     for x in t["inputs"]:
@@ -229,32 +229,29 @@ def _documents(t, steps, spec, defects, lang, fmt, mess, rng, fr_names):
         date = f"2026-{rng.randint(7, 9):02d}-{rng.randint(1, 28):02d}"
         if fr:
             title = {"appendix_iii_a": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)",
-                     "certificate_of_origin": "CERTIFICAT D'ORIGINE ZLECAf – COPIE",
                      "supplier_invoice": "FACTURE"}[kind]
-            body = [HEAD_FR, title, f"Fournisseur : {x['supplier']}", f"Pays d'origine : {x['supplier_country']}",
+            body = [title, f"Fournisseur : {x['supplier']}", f"Pays d'origine : {x['supplier_country']}",
                     f"Facture n° : {inv_no}", f"Date : {date}", f"Client : {t['exporter']['name']}",
                     f"Marchandises : {fr_names.get(x['id']) or x['description']}", f"Quantité : {qty} {'sacs' if unit == 'bags' else unit}",
                     f"Prix unitaire : {unit_price} {cur}", (f"Valeur en douane : {val} {cur}" if x["origin_class"] == "non_state_party" else f"Valeur facturée : {val} {cur}"),
-                    "Les marchandises satisfont aux règles d'origine de la ZLECAf." if kind != "supplier_invoice" else ""]
+                    ("Je soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf." if kind != "supplier_invoice" else "")]
         else:
             title = {"appendix_iii_a": "SUPPLIER DECLARATION (Appendix III, Part A)",
-                     "certificate_of_origin": "AfCFTA CERTIFICATE OF ORIGIN – COPY",
                      "supplier_invoice": "COMMERCIAL INVOICE AND CUSTOMS ENTRY"}[kind]
-            body = [HEAD, title, f"Supplier: {x['supplier']}", f"Country of origin: {x['supplier_country']}",
+            body = [title, f"Supplier: {x['supplier']}", f"Country of origin: {x['supplier_country']}",
                     f"Invoice no: {inv_no}", f"Date: {date}", f"Buyer: {t['exporter']['name']}", f"Goods: {x['description']}",
                     f"Quantity: {qty} {unit}", f"Unit price: {unit_price} {cur}", (f"Customs value: {val} {cur}" if x["origin_class"] == "non_state_party" else f"Invoice value: {val} {cur}"),
-                    "The goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties." if kind != "supplier_invoice" else ""]
+                    (f"I, the undersigned, declare that the goods listed on this invoice were produced in {x['supplier_country']} and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties." if kind != "supplier_invoice" else "")]
         docs.append({"doc_id": f"DOC-SUP-{x['id']}", "type": kind, "input_id": x["id"], "language": "fr" if fr else "en",
                      "format": "typed", "text": "\n".join(l for l in body if l)})
     fr_notes = lang == "fr_mixed"
     food = [x for x in t["inputs"] if x.get("food_aid")]
-    lines = [HEAD_FR if fr_notes else HEAD, "PROCÉDÉ DE PRODUCTION" if fr_notes else "PRODUCTION PROCESS",
-             (f"Lot : {batch}" if fr_notes else f"Batch no: {batch}")]
+    lines = ["PROCÉDÉ DE PRODUCTION" if fr_notes else "PRODUCTION PROCESS",
+             (f"Lot : {batch}" if fr_notes else f"Batch no: {batch}"),
+             "N° | Étape | Lieu | Équipement" if fr_notes else "Step | Description | Location | Equipment"]
     for s in steps:
-        lines.append(f"{s['id'][1:]}. {s['description_fr'] if fr_notes else s['description']} – {'Usine' if fr_notes else 'Factory'}, Ghana")
-        eq = next((v for k, v in EQUIPMENT.items() if s["description"].startswith(k)), None)
-        if eq:
-            lines.append(f"   {'Équipement' if fr_notes else 'Equipment'}: {eq}")
+        eq = next((v for k, v in EQUIPMENT.items() if s["description"].startswith(k)), None) or "—"
+        lines.append(" | ".join([s['id'][1:], s['description_fr'] if fr_notes else s['description'], f"{'Usine' if fr_notes else 'Factory'}, Ghana", eq]))
     if food:
         lines.append(("Aide alimentaire : " if fr_notes else "Food aid: ") + f"{food[0]['description']} received from a food assistance programme")
     else:
@@ -268,13 +265,13 @@ def _documents(t, steps, spec, defects, lang, fmt, mess, rng, fr_names):
     over = (rest * Decimal("0.20")).quantize(C2)
     margin = rest - labour - energy - pack - over
     docs.append({"doc_id": "DOC-COST", "type": "costing_sheet", "language": "en", "format": "typed", "text": "\n".join([
-        HEAD, "COSTING SHEET", f"Batch no: {batch}", f"Batch: {t['product']['quantity']} {t['product']['unit']}",
-        f"Materials: {mats:.2f} GHS", f"Packaging: {pack:.2f} GHS", f"Direct labour: {labour:.2f} GHS", f"Energy and water: {energy:.2f} GHS",
-        f"Factory overheads: {over:.2f} GHS", f"Margin: {margin:.2f} GHS",
+        "COSTING SHEET", f"Batch no: {batch}", f"Batch: {t['product']['quantity']} {t['product']['unit']}",
+        f"Materials: {mats:,.2f} GHS", f"Packaging: {pack:,.2f} GHS", f"Direct labour: {labour:,.2f} GHS", f"Energy and water: {energy:,.2f} GHS",
+        f"Factory overheads: {over:,.2f} GHS", f"Margin: {margin:,.2f} GHS",
         f"Ex-works price per batch: {_num(t['ex_works_price']['amount'], mess, rng)} GHS"])})
     inv, p, c = t["invoice"], t["product"], t["consignee"]
     docs.append({"doc_id": "DOC-INV", "type": "export_invoice", "language": "en", "format": "typed", "text": "\n".join([
-        HEAD, "EXPORT INVOICE", f"Invoice no: {inv['number']}", f"Date: {inv['date']}", f"Exporter: {exp['name']}", f"Exporter TIN: {exp['tin']}",
+        "EXPORT INVOICE", f"Invoice no: {inv['number']}", f"Date: {inv['date']}", f"Exporter: {exp['name']}", f"Exporter TIN: {exp['tin']}",
         f"Consignee: {c['name']}", f"Consignee address: {c['address']}", f"Destination: {c['country']}", f"Goods: {p['description']}",
         f"Quantity: {p['quantity']} {p['unit']}", f"Gross weight: {p['gross_weight_kg']} kg", f"Marks: {p['marks']}",
         f"Packages: {p['packaging_count']}", f"Transport: {p['transport']}", f"Value: {inv['value']} {inv['currency']}",

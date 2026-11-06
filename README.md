@@ -13,7 +13,7 @@ GRA Customs and the National AfCFTA Approval Committee make the official decisio
 |---|---|
 | `rules/` | `rules.json` (71 entries: verbatim text, source file, page, provision, date, legal status, engine behaviour), `build_rules.py`, `validate.py` |
 | `engine/` | Deterministic rule engine – pure Python standard library, exact `Decimal` arithmetic. The same files run in the browser (Pyodide). |
-| `adapter/` | Language-model adapter: `stub.py` (labelled *STUB – synthetic transcription*) and `live.py` (optional Google Gemini free tier, run locally). Prompts in `adapter/prompts/`. |
+| `adapter/` | Language-model adapter: `stub.py` (shown as "Tessera prototype") and `live.py` (optional Google Gemini free tier, run locally). Prompts in `adapter/prompts/`. |
 | `generator/` | Seeded synthetic SME generator, defect library, handwriting-style image renderer. |
 | `answer_key/` | `fixed_key.json` (hand-derived, five required tests, checker fields blank) and `derive.py` (independent expectations for the evaluation set). |
 | `cases/` | Generated cases (`fixed/`, `eval/`), readable versions (`readable/`), images, `manifest.json`, `recorded/` (live runs). |

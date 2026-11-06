@@ -40,7 +40,9 @@ def test_defect_library_and_answer_key_use_same_ids():
 def test_everything_is_labelled_synthetic():
     for f in (ROOT / "cases").glob("*/*.json"):
         c = json.loads(f.read_text(encoding="utf-8"))
-        assert c["meta"]["synthetic"] is True and all(d["text"].startswith(("SYNTHETIC", "DOCUMENT SYNTHÉTIQUE")) for d in c["documents"])
+        # v4: the watermark line was removed from the documents at the group's request; the case files stay labelled
+        assert c["meta"]["synthetic"] is True and c["truth"]["synthetic"] is True and "SYNTHETIC" in c["meta"]["label"]
+        assert not any("certificate of origin" in d["text"].lower() or "certificat d'origine" in d["text"].lower() for d in c["documents"])
 
 def test_state_party_suppliers_only_from_para_7():
     rules = json.loads((ROOT / "rules" / "rules.json").read_text(encoding="utf-8"))

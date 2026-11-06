@@ -2,7 +2,7 @@
  "meta": {
   "case_id": "E11",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -63,7 +63,7 @@
    {
     "id": "I1",
     "description": "Wheat flour",
-    "hs_code": "11.01",
+    "hs_code": "1101.00",
     "quantity": {
      "value": "1100",
      "unit": "kg"
@@ -83,7 +83,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -91,7 +91,7 @@
    {
     "id": "I2",
     "description": "Malt, not roasted",
-    "hs_code": "11.07",
+    "hs_code": "1107.10",
     "quantity": {
      "value": "250",
      "unit": "kg"
@@ -119,7 +119,7 @@
    {
     "id": "I3",
     "description": "Baking powder",
-    "hs_code": "21.02",
+    "hs_code": "2102.30",
     "quantity": {
      "value": "40",
      "unit": "kg"
@@ -147,7 +147,7 @@
    {
     "id": "I4",
     "description": "Cane sugar",
-    "hs_code": "Chapter 17",
+    "hs_code": "1701.99",
     "quantity": {
      "value": "80",
      "unit": "kg"
@@ -204,7 +204,6 @@
     "id": "P1",
     "description": "Printed paper bag, 1 kg",
     "packing_type": "retail",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    },
@@ -212,7 +211,6 @@
     "id": "P2",
     "description": "Corrugated carton (10 bags)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    }
@@ -231,23 +229,23 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Akwaaba Foods Ltd\nAddress: Plot 4, Light Industrial Area, Tema, Ghana\nPhone: +233 37 854 6167\nTIN: C0097310973\nRegistration no: \nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Akwaaba Foods Ltd\nAddress: Plot 4, Light Industrial Area, Tema, Ghana\nPhone: +233 37 854 6167\nTIN: C0097310973\nRegistration no: \nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Akwaaba Foods Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2680-71\nPrepared by: Production manager, Akwaaba Foods Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Wheat flour | 1100 | kilos | 5391.65 | 5,391.65 | GHS | Bouaké Flour Mills SA | Côte d’Ivoire | 11.01 | AfCFTA State Party\nI2 | Malt, not roasted | 250 | Kg | 1,422.01 | 1422.01 | GHS | Ségou Malt SARL | — | 11.07 | —\nI3 | Baking powder | 40 | kilos | 398.94 | 398.94 | GHS | Akatsi Bakery Supplies Ltd | Ghana | 21.02 | Ghana\nI4 | Cane sugar | 80 | kg | 652.75 | 600.53 | GHS | Southern Cross Sugar Ltd | New Zealand | Chapter 17 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Akwaaba Foods Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2680-71\nPrepared by: Production manager, Akwaaba Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Wheat flour | 1100 | kilos | 5391.65 | 5,391.65 | GHS | Bouaké Flour Mills SA | Côte d’Ivoire | 1101.00 | AfCFTA State Party\nI2 | Malt, not roasted | 250 | Kg | 1,422.01 | 1422.01 | GHS | Ségou Malt SARL | — | 1107.10 | —\nI3 | Baking powder | 40 | kilos | 398.94 | 398.94 | GHS | Akatsi Bakery Supplies Ltd | Ghana | 2102.30 | Ghana\nI4 | Cane sugar | 80 | kg | 652.75 | 600.53 | GHS | Southern Cross Sugar Ltd | New Zealand | 1701.99 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paper bag, 1 kg | retail | Ghana\nP2 | Corrugated carton (10 bags) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Bouaké Flour Mills SA\nCountry of origin: Côte d’Ivoire\nInvoice no: BOU-69913\nDate: 2026-07-24\nBuyer: Akwaaba Foods Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 4.90 GHS\nInvoice value: 5391.65 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Bouaké Flour Mills SA\nCountry of origin: Côte d’Ivoire\nInvoice no: BOU-69913\nDate: 2026-07-24\nBuyer: Akwaaba Foods Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 4.90 GHS\nInvoice value: 5391.65 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Côte d’Ivoire and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I3",
@@ -255,7 +253,7 @@
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Bakery Supplies Ltd\nCountry of origin: Ghana\nInvoice no: AKA-81138\nDate: 2026-07-03\nBuyer: Akwaaba Foods Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 9.97 GHS\nInvoice value: 398.94 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Bakery Supplies Ltd\nCountry of origin: Ghana\nInvoice no: AKA-81138\nDate: 2026-07-03\nBuyer: Akwaaba Foods Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 9.97 GHS\nInvoice value: 398.94 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I4",
@@ -263,28 +261,28 @@
    "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Sugar Ltd\nCountry of origin: New Zealand\nInvoice no: SOU-66587\nDate: 2026-07-06\nBuyer: Akwaaba Foods Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 8.16 GHS\nCustoms value: 652.75 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Sugar Ltd\nCountry of origin: New Zealand\nInvoice no: SOU-66587\nDate: 2026-07-06\nBuyer: Akwaaba Foods Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 8.16 GHS\nCustoms value: 652.75 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2680-71\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Drum drying of the malt extract with part of the flour – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n3. Simple mixing with flour, sugar and baking powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n4. Filling into bags – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2680-71\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Drum drying of the malt extract with part of the flour | Factory, Ghana | steam-heated double drum dryer\n3 | Simple mixing with flour, sugar and baking powder | Factory, Ghana | ribbon blender, 500 kg\n4 | Filling into bags | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2680-71\nBatch: 1500 bags of 1 kg\nMaterials: 7865.35 GHS\nPackaging: 1213.46 GHS\nDirect labour: 3640.40 GHS\nEnergy and water: 1820.20 GHS\nFactory overheads: 2426.93 GHS\nMargin: 3033.66 GHS\nEx-works price per batch: 20,000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2680-71\nBatch: 1500 bags of 1 kg\nMaterials: 7,865.35 GHS\nPackaging: 1,213.46 GHS\nDirect labour: 3,640.40 GHS\nEnergy and water: 1,820.20 GHS\nFactory overheads: 2,426.93 GHS\nMargin: 3,033.66 GHS\nEx-works price per batch: 20,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-2239\nDate: 2026-10-15\nExporter: Akwaaba Foods Ltd\nExporter TIN: C0097310973\nConsignee: Kilimanjaro Foods Ltd\nConsignee address: 42 Avenue de la Paix, Dakar\nDestination: Senegal\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: AF/SEN/1-1500\nPackages: 150 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-2239\nDate: 2026-10-15\nExporter: Akwaaba Foods Ltd\nExporter TIN: C0097310973\nConsignee: Kilimanjaro Foods Ltd\nConsignee address: 42 Avenue de la Paix, Dakar\nDestination: Senegal\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: AF/SEN/1-1500\nPackages: 150 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ]
 }

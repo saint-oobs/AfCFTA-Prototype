@@ -2,31 +2,31 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import anime from 'animejs'
 import HeroMosaic from '../components/HeroMosaic'
-import { STAGES } from '../components/ui'
+import { RuleData, STAGES } from '../components/ui'
 import { reduced } from '../lib/motion'
 import { Activity, ArrowRight, Cpu, FileText, Scale, Scan, User } from '../components/icons'
 
 export const TESTS = [
   ['1', 'Typical', 'Malt extract', '1901.90', 'Local and AfCFTA ingredients, full processing in Ghana.', 'T1'],
-  ['2', 'Typical', 'Infant cereal', '1901.10', 'Imported ingredients of other headings, a French certificate from Togo.', 'T2'],
+  ['2', 'Typical', 'Infant cereal', '1901.10', 'Imported ingredients of other headings, a French supplier declaration from Togo.', 'T2'],
   ['3', 'Edge', 'Malted bread mix', '1901.20', 'Imported 19.01 premix at 14.9%, 15.0% and 15.1%, and two lots of 8% each.', 'T3a'],
-  ['4', 'Failure', 'Millet porridge mix', '1901.90', 'Only simple operations: cleaning, grinding, mixing and packing.', 'T4'],
-  ['5', 'Key assumption', 'Infant cereal', '1901.10', 'Handwritten and French records; one value cannot be read.', 'T5a'],
+  ['4', 'Failure', 'Millet porridge mix', '1901.90', 'No eligible manufacturing process: only cleaning, grinding, mixing and packing.', 'T4'],
+  ['5', 'Key assumption', 'Infant cereal', '1901.10', 'Handwritten and multilingual records; one value cannot be read.', 'T5a'],
 ]
 
 const ICONS = [FileText, Scan, Cpu, Scale, User, Activity]
 const TASKS: [string, string][][] = [
   [['Data', 'Invoices, bills of materials, costing sheets and supplier records from the SME. AfCFTA rules of origin and HS schedules as the knowledge base.']],
-  [['Extraction', 'SME records come in many layouts, often handwritten or in French. Fixed templates fail on such records; a language model can read them.'],
+  [['Extraction', 'SME records come in many layouts, often handwritten or multilingual. Fixed templates fail on such records; a language model can read them.'],
    ['Classification', 'Most SMEs find HS classification difficult. The model suggests the HS code with the text it comes from, and the adviser confirms it.'],
-   ['Process evaluation', 'Each production step is compared with the list of simple operations in Article 7.']],
+   ['Process evaluation', 'Each production step is checked against the accepted operations in the AfCFTA guidelines.']],
   [['Retrieval (RAG)', 'The answer is grounded in the official legal text, not in the model’s memory. The knowledge base can be updated without retraining.'],
    ['Bounded agents', 'Instructions limit the model to the retrieved text and the extracted data. It flags gaps and does not guess.'],
-   ['Rule engine', 'Calculations such as the 15% limit run in plain code with exact numbers.']],
+   ['Exact calculation', 'Calculations such as the 15% limit run in plain code with exact numbers, not in the language model.']],
   [['Matching', 'The extracted values and steps are compared with the rule for heading 19.01.'],
    ['Generation', 'A plain-language summary and a list of gaps with actions for the SME.']],
-  [['Human review', 'The adviser checks the HS code against the SME’s documents and approves the result, or asks the SME for information.']],
-  [['Monitoring', 'Corrections and errors are logged. Aggregated, de-identified data shows where SMEs need support.']],
+  [['Human review', 'If the HS code is confirmed, the result is sent to the SME; if not, the SME is asked for more information.']],
+  [['Feedback', 'The SME and the adviser flag hallucinations and values that were extracted or identified wrongly.'], ['Monitoring and updates', 'The feedback goes to the development team, which fixes the model and releases an updated version.']],
 ]
 
 function Pipeline() {
@@ -86,7 +86,7 @@ export default function Landing() {
             <p className="label mb-3">AI Adoption and Innovation Centre · Ghana</p>
             <h1 className="text-5xl font-semibold tracking-tight">Tessera</h1>
             <p className="mt-3 text-xl">Know if your product meets the AfCFTA rules of origin before you apply.</p>
-            <p className="mt-4 lead max-w-xl">Tessera checks food products of HS heading 19.01 against the AfCFTA rules of origin. It shows the likely result, the reasons and the missing information. A trade adviser checks every result.</p>
+            <p className="mt-4 lead max-w-xl">Tessera checks food products of HS heading 19.01 against the AfCFTA rules of origin. It shows the likely result, the reasons and the missing information.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/navigator/T1/inputs" className="btn-primary">Open the Navigator <ArrowRight /></Link>
               <Link to="/tests" className="btn">Test log</Link>
@@ -105,11 +105,12 @@ export default function Landing() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 pb-12">
         <h2 className="h2 mb-4">The rules that Tessera checks</h2>
         <div className="grid md:grid-cols-3 gap-4">
-          {[['Heading rule', 'An ingredient without AfCFTA origin must not be in heading 19.01.', 'Appendix IV, heading 19.01 (December 2023)'],
-            ['15% tolerance', 'Ingredients of heading 19.01 without AfCFTA origin are allowed up to 15% of the ex-works price in total.', 'EX.CL/1329(XL), Annex, item 3 (draft decision text)'],
-            ['Simple operations', 'Mixing, grinding or packing alone does not give origin. Tessera checks this in every case.', 'Annex 2, Article 7']].map(([t, d, s]) => (
-            <div key={t} className="card p-5"><p className="h3">{t}</p><p className="mt-2 text-sm">{d}</p><p className="mt-3 note">{s}</p></div>))}
+          {[['Heading rule', 'Ingredients from outside the AfCFTA must not themselves be products of heading 19.01. For example, imported wheat flour (heading 11.01) or milk powder (heading 04.02) is allowed; an imported premix or malt extract of heading 19.01 is not.'],
+            ['15% tolerance', 'Exception to the heading rule: imported ingredients of heading 19.01 are still allowed if, together, they cost no more than 15% of the factory price (ex-works price) of the product.'],
+            ['Eligible manufacturing processes', 'Mixing, grinding or packaging alone are not sufficient production processes for a certificate of origin under AfCFTA requirements. Real processing, such as cooking, roasting or drying, must take place in Ghana.']].map(([t, d]) => (
+            <div key={t} className="card p-5"><p className="h3">{t}</p><p className="mt-2 text-sm">{d}</p></div>))}
         </div>
+        <div className="mt-4"><RuleData /></div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6">

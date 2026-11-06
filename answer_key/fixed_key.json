@@ -13,7 +13,7 @@
    "share_percent": "0",
    "article7": "met",
    "box12": "SX",
-   "derivation": "No ingredient is in heading 19.01 (malt 11.07, glucose syrup 17.02). The heading-change rule is met without the tolerance. Mashing and vacuum evaporation in Ghana are not Art. 7(1) operations. Box 12: SX.",
+   "derivation": "No ingredient is in heading 19.01 (malt 1107.10, glucose syrup 1702.30). The heading-change rule is met without the tolerance. Mashing and vacuum evaporation in Ghana are not Art. 7(1) operations. Box 12: SX.",
    "rule_ids": [
     "APPIV-1901",
     "EXCL-AN-3",
@@ -40,7 +40,7 @@
    "share_percent": "0",
    "article7": "met",
    "box12": "SX",
-   "derivation": "Ingredients are in Chapters 10, 12, 4 and 17, not heading 19.01. Imported milk powder and sugar do not affect a heading-change rule. Roasting, extrusion cooking and drum drying in Ghana are not Art. 7(1) operations. Box 12: SX.",
+   "derivation": "Ingredients are in headings 10.08, 12.01, 04.02 and 17.01, not heading 19.01. Imported milk powder and sugar do not affect a heading-change rule. Roasting, extrusion cooking and drum drying in Ghana are not Art. 7(1) operations. Box 12: SX.",
    "rule_ids": [
     "APPIV-1901",
     "EXCL-AN-3",
@@ -202,7 +202,7 @@
    "share_percent": "6.0",
    "article7": "met",
    "box12": "SX",
-   "derivation": "Imported premix (heading 19.01) GHS 3,600.00 / ex-works GHS 60,000.00 = 6.0% ≤ 15%. Millet from Burkina Faso is Chapter 10, not heading 19.01, so cumulation is not needed. Expected only if every value is read correctly.",
+   "derivation": "Imported premix (heading 19.01) GHS 3,600.00 / ex-works GHS 60,000.00 = 6.0% ≤ 15%. Millet from Burkina Faso is heading 10.08, not heading 19.01, so cumulation is not needed. Expected only if every value is read correctly.",
    "rule_ids": [
     "APPIV-1901",
     "EXCL-AN-3",

@@ -3,7 +3,7 @@
  "meta": {
   "case_id": "E12",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -18,7 +18,7 @@
    "language": "en",
    "format": "typed",
    "messiness": 0.3,
-   "scenario": "Malt extract. A certificate is missing and the units of the concentrate do not agree."
+   "scenario": "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree."
   },
   "defects": [
    "D01_missing_supplier_declaration",
@@ -35,23 +35,23 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Akwaaba Grains Ltd\nAddress: Plot 24, Light Industrial Area, Tamale, Ghana\nPhone: +233 37 486 5380\nTIN: C0037993082\nRegistration no: GEPA/EXP/2026/1813\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Akwaaba Grains Ltd\nAddress: Plot 24, Light Industrial Area, Tamale, Ghana\nPhone: +233 37 486 5380\nTIN: C0037993082\nRegistration no: GEPA/EXP/2026/1813\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Akwaaba Grains Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2641-37\nPrepared by: Production manager, Akwaaba Grains Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 11915.77 | 11915.77 | GHS | Delta Malt Co. | Egypt | 11.07 | AfCFTA State Party\nI2 | Glucose syrup | 150 | kgs | 2,790.46 | 2567.22 | GHS | Deccan Sweeteners Pvt Ltd | India | 17.02 | Imported (non-State Party)\nX1 | Malt extract concentrate | 38 | kg | 1000.00 | 1,000.00 | GHS | Rhinefield Food Ingredients GmbH | India | 1901.90 | Imported (non-State Party)\nSP1 | Malt extract concentrate | 69 | kg | 3700.00 | 3700.00 | Ghc | Brasserie des Plateaux SARL | Togo | 1901.90 | AfCFTA State Party\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Akwaaba Grains Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2641-37\nPrepared by: Production manager, Akwaaba Grains Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Malt, not roasted | 800 | kg | 11915.77 | 11915.77 | GHS | Delta Malt Co. | Egypt | 1107.10 | AfCFTA State Party\nI2 | Glucose syrup | 150 | kgs | 2,790.46 | 2567.22 | GHS | Punjab Sweeteners Pvt Ltd | India | 1702.30 | Imported (non-State Party)\nX1 | Malt extract concentrate | 38 | kg | 1000.00 | 1,000.00 | GHS | Rhinefield Food Ingredients GmbH | India | 1901.90 | Imported (non-State Party)\nSP1 | Malt extract concentrate | 69 | kg | 3700.00 | 3700.00 | Ghc | Brasserie des Plateaux SARL | Togo | 1901.90 | AfCFTA State Party\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Plastic jar with lid, 1 kg | retail | Ghana\nP2 | Corrugated carton (12 jars) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Delta Malt Co.\nCountry of origin: Egypt\nInvoice no: DEL-19856\nDate: 2026-07-01\nBuyer: Akwaaba Grains Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 14.89 GHS\nCustoms value: 11915.77 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Delta Malt Co.\nCountry of origin: Egypt\nInvoice no: DEL-19856\nDate: 2026-07-01\nBuyer: Akwaaba Grains Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 14.89 GHS\nInvoice value: 11915.77 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Egypt and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
@@ -59,7 +59,7 @@
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Sweeteners Pvt Ltd\nCountry of origin: India\nInvoice no: DEC-80690\nDate: 2026-09-17\nBuyer: Akwaaba Grains Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 18.60 GHS\nCustoms value: 2790.46 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Punjab Sweeteners Pvt Ltd\nCountry of origin: India\nInvoice no: PUN-80690\nDate: 2026-09-17\nBuyer: Akwaaba Grains Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 18.60 GHS\nCustoms value: 2790.46 GHS"
   },
   {
    "doc_id": "DOC-SUP-X1",
@@ -67,219 +67,250 @@
    "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: India\nInvoice no: RHI-58807\nDate: 2026-07-06\nBuyer: Akwaaba Grains Ltd\nGoods: Malt extract concentrate\nQuantity: 1 bags\nUnit price: 26.32 GHS\nCustoms value: 1000.00 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: India\nInvoice no: RHI-58807\nDate: 2026-07-06\nBuyer: Akwaaba Grains Ltd\nGoods: Malt extract concentrate\nQuantity: 1 bags\nUnit price: 26.32 GHS\nCustoms value: 1000.00 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2641-37\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2641-37\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Filtration and vacuum evaporation to a concentrate | Factory, Ghana | plate filter and single-effect vacuum evaporator\n3 | Filling into jars | Factory, Ghana | semi-automatic filling and sealing machine\n4 | Labelling | Factory, Ghana | —\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2641-37\nBatch: 1000 jars\nMaterials: 19406.23 GHS\nPackaging: 3059.38 GHS\nDirect labour: 9178.13 GHS\nEnergy and water: 4589.07 GHS\nFactory overheads: 6118.75 GHS\nMargin: 7648.44 GHS\nEx-works price per batch: 50000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2641-37\nBatch: 1000 jars\nMaterials: 19,406.23 GHS\nPackaging: 3,059.38 GHS\nDirect labour: 9,178.13 GHS\nEnergy and water: 4,589.07 GHS\nFactory overheads: 6,118.75 GHS\nMargin: 7,648.44 GHS\nEx-works price per batch: 50000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-8855\nDate: 2026-10-15\nExporter: Akwaaba Grains Ltd\nExporter TIN: C0037993082\nConsignee: Kilimanjaro Distribution SARL\nConsignee address: 147 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: AG/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 54000.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-8855\nDate: 2026-10-15\nExporter: Akwaaba Grains Ltd\nExporter TIN: C0037993082\nConsignee: Kilimanjaro Distribution SARL\nConsignee address: 147 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: AG/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 54000.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
   }
  ],
  "adapter": {
   "mode": "stub",
-  "label": "Prototype transcription (synthetic documents)",
-  "adapter_version": "1.2.0",
+  "label": "Tessera prototype",
+  "adapter_version": "1.3.0",
   "field_tags": [
    {
     "field": "exporter.registration_no",
+    "label": "Exporter registration number",
     "status": "stated",
     "snippet": "GEPA/EXP/2026/1813",
     "doc_id": "DOC-EXP"
    },
    {
     "field": "product.declared_hs",
+    "label": "Product HS code",
     "status": "stated",
-    "snippet": "Declared HS: 1901.90",
+    "snippet": "1901.90",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "product.description",
+    "label": "Product description",
     "status": "stated",
-    "snippet": "Product: Malt extract, liquid, in 1 kg plastic jars",
+    "snippet": "Malt extract, liquid, in 1 kg plastic jars",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.customs_value",
+    "label": "Malt, not roasted · value",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … 11915.77",
+    "snippet": "11915.77 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.fob_value",
+    "label": "Malt, not roasted · FOB value",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … 11915.77",
+    "snippet": "11915.77 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.hs_code",
+    "label": "Malt, not roasted · HS code",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … 11.07",
+    "snippet": "1107.10",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.origin_class",
+    "label": "Malt, not roasted · origin",
     "status": "stated",
-    "snippet": "I1 | Malt, not roasted | … AfCFTA State Party",
+    "snippet": "AfCFTA State Party",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.customs_value",
+    "label": "Glucose syrup · value",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … 2,790.46",
+    "snippet": "2,790.46 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.fob_value",
+    "label": "Glucose syrup · FOB value",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … 2567.22",
+    "snippet": "2567.22 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.hs_code",
+    "label": "Glucose syrup · HS code",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … 17.02",
+    "snippet": "1702.30",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.origin_class",
+    "label": "Glucose syrup · origin",
     "status": "stated",
-    "snippet": "I2 | Glucose syrup | … Imported (non-State Party)",
+    "snippet": "Imported (non-State Party)",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.customs_value",
+    "label": "Malt extract concentrate · value",
     "status": "stated",
-    "snippet": "X1 | Malt extract concentrate | … 1000.00",
+    "snippet": "1000.00 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.fob_value",
+    "label": "Malt extract concentrate · FOB value",
     "status": "stated",
-    "snippet": "X1 | Malt extract concentrate | … 1,000.00",
+    "snippet": "1,000.00 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.hs_code",
+    "label": "Malt extract concentrate · HS code",
     "status": "stated",
-    "snippet": "X1 | Malt extract concentrate | … 1901.90",
+    "snippet": "1901.90",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.origin_class",
+    "label": "Malt extract concentrate · origin",
     "status": "stated",
-    "snippet": "X1 | Malt extract concentrate | … Imported (non-State Party)",
+    "snippet": "Imported (non-State Party)",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.customs_value",
+    "label": "Malt extract concentrate · value",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … 3700.00",
+    "snippet": "3700.00 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.fob_value",
+    "label": "Malt extract concentrate · FOB value",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … 3700.00",
+    "snippet": "3700.00 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.hs_code",
+    "label": "Malt extract concentrate · HS code",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … 1901.90",
+    "snippet": "1901.90",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "SP1.origin_class",
+    "label": "Malt extract concentrate · origin",
     "status": "stated",
-    "snippet": "SP1 | Malt extract concentrate | … AfCFTA State Party",
+    "snippet": "AfCFTA State Party",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P1.origin",
+    "label": "Plastic jar with lid, 1 kg · made in",
     "status": "stated",
-    "snippet": "P1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P2.origin",
+    "label": "Corrugated carton (12 jars) · made in",
     "status": "stated",
-    "snippet": "P2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.declaration",
+    "label": "Malt, not roasted · proof of origin",
     "status": "stated",
-    "snippet": "AfCFTA CERTIFICATE OF ORIGIN – COPY",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
     "doc_id": "DOC-SUP-I1"
    },
    {
     "field": "I2.declaration",
+    "label": "Glucose syrup · proof of origin",
     "status": "stated",
     "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
     "doc_id": "DOC-SUP-I2"
    },
    {
     "field": "X1.declaration",
+    "label": "Malt extract concentrate · proof of origin",
     "status": "stated",
     "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
     "doc_id": "DOC-SUP-X1"
    },
    {
     "field": "S1.operation_code",
+    "label": "Step 1 · type of operation",
     "status": "inferred",
-    "snippet": "1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana",
+    "snippet": "Mashing of malt with hot water in a mash tun (enzymatic conversion) (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S2.operation_code",
+    "label": "Step 2 · type of operation",
     "status": "inferred",
-    "snippet": "2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana",
+    "snippet": "Filtration and vacuum evaporation to a concentrate (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S3.operation_code",
+    "label": "Step 3 · type of operation",
     "status": "inferred",
-    "snippet": "3. Filling into jars – Factory, Ghana",
+    "snippet": "Filling into jars (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S4.operation_code",
+    "label": "Step 4 · type of operation",
     "status": "inferred",
-    "snippet": "4. Labelling – Factory, Ghana",
+    "snippet": "Labelling (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "inputs.food_aid",
+    "label": "Food aid",
     "status": "stated",
-    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "snippet": "none of the inputs was obtained from food aid",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "ex_works_price",
+    "label": "Ex-works price",
     "status": "stated",
-    "snippet": "Ex-works price per batch: 50000.00 GHS",
+    "snippet": "50000.00 GHS",
     "doc_id": "DOC-COST"
    },
    {
     "field": "product.description",
+    "label": "Product description (export invoice)",
     "status": "stated",
-    "snippet": "Goods: Malt extract, liquid, in 1 kg plastic jars",
+    "snippet": "Malt extract, liquid, in 1 kg plastic jars",
     "doc_id": "DOC-INV"
    }
   ]
@@ -328,12 +359,12 @@
     "supplier": "Delta Malt Co.",
     "supplier_country": "Egypt",
     "origin_class": "state_party",
-    "hs_code": "11.07",
+    "hs_code": "1107.10",
     "hs_field": {
      "status": "stated"
     },
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": [],
@@ -356,10 +387,10 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Deccan Sweeteners Pvt Ltd",
+    "supplier": "Punjab Sweeteners Pvt Ltd",
     "supplier_country": "India",
     "origin_class": "non_state_party",
-    "hs_code": "17.02",
+    "hs_code": "1702.30",
     "hs_field": {
      "status": "stated"
     },
@@ -481,14 +512,12 @@
     "id": "P1",
     "description": "Plastic jar with lid, 1 kg",
     "packing_type": "retail",
-    "hs_code": "Ex-Chapter 39",
     "origin_class": "ghana"
    },
    {
     "id": "P2",
     "description": "Corrugated carton (12 jars)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana"
    }
   ],
@@ -508,7 +537,7 @@
   "case_id": "E12"
  },
  "result": {
-  "engine_version": "1.2.0",
+  "engine_version": "1.3.0",
   "rulebase_version": "1.1.0",
   "case_id": "E12",
   "valuation_basis": "customs_value",
@@ -614,7 +643,7 @@
     "category": "origin_proof",
     "title": "Origin of 'Malt extract concentrate' cannot be confirmed",
     "input_ref": "SP1",
-    "explanation": "Line SP1 (heading 19.01): no supplier declaration / proof of origin on file. Without proof, the tool cannot count it as local.",
+    "explanation": "Malt extract concentrate (heading 19.01): no supplier declaration / proof of origin on file. Without proof, the tool cannot count it as local.",
     "rule_ids": [
      "A2-31-1",
      "A2-8"
@@ -625,7 +654,7 @@
     ],
     "fix": "Obtain the proof of origin (Certificate of Origin / Origin Declaration, or Appendix III supplier declaration).",
     "sub_reason": "missing",
-    "sme_action": "Send the supplier declaration or certificate of origin for malt extract concentrate."
+    "sme_action": "Send the supplier declaration for malt extract concentrate."
    },
    {
     "id": "F2",
@@ -633,7 +662,7 @@
     "category": "consistency",
     "title": "Contradictory quantity for 'Malt extract concentrate'",
     "input_ref": "X1",
-    "explanation": "Line X1: the documents do not agree (38 kg (BOM), 1 bags (DOC-SUP-X1)). The result depends on this ingredient. The tool cannot use the value until the SME clarifies it.",
+    "explanation": "Malt extract concentrate: the documents contain contradictory information (38 kg (BOM), 1 bags (DOC-SUP-X1)). The result depends on this ingredient. The tool cannot use the value until the SME clarifies it.",
     "rule_ids": [
      "APPIV-1901",
      "A2-22"
@@ -679,7 +708,7 @@
    },
    {
     "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
-    "evidence": "Malt extract concentrate and Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.",
+    "evidence": "Malt extract concentrate and Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. The share cannot be calculated yet.",
     "status": "unclear",
     "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
     "rule_ids": [
@@ -688,8 +717,8 @@
     ]
    },
    {
-    "requirement": "The work done in Ghana is more than simple operations such as mixing or packing.",
-    "evidence": "These steps in Ghana are more than simple operations: mashing of malt with hot water in a mash tun (enzymatic conversion) and filtration and vacuum evaporation to a concentrate.",
+    "requirement": "The work done in Ghana includes eligible manufacturing processes under AfCFTA guidelines, not only mixing, grinding or packing.",
+    "evidence": "These manufacturing processes are eligible under AfCFTA guidelines: mashing of malt with hot water in a mash tun (enzymatic conversion) and filtration and vacuum evaporation to a concentrate.",
     "status": "met",
     "source": "Annex 2, Art. 7",
     "rule_ids": [
@@ -698,7 +727,7 @@
     ]
    },
    {
-    "requirement": "No ingredient comes from food aid.",
+    "requirement": "No ingredient comes from food aid (donated or non-commercial supplies).",
     "evidence": "The production notes state that no ingredient comes from food aid.",
     "status": "met",
     "source": "Annex 2, Art. 7(2)",
@@ -708,7 +737,7 @@
    },
    {
     "requirement": "There is proof of origin for local and AfCFTA ingredients.",
-    "evidence": "Supplier declarations or certificates are on file for 1 of 2 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.",
+    "evidence": "Supplier declarations are on file for 1 of 2 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.",
     "status": "unclear",
     "source": "Annex 2, Art. 31 and Appendix III",
     "rule_ids": [
@@ -717,7 +746,7 @@
     ]
    }
   ],
-  "missing_info_request": "Dear Akwaaba Grains Ltd,\n\nThank you for your documents. To complete the pre-check, please send us the items below:\n1. Send the supplier declaration or certificate of origin for malt extract concentrate.\n2. Check which document is correct for malt extract concentrate and send a corrected copy.\n\nThe pre-check is indicative only. GRA Customs and the National AfCFTA Approval Committee make the official decision.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
+  "missing_info_request": "Dear Akwaaba Grains Ltd,\n\nThank you for your documents. To complete the pre-check, please send us the items below:\n1. Send the supplier declaration for malt extract concentrate.\n2. Check which document is correct for malt extract concentrate and send a corrected copy.\n\nThe pre-check is indicative only. GRA Customs and the National AfCFTA Approval Committee make the official decision.\nKind regards,\nTrade adviser, AI Adoption and Innovation Centre",
   "folder": {
    "label": "Draft compliance folder – based on the Appendix I box notes; the official form is not in the attached sources.",
    "boxes": [
@@ -867,8 +896,8 @@
   }
  },
  "explanation": {
-  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Malt extract concentrate and Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.\n- Supplier declarations or certificates are on file for 1 of 2 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.\n\nWhat to do next:\n- Send the supplier declaration or certificate of origin for malt extract concentrate.\n- Check which document is correct for malt extract concentrate and send a corrected copy.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
-  "label": "Prototype transcription (synthetic documents)",
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Malt extract concentrate and Malt extract concentrate may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. The share cannot be calculated yet.\n- Supplier declarations are on file for 1 of 2 ingredients from Ghana or other AfCFTA countries. Proof is missing for an ingredient that the result depends on.\n\nWhat to do next:\n- Send the supplier declaration for malt extract concentrate.\n- Check which document is correct for malt extract concentrate and send a corrected copy.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Tessera prototype",
   "citation_check": {
    "ok": true,
    "valid": [

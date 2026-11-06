@@ -9,11 +9,11 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent / "cases"
 FIXED = [
  {"case_id": "T1", "test": 1, "case_type": "Typical", "product": "malt_extract", "share_pct": "0", "exw": "40000",
   "origins": {"malt": "ghana", "glucose": "state_party"}, "countries": {"glucose": "Nigeria"},
-  "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a certificate of origin. Mashing and evaporation in Ghana."},
+  "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a supplier declaration. Mashing and evaporation in Ghana."},
  {"case_id": "T2", "test": 2, "case_type": "Typical", "product": "infant_cereal", "share_pct": "0", "exw": "60000",
   "origins": {"millet": "ghana", "soya": "state_party", "milk": "non_state_party", "sugar": "non_state_party"},
   "countries": {"soya": "Togo"}, "language": "fr_suppliers",
-  "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French certificate. Roasting, extrusion cooking and drum drying in Ghana."},
+  "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana."},
  {"case_id": "T3a", "test": 3, "case_type": "Edge", "product": "bread_mix", "share_pct": "14.9", "exw": "40000",
   "origins": {"wheat": "non_state_party", "malt": "ghana", "baking": "ghana", "sugar": "non_state_party"},
   "scenario": "Malted bread mix (HS 1901.20). Imported bakery premix of heading 19.01 = 14.9% of the ex-works price."},
@@ -29,11 +29,11 @@ FIXED = [
  {"case_id": "T4", "test": 4, "case_type": "Failure", "product": "millet_porridge_mix", "share_pct": "0", "exw": "50000",
   "origins": {"millet": "ghana", "soya": "ghana", "sugar": "non_state_party", "milk": "non_state_party"},
   "defects": ["D08_simple_operations_only"],
-  "scenario": "Millet porridge mix (HS 1901.90). Only cleaning, simple grinding, simple mixing and bagging. No imported ingredient of heading 19.01."},
+  "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."},
  {"case_id": "T5a", "test": 5, "case_type": "Key assumption", "product": "infant_cereal", "share_pct": "6.0", "exw": "60000",
   "origins": {"millet": "state_party", "soya": "ghana", "milk": "non_state_party", "sugar": "non_state_party"}, "countries": {"millet": "Burkina Faso"},
   "language": "fr_mixed", "format": "handwritten", "messiness": 0.8,
-  "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French certificate from Burkina Faso. All values can be read."},
+  "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French supplier declaration from Burkina Faso. All values can be read."},
  {"case_id": "T5b", "test": 5, "case_type": "Key assumption", "product": "infant_cereal", "share_pct": "6.0", "exw": "60000",
   "origins": {"millet": "state_party", "soya": "ghana", "milk": "non_state_party", "sugar": "non_state_party"}, "countries": {"millet": "Burkina Faso"},
   "language": "fr_mixed", "format": "handwritten", "messiness": 0.8, "defects": ["D05_unreadable_cost_1901"],
@@ -46,18 +46,18 @@ INCOMPATIBLE = [({"D07_above_tolerance"}, {"D02_wrong_input_hs", "D03_inconsiste
 
 
 EVAL = [  # curated evaluation set: SME documentation deficiencies, mainly missing and contradictory information
- ("E01", "malt_extract", ["D01_missing_supplier_declaration"], "en", "typed", "Malt extract with a lot from Togo. The certificate of origin for that lot is missing."),
+ ("E01", "malt_extract", ["D01_missing_supplier_declaration"], "en", "typed", "Malt extract with a lot from Togo. The supplier declaration for that lot is missing."),
  ("E02", "bread_mix", ["D05_unreadable_cost_1901"], "en", "handwritten", "Bread mix. The value of the imported premix is smudged."),
  ("E03", "millet_porridge_mix", ["D11_ambiguous_process"], "en", "typed", "Porridge mix. The production notes only say 'processed at the factory'."),
  ("E04", "infant_cereal", ["D03_inconsistent_units_1901"], "fr_suppliers", "typed", "Infant cereal. The premix is in kg in the bill of materials but in bags on the invoice."),
  ("E05", "malt_extract", ["D04_invoice_value_mismatch"], "fr_suppliers", "typed", "Malt extract. The bill of materials and the supplier invoice show different values for the concentrate."),
  ("E06", "bread_mix", ["D14_currency_mismatch_1901"], "en", "typed", "Bread mix. The premix value is in EUR, the ex-works price in GHS."),
- ("E07", "infant_cereal", ["D02_wrong_input_hs"], "en", "typed", "Infant cereal. The premix has the HS code of malt (11.07)."),
+ ("E07", "infant_cereal", ["D02_wrong_input_hs"], "en", "typed", "Infant cereal. The premix has the HS code of malt (1107.10)."),
  ("E08", "millet_porridge_mix", ["D12_doubtful_product_hs"], "en", "typed", "The product description reads like plain millet flour."),
  ("E09", "infant_cereal", ["D09_food_aid_input"], "fr_mixed", "typed", "Infant cereal. The millet comes from a food assistance programme."),
  ("E10", "malt_extract", ["D07_above_tolerance", "D10_packaging_unknown_origin"], "en", "typed", "Malt extract with imported concentrate above 15%. The origin of the jars is not stated."),
  ("E11", "bread_mix", ["D13_missing_exporter_registration", "D06_unstated_origin_other"], "en", "mixed_units", "Bread mix. No exporter registration number; the origin of one ingredient is not stated."),
- ("E12", "malt_extract", ["D01_missing_supplier_declaration", "D03_inconsistent_units_1901"], "en", "typed", "Malt extract. A certificate is missing and the units of the concentrate do not agree."),
+ ("E12", "malt_extract", ["D01_missing_supplier_declaration", "D03_inconsistent_units_1901"], "en", "typed", "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree."),
 ]
 
 

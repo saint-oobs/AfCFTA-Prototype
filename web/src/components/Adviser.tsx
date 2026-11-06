@@ -2,7 +2,6 @@ import { useEffect, useState, useSyncExternalStore } from 'react'
 import { Section, Tag } from './ui'
 import { log } from '../lib/log'
 import { docName } from './Inputs'
-import { Findings, InfoRequest, Requirements, TolerancePanel } from './Result'
 import { Check, Message, Refresh, Send } from './icons'
 
 const THRESHOLD = 2 // rules.json parameters.repeated_error_threshold
@@ -65,7 +64,8 @@ export function AdviserView({ caseId, rec, extracted, result, canRun, rerun, onR
             {extracted?.product?.hs_doubt && <p className="mt-2 text-sm text-major">Flagged: {extracted.product.hs_doubt_reason}</p>}</div>
           <div><p className="label mb-2">Citations from the SME's documents</p>
             <ul className="space-y-2 text-sm">{tags.map((t: any, i: number) => (
-              <li key={i} className="border-l-2 border-accent pl-3">“{t.snippet}”<span className="block note">{docName(rec, t.doc_id)}</span></li>))}</ul></div>
+              <li key={i} className="border-l-2 border-accent pl-3"><span className="text-muted">{t.label ?? t.field}:</span> “{t.snippet}”<span className="block note">{docName(rec, t.doc_id)}</span></li>))}
+              {tags.length === 0 && <li className="note">Manual entry: no documents. HS code typed by the user: {declared}.</li>}</ul></div>
         </div>
         {yesNo(citation, a => { setCitation(a); setCorrect(null) }, 'Is the citation enough to verify the HS code?')}
         {citation === 'yes' && <>
@@ -88,19 +88,15 @@ export function AdviserView({ caseId, rec, extracted, result, canRun, rerun, onR
 
       <Section title="Technical overview">
         <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-          <div><dt className="label">Model</dt><dd>Prototype transcription v{rec?.adapter?.adapter_version?.split(' ')[0]}</dd></div>
-          <div><dt className="label">Rule engine</dt><dd>v{result.engine_version} · rules v{result.rulebase_version}</dd></div>
+          <div><dt className="label">Model</dt><dd>Tessera prototype</dd></div>
+          <div><dt className="label">Rule data</dt><dd>Rule base v{result.rulebase_version}: Annex 2, Appendix IV (Dec 2023), EX.CL/1329(XL) tolerance (draft)</dd></div>
           <div><dt className="label">Values read</dt><dd className="flex flex-wrap gap-1"><Tag s="stated" /><span className="tabular-nums mr-2">{count('stated')}</span><Tag s="inferred" /><span className="tabular-nums mr-2">{count('inferred')}</span><Tag s="missing" /><span className="tabular-nums mr-2">{count('missing')}</span><Tag s="unreadable" /><span className="tabular-nums">{count('unreadable')}</span></dd></div>
           <div><dt className="label">Processing</dt><dd>{errors.length ? <span className="text-crit">{errors.length} error(s)</span> : <span className="text-ok">No errors</span>}
-            {conflicts > 0 && <span className="block">{conflicts} line(s) with documents that do not agree</span>}
+            {conflicts > 0 && <span className="block">{conflicts} ingredient(s) with contradictory information</span>}
             {unmatched.length > 0 && <span className="block">{unmatched.length} document(s) not linked</span>}</dd></div>
         </dl>
         {errors.length > 0 && <ul className="mt-3 text-sm text-crit list-disc pl-5">{errors.slice(-3).map((e, i) => <li key={i}>{e.detail}</li>)}</ul>}
       </Section>
-      <Findings result={result} onRule={onRule} />
-      <TolerancePanel result={result} />
-      <Section title="Requirement by requirement"><Requirements result={result} onRule={onRule} /></Section>
-      <InfoRequest result={result} title="Draft request to the SME" />
     </div>
   )
 }

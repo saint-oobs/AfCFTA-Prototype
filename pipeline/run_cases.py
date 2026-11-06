@@ -33,7 +33,7 @@ def transcription_metrics(case, extracted):
     illegible = {f for d in case["documents"] for f in d.get("illegible_fields", [])}
     # fields deliberately written wrongly in the documents (document-level defects) are compared with
     # the document, not with reality: the transcription is right if it reproduces the document.
-    doc_level = {"D02_wrong_input_hs": {"X1.hs_code": "11.07"}}
+    doc_level = {"D02_wrong_input_hs": {"X1.hs_code": "1107.10"}}
     as_written = {}
     for dfc in case["meta"]["defects"]:
         as_written.update(doc_level.get(dfc, {}))

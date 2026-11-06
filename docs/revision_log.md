@@ -15,3 +15,11 @@
 | Engine 1.1.0 → 1.2.0 | Requirement table written in plain language. Each finding has an action for the SME. No rule logic changed. |
 | Adapter stub 1.1.0 → 1.2.0 | Summary for the SME in plain language. Product description snippets for the adviser. French production steps translated. |
 | Generator 1.0.0 → 1.1.0 | Four products in three subheadings: 1901.10 infant cereal, 1901.20 malted bread mix, 1901.90 malt extract and millet porridge mix. |
+
+## v4 (2026-11-06) – group feedback round 4
+- Overview: new stage texts (output, human decision, feedback), plain-language rule cards without citations, rule-data version box.
+- Documents: no watermark line, no certificates of origin (AfCFTA suppliers now give an Appendix III supplier declaration), packaging table with headers and without HS codes, production notes as a table, aligned costing sheet and invoice.
+- Ingredient HS codes are six-digit HS 2022 subheadings (e.g. millet 1008.29, sugar 1701.99, milk powder 0402.10) instead of chapter-level codes. Group to verify.
+- "Simple operations" renamed "eligible manufacturing processes under AfCFTA guidelines" (wording only; no rule change). Engine 1.3.0, stub 1.3.0, generator 1.3.0.
+- Manual entry opens an empty form; the check runs on the typed data.
+- Adviser view ends after the technical overview. Test log: misc set moved up, assessment accuracy = confusion matrix, severity legend, four record types.

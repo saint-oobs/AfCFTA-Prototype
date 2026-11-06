@@ -33,7 +33,7 @@ export const OUTCOME_STYLE: Record<string, { cls: string; Icon: any }> = {
   'Likely not to qualify': { cls: 'border-crit text-crit', Icon: X },
   'Further information required': { cls: 'border-major text-major', Icon: Help },
 }
-export const SUB: Record<string, string> = { missing: 'information is missing', contradictory: 'documents do not agree', out_of_rule_base: 'HS code outside heading 19.01 or in doubt' }
+export const SUB: Record<string, string> = { missing: 'information is missing', contradictory: 'contradictory information', out_of_rule_base: 'HS code outside heading 19.01 or in doubt' }
 
 export function Section({ title, kicker, children, right }: { title: string; kicker?: string; children: ReactNode; right?: ReactNode }) {
   return (
@@ -55,12 +55,28 @@ export function PageHead({ kicker, title, children }: { kicker?: string; title: 
 }
 
 export const STAGES = [
-  ['1', 'Inputs and data', 'The SME gives its records: bill of materials, supplier declarations, production notes, costing sheet and invoice.'],
+  ['1', 'Inputs and data', 'The SME provides: bill of materials, supplier declarations, production notes, costing sheet and invoice.'],
   ['2', 'AI task', 'The tool reads the records, puts the data into fixed fields, identifies the HS code and evaluates the production process.'],
   ['3', 'Model', 'The model uses RAG and bounded LLM agents, which is connected to the non-parametric knowledge base. This prototype uses a stub with a python code snippet.'],
-  ['4', 'Output', 'Rule code compares the data with the rules. The result is one of three answers, with reasons and gaps.'],
-  ['5', 'Human decision', 'A trade adviser checks the HS code and the result. The adviser approves the result or asks the SME for information.'],
-  ['6', 'Feedback and monitoring', 'The tool records corrections and errors. The development team uses them to release updated versions.'],
+  ['4', 'Output', 'The model compares the submitted data with the AfCFTA rules of origin. It returns one of three outcomes: the application is likely to qualify, the application is unlikely to qualify, or an error flags missing or contradictory data. Each outcome comes with the reasons behind it and any gaps that were found.'],
+  ['5', 'Human decision', 'A trade adviser checks the HS code against the SME’s documents.'],
+  ['6', 'Feedback and monitoring', 'The SME and the trade adviser report hallucinations and data that the model extracted or identified wrongly. The development team receives this feedback and releases an updated version of the model.'],
 ] as const
 
 export const DISCLAIMER = 'Indicative pre-check only. It is not an origin decision. The National AfCFTA Approval Committee decides on origin and GRA Customs issues the certificate.'
+
+/** Version of the rule data that Tessera uses. Rules can change over time; update this with rules/rules.json. */
+export const RULE_DATA = [
+  ['Agreement', 'Agreement Establishing the AfCFTA, Annex 2 on Rules of Origin (Laws.Africa text)'],
+  ['Product rule', 'Appendix IV to Annex 2, as approved by the 12th AfCFTA Council of Ministers, December 2023'],
+  ['15% tolerance', 'EX.CL/1329(XL), Annex, January 2022 (draft decision; adoption not confirmed)'],
+] as const
+export const RULE_DATA_SHORT = 'AfCFTA Annex 2 on Rules of Origin · Appendix IV (December 2023) · tolerance from EX.CL/1329(XL) (January 2022, draft)'
+
+export function RuleData({ version }: { version?: string }) {
+  return <div className="rounded-lg bg-panel p-4 text-sm">
+    <p className="label mb-2">Rule data used{version ? ` · rule base v${version}` : ''}</p>
+    <dl className="grid sm:grid-cols-[130px_1fr] gap-x-4 gap-y-1">{RULE_DATA.map(([k, v]) => <div key={k} className="contents"><dt className="text-muted">{k}</dt><dd>{v}</dd></div>)}</dl>
+    <p className="note mt-2">The AfCFTA rules can change. A result is valid only for the rule versions listed here.</p>
+  </div>
+}

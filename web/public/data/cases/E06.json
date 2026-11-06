@@ -3,7 +3,7 @@
  "meta": {
   "case_id": "E06",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -33,14 +33,14 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Volta Agro-Processing Ltd\nAddress: Plot 34, Light Industrial Area, Kumasi, Ghana\nPhone: +233 30 872 8715\nTIN: C0026744328\nRegistration no: GEPA/EXP/2026/2229\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Volta Agro-Processing Ltd\nAddress: Plot 34, Light Industrial Area, Kumasi, Ghana\nPhone: +233 30 872 8715\nTIN: C0026744328\nRegistration no: GEPA/EXP/2026/2229\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Volta Agro-Processing Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2662-99\nPrepared by: Production manager, Volta Agro-Processing Ltd\nID | Description | Qty | Unit | Customs value | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Wheat flour | 1100 | kg | 4947.36 | 4551.57 | Ghc | Paraná Flour Mills Ltda | New Zealand | 11.01 | Imported (non-State Party)\nI2 | Malt, not roasted | 250 | Kg | 1,400.65 | 1400.65 | Ghc | Ogun Malt Ltd | Nigeria | 11.07 | AfCFTA State Party\nI3 | Baking powder | 40 | kgs | 333.48 | 333.48 | GHS | Akatsi Bakery Supplies Ltd | Ghana | 21.02 | Ghana\nI4 | Cane sugar | 80 | kgs | 742.64 | 683.23 | GHS | Paraná Sugar Ltda | France | Chapter 17 | Imported (non-State Party)\nX1 | Bakery premix preparation | 41 | kg | 820.00 | 820.00 | EUR | Rhinefield Food Ingredients GmbH | France | 1901.20 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Volta Agro-Processing Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2662-99\nPrepared by: Production manager, Volta Agro-Processing Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Wheat flour | 1100 | kg | 4947.36 | 4551.57 | Ghc | Waikato Flour Mills Ltd | New Zealand | 1101.00 | Imported (non-State Party)\nI2 | Malt, not roasted | 250 | Kg | 1,400.65 | 1400.65 | Ghc | Ogun Malt Ltd | Nigeria | 1107.10 | AfCFTA State Party\nI3 | Baking powder | 40 | kgs | 333.48 | 333.48 | GHS | Akatsi Bakery Supplies Ltd | Ghana | 2102.30 | Ghana\nI4 | Cane sugar | 80 | kgs | 742.64 | 683.23 | GHS | Beauce Sugar SAS | France | 1701.99 | Imported (non-State Party)\nX1 | Bakery premix preparation | 41 | kg | 820.00 | 820.00 | EUR | Rhinefield Food Ingredients GmbH | France | 1901.20 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paper bag, 1 kg | retail | Ghana\nP2 | Corrugated carton (10 bags) | transport | Ghana",
    "illegible_fields": []
   },
   {
@@ -49,15 +49,15 @@
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Flour Mills Ltda\nCountry of origin: New Zealand\nInvoice no: PAR-97253\nDate: 2026-08-16\nBuyer: Volta Agro-Processing Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 4.50 GHS\nCustoms value: 4947.36 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Waikato Flour Mills Ltd\nCountry of origin: New Zealand\nInvoice no: WAI-97253\nDate: 2026-08-16\nBuyer: Volta Agro-Processing Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 4.50 GHS\nCustoms value: 4947.36 GHS"
   },
   {
    "doc_id": "DOC-SUP-I2",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nAfCFTA CERTIFICATE OF ORIGIN – COPY\nSupplier: Ogun Malt Ltd\nCountry of origin: Nigeria\nInvoice no: OGU-21571\nDate: 2026-07-22\nBuyer: Volta Agro-Processing Ltd\nGoods: Malt, not roasted\nQuantity: 250 kg\nUnit price: 5.60 GHS\nCustoms value: 1400.65 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ogun Malt Ltd\nCountry of origin: Nigeria\nInvoice no: OGU-21571\nDate: 2026-07-22\nBuyer: Volta Agro-Processing Ltd\nGoods: Malt, not roasted\nQuantity: 250 kg\nUnit price: 5.60 GHS\nInvoice value: 1400.65 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Nigeria and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I3",
@@ -65,7 +65,7 @@
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Bakery Supplies Ltd\nCountry of origin: Ghana\nInvoice no: AKA-58368\nDate: 2026-09-13\nBuyer: Volta Agro-Processing Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 8.34 GHS\nCustoms value: 333.48 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Bakery Supplies Ltd\nCountry of origin: Ghana\nInvoice no: AKA-58368\nDate: 2026-09-13\nBuyer: Volta Agro-Processing Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 8.34 GHS\nInvoice value: 333.48 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I4",
@@ -73,7 +73,7 @@
    "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Sugar Ltda\nCountry of origin: France\nInvoice no: PAR-64162\nDate: 2026-08-01\nBuyer: Volta Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 9.28 GHS\nCustoms value: 742.64 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Beauce Sugar SAS\nCountry of origin: France\nInvoice no: BEA-64162\nDate: 2026-08-01\nBuyer: Volta Agro-Processing Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 9.28 GHS\nCustoms value: 742.64 GHS"
   },
   {
    "doc_id": "DOC-SUP-X1",
@@ -81,255 +81,292 @@
    "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: France\nInvoice no: RHI-58602\nDate: 2026-09-24\nBuyer: Volta Agro-Processing Ltd\nGoods: Bakery premix preparation\nQuantity: 41 kg\nUnit price: 20.00 EUR\nCustoms value: 820.00 EUR"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: France\nInvoice no: RHI-58602\nDate: 2026-09-24\nBuyer: Volta Agro-Processing Ltd\nGoods: Bakery premix preparation\nQuantity: 41 kg\nUnit price: 20.00 EUR\nCustoms value: 820.00 EUR"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2662-99\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Drum drying of the malt extract with part of the flour – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n3. Simple mixing with flour, sugar and baking powder – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n4. Filling into bags – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2662-99\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Drum drying of the malt extract with part of the flour | Factory, Ghana | steam-heated double drum dryer\n3 | Simple mixing with flour, sugar and baking powder | Factory, Ghana | ribbon blender, 500 kg\n4 | Filling into bags | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2662-99\nBatch: 1500 bags of 1 kg\nMaterials: 8244.13 GHS\nPackaging: 1175.59 GHS\nDirect labour: 3526.76 GHS\nEnergy and water: 1763.38 GHS\nFactory overheads: 2351.17 GHS\nMargin: 2938.97 GHS\nEx-works price per batch: 20000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2662-99\nBatch: 1500 bags of 1 kg\nMaterials: 8,244.13 GHS\nPackaging: 1,175.59 GHS\nDirect labour: 3,526.76 GHS\nEnergy and water: 1,763.38 GHS\nFactory overheads: 2,351.17 GHS\nMargin: 2,938.97 GHS\nEx-works price per batch: 20000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-1396\nDate: 2026-10-15\nExporter: Volta Agro-Processing Ltd\nExporter TIN: C0026744328\nConsignee: Teranga Distribution SARL\nConsignee address: 158 Avenue de la Paix, Dakar\nDestination: Senegal\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: VA/SEN/1-1500\nPackages: 150 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-1396\nDate: 2026-10-15\nExporter: Volta Agro-Processing Ltd\nExporter TIN: C0026744328\nConsignee: Teranga Distribution SARL\nConsignee address: 158 Avenue de la Paix, Dakar\nDestination: Senegal\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: VA/SEN/1-1500\nPackages: 150 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ],
  "adapter": {
   "mode": "stub",
-  "label": "Prototype transcription (synthetic documents)",
-  "adapter_version": "1.2.0",
+  "label": "Tessera prototype",
+  "adapter_version": "1.3.0",
   "field_tags": [
    {
     "field": "exporter.registration_no",
+    "label": "Exporter registration number",
     "status": "stated",
     "snippet": "GEPA/EXP/2026/2229",
     "doc_id": "DOC-EXP"
    },
    {
     "field": "product.declared_hs",
+    "label": "Product HS code",
     "status": "stated",
-    "snippet": "Declared HS: 1901.20",
+    "snippet": "1901.20",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "product.description",
+    "label": "Product description",
     "status": "stated",
-    "snippet": "Product: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+    "snippet": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.customs_value",
+    "label": "Wheat flour · value",
     "status": "stated",
-    "snippet": "I1 | Wheat flour | … 4947.36",
+    "snippet": "4947.36 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.fob_value",
+    "label": "Wheat flour · FOB value",
     "status": "stated",
-    "snippet": "I1 | Wheat flour | … 4551.57",
+    "snippet": "4551.57 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.hs_code",
+    "label": "Wheat flour · HS code",
     "status": "stated",
-    "snippet": "I1 | Wheat flour | … 11.01",
+    "snippet": "1101.00",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.origin_class",
+    "label": "Wheat flour · origin",
     "status": "stated",
-    "snippet": "I1 | Wheat flour | … Imported (non-State Party)",
+    "snippet": "Imported (non-State Party)",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.customs_value",
+    "label": "Malt, not roasted · value",
     "status": "stated",
-    "snippet": "I2 | Malt, not roasted | … 1,400.65",
+    "snippet": "1,400.65 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.fob_value",
+    "label": "Malt, not roasted · FOB value",
     "status": "stated",
-    "snippet": "I2 | Malt, not roasted | … 1400.65",
+    "snippet": "1400.65 Ghc",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.hs_code",
+    "label": "Malt, not roasted · HS code",
     "status": "stated",
-    "snippet": "I2 | Malt, not roasted | … 11.07",
+    "snippet": "1107.10",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I2.origin_class",
+    "label": "Malt, not roasted · origin",
     "status": "stated",
-    "snippet": "I2 | Malt, not roasted | … AfCFTA State Party",
+    "snippet": "AfCFTA State Party",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I3.customs_value",
+    "label": "Baking powder · value",
     "status": "stated",
-    "snippet": "I3 | Baking powder | … 333.48",
+    "snippet": "333.48 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I3.fob_value",
+    "label": "Baking powder · FOB value",
     "status": "stated",
-    "snippet": "I3 | Baking powder | … 333.48",
+    "snippet": "333.48 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I3.hs_code",
+    "label": "Baking powder · HS code",
     "status": "stated",
-    "snippet": "I3 | Baking powder | … 21.02",
+    "snippet": "2102.30",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I3.origin_class",
+    "label": "Baking powder · origin",
     "status": "stated",
-    "snippet": "I3 | Baking powder | … Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I4.customs_value",
+    "label": "Cane sugar · value",
     "status": "stated",
-    "snippet": "I4 | Cane sugar | … 742.64",
+    "snippet": "742.64 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I4.fob_value",
+    "label": "Cane sugar · FOB value",
     "status": "stated",
-    "snippet": "I4 | Cane sugar | … 683.23",
+    "snippet": "683.23 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I4.hs_code",
+    "label": "Cane sugar · HS code",
     "status": "stated",
-    "snippet": "I4 | Cane sugar | … Chapter 17",
+    "snippet": "1701.99",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I4.origin_class",
+    "label": "Cane sugar · origin",
     "status": "stated",
-    "snippet": "I4 | Cane sugar | … Imported (non-State Party)",
+    "snippet": "Imported (non-State Party)",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.customs_value",
+    "label": "Bakery premix preparation · value",
     "status": "stated",
-    "snippet": "X1 | Bakery premix preparation | … 820.00",
+    "snippet": "820.00 EUR",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.fob_value",
+    "label": "Bakery premix preparation · FOB value",
     "status": "stated",
-    "snippet": "X1 | Bakery premix preparation | … 820.00",
+    "snippet": "820.00 EUR",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.hs_code",
+    "label": "Bakery premix preparation · HS code",
     "status": "stated",
-    "snippet": "X1 | Bakery premix preparation | … 1901.20",
+    "snippet": "1901.20",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "X1.origin_class",
+    "label": "Bakery premix preparation · origin",
     "status": "stated",
-    "snippet": "X1 | Bakery premix preparation | … Imported (non-State Party)",
+    "snippet": "Imported (non-State Party)",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P1.origin",
+    "label": "Printed paper bag, 1 kg · made in",
     "status": "stated",
-    "snippet": "P1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P2.origin",
+    "label": "Corrugated carton (10 bags) · made in",
     "status": "stated",
-    "snippet": "P2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana",
+    "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
+    "field": "I2.declaration",
+    "label": "Malt, not roasted · proof of origin",
+    "status": "stated",
+    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
+    "doc_id": "DOC-SUP-I2"
+   },
+   {
     "field": "I3.declaration",
+    "label": "Baking powder · proof of origin",
     "status": "stated",
     "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
     "doc_id": "DOC-SUP-I3"
    },
    {
-    "field": "I2.declaration",
-    "status": "stated",
-    "snippet": "AfCFTA CERTIFICATE OF ORIGIN – COPY",
-    "doc_id": "DOC-SUP-I2"
-   },
-   {
     "field": "I1.declaration",
+    "label": "Wheat flour · proof of origin",
     "status": "stated",
     "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
     "doc_id": "DOC-SUP-I1"
    },
    {
     "field": "I4.declaration",
+    "label": "Cane sugar · proof of origin",
     "status": "stated",
     "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
     "doc_id": "DOC-SUP-I4"
    },
    {
     "field": "X1.declaration",
+    "label": "Bakery premix preparation · proof of origin",
     "status": "stated",
     "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
     "doc_id": "DOC-SUP-X1"
    },
    {
     "field": "S1.operation_code",
+    "label": "Step 1 · type of operation",
     "status": "inferred",
-    "snippet": "1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana",
+    "snippet": "Mashing of malt with hot water in a mash tun (enzymatic conversion) (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S2.operation_code",
+    "label": "Step 2 · type of operation",
     "status": "inferred",
-    "snippet": "2. Drum drying of the malt extract with part of the flour – Factory, Ghana",
+    "snippet": "Drum drying of the malt extract with part of the flour (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S3.operation_code",
+    "label": "Step 3 · type of operation",
     "status": "inferred",
-    "snippet": "3. Simple mixing with flour, sugar and baking powder – Factory, Ghana",
+    "snippet": "Simple mixing with flour, sugar and baking powder (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S4.operation_code",
+    "label": "Step 4 · type of operation",
     "status": "inferred",
-    "snippet": "4. Filling into bags – Factory, Ghana",
+    "snippet": "Filling into bags (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "inputs.food_aid",
+    "label": "Food aid",
     "status": "stated",
-    "snippet": "Food aid: none of the inputs was obtained from food aid",
+    "snippet": "none of the inputs was obtained from food aid",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "ex_works_price",
+    "label": "Ex-works price",
     "status": "stated",
-    "snippet": "Ex-works price per batch: 20000.00 GHS",
+    "snippet": "20000.00 GHS",
     "doc_id": "DOC-COST"
    },
    {
     "field": "product.description",
+    "label": "Product description (export invoice)",
     "status": "stated",
-    "snippet": "Goods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+    "snippet": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
     "doc_id": "DOC-INV"
    }
   ]
@@ -375,10 +412,10 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Paraná Flour Mills Ltda",
+    "supplier": "Waikato Flour Mills Ltd",
     "supplier_country": "New Zealand",
     "origin_class": "non_state_party",
-    "hs_code": "11.01",
+    "hs_code": "1101.00",
     "hs_field": {
      "status": "stated"
     },
@@ -409,12 +446,12 @@
     "supplier": "Ogun Malt Ltd",
     "supplier_country": "Nigeria",
     "origin_class": "state_party",
-    "hs_code": "11.07",
+    "hs_code": "1107.10",
     "hs_field": {
      "status": "stated"
     },
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": [],
@@ -440,7 +477,7 @@
     "supplier": "Akatsi Bakery Supplies Ltd",
     "supplier_country": "Ghana",
     "origin_class": "ghana",
-    "hs_code": "21.02",
+    "hs_code": "2102.30",
     "hs_field": {
      "status": "stated"
     },
@@ -468,10 +505,10 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Paraná Sugar Ltda",
+    "supplier": "Beauce Sugar SAS",
     "supplier_country": "France",
     "origin_class": "non_state_party",
-    "hs_code": "Chapter 17",
+    "hs_code": "1701.99",
     "hs_field": {
      "status": "stated"
     },
@@ -549,14 +586,12 @@
     "id": "P1",
     "description": "Printed paper bag, 1 kg",
     "packing_type": "retail",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana"
    },
    {
     "id": "P2",
     "description": "Corrugated carton (10 bags)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana"
    }
   ],
@@ -576,7 +611,7 @@
   "case_id": "E06"
  },
  "result": {
-  "engine_version": "1.2.0",
+  "engine_version": "1.3.0",
   "rulebase_version": "1.1.0",
   "case_id": "E06",
   "valuation_basis": "customs_value",
@@ -730,7 +765,7 @@
    },
    {
     "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
-    "evidence": "Bakery premix preparation may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.",
+    "evidence": "Bakery premix preparation may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. The share cannot be calculated yet.",
     "status": "unclear",
     "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
     "rule_ids": [
@@ -739,8 +774,8 @@
     ]
    },
    {
-    "requirement": "The work done in Ghana is more than simple operations such as mixing or packing.",
-    "evidence": "These steps in Ghana are more than simple operations: mashing of malt with hot water in a mash tun (enzymatic conversion) and drum drying of the malt extract with part of the flour.",
+    "requirement": "The work done in Ghana includes eligible manufacturing processes under AfCFTA guidelines, not only mixing, grinding or packing.",
+    "evidence": "These manufacturing processes are eligible under AfCFTA guidelines: mashing of malt with hot water in a mash tun (enzymatic conversion) and drum drying of the malt extract with part of the flour.",
     "status": "met",
     "source": "Annex 2, Art. 7",
     "rule_ids": [
@@ -749,7 +784,7 @@
     ]
    },
    {
-    "requirement": "No ingredient comes from food aid.",
+    "requirement": "No ingredient comes from food aid (donated or non-commercial supplies).",
     "evidence": "The production notes state that no ingredient comes from food aid.",
     "status": "met",
     "source": "Annex 2, Art. 7(2)",
@@ -759,7 +794,7 @@
    },
    {
     "requirement": "There is proof of origin for local and AfCFTA ingredients.",
-    "evidence": "Supplier declarations or certificates are on file for 2 of 2 ingredients from Ghana or other AfCFTA countries.",
+    "evidence": "Supplier declarations are on file for 2 of 2 ingredients from Ghana or other AfCFTA countries.",
     "status": "met",
     "source": "Annex 2, Art. 31 and Appendix III",
     "rule_ids": [
@@ -913,8 +948,8 @@
   }
  },
  "explanation": {
-  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Bakery premix preparation may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. The share cannot be calculated yet.\n\nWhat to do next:\n- Send the value of bakery premix preparation in GHS, as declared to Customs.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
-  "label": "Prototype transcription (synthetic documents)",
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- Bakery premix preparation may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. The share cannot be calculated yet.\n\nWhat to do next:\n- Send the value of bakery premix preparation in GHS, as declared to Customs.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "label": "Tessera prototype",
   "citation_check": {
    "ok": true,
    "valid": [

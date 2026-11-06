@@ -2,7 +2,7 @@
  "meta": {
   "case_id": "E04",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -63,7 +63,7 @@
    {
     "id": "I1",
     "description": "Millet grain",
-    "hs_code": "Chapter 10",
+    "hs_code": "1008.29",
     "quantity": {
      "value": "550",
      "unit": "kg"
@@ -83,7 +83,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -91,7 +91,7 @@
    {
     "id": "I2",
     "description": "Soya beans",
-    "hs_code": "Chapter 12",
+    "hs_code": "1201.90",
     "quantity": {
      "value": "250",
      "unit": "kg"
@@ -111,7 +111,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -119,7 +119,7 @@
    {
     "id": "I3",
     "description": "Skimmed milk powder",
-    "hs_code": "Chapter 4",
+    "hs_code": "0402.10",
     "quantity": {
      "value": "120",
      "unit": "kg"
@@ -134,7 +134,7 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Deccan Dairy Pvt Ltd",
+    "supplier": "Zeeland Dairy B.V.",
     "supplier_country": "Netherlands",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -147,7 +147,7 @@
    {
     "id": "I4",
     "description": "Cane sugar",
-    "hs_code": "Chapter 17",
+    "hs_code": "1701.99",
     "quantity": {
      "value": "60",
      "unit": "kg"
@@ -167,7 +167,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -250,7 +250,6 @@
     "id": "P1",
     "description": "Printed paperboard carton with inner bag, 400 g",
     "packing_type": "retail",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    },
@@ -258,7 +257,6 @@
     "id": "P2",
     "description": "Corrugated carton (24 cartons)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    }
@@ -277,31 +275,31 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Adom Provisions Ltd\nAddress: Plot 72, Light Industrial Area, Ho, Ghana\nPhone: +233 55 109 5238\nTIN: C0027483831\nRegistration no: GEPA/EXP/2026/5131\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Adom Provisions Ltd\nAddress: Plot 72, Light Industrial Area, Ho, Ghana\nPhone: +233 55 109 5238\nTIN: C0027483831\nRegistration no: GEPA/EXP/2026/5131\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Adom Provisions Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2677-19\nPrepared by: Production manager, Adom Provisions Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 550 | kilos | 3470.02 | 3470.02 | GHS | Bouaké Grains SA | Côte d’Ivoire | Chapter 10 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 1291.15 | 1,291.15 | GHS | Plateaux Agro SARL | Togo | Chapter 12 | AfCFTA State Party\nI3 | Skimmed milk powder | 120 | kgs | 2,202.83 | 2026.60 | GHS | Deccan Dairy Pvt Ltd | Netherlands | Chapter 4 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kg | 571.13 | 571.13 | GHS | Houet Sugar SARL | Burkina Faso | Chapter 17 | AfCFTA State Party\nX1 | Cereal-based premix preparation | 95 | Kg | 660.00 | 660.00 | GHS | Lowlands Malt Ingredients GmbH | Netherlands | 1901.90 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Adom Provisions Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2677-19\nPrepared by: Production manager, Adom Provisions Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 550 | kilos | 3470.02 | 3470.02 | GHS | Bouaké Grains SA | Côte d’Ivoire | 1008.29 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 1291.15 | 1,291.15 | GHS | Plateaux Agro SARL | Togo | 1201.90 | AfCFTA State Party\nI3 | Skimmed milk powder | 120 | kgs | 2,202.83 | 2026.60 | GHS | Zeeland Dairy B.V. | Netherlands | 0402.10 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kg | 571.13 | 571.13 | GHS | Houet Sugar SARL | Burkina Faso | 1701.99 | AfCFTA State Party\nX1 | Cereal-based premix preparation | 95 | Kg | 660.00 | 660.00 | GHS | Lowlands Malt Ingredients GmbH | Netherlands | 1901.90 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I1",
    "language": "fr",
    "format": "typed",
-   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nCERTIFICAT D'ORIGINE ZLECAf – COPIE\nFournisseur : Bouaké Grains SA\nPays d'origine : Côte d’Ivoire\nFacture n° : BOU-84981\nDate : 2026-09-25\nClient : Adom Provisions Ltd\nMarchandises : Mil en grains\nQuantité : 550 kg\nPrix unitaire : 6.31 GHS\nValeur facturée : 3470.02 GHS\nLes marchandises satisfont aux règles d'origine de la ZLECAf."
+   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Bouaké Grains SA\nPays d'origine : Côte d’Ivoire\nFacture n° : BOU-84981\nDate : 2026-09-25\nClient : Adom Provisions Ltd\nMarchandises : Mil en grains\nQuantité : 550 kg\nPrix unitaire : 6.31 GHS\nValeur facturée : 3470.02 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
   },
   {
    "doc_id": "DOC-SUP-I2",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I2",
    "language": "fr",
    "format": "typed",
-   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nCERTIFICAT D'ORIGINE ZLECAf – COPIE\nFournisseur : Plateaux Agro SARL\nPays d'origine : Togo\nFacture n° : PLA-98406\nDate : 2026-09-12\nClient : Adom Provisions Ltd\nMarchandises : Fèves de soja\nQuantité : 250 kg\nPrix unitaire : 5.16 GHS\nValeur facturée : 1291.15 GHS\nLes marchandises satisfont aux règles d'origine de la ZLECAf."
+   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Plateaux Agro SARL\nPays d'origine : Togo\nFacture n° : PLA-98406\nDate : 2026-09-12\nClient : Adom Provisions Ltd\nMarchandises : Fèves de soja\nQuantité : 250 kg\nPrix unitaire : 5.16 GHS\nValeur facturée : 1291.15 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
   },
   {
    "doc_id": "DOC-SUP-I3",
@@ -309,15 +307,15 @@
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Deccan Dairy Pvt Ltd\nCountry of origin: Netherlands\nInvoice no: DEC-15173\nDate: 2026-07-06\nBuyer: Adom Provisions Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 18.36 GHS\nCustoms value: 2202.83 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Zeeland Dairy B.V.\nCountry of origin: Netherlands\nInvoice no: ZEE-15173\nDate: 2026-07-06\nBuyer: Adom Provisions Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 18.36 GHS\nCustoms value: 2202.83 GHS"
   },
   {
    "doc_id": "DOC-SUP-I4",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I4",
    "language": "fr",
    "format": "typed",
-   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nCERTIFICAT D'ORIGINE ZLECAf – COPIE\nFournisseur : Houet Sugar SARL\nPays d'origine : Burkina Faso\nFacture n° : HOU-49443\nDate : 2026-08-21\nClient : Adom Provisions Ltd\nMarchandises : Sucre de canne\nQuantité : 60 kg\nPrix unitaire : 9.52 GHS\nValeur facturée : 571.13 GHS\nLes marchandises satisfont aux règles d'origine de la ZLECAf."
+   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Houet Sugar SARL\nPays d'origine : Burkina Faso\nFacture n° : HOU-49443\nDate : 2026-08-21\nClient : Adom Provisions Ltd\nMarchandises : Sucre de canne\nQuantité : 60 kg\nPrix unitaire : 9.52 GHS\nValeur facturée : 571.13 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
   },
   {
    "doc_id": "DOC-SUP-X1",
@@ -325,28 +323,28 @@
    "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Malt Ingredients GmbH\nCountry of origin: Netherlands\nInvoice no: LOW-83935\nDate: 2026-08-26\nBuyer: Adom Provisions Ltd\nGoods: Cereal-based premix preparation\nQuantity: 3 bags\nUnit price: 6.95 GHS\nCustoms value: 660.00 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Malt Ingredients GmbH\nCountry of origin: Netherlands\nInvoice no: LOW-83935\nDate: 2026-08-26\nBuyer: Adom Provisions Ltd\nGoods: Cereal-based premix preparation\nQuantity: 3 bags\nUnit price: 6.95 GHS\nCustoms value: 660.00 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2677-19\n1. Cleaning of millet – Factory, Ghana\n   Equipment: vibrating sieve and destoner\n2. Roasting of millet and soya – Factory, Ghana\n   Equipment: rotary drum roaster, 300 kg/h\n3. Cooking by extrusion – Factory, Ghana\n   Equipment: twin-screw cooking extruder\n4. Drum drying of the cooked paste – Factory, Ghana\n   Equipment: steam-heated double drum dryer\n5. Simple grinding – Factory, Ghana\n   Equipment: hammer mill\n6. Simple mixing with milk powder and sugar – Factory, Ghana\n   Equipment: ribbon blender, 500 kg\n7. Filling into cartons – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2677-19\nStep | Description | Location | Equipment\n1 | Cleaning of millet | Factory, Ghana | vibrating sieve and destoner\n2 | Roasting of millet and soya | Factory, Ghana | rotary drum roaster, 300 kg/h\n3 | Cooking by extrusion | Factory, Ghana | twin-screw cooking extruder\n4 | Drum drying of the cooked paste | Factory, Ghana | steam-heated double drum dryer\n5 | Simple grinding | Factory, Ghana | hammer mill\n6 | Simple mixing with milk powder and sugar | Factory, Ghana | ribbon blender, 500 kg\n7 | Filling into cartons | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2677-19\nBatch: 2400 cartons of 400 g\nMaterials: 8195.13 GHS\nPackaging: 1180.49 GHS\nDirect labour: 3541.46 GHS\nEnergy and water: 1770.73 GHS\nFactory overheads: 2360.97 GHS\nMargin: 2951.22 GHS\nEx-works price per batch: 20000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2677-19\nBatch: 2400 cartons of 400 g\nMaterials: 8,195.13 GHS\nPackaging: 1,180.49 GHS\nDirect labour: 3,541.46 GHS\nEnergy and water: 1,770.73 GHS\nFactory overheads: 2,360.97 GHS\nMargin: 2,951.22 GHS\nEx-works price per batch: 20000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-4342\nDate: 2026-10-15\nExporter: Adom Provisions Ltd\nExporter TIN: C0027483831\nConsignee: Teranga Distribution SARL\nConsignee address: 129 Industrial Layout, Lomé\nDestination: Togo\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: AP/TOG/1-2400\nPackages: 100 cartons\nTransport: Road – truck GR 3296-26, from Tema\nValue: 21600.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-4342\nDate: 2026-10-15\nExporter: Adom Provisions Ltd\nExporter TIN: C0027483831\nConsignee: Teranga Distribution SARL\nConsignee address: 129 Industrial Layout, Lomé\nDestination: Togo\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: AP/TOG/1-2400\nPackages: 100 cartons\nTransport: Road – truck GR 3296-26, from Tema\nValue: 21600.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
   }
  ]
 }

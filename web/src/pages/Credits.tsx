@@ -11,13 +11,6 @@ const ROWS = [
   ['Caveat (Fontsource)', 'Handwriting-style font for synthetic document images', 'SIL OFL 1.1', 'https://fontsource.org/fonts/caveat'],
   ['Laws.Africa – AfCFTA Agreement text', 'Source of Annex 2 rule text', 'CC-BY', 'https://laws.africa'],
 ]
-const DESIGN = [
-  
-  ['Skiper UI', 'Not used. The terms for free components are not clear.', 'https://skiper-ui.com/components'],
-  ['Spline community', 'Not used. No scene with a confirmed licence.', 'https://community.spline.design'],
-  ['recent.design', 'General direction only. No designs or assets copied.', 'https://recent.design'],
-]
-
 export default function Credits() {
   return (
     <>
@@ -26,10 +19,7 @@ export default function Credits() {
         <Section title="Libraries, fonts and sources"><div className="overflow-x-auto"><table className="data text-sm">
           <thead><tr><th>Item</th><th>Used for</th><th>Licence</th><th>Link</th></tr></thead>
           <tbody>{ROWS.map(r => <tr key={r[0]}><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td><a className="text-accent hover:underline break-all" href={r[3]} target="_blank" rel="noreferrer">{r[3]}</a></td></tr>)}</tbody></table></div></Section>
-        <Section title="Design components, 3D and inspiration"><div className="overflow-x-auto"><table className="data text-sm">
-          <thead><tr><th>Source</th><th>How it was used</th><th>Link</th></tr></thead>
-          <tbody>{DESIGN.map(r => <tr key={r[0]}><td className="min-w-[180px]">{r[0]}</td><td>{r[1]}</td><td><a className="text-accent hover:underline break-all" href={r[2]} target="_blank" rel="noreferrer">{r[2]}</a></td></tr>)}</tbody></table></div></Section>
-        <Section title="Team"><p className="text-sm">BI Norwegian Business School, AI for Business, Group 10: Oliwia Kosciolek, Apurv Sinha, Tereza Havlíčková, Ellinor Osvold and Vetle Nordli Strand.</p></Section>
+        <Section title="Generative AI"><p className="text-sm max-w-3xl">The code, the rule extraction, the synthetic data and draft documents of this prototype were produced with Claude (Anthropic), a generative AI assistant, under the group’s direction.</p></Section>
       </div>
     </>
   )

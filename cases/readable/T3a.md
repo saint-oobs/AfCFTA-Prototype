@@ -1,11 +1,10 @@
 # Case T3a – SYNTHETIC
 
-Generator 1.2.0, seed 2026
+Generator 1.3.0, seed 2026
 Defects injected: none
 
 ## DOC-EXP (exporter_profile, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 EXPORTER PROFILE
 Name: Nkabom Food Works Ltd
 Address: Plot 33, Light Industrial Area, Koforidua, Ghana
@@ -18,7 +17,6 @@ Activity: manufacture of food preparations
 
 ## DOC-BOM (bill_of_materials, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 BILL OF MATERIALS
 Exporter: Nkabom Food Works Ltd
 Product: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags
@@ -26,24 +24,24 @@ Declared HS: 1901.20
 Batch: 1500 bags of 1 kg
 Batch no: B-2672-52
 Prepared by: Production manager, Nkabom Food Works Ltd
-ID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin
-I1 | Wheat flour | 1100 | kg | 8972.50 | 8254.70 | GHS | Southern Cross Flour Mills Ltd | Brazil | 11.01 | Imported (non-State Party)
-I2 | Malt, not roasted | 250 | kg | 3940.40 | 3940.40 | GH₵ | Akatsi Malt Ltd | Ghana | 11.07 | Ghana
-I3 | Baking powder | 40 | kg | 683.43 | 683.43 | GHS | Nkwanta Bakery Supplies Enterprise | Ghana | 21.02 | Ghana
-I4 | Cane sugar | 80 | kg | 1,593.05 | 1465.61 | GHS | Lowlands Sugar B.V. | France | Chapter 17 | Imported (non-State Party)
+Item | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin
+I1 | Wheat flour | 1100 | kg | 8972.50 | 8254.70 | GHS | Paraná Flour Mills Ltda | Brazil | 1101.00 | Imported (non-State Party)
+I2 | Malt, not roasted | 250 | kg | 3940.40 | 3940.40 | GH₵ | Akatsi Malt Ltd | Ghana | 1107.10 | Ghana
+I3 | Baking powder | 40 | kg | 683.43 | 683.43 | GHS | Nkwanta Bakery Supplies Enterprise | Ghana | 2102.30 | Ghana
+I4 | Cane sugar | 80 | kg | 1,593.05 | 1465.61 | GHS | Normandie Sugar SAS | France | 1701.99 | Imported (non-State Party)
 X1 | Bakery premix preparation | 76 | kg | 5960.00 | 5960.00 | GHS | Westbrook Nutrition Ingredients GmbH | Belgium | 1901.20 | Imported (non-State Party)
 PACKAGING
-P1 | Printed paper bag, 1 kg | retail | Chapter 48 | Ghana
-P2 | Corrugated carton (10 bags) | transport | Chapter 48 | Ghana
+Item | Description | Packing type | Made in
+P1 | Printed paper bag, 1 kg | retail | Ghana
+P2 | Corrugated carton (10 bags) | transport | Ghana
 ```
 
 ## DOC-SUP-I1 (supplier_invoice, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 COMMERCIAL INVOICE AND CUSTOMS ENTRY
-Supplier: Southern Cross Flour Mills Ltd
+Supplier: Paraná Flour Mills Ltda
 Country of origin: Brazil
-Invoice no: SOU-49117
+Invoice no: PAR-49117
 Date: 2026-07-07
 Buyer: Nkabom Food Works Ltd
 Goods: Wheat flour
@@ -54,7 +52,6 @@ Customs value: 8972.50 GHS
 
 ## DOC-SUP-I2 (appendix_iii_a, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 SUPPLIER DECLARATION (Appendix III, Part A)
 Supplier: Akatsi Malt Ltd
 Country of origin: Ghana
@@ -65,12 +62,11 @@ Goods: Malt, not roasted
 Quantity: 250 kg
 Unit price: 15.76 GHS
 Invoice value: 3940.40 GHS
-The goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties.
+I, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties.
 ```
 
 ## DOC-SUP-I3 (appendix_iii_a, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 SUPPLIER DECLARATION (Appendix III, Part A)
 Supplier: Nkwanta Bakery Supplies Enterprise
 Country of origin: Ghana
@@ -81,16 +77,15 @@ Goods: Baking powder
 Quantity: 40 kg
 Unit price: 17.09 GHS
 Invoice value: 683.43 GHS
-The goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties.
+I, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties.
 ```
 
 ## DOC-SUP-I4 (supplier_invoice, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 COMMERCIAL INVOICE AND CUSTOMS ENTRY
-Supplier: Lowlands Sugar B.V.
+Supplier: Normandie Sugar SAS
 Country of origin: France
-Invoice no: LOW-51021
+Invoice no: NOR-51021
 Date: 2026-08-21
 Buyer: Nkabom Food Works Ltd
 Goods: Cane sugar
@@ -101,7 +96,6 @@ Customs value: 1593.05 GHS
 
 ## DOC-SUP-X1 (supplier_invoice, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 COMMERCIAL INVOICE AND CUSTOMS ENTRY
 Supplier: Westbrook Nutrition Ingredients GmbH
 Country of origin: Belgium
@@ -116,38 +110,32 @@ Customs value: 5960.00 GHS
 
 ## DOC-PROC (production_notes, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 PRODUCTION PROCESS
 Batch no: B-2672-52
-1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana
-   Equipment: 2,000 L stainless mash tun with temperature control
-2. Drum drying of the malt extract with part of the flour – Factory, Ghana
-   Equipment: steam-heated double drum dryer
-3. Simple mixing with flour, sugar and baking powder – Factory, Ghana
-   Equipment: ribbon blender, 500 kg
-4. Filling into bags – Factory, Ghana
-   Equipment: semi-automatic filling and sealing machine
+Step | Description | Location | Equipment
+1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control
+2 | Drum drying of the malt extract with part of the flour | Factory, Ghana | steam-heated double drum dryer
+3 | Simple mixing with flour, sugar and baking powder | Factory, Ghana | ribbon blender, 500 kg
+4 | Filling into bags | Factory, Ghana | semi-automatic filling and sealing machine
 Food aid: none of the inputs was obtained from food aid
 ```
 
 ## DOC-COST (costing_sheet, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 COSTING SHEET
 Batch no: B-2672-52
 Batch: 1500 bags of 1 kg
-Materials: 21149.38 GHS
-Packaging: 1885.06 GHS
-Direct labour: 5655.19 GHS
-Energy and water: 2827.59 GHS
-Factory overheads: 3770.12 GHS
-Margin: 4712.66 GHS
+Materials: 21,149.38 GHS
+Packaging: 1,885.06 GHS
+Direct labour: 5,655.19 GHS
+Energy and water: 2,827.59 GHS
+Factory overheads: 3,770.12 GHS
+Margin: 4,712.66 GHS
 Ex-works price per batch: 40000.00 GHS
 ```
 
 ## DOC-INV (export_invoice, en, typed)
 ```
-SYNTHETIC DOCUMENT – fictional company, created for prototype testing
 EXPORT INVOICE
 Invoice no: EXP-7694
 Date: 2026-10-15

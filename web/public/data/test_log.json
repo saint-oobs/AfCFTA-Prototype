@@ -8,7 +8,7 @@
    "cases": [
     {
      "case_id": "T1",
-     "scenario": "Malt from Ghana. Glucose syrup from Nigeria, with a certificate of origin. Mashing and evaporation in Ghana.",
+     "scenario": "Malt from Ghana. Glucose syrup from Nigeria, with a supplier declaration. Mashing and evaporation in Ghana.",
      "expected": "Likely to qualify"
     }
    ]
@@ -21,7 +21,7 @@
    "cases": [
     {
      "case_id": "T2",
-     "scenario": "Imported milk powder and sugar. Soya from Togo, with a French certificate. Roasting, extrusion cooking and drum drying in Ghana.",
+     "scenario": "Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana.",
      "expected": "Likely to qualify"
     }
    ]
@@ -62,7 +62,7 @@
    "cases": [
     {
      "case_id": "T4",
-     "scenario": "Only cleaning, simple grinding, simple mixing and bagging. No imported ingredient of heading 19.01.",
+     "scenario": "No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
      "expected": "Likely not to qualify"
     }
    ]
@@ -75,7 +75,7 @@
    "cases": [
     {
      "case_id": "T5a",
-     "scenario": "Handwritten bill of materials, French production notes and a French certificate from Burkina Faso. All values can be read.",
+     "scenario": "Handwritten bill of materials, French production notes and a French supplier declaration from Burkina Faso. All values can be read.",
      "expected": "Likely to qualify"
     },
     {
@@ -155,7 +155,7 @@
    },
    {
     "case_id": "E01",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "missing"
@@ -164,7 +164,7 @@
    },
    {
     "case_id": "E02",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "missing"
@@ -173,7 +173,7 @@
    },
    {
     "case_id": "E03",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "missing"
@@ -182,7 +182,7 @@
    },
    {
     "case_id": "E04",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "contradictory"
@@ -191,7 +191,7 @@
    },
    {
     "case_id": "E05",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "contradictory"
@@ -200,7 +200,7 @@
    },
    {
     "case_id": "E06",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "contradictory"
@@ -209,7 +209,7 @@
    },
    {
     "case_id": "E07",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "contradictory"
@@ -218,7 +218,7 @@
    },
    {
     "case_id": "E08",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "out_of_rule_base"
@@ -227,28 +227,28 @@
    },
    {
     "case_id": "E09",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Likely not to qualify",
     "sub_reasons": [],
     "agrees": true
    },
    {
     "case_id": "E10",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Likely not to qualify",
     "sub_reasons": [],
     "agrees": true
    },
    {
     "case_id": "E11",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Likely to qualify",
     "sub_reasons": [],
     "agrees": true
    },
    {
     "case_id": "E12",
-    "set": "Evaluation set",
+    "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
      "contradictory",
@@ -260,43 +260,73 @@
   "deficiencies": [
    {
     "type": "Imported 19.01 ingredients above 15%",
-    "count": 3
+    "count": 3,
+    "critical": 3,
+    "major": 0,
+    "minor": 0
    },
    {
     "type": "Value missing, unreadable or in another currency",
-    "count": 3
+    "count": 3,
+    "critical": 0,
+    "major": 3,
+    "minor": 0
    },
    {
     "type": "Proof of origin missing",
-    "count": 3
+    "count": 3,
+    "critical": 0,
+    "major": 2,
+    "minor": 1
    },
    {
-    "type": "Documents do not agree",
-    "count": 3
+    "type": "Contradictory information",
+    "count": 3,
+    "critical": 0,
+    "major": 3,
+    "minor": 0
    },
    {
     "type": "HS code missing or in doubt",
-    "count": 2
+    "count": 2,
+    "critical": 0,
+    "major": 2,
+    "minor": 0
    },
    {
-    "type": "Only simple operations",
-    "count": 1
+    "type": "No eligible manufacturing process",
+    "count": 1,
+    "critical": 1,
+    "major": 0,
+    "minor": 0
    },
    {
     "type": "Production step not clear",
-    "count": 1
+    "count": 1,
+    "critical": 0,
+    "major": 1,
+    "minor": 0
    },
    {
     "type": "Ingredient from food aid",
-    "count": 1
+    "count": 1,
+    "critical": 1,
+    "major": 0,
+    "minor": 0
    },
    {
     "type": "Origin of packing not stated",
-    "count": 1
+    "count": 1,
+    "critical": 0,
+    "major": 0,
+    "minor": 1
    },
    {
     "type": "Form data missing",
-    "count": 1
+    "count": 1,
+    "critical": 0,
+    "major": 0,
+    "minor": 1
    }
   ],
   "severity": {
@@ -328,17 +358,39 @@
   ],
   "transcription": [
    {
-    "group": "Typed records",
+    "format": "typed",
+    "language": "English",
+    "cases": 14,
     "fields": 413,
     "correct": 413,
     "flagged_unreadable": 0,
     "wrong": 0
    },
    {
-    "group": "Handwritten or French records",
-    "fields": 217,
-    "correct": 213,
-    "flagged_unreadable": 4,
+    "format": "typed",
+    "language": "multilingual",
+    "cases": 4,
+    "fields": 112,
+    "correct": 112,
+    "flagged_unreadable": 0,
+    "wrong": 0
+   },
+   {
+    "format": "handwritten",
+    "language": "English",
+    "cases": 1,
+    "fields": 35,
+    "correct": 33,
+    "flagged_unreadable": 2,
+    "wrong": 0
+   },
+   {
+    "format": "handwritten",
+    "language": "multilingual",
+    "cases": 2,
+    "fields": 70,
+    "correct": 68,
+    "flagged_unreadable": 2,
     "wrong": 0
    }
   ]
@@ -347,7 +399,7 @@
   {
    "case_id": "E01",
    "product": "malt_extract",
-   "scenario": "Malt extract with a lot from Togo. The certificate of origin for that lot is missing.",
+   "scenario": "Malt extract with a lot from Togo. The supplier declaration for that lot is missing.",
    "expected": "Further information required",
    "observed": "Further information required",
    "sub": "information missing"
@@ -374,7 +426,7 @@
    "scenario": "Infant cereal. The premix is in kg in the bill of materials but in bags on the invoice.",
    "expected": "Further information required",
    "observed": "Further information required",
-   "sub": "documents do not agree"
+   "sub": "contradictory information"
   },
   {
    "case_id": "E05",
@@ -382,7 +434,7 @@
    "scenario": "Malt extract. The bill of materials and the supplier invoice show different values for the concentrate.",
    "expected": "Further information required",
    "observed": "Further information required",
-   "sub": "documents do not agree"
+   "sub": "contradictory information"
   },
   {
    "case_id": "E06",
@@ -390,15 +442,15 @@
    "scenario": "Bread mix. The premix value is in EUR, the ex-works price in GHS.",
    "expected": "Further information required",
    "observed": "Further information required",
-   "sub": "documents do not agree"
+   "sub": "contradictory information"
   },
   {
    "case_id": "E07",
    "product": "infant_cereal",
-   "scenario": "Infant cereal. The premix has the HS code of malt (11.07).",
+   "scenario": "Infant cereal. The premix has the HS code of malt (1107.10).",
    "expected": "Further information required",
    "observed": "Further information required",
-   "sub": "documents do not agree"
+   "sub": "contradictory information"
   },
   {
    "case_id": "E08",
@@ -435,10 +487,10 @@
   {
    "case_id": "E12",
    "product": "malt_extract",
-   "scenario": "Malt extract. A certificate is missing and the units of the concentrate do not agree.",
+   "scenario": "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree.",
    "expected": "Further information required",
    "observed": "Further information required",
-   "sub": "documents do not agree, information missing"
+   "sub": "contradictory information, information missing"
   }
  ]
 }

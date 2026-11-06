@@ -2,7 +2,7 @@
  "meta": {
   "case_id": "E05",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -63,7 +63,7 @@
    {
     "id": "I1",
     "description": "Malt, not roasted",
-    "hs_code": "11.07",
+    "hs_code": "1107.10",
     "quantity": {
      "value": "800",
      "unit": "kg"
@@ -91,7 +91,7 @@
    {
     "id": "I2",
     "description": "Glucose syrup",
-    "hs_code": "17.02",
+    "hs_code": "1702.30",
     "quantity": {
      "value": "150",
      "unit": "kg"
@@ -111,7 +111,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -176,7 +176,6 @@
     "id": "P1",
     "description": "Plastic jar with lid, 1 kg",
     "packing_type": "retail",
-    "hs_code": "Ex-Chapter 39",
     "origin_class": "ghana",
     "country": "Ghana"
    },
@@ -184,7 +183,6 @@
     "id": "P2",
     "description": "Corrugated carton (12 jars)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    }
@@ -203,14 +201,14 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Sika Grains Ltd\nAddress: Plot 28, Light Industrial Area, Takoradi, Ghana\nPhone: +233 30 627 4380\nTIN: C0032318463\nRegistration no: GEPA/EXP/2026/7401\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Sika Grains Ltd\nAddress: Plot 28, Light Industrial Area, Takoradi, Ghana\nPhone: +233 30 627 4380\nTIN: C0032318463\nRegistration no: GEPA/EXP/2026/7401\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Sika Grains Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2657-65\nPrepared by: Production manager, Sika Grains Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Malt, not roasted | 800 | kg | 9557.91 | 9557.91 | GHS | Brong Malt Cooperative | Ghana | 11.07 | Ghana\nI2 | Glucose syrup | 150 | kg | 2042.58 | 2042.58 | GH₵ | Kara Sweeteners SARL | Togo | 17.02 | AfCFTA State Party\nX1 | Malt extract concentrate | 69 | kg | 1320.00 | 1320.00 | GHS | Westbrook Nutrition Ingredients GmbH | Brazil | 1901.90 | Imported (non-State Party)\nPACKAGING\nP1 | Plastic jar with lid, 1 kg | retail | Ex-Chapter 39 | Ghana\nP2 | Corrugated carton (12 jars) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Sika Grains Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2657-65\nPrepared by: Production manager, Sika Grains Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Malt, not roasted | 800 | kg | 9557.91 | 9557.91 | GHS | Brong Malt Cooperative | Ghana | 1107.10 | Ghana\nI2 | Glucose syrup | 150 | kg | 2042.58 | 2042.58 | GH₵ | Kara Sweeteners SARL | Togo | 1702.30 | AfCFTA State Party\nX1 | Malt extract concentrate | 69 | kg | 1320.00 | 1320.00 | GHS | Westbrook Nutrition Ingredients GmbH | Brazil | 1901.90 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Plastic jar with lid, 1 kg | retail | Ghana\nP2 | Corrugated carton (12 jars) | transport | Ghana",
    "illegible_fields": []
   },
   {
@@ -219,15 +217,15 @@
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Malt Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-65201\nDate: 2026-09-16\nBuyer: Sika Grains Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 11.95 GHS\nInvoice value: 9557.91 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Malt Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-65201\nDate: 2026-09-16\nBuyer: Sika Grains Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 11.95 GHS\nInvoice value: 9557.91 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I2",
    "language": "fr",
    "format": "typed",
-   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nCERTIFICAT D'ORIGINE ZLECAf – COPIE\nFournisseur : Kara Sweeteners SARL\nPays d'origine : Togo\nFacture n° : KAR-97554\nDate : 2026-08-02\nClient : Sika Grains Ltd\nMarchandises : Sirop de glucose\nQuantité : 150 kg\nPrix unitaire : 13.62 GHS\nValeur facturée : 2042.58 GHS\nLes marchandises satisfont aux règles d'origine de la ZLECAf."
+   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Kara Sweeteners SARL\nPays d'origine : Togo\nFacture n° : KAR-97554\nDate : 2026-08-02\nClient : Sika Grains Ltd\nMarchandises : Sirop de glucose\nQuantité : 150 kg\nPrix unitaire : 13.62 GHS\nValeur facturée : 2042.58 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
   },
   {
    "doc_id": "DOC-SUP-X1",
@@ -235,28 +233,28 @@
    "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: Brazil\nInvoice no: WES-11684\nDate: 2026-08-20\nBuyer: Sika Grains Ltd\nGoods: Malt extract concentrate\nQuantity: 69 kg\nUnit price: 25.83 GHS\nCustoms value: 1782.00 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: Brazil\nInvoice no: WES-11684\nDate: 2026-08-20\nBuyer: Sika Grains Ltd\nGoods: Malt extract concentrate\nQuantity: 69 kg\nUnit price: 25.83 GHS\nCustoms value: 1782.00 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nPRODUCTION PROCESS\nBatch no: B-2657-65\n1. Mashing of malt with hot water in a mash tun (enzymatic conversion) – Factory, Ghana\n   Equipment: 2,000 L stainless mash tun with temperature control\n2. Filtration and vacuum evaporation to a concentrate – Factory, Ghana\n   Equipment: plate filter and single-effect vacuum evaporator\n3. Filling into jars – Factory, Ghana\n   Equipment: semi-automatic filling and sealing machine\n4. Labelling – Factory, Ghana\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2657-65\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Filtration and vacuum evaporation to a concentrate | Factory, Ghana | plate filter and single-effect vacuum evaporator\n3 | Filling into jars | Factory, Ghana | semi-automatic filling and sealing machine\n4 | Labelling | Factory, Ghana | —\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2657-65\nBatch: 1000 jars\nMaterials: 12920.49 GHS\nPackaging: 2707.95 GHS\nDirect labour: 8123.85 GHS\nEnergy and water: 4061.93 GHS\nFactory overheads: 5415.90 GHS\nMargin: 6769.88 GHS\nEx-works price per batch: 40000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2657-65\nBatch: 1000 jars\nMaterials: 12,920.49 GHS\nPackaging: 2,707.95 GHS\nDirect labour: 8,123.85 GHS\nEnergy and water: 4,061.93 GHS\nFactory overheads: 5,415.90 GHS\nMargin: 6,769.88 GHS\nEx-works price per batch: 40000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-9561\nDate: 2026-10-15\nExporter: Sika Grains Ltd\nExporter TIN: C0032318463\nConsignee: Teranga Wholesale Ltd\nConsignee address: 30 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: SG/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 43200.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-9561\nDate: 2026-10-15\nExporter: Sika Grains Ltd\nExporter TIN: C0032318463\nConsignee: Teranga Wholesale Ltd\nConsignee address: 30 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: SG/CÔT/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 43200.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
   }
  ]
 }

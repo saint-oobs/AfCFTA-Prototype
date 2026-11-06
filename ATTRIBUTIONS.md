@@ -25,19 +25,8 @@
 - *Appendix IV to Annex 2 on Rules of Origin as approved by the 12th AfCFTA Council of Ministers, December 2023*.
 - *EX.CL/1329(XL)*, African Union Common Repository.
 
-## Design components, 3D scenes and inspiration
-| Source | Decision | Reason |
-|---|---|---|
-| Aceternity UI (ui.aceternity.com/components) | **Not used** | The licence forbids redistributing source files. |
-| Skiper UI (skiper-ui.com/components) | **Not used** | Free-tier terms could not be confirmed; the terms of service reserve all rights and prohibit redistribution. |
-| Spline community (community.spline.design) | **Not used** | No community file with a verifiable reuse licence was identified. The home page uses its own animated tile mosaic (`HeroMosaic.tsx`, anime.js). |
-| recent.design | **Direction only** – no screenshots, layouts, logos or assets copied | General direction only (layout rhythm, whitespace). Crediting does not give a right to copy other designers' work, so nothing was copied. |
-
 ## Logo
 The Tessera logo (nine tiles, accent tiles form a “T”) was drawn for this prototype as an inline SVG (`web/src/components/Logo.tsx`).
 
-## Team
-Oliwia Kosciolek, Apurv Sinha, Tereza Havlíčková, Ellinor Osvold, Vetle Nordli Strand (BI Norwegian Business School, AI for Business, Group 10).
-
 ## Generative AI
-Code, rule extraction, synthetic data and draft documents were produced with Claude (Anthropic) under the group's direction and checked by the group (see `docs/appendix_b_draft.md`).
+Code, rule extraction, synthetic data and draft documents were produced with Claude (Anthropic) under the group's direction.

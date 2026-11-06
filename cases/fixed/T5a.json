@@ -2,7 +2,7 @@
  "meta": {
   "case_id": "T5a",
   "seed": 2026,
-  "generator_version": "1.2.0",
+  "generator_version": "1.3.0",
   "synthetic": true,
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
@@ -24,7 +24,7 @@
    "language": "fr_mixed",
    "format": "handwritten",
    "messiness": 0.8,
-   "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French certificate from Burkina Faso. All values can be read."
+   "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French supplier declaration from Burkina Faso. All values can be read."
   },
   "defects": [],
   "tolerance_percent_used": "15",
@@ -69,7 +69,7 @@
    {
     "id": "I1",
     "description": "Millet grain",
-    "hs_code": "Chapter 10",
+    "hs_code": "1008.29",
     "quantity": {
      "value": "550",
      "unit": "kg"
@@ -89,7 +89,7 @@
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
-     "type": "certificate_of_origin",
+     "type": "appendix_iii_a",
      "present": true
     },
     "conflicts": []
@@ -97,7 +97,7 @@
    {
     "id": "I2",
     "description": "Soya beans",
-    "hs_code": "Chapter 12",
+    "hs_code": "1201.90",
     "quantity": {
      "value": "250",
      "unit": "kg"
@@ -125,7 +125,7 @@
    {
     "id": "I3",
     "description": "Skimmed milk powder",
-    "hs_code": "Chapter 4",
+    "hs_code": "0402.10",
     "quantity": {
      "value": "120",
      "unit": "kg"
@@ -140,7 +140,7 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Southern Cross Dairy Ltd",
+    "supplier": "Normandie Dairy SAS",
     "supplier_country": "France",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -153,7 +153,7 @@
    {
     "id": "I4",
     "description": "Cane sugar",
-    "hs_code": "Chapter 17",
+    "hs_code": "1701.99",
     "quantity": {
      "value": "60",
      "unit": "kg"
@@ -168,7 +168,7 @@
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Southern Cross Sugar Ltd",
+    "supplier": "Paraná Sugar Ltda",
     "supplier_country": "Brazil",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -256,7 +256,6 @@
     "id": "P1",
     "description": "Printed paperboard carton with inner bag, 400 g",
     "packing_type": "retail",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    },
@@ -264,7 +263,6 @@
     "id": "P2",
     "description": "Corrugated carton (24 cartons)",
     "packing_type": "transport",
-    "hs_code": "Chapter 48",
     "origin_class": "ghana",
     "country": "Ghana"
    }
@@ -283,23 +281,23 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORTER PROFILE\nName: Volta Foods Ltd\nAddress: Plot 81, Light Industrial Area, Kumasi, Ghana\nPhone: +233 30 940 3155\nTIN: C0074338183\nRegistration no: GEPA/EXP/2026/7485\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Volta Foods Ltd\nAddress: Plot 81, Light Industrial Area, Kumasi, Ghana\nPhone: +233 30 940 3155\nTIN: C0074338183\nRegistration no: GEPA/EXP/2026/7485\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "handwritten",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nBILL OF MATERIALS\nExporter: Volta Foods Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2605-77\nPrepared by: Production manager, Volta Foods Ltd\nID | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS | Origin\nI1 | Millet grain | 550 | Kg | 9,112.41 | 9112.41 | GHS | Faso Grains SARL | Burkina Faso | Chapter 10 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 3,481.08 | 3,481.08 | GH₵ | Brong Agro Cooperative | Ghana | Chapter 12 | Ghana\nI3 | Skimmed milk powder | 120 | Kg | 7,007.76 | 6,447.14 | GHS | Southern Cross Dairy Ltd | France | Chapter 4 | Imported (non-State Party)\nI4 | Cane sugar | 60 | Kg | 1996.37 | 1,836.66 | GH₵ | Southern Cross Sugar Ltd | Brazil | Chapter 17 | Imported (non-State Party)\nX1 | Cereal-based premix preparation | 103 | kgs | 3,600.00 | 3,600.00 | GHS | Rhinefield Food Ingredients GmbH | India | 1901.90 | Imported (non-State Party)\nPACKAGING\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Chapter 48 | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Chapter 48 | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Volta Foods Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2605-77\nPrepared by: Production manager, Volta Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 550 | Kg | 9,112.41 | 9112.41 | GHS | Faso Grains SARL | Burkina Faso | 1008.29 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 3,481.08 | 3,481.08 | GH₵ | Brong Agro Cooperative | Ghana | 1201.90 | Ghana\nI3 | Skimmed milk powder | 120 | Kg | 7,007.76 | 6,447.14 | GHS | Normandie Dairy SAS | France | 0402.10 | Imported (non-State Party)\nI4 | Cane sugar | 60 | Kg | 1996.37 | 1,836.66 | GH₵ | Paraná Sugar Ltda | Brazil | 1701.99 | Imported (non-State Party)\nX1 | Cereal-based premix preparation | 103 | kgs | 3,600.00 | 3,600.00 | GHS | Rhinefield Food Ingredients GmbH | India | 1901.90 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "certificate_of_origin",
+   "type": "appendix_iii_a",
    "input_id": "I1",
    "language": "fr",
    "format": "typed",
-   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nCERTIFICAT D'ORIGINE ZLECAf – COPIE\nFournisseur : Faso Grains SARL\nPays d'origine : Burkina Faso\nFacture n° : FAS-96203\nDate : 2026-07-22\nClient : Volta Foods Ltd\nMarchandises : Mil en grains\nQuantité : 550 kg\nPrix unitaire : 16.57 GHS\nValeur facturée : 9112.41 GHS\nLes marchandises satisfont aux règles d'origine de la ZLECAf."
+   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Faso Grains SARL\nPays d'origine : Burkina Faso\nFacture n° : FAS-96203\nDate : 2026-07-22\nClient : Volta Foods Ltd\nMarchandises : Mil en grains\nQuantité : 550 kg\nPrix unitaire : 16.57 GHS\nValeur facturée : 9112.41 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
   },
   {
    "doc_id": "DOC-SUP-I2",
@@ -307,7 +305,7 @@
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nSUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Agro Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-33083\nDate: 2026-08-17\nBuyer: Volta Foods Ltd\nGoods: Soya beans\nQuantity: 250 kg\nUnit price: 13.92 GHS\nInvoice value: 3481.08 GHS\nThe goods satisfy the rules of origin governing preferential trade between the AfCFTA State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Agro Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-33083\nDate: 2026-08-17\nBuyer: Volta Foods Ltd\nGoods: Soya beans\nQuantity: 250 kg\nUnit price: 13.92 GHS\nInvoice value: 3481.08 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I3",
@@ -315,7 +313,7 @@
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Dairy Ltd\nCountry of origin: France\nInvoice no: SOU-14096\nDate: 2026-09-18\nBuyer: Volta Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 58.40 GHS\nCustoms value: 7007.76 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Normandie Dairy SAS\nCountry of origin: France\nInvoice no: NOR-14096\nDate: 2026-09-18\nBuyer: Volta Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 58.40 GHS\nCustoms value: 7007.76 GHS"
   },
   {
    "doc_id": "DOC-SUP-I4",
@@ -323,7 +321,7 @@
    "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Sugar Ltd\nCountry of origin: Brazil\nInvoice no: SOU-51093\nDate: 2026-08-17\nBuyer: Volta Foods Ltd\nGoods: Cane sugar\nQuantity: 60 kg\nUnit price: 33.27 GHS\nCustoms value: 1996.37 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Sugar Ltda\nCountry of origin: Brazil\nInvoice no: PAR-51093\nDate: 2026-08-17\nBuyer: Volta Foods Ltd\nGoods: Cane sugar\nQuantity: 60 kg\nUnit price: 33.27 GHS\nCustoms value: 1996.37 GHS"
   },
   {
    "doc_id": "DOC-SUP-X1",
@@ -331,28 +329,28 @@
    "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: India\nInvoice no: RHI-64809\nDate: 2026-07-03\nBuyer: Volta Foods Ltd\nGoods: Cereal-based premix preparation\nQuantity: 103 kg\nUnit price: 34.95 GHS\nCustoms value: 3600.00 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Rhinefield Food Ingredients GmbH\nCountry of origin: India\nInvoice no: RHI-64809\nDate: 2026-07-03\nBuyer: Volta Foods Ltd\nGoods: Cereal-based premix preparation\nQuantity: 103 kg\nUnit price: 34.95 GHS\nCustoms value: 3600.00 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "fr",
    "format": "handwritten",
-   "text": "DOCUMENT SYNTHÉTIQUE – entreprise fictive, créé pour les tests du prototype\nPROCÉDÉ DE PRODUCTION\nLot : B-2605-77\n1. Nettoyage du mil – Usine, Ghana\n   Équipement: vibrating sieve and destoner\n2. Torréfaction du mil et du soja – Usine, Ghana\n   Équipement: rotary drum roaster, 300 kg/h\n3. Cuisson par extrusion – Usine, Ghana\n   Équipement: twin-screw cooking extruder\n4. Séchage sur cylindre de la pâte cuite – Usine, Ghana\n   Équipement: steam-heated double drum dryer\n5. Simple broyage – Usine, Ghana\n   Équipement: hammer mill\n6. Simple mélange avec lait en poudre et sucre – Usine, Ghana\n   Équipement: ribbon blender, 500 kg\n7. Remplissage des boîtes – Usine, Ghana\n   Équipement: semi-automatic filling and sealing machine\nAide alimentaire : aucun intrant"
+   "text": "PROCÉDÉ DE PRODUCTION\nLot : B-2605-77\nN° | Étape | Lieu | Équipement\n1 | Nettoyage du mil | Usine, Ghana | vibrating sieve and destoner\n2 | Torréfaction du mil et du soja | Usine, Ghana | rotary drum roaster, 300 kg/h\n3 | Cuisson par extrusion | Usine, Ghana | twin-screw cooking extruder\n4 | Séchage sur cylindre de la pâte cuite | Usine, Ghana | steam-heated double drum dryer\n5 | Simple broyage | Usine, Ghana | hammer mill\n6 | Simple mélange avec lait en poudre et sucre | Usine, Ghana | ribbon blender, 500 kg\n7 | Remplissage des boîtes | Usine, Ghana | semi-automatic filling and sealing machine\nAide alimentaire : aucun intrant"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nCOSTING SHEET\nBatch no: B-2605-77\nBatch: 2400 cartons of 400 g\nMaterials: 25197.62 GHS\nPackaging: 3480.24 GHS\nDirect labour: 10440.71 GHS\nEnergy and water: 5220.36 GHS\nFactory overheads: 6960.48 GHS\nMargin: 8700.59 GHS\nEx-works price per batch: 60,000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2605-77\nBatch: 2400 cartons of 400 g\nMaterials: 25,197.62 GHS\nPackaging: 3,480.24 GHS\nDirect labour: 10,440.71 GHS\nEnergy and water: 5,220.36 GHS\nFactory overheads: 6,960.48 GHS\nMargin: 8,700.59 GHS\nEx-works price per batch: 60,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "SYNTHETIC DOCUMENT – fictional company, created for prototype testing\nEXPORT INVOICE\nInvoice no: EXP-7606\nDate: 2026-10-15\nExporter: Volta Foods Ltd\nExporter TIN: C0074338183\nConsignee: Teranga Trading SA\nConsignee address: 4 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: VF/CÔT/1-2400\nPackages: 100 cartons\nTransport: Road – truck GR 9863-26, from Tema\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-7606\nDate: 2026-10-15\nExporter: Volta Foods Ltd\nExporter TIN: C0074338183\nConsignee: Teranga Trading SA\nConsignee address: 4 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: VF/CÔT/1-2400\nPackages: 100 cartons\nTransport: Road – truck GR 9863-26, from Tema\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ]
 }

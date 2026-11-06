@@ -26,7 +26,7 @@ export function SummaryStrip({ result, extracted, scenario }: { result: any; ext
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         <div><p className="label">Product</p><p className="text-sm mt-0.5">{extracted?.product?.description?.split('(')[0] ?? '—'}</p><p className="note">HS {extracted?.product?.declared_hs ?? '—'}</p></div>
         <div><p className="label">Heading 19.01 rule</p><div className="mt-1"><Status s={c.tolerance?.status ?? 'not assessed'} /></div></div>
-        <div><p className="label">Simple operations</p><div className="mt-1"><Status s={c.article7?.status ?? 'not assessed'} /></div></div>
+        <div><p className="label">Eligible manufacturing processes</p><div className="mt-1"><Status s={c.article7?.status ?? 'not assessed'} /></div></div>
         {scenario && <p className="col-span-2 lg:col-span-3 note">{scenario.replace(/^[^.]*\(HS [\d.]+\)\.\s*/, '')}</p>}
       </div>
     </div>
@@ -61,7 +61,7 @@ export function ShareGauge({ result }: { result: any }) {
   const headroom = t.headroom != null ? Number(t.headroom) : null
   let text: string, action: string
   if (t.status === 'unclear') {
-    text = 'We cannot calculate this share yet, because a value, an HS code or a proof of origin is missing or the documents do not agree.'
+    text = 'We cannot calculate this share yet, because a value, an HS code or a proof of origin is missing or contradictory.'
     action = 'Send the documents listed under “Information we need from you”.'
   } else if (t.status === 'met') {
     text = 'None of your imported ingredients is a preparation of heading 19.01. This rule is met.'
@@ -103,7 +103,7 @@ export function TolerancePanel({ result }: { result: any }) {
         <thead><tr><th>Imported ingredient of heading 19.01</th><th className="num">Customs value</th></tr></thead>
         <tbody>
           {t.items.length === 0 && <tr><td colSpan={2} className="text-muted">None.</td></tr>}
-          {t.items.map((i: any) => <tr key={i.input_id}><td>{i.input_id} · {i.description}</td><td className="num">{money(i.value, t.currency)}</td></tr>)}
+          {t.items.map((i: any) => <tr key={i.input_id}><td>{i.description}</td><td className="num">{money(i.value, t.currency)}</td></tr>)}
           <tr className="font-semibold"><td>Total</td><td className="num">{money(t.total, t.currency)}</td></tr>
         </tbody>
       </table></div>
@@ -134,7 +134,7 @@ export function Findings({ result, onRule }: { result: any; onRule: (id: string)
       <ol className="space-y-3">{shown.map((f: any) => (
         <li key={f.id} className="rounded-md border border-line p-4">
           <div className="flex flex-wrap items-center gap-2"><Severity s={f.severity} /><span className="font-semibold">{f.title}</span>
-            {f.input_ref && <span className="chip border-line text-muted">Line {f.input_ref}</span>}</div>
+</div>
           <p className="mt-2 text-sm">{f.explanation}</p>
           <p className="mt-2 note">Source: {f.rule_ids.map((id: string, k: number) =>
             <button key={id} onClick={() => onRule(id)} className="text-accent hover:underline mr-3">{f.provisions[k]}</button>)}</p>

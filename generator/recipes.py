@@ -1,7 +1,8 @@
 """Product recipes for synthetic SMEs (heading 19.01 only). All names and firms are fictional.
 
-HS codes for inputs follow group decision Q7: Appendix IV Column 1-2 descriptions
-(heading level where a row exists, otherwise chapter level). Product subheadings
+HS codes for inputs are six-digit HS 2022 subheadings as an SME or supplier would declare them
+(revision v4: replaces the earlier heading/chapter-level codes). They are synthetic declarations, not verified classifications;
+the engine uses only the first four digits (the heading). Product subheadings
 (1901.10 / 1901.20 / 1901.90) are SME-declared and not verified. The 19.01 rule applies to all of them.
 """
 
@@ -16,16 +17,16 @@ RECIPES = {
         "declared_hs": "1901.90",
         "batch": {"quantity": "1000", "unit": "jars", "gross_weight_kg": "1150"},
         "ingredients": [
-            {"key": "malt", "description": "Malt, not roasted", "desc_fr": "Malt, non torréfié", "hs": "11.07", "qty": "800", "unit": "kg",
+            {"key": "malt", "description": "Malt, not roasted", "desc_fr": "Malt, non torréfié", "hs": "1107.10", "qty": "800", "unit": "kg",
              "share": (0.18, 0.26), "origins": ["ghana", "state_party"]},
-            {"key": "glucose", "description": "Glucose syrup", "desc_fr": "Sirop de glucose", "hs": "17.02", "qty": "150", "unit": "kg",
+            {"key": "glucose", "description": "Glucose syrup", "desc_fr": "Sirop de glucose", "hs": "1702.30", "qty": "150", "unit": "kg",
              "share": (0.04, 0.08), "origins": ["state_party", "non_state_party", "ghana"]},
         ],
         "imp1901": {"description": "Malt extract concentrate", "hs": "1901.90", "unit": "kg",
                     "desc_fr": "Extrait de malt concentré"},
         "packaging": [
-            {"description": "Plastic jar with lid, 1 kg", "packing_type": "retail", "hs": "Ex-Chapter 39"},
-            {"description": "Corrugated carton (12 jars)", "packing_type": "transport", "hs": "Chapter 48"},
+            {"description": "Plastic jar with lid, 1 kg", "packing_type": "retail"},
+            {"description": "Corrugated carton (12 jars)", "packing_type": "transport"},
         ],
         "steps": {
             "substantive": [
@@ -46,20 +47,20 @@ RECIPES = {
         "declared_hs": "1901.90",
         "batch": {"quantity": "2000", "unit": "pouches", "gross_weight_kg": "1080"},
         "ingredients": [
-            {"key": "millet", "description": "Millet grain", "desc_fr": "Mil en grains", "hs": "Chapter 10", "qty": "600", "unit": "kg",
+            {"key": "millet", "description": "Millet grain", "desc_fr": "Mil en grains", "hs": "1008.29", "qty": "600", "unit": "kg",
              "share": (0.12, 0.18), "origins": ["ghana", "state_party"]},
-            {"key": "soya", "description": "Soya beans", "desc_fr": "Fèves de soja", "hs": "Chapter 12", "qty": "200", "unit": "kg",
+            {"key": "soya", "description": "Soya beans", "desc_fr": "Fèves de soja", "hs": "1201.90", "qty": "200", "unit": "kg",
              "share": (0.05, 0.08), "origins": ["ghana", "state_party"]},
-            {"key": "sugar", "description": "Cane sugar", "desc_fr": "Sucre de canne", "hs": "Chapter 17", "qty": "120", "unit": "kg",
+            {"key": "sugar", "description": "Cane sugar", "desc_fr": "Sucre de canne", "hs": "1701.99", "qty": "120", "unit": "kg",
              "share": (0.03, 0.05), "origins": ["non_state_party", "state_party"]},
-            {"key": "milk", "description": "Skimmed milk powder", "desc_fr": "Lait écrémé en poudre", "hs": "Chapter 4", "qty": "80", "unit": "kg",
+            {"key": "milk", "description": "Skimmed milk powder", "desc_fr": "Lait écrémé en poudre", "hs": "0402.10", "qty": "80", "unit": "kg",
              "share": (0.06, 0.10), "origins": ["non_state_party"]},
         ],
         "imp1901": {"description": "Cereal-based premix preparation", "hs": "1901.90", "unit": "kg",
                     "desc_fr": "Prémélange céréalier préparé"},
         "packaging": [
-            {"description": "Printed plastic pouch, 500 g", "packing_type": "retail", "hs": "Ex-Chapter 39"},
-            {"description": "Corrugated carton (20 pouches)", "packing_type": "transport", "hs": "Chapter 48"},
+            {"description": "Printed plastic pouch, 500 g", "packing_type": "retail"},
+            {"description": "Corrugated carton (20 pouches)", "packing_type": "transport"},
         ],
         "steps": {
             "substantive": [
@@ -86,19 +87,19 @@ RECIPES = {
         "per_carton": 24,
         "batch": {"quantity": "2400", "unit": "cartons of 400 g", "gross_weight_kg": "1050"},
         "ingredients": [
-            {"key": "millet", "description": "Millet grain", "desc_fr": "Mil en grains", "hs": "Chapter 10", "qty": "550", "unit": "kg",
+            {"key": "millet", "description": "Millet grain", "desc_fr": "Mil en grains", "hs": "1008.29", "qty": "550", "unit": "kg",
              "share": (0.12, 0.18), "origins": ["ghana", "state_party"]},
-            {"key": "soya", "description": "Soya beans", "desc_fr": "Fèves de soja", "hs": "Chapter 12", "qty": "250", "unit": "kg",
+            {"key": "soya", "description": "Soya beans", "desc_fr": "Fèves de soja", "hs": "1201.90", "qty": "250", "unit": "kg",
              "share": (0.05, 0.08), "origins": ["ghana", "state_party"]},
-            {"key": "milk", "description": "Skimmed milk powder", "desc_fr": "Lait écrémé en poudre", "hs": "Chapter 4", "qty": "120", "unit": "kg",
+            {"key": "milk", "description": "Skimmed milk powder", "desc_fr": "Lait écrémé en poudre", "hs": "0402.10", "qty": "120", "unit": "kg",
              "share": (0.08, 0.12), "origins": ["non_state_party"]},
-            {"key": "sugar", "description": "Cane sugar", "desc_fr": "Sucre de canne", "hs": "Chapter 17", "qty": "60", "unit": "kg",
+            {"key": "sugar", "description": "Cane sugar", "desc_fr": "Sucre de canne", "hs": "1701.99", "qty": "60", "unit": "kg",
              "share": (0.02, 0.04), "origins": ["non_state_party", "state_party"]},
         ],
         "imp1901": {"description": "Cereal-based premix preparation", "hs": "1901.90", "unit": "kg", "desc_fr": "Prémélange céréalier préparé"},
         "packaging": [
-            {"description": "Printed paperboard carton with inner bag, 400 g", "packing_type": "retail", "hs": "Chapter 48"},
-            {"description": "Corrugated carton (24 cartons)", "packing_type": "transport", "hs": "Chapter 48"},
+            {"description": "Printed paperboard carton with inner bag, 400 g", "packing_type": "retail"},
+            {"description": "Corrugated carton (24 cartons)", "packing_type": "transport"},
         ],
         "steps": {
             "substantive": [
@@ -124,19 +125,19 @@ RECIPES = {
         "per_carton": 10,
         "batch": {"quantity": "1500", "unit": "bags of 1 kg", "gross_weight_kg": "1560"},
         "ingredients": [
-            {"key": "wheat", "description": "Wheat flour", "desc_fr": "Farine de blé", "hs": "11.01", "qty": "1100", "unit": "kg",
+            {"key": "wheat", "description": "Wheat flour", "desc_fr": "Farine de blé", "hs": "1101.00", "qty": "1100", "unit": "kg",
              "share": (0.20, 0.28), "origins": ["non_state_party", "state_party"]},
-            {"key": "malt", "description": "Malt, not roasted", "desc_fr": "Malt, non torréfié", "hs": "11.07", "qty": "250", "unit": "kg",
+            {"key": "malt", "description": "Malt, not roasted", "desc_fr": "Malt, non torréfié", "hs": "1107.10", "qty": "250", "unit": "kg",
              "share": (0.06, 0.10), "origins": ["ghana", "state_party"]},
-            {"key": "baking", "description": "Baking powder", "desc_fr": "Levure chimique", "hs": "21.02", "qty": "40", "unit": "kg",
+            {"key": "baking", "description": "Baking powder", "desc_fr": "Levure chimique", "hs": "2102.30", "qty": "40", "unit": "kg",
              "share": (0.01, 0.02), "origins": ["non_state_party", "ghana"]},
-            {"key": "sugar", "description": "Cane sugar", "desc_fr": "Sucre de canne", "hs": "Chapter 17", "qty": "80", "unit": "kg",
+            {"key": "sugar", "description": "Cane sugar", "desc_fr": "Sucre de canne", "hs": "1701.99", "qty": "80", "unit": "kg",
              "share": (0.02, 0.04), "origins": ["non_state_party", "state_party"]},
         ],
         "imp1901": {"description": "Bakery premix preparation", "hs": "1901.20", "unit": "kg", "desc_fr": "Prémélange de boulangerie préparé"},
         "packaging": [
-            {"description": "Printed paper bag, 1 kg", "packing_type": "retail", "hs": "Chapter 48"},
-            {"description": "Corrugated carton (10 bags)", "packing_type": "transport", "hs": "Chapter 48"},
+            {"description": "Printed paper bag, 1 kg", "packing_type": "retail"},
+            {"description": "Corrugated carton (10 bags)", "packing_type": "transport"},
         ],
         "steps": {
             "substantive": [
@@ -170,6 +171,9 @@ SUPPLIER_NAMES = {  # fictional names
     "Nigeria": ["Kano {item} Industries Ltd", "Ogun {item} Ltd"], "Togo": ["Plateaux {item} SARL", "Kara {item} SARL"],
     "Côte d’Ivoire": ["Bouaké {item} SA", "Lagunes {item} SARL"], "Burkina Faso": ["Faso {item} SARL", "Houet {item} SARL"],
     "Senegal": ["Thiès {item} SA"], "Mali": ["Ségou {item} SARL"], "Kenya": ["Rift {item} Ltd"], "Egypt": ["Delta {item} Co."],
+    "Netherlands": ["Lowlands {item} B.V.", "Zeeland {item} B.V."], "Belgium": ["Flandria {item} NV", "Brabant {item} NV"],
+    "Brazil": ["Paraná {item} Ltda", "Minas {item} Ltda"], "New Zealand": ["Southern Cross {item} Ltd", "Waikato {item} Ltd"],
+    "France": ["Normandie {item} SAS", "Beauce {item} SAS"], "India": ["Deccan {item} Pvt Ltd", "Punjab {item} Pvt Ltd"],
     "_other": ["Lowlands {item} B.V.", "Southern Cross {item} Ltd", "Paraná {item} Ltda", "Deccan {item} Pvt Ltd"],
 }
 EQUIPMENT = {  # step prefix -> equipment line in the production notes

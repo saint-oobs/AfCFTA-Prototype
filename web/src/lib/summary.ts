@@ -11,7 +11,7 @@ export function smeSummary(r: any): string {
   ;(bad.length ? bad.slice(0, 3) : reqs.filter((q: any) => q.status === 'met').slice(1, 3)).forEach((q: any) => lines.push(`- ${q.evidence}`))
   if (t?.status === 'met via 15% tolerance') {
     const margin = String(t.margin_pp_display).replace(/0+$/, '').replace(/\.$/, '') || '0'
-    lines.push('', `Note: the 15% limit is the AfCFTA tolerance rule (EX.CL/1329(XL), Annex, item 3). Your margin is ${margin} percentage points. A change in prices or recipe can change the result.`)
+    lines.push('', `Note: the 15% limit is the AfCFTA tolerance rule. Your margin is ${margin} percentage points. A change in prices or recipe can change the result.`)
   }
   const fixes = [...new Set(r.findings.filter((f: any) => f.severity === 'critical' || f.severity === 'major').map((f: any) => f.sme_action || f.fix))].slice(0, 3) as string[]
   lines.push('', 'What to do next:')

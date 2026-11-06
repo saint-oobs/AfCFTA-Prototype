@@ -1,13 +1,13 @@
 {
- "engine_version": "1.2.0",
+ "engine_version": "1.3.0",
  "rulebase_version": "1.1.0",
- "adapter": "Prototype transcription (synthetic documents)",
+ "adapter": "Tessera prototype",
  "cases": [
   {
    "case_id": "T1",
    "set": "fixed",
    "product": "malt_extract",
-   "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a certificate of origin. Mashing and evaporation in Ghana.",
+   "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a supplier declaration. Mashing and evaporation in Ghana.",
    "test": 1,
    "case_type": "Typical",
    "defects": [],
@@ -24,7 +24,7 @@
    "case_id": "T2",
    "set": "fixed",
    "product": "infant_cereal",
-   "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French certificate. Roasting, extrusion cooking and drum drying in Ghana.",
+   "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana.",
    "test": 2,
    "case_type": "Typical",
    "defects": [],
@@ -109,7 +109,7 @@
    "case_id": "T4",
    "set": "fixed",
    "product": "millet_porridge_mix",
-   "scenario": "Millet porridge mix (HS 1901.90). Only cleaning, simple grinding, simple mixing and bagging. No imported ingredient of heading 19.01.",
+   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
    "test": 4,
    "case_type": "Failure",
    "defects": [
@@ -128,7 +128,7 @@
    "case_id": "T5a",
    "set": "fixed",
    "product": "infant_cereal",
-   "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French certificate from Burkina Faso. All values can be read.",
+   "scenario": "Infant cereal (HS 1901.10). Handwritten bill of materials, French production notes and a French supplier declaration from Burkina Faso. All values can be read.",
    "test": 5,
    "case_type": "Key assumption",
    "defects": [],
@@ -166,7 +166,7 @@
    "case_id": "E01",
    "set": "eval",
    "product": "malt_extract",
-   "scenario": "Malt extract with a lot from Togo. The certificate of origin for that lot is missing.",
+   "scenario": "Malt extract with a lot from Togo. The supplier declaration for that lot is missing.",
    "test": null,
    "case_type": null,
    "defects": [
@@ -292,7 +292,7 @@
    "case_id": "E07",
    "set": "eval",
    "product": "infant_cereal",
-   "scenario": "Infant cereal. The premix has the HS code of malt (11.07).",
+   "scenario": "Infant cereal. The premix has the HS code of malt (1107.10).",
    "test": null,
    "case_type": null,
    "defects": [
@@ -393,7 +393,7 @@
    "case_id": "E12",
    "set": "eval",
    "product": "malt_extract",
-   "scenario": "Malt extract. A certificate is missing and the units of the concentrate do not agree.",
+   "scenario": "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree.",
    "test": null,
    "case_type": null,
    "defects": [

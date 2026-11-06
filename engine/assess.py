@@ -10,7 +10,7 @@ from decimal import Decimal, getcontext
 from .util import heading_of, chapter_of, money, fmt, USABLE
 from .folder import build_folder
 
-ENGINE_VERSION = "1.2.0"  # 1.2.0: plain-language requirement table (no rule change)
+ENGINE_VERSION = "1.3.0"  # 1.3.0: wording "eligible manufacturing processes" (no rule change)
 # 1.1.0  # 1.1.0: Art. 7(2) food-aid check also runs when the product is out of the rule base (revision R2)
 getcontext().prec = 34  # only used for display values; comparisons are cross-multiplied
 
@@ -119,7 +119,7 @@ def assess(case, rb, valuation_basis=None):
         ch = chapter_of(inp.get("hs_code")) if hs_ok else None
         if inp.get("hs_doubt"):
             ctx.find("major", "hs", f"HS code of '{desc}' contradicts its description",
-                     f"Line {iid} has HS code {inp.get('hs_code')}, but the description looks like a preparation of heading 19.01.",
+                     f"{desc} has HS code {inp.get('hs_code')}, but the description looks like a preparation of heading 19.01.",
                      ["APPIV-1901", "A2-10"], "Ask the supplier/SME to confirm the HS code of this input.",
                      input_ref=iid, sub_reason="contradictory")
             cat = "could_be_1901"
@@ -152,12 +152,12 @@ def assess(case, rb, valuation_basis=None):
             # Not a 19.01 material: cannot breach the heading-change rule. Gaps are minor.
             if origin_res == "unresolved":
                 ctx.find("minor", "origin_proof", f"Origin evidence incomplete for '{desc}'",
-                         f"Line {iid}: {why}. The ingredient is not in heading 19.01, so this does not change the result. "
+                         f"{desc}: {why}. The ingredient is not in heading 19.01, so this does not change the result. "
                          "The authority can ask for this proof.",
                          ["A2-22", "A2-31-2"], "Obtain a supplier declaration (Appendix III) or invoice showing origin.", input_ref=iid)
             for c in conflicts:
                 ctx.find("minor", "consistency", f"Inconsistent {c.get('field')} for '{desc}'",
-                         f"Line {iid}: the documents do not agree ({', '.join(map(str, c.get('values', [])))}).",
+                         f"{desc}: the documents contain contradictory information ({', '.join(map(str, c.get('values', [])))}).",
                          ["A2-22"], "Correct the documents so they agree.", input_ref=iid)
             continue
 
@@ -168,25 +168,25 @@ def assess(case, rb, valuation_basis=None):
             ctx.log("inputs", f"{iid} '{desc}': {cat}, originating ({origin}) with {decl.get('type')} -> not counted")
             for c in conflicts:
                 ctx.find("minor", "consistency", f"Inconsistent {c.get('field')} for '{desc}'",
-                         f"Line {iid}: the documents do not agree.", ["A2-22"],
+                         f"{desc}: the documents contain contradictory information.", ["A2-22"],
                          "Correct the documents so they agree.", input_ref=iid)
             continue
         if cat == "could_be_1901" and not inp.get("hs_doubt"):
             ctx.find("major", "hs", f"HS code missing or unreadable for '{desc}'",
-                     f"Line {iid} has no proof of origin and its HS code is "
+                     f"{desc} has no proof of origin and its HS code is "
                      f"{'unreadable' if _status(inp.get('hs_field')) == 'unreadable' else 'missing'}. It can be an ingredient of heading 19.01.",
                      ["APPIV-1901", "A2-10"], "Ask the SME/supplier for the HS code of this input.",
                      input_ref=iid, sub_reason="missing")
         if origin_res == "unresolved":
             proof_rule = ["A2-31-1", "A2-8"] if origin == "state_party" else ["A2-21-3", "A2-APPIII-A"]
             ctx.find("major", "origin_proof", f"Origin of '{desc}' cannot be confirmed",
-                     f"Line {iid} ({'heading 19.01' if cat == '1901' else 'possibly heading 19.01'}): {why}. "
+                     f"{desc} ({'heading 19.01' if cat == '1901' else 'possibly heading 19.01'}): {why}. "
                      "Without proof, the tool cannot count it as local.",
                      proof_rule, "Obtain the proof of origin (Certificate of Origin / Origin Declaration, or Appendix III supplier declaration).",
                      input_ref=iid, sub_reason="missing")
         for c in conflicts:
             ctx.find("major", "consistency", f"Contradictory {c.get('field')} for '{desc}'",
-                     f"Line {iid}: the documents do not agree ({', '.join(map(str, c.get('values', [])))}). "
+                     f"{desc}: the documents contain contradictory information ({', '.join(map(str, c.get('values', [])))}). "
                      "The result depends on this ingredient. The tool cannot use the value until the SME clarifies it.",
                      ["APPIV-1901", "A2-22"], "Ask the SME which document is correct.", input_ref=iid, sub_reason="contradictory")
         rows.append(dict(inp=inp, cat=cat, origin_res=origin_res, conflicts=conflicts))
@@ -296,7 +296,7 @@ def _tolerance(ctx, rows, exw, exw_cur, tol_pct, basis, params, quiet=False):
         if val is None:
             if not quiet:
                 ctx.find("major", "value", f"Value missing or unreadable for '{inp.get('description')}'",
-                         f"Line {inp.get('id')} is an imported ingredient of heading 19.01. The 15% calculation needs its value. "
+                         f"{inp.get('description')} is an imported ingredient of heading 19.01. The 15% calculation needs its value. "
                          "The tool does not use zero for a missing value.",
                          ["A2-1-y", "EXCL-AN-3"], "Ask the SME for the customs entry / invoice showing this value.",
                          input_ref=inp.get("id"), sub_reason="missing")
@@ -379,22 +379,22 @@ def _article7(ctx, steps, opmap, rb):
         out["status"] = "unclear"
         for s in unclear:
             ctx.find("major", "process", f"Process step '{s.get('description')}' is unclear",
-                     "The description does not show if this is a simple operation.",
+                     "The description does not show if this is an eligible manufacturing process under AfCFTA guidelines.",
                      ["A2-7-1", "A2-7-3"], "Ask the SME what equipment and skills the step uses and what it changes in the product.",
                      input_ref=s.get("id"), sub_reason="missing")
     elif substantive_abroad:
         out["status"] = "unclear"
         ctx.find("major", "process", "The main processing is not done in Ghana",
-                 "The steps that are more than simple operations are not done in Ghana.",
+                 "The eligible manufacturing processes are not done in Ghana.",
                  ["A2-8", "A2-7-1"], "Adviser checks where the last substantive working takes place.",
                  sub_reason="missing")
     else:
         out["status"] = "not met"
         uniq = sorted(set(letters))
         rid = ["A2-7-1"] + [f"A2-7-1-{x}" for x in uniq] + (["A2-7-1-o"] if len(uniq) > 1 else [])
-        ctx.find("critical", "article7", "Only simple operations in production",
-                 "All production steps are simple operations listed in Article 7(1). "
-                 "Simple operations do not give origin, even when the rule for heading 19.01 is met.",
+        ctx.find("critical", "article7", "No eligible manufacturing process under AfCFTA guidelines",
+                 "All production steps are operations listed in Article 7(1), such as mixing, grinding or packing. "
+                 "These operations alone are not eligible manufacturing processes under AfCFTA guidelines, even when the rule for heading 19.01 is met.",
                  rid, "The adviser discusses with the SME if more processing in Ghana is possible.")
     ctx.log("article7", f"status={out['status']}")
     return out
@@ -457,7 +457,7 @@ SME_ACTIONS = [  # (category, title prefix) -> action addressed to the SME (used
     ("hs", "Doubt whether", "Confirm the HS code of your product with the adviser and send a full product description."),
     ("hs", "HS code missing", "Send the HS code of {input} from the supplier invoice."),
     ("hs", "HS code of", "Ask your supplier to confirm the HS code of {input}."),
-    ("origin_proof", "", "Send the supplier declaration or certificate of origin for {input}."),
+    ("origin_proof", "", "Send the supplier declaration for {input}."),
     ("value", "Value missing", "Send the customs entry or supplier invoice that shows the value of {input}."),
     ("value", "Currency", "Send the value of {input} in GHS, as declared to Customs."),
     ("value", "Ex-works price missing", "Send the ex-works price of the product."),
@@ -495,7 +495,7 @@ def _requirements(rule, tol, art7, food, hs_conf, ctx, case):
     rows = [{"requirement": "The product is in HS heading 19.01.", "evidence": ev, "status": s1,
              "source": "Appendix IV, heading 19.01", "rule_ids": ["APPIV-1901", "A2-10"]}]
     if not rule:
-        rows.append({"requirement": "No ingredient comes from food aid.", "evidence": _food_text(food), "status": _food_status(food),
+        rows.append({"requirement": "No ingredient comes from food aid (donated or non-commercial supplies).", "evidence": _food_text(food), "status": _food_status(food),
                      "source": "Annex 2, Art. 7(2)", "rule_ids": ["A2-7-2"]})
         return rows
     inputs = {i.get("id"): i for i in case.get("inputs") or []}
@@ -503,7 +503,7 @@ def _requirements(rule, tol, art7, food, hs_conf, ctx, case):
         ev2 = "No imported ingredient is classified in heading 19.01."
     elif tol["status"] == "unclear":
         names = _names([inputs.get(i, {}).get("description") for i in tol.get("unresolved_ids", [])])
-        ev2 = (f"{names} may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or the documents do not agree. "
+        ev2 = (f"{names} may be an imported ingredient of heading 19.01. The value, HS code or origin is missing or contradictory. "
                "The share cannot be calculated yet.") if names else "The ex-works price is missing. The share cannot be calculated yet."
     else:
         names = _names([i["description"] for i in tol["items"]])
@@ -519,23 +519,23 @@ def _requirements(rule, tol, art7, food, hs_conf, ctx, case):
     simple = [s["description"].lower() for s in steps if s["map_status"] == "listed"]
     vague = [s["description"].lower() for s in steps if s["map_status"] == "unclear"]
     if art7["status"] == "met":
-        ev3 = f"These steps in Ghana are more than simple operations: {_names(sub)}."
+        ev3 = f"These manufacturing processes are eligible under AfCFTA guidelines: {_names(sub)}."
     elif art7["status"] == "not met":
-        ev3 = f"All steps are simple operations: {_names(simple)}. Simple operations alone do not give origin."
+        ev3 = f"None of the steps is an eligible manufacturing process under AfCFTA guidelines: {_names(simple)}. Such steps alone do not give origin."
     elif vague:
         ev3 = f"The description of this step is not clear enough: {_names(vague)}."
     elif not steps:
         ev3 = "The records do not describe the production steps."
     else:
-        ev3 = "The steps that are more than simple operations are not done in Ghana."
-    rows.append({"requirement": "The work done in Ghana is more than simple operations such as mixing or packing.", "evidence": ev3,
+        ev3 = "The eligible manufacturing processes are not done in Ghana."
+    rows.append({"requirement": "The work done in Ghana includes eligible manufacturing processes under AfCFTA guidelines, not only mixing, grinding or packing.", "evidence": ev3,
                  "status": art7["status"], "source": "Annex 2, Art. 7", "rule_ids": ["A2-7-1", "A2-7-3"]})
-    rows.append({"requirement": "No ingredient comes from food aid.", "evidence": _food_text(food), "status": _food_status(food),
+    rows.append({"requirement": "No ingredient comes from food aid (donated or non-commercial supplies).", "evidence": _food_text(food), "status": _food_status(food),
                  "source": "Annex 2, Art. 7(2)", "rule_ids": ["A2-7-2"]})
     local = [i for i in inputs.values() if i.get("origin_class") in ("ghana", "state_party")]
     proof = [i for i in local if (i.get("declaration") or {}).get("present")]
     major_proof = any(f["category"] == "origin_proof" and f["severity"] == "major" for f in ctx.findings)
-    ev5 = (f"Supplier declarations or certificates are on file for {len(proof)} of {len(local)} ingredients from Ghana or other AfCFTA countries."
+    ev5 = (f"Supplier declarations are on file for {len(proof)} of {len(local)} ingredients from Ghana or other AfCFTA countries."
            if local else "No ingredient comes from Ghana or another AfCFTA country.")
     if major_proof:
         ev5 += " Proof is missing for an ingredient that the result depends on."

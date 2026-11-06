@@ -7,8 +7,8 @@ DATA = ROOT / "web" / "public" / "data"
 LABELS = ["Likely to qualify", "Likely not to qualify", "Further information required"]
 DEFICIENCY_NAMES = {
     "origin_proof": "Proof of origin missing", "value": "Value missing, unreadable or in another currency",
-    "consistency": "Documents do not agree", "hs": "HS code missing or in doubt", "process": "Production step not clear",
-    "food_aid": "Ingredient from food aid", "rule_1901": "Imported 19.01 ingredients above 15%", "article7": "Only simple operations",
+    "consistency": "Contradictory information", "hs": "HS code missing or in doubt", "process": "Production step not clear",
+    "food_aid": "Ingredient from food aid", "rule_1901": "Imported 19.01 ingredients above 15%", "article7": "No eligible manufacturing process",
     "packaging": "Origin of packing not stated", "form": "Form data missing",
 }
 
@@ -18,7 +18,7 @@ def load(cid):
 
 
 def outcome_text(o):
-    return o["outcome"] + (f" ({', '.join({'missing': 'information missing', 'contradictory': 'documents do not agree', 'out_of_rule_base': 'HS code in doubt'}[s] for s in o['sub_reasons'])})" if o["sub_reasons"] else "")
+    return o["outcome"] + (f" ({', '.join({'missing': 'information missing', 'contradictory': 'contradictory information', 'out_of_rule_base': 'HS code in doubt'}[s] for s in o['sub_reasons'])})" if o["sub_reasons"] else "")
 
 
 def main():
@@ -33,33 +33,41 @@ def main():
                                  "expected": outcome_text(fk[c])} for c in ids]})
     fixed = [load(c) for c in fk]
     ev = [json.loads(f.read_text(encoding="utf-8")) for f in sorted((DATA / "cases").glob("E*.json"))]
-    tiles = [{"case_id": r["case_id"], "set": "Test cases" if r["case_id"].startswith("T") else "Evaluation set",
+    tiles = [{"case_id": r["case_id"], "set": "Test cases" if r["case_id"].startswith("T") else "Miscellaneous test logs",
               "result": r["result"]["outcome"]["label"], "sub_reasons": r["result"]["outcome"]["sub_reasons"],
               "agrees": (r["result"]["outcome"]["label"] == fk[r["case_id"]]["outcome"] and r["result"]["outcome"]["sub_reasons"] == fk[r["case_id"]]["sub_reasons"])
               if r["case_id"] in fk else r["comparison"]["outcome_correct"]} for r in fixed + ev]
     found = Counter()
     sev = Counter()
+    by_sev = {}
     for r in fixed + ev:
         for f in r["result"]["findings"]:
-            found[DEFICIENCY_NAMES.get(f["category"], f["category"])] += 1
+            name = DEFICIENCY_NAMES.get(f["category"], f["category"])
+            found[name] += 1
             sev[f["severity"]] += 1
+            by_sev.setdefault(name, Counter())[f["severity"]] += 1
     confusion = {e: {o: 0 for o in LABELS} for e in LABELS}
     for r in ev:
         confusion[r["comparison"]["expected_outcome"]][r["result"]["outcome"]["label"]] += 1
     for c, k in fk.items():
         confusion[k["outcome"]][load(c)["result"]["outcome"]["label"]] += 1
-    tx = {"Typed records": Counter(), "Handwritten or French records": Counter()}  # field values
+    groups4 = [("typed", False), ("typed", True), ("handwritten", False), ("handwritten", True)]
+    tx = {g: Counter() for g in groups4}  # field values per record type
+    ncases = Counter()
     for r in fixed + ev:
-        k = "Handwritten or French records" if (r["meta"]["spec"].get("format") == "handwritten" or r["meta"]["spec"].get("language", "en") != "en") else "Typed records"
+        sp = r["meta"]["spec"]
+        g = ("handwritten" if sp.get("format") == "handwritten" else "typed", sp.get("language", "en") != "en")
+        ncases[g] += 1
         for f in ("fields", "correct", "flagged_unreadable", "wrong"):
-            tx[k][f] += r["transcription"][f]
-    success = {"tiles": tiles, "deficiencies": [{"type": k, "count": v} for k, v in found.most_common()],
+            tx[g][f] += r["transcription"][f]
+    success = {"tiles": tiles, "deficiencies": [{"type": k, "count": v, **{s: by_sev[k][s] for s in ("critical", "major", "minor")}} for k, v in found.most_common()],
                "severity": {s: sev[s] for s in ("critical", "major", "minor")}, "confusion": confusion, "labels": LABELS,
-               "transcription": [{"group": k, **v} for k, v in tx.items()]}
+               "transcription": [{"format": g[0], "language": "multilingual" if g[1] else "English", "cases": ncases[g],
+                                  **{f: tx[g][f] for f in ("fields", "correct", "flagged_unreadable", "wrong")}} for g in groups4]}
     out = {"tests": tests, "success": success,
            "evaluation_cases": [{"case_id": r["case_id"], "product": r["meta"]["spec"]["product"], "scenario": r["meta"]["spec"].get("scenario"),
                                  "expected": r["comparison"]["expected_outcome"], "observed": r["result"]["outcome"]["label"],
-                                 "sub": ", ".join({"missing": "information missing", "contradictory": "documents do not agree", "out_of_rule_base": "HS code in doubt"}[x] for x in r["result"]["outcome"]["sub_reasons"])} for r in ev]}
+                                 "sub": ", ".join({"missing": "information missing", "contradictory": "contradictory information", "out_of_rule_base": "HS code in doubt"}[x] for x in r["result"]["outcome"]["sub_reasons"])} for r in ev]}
     (DATA / "test_log.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     img = DATA / "images"
     if img.exists():
@@ -73,7 +81,7 @@ def main():
     for t in tests:
         md.append(f"| {t['#']} | {t['case_type']} | {t['product']} ({t['hs']}) | " + "<br>".join(f"{c['case_id']}: {c['scenario']}" for c in t["cases"])
                   + " | " + "<br>".join(f"{c['case_id']}: {c['expected']}" for c in t["cases"]) + " |")
-    md += ["", f"Results that agree with the answer key: {sum(t['agrees'] for t in tiles)} of {len(tiles)} cases.",
+    md += ["", f"Results that agree with the expected assessment under the AfCFTA rules: {sum(t['agrees'] for t in tiles)} of {len(tiles)} cases.",
            f"SME documentation deficiencies reported: {sum(found.values())}."]
     (ROOT / "docs" / "test_log.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print(f"test log: {sum(t['agrees'] for t in tiles)}/{len(tiles)} agree; {sum(found.values())} deficiencies")

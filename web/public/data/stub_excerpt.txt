@@ -7,8 +7,9 @@ snippet. It never guesses a value: '[illegible]' stays unreadable.
 """
 import re
 
-LABEL = "Prototype transcription (synthetic documents)"
-STUB_VERSION = "1.2.0"  # 1.2.0: SME summary in plain language; product description snippets for the adviser
+LABEL = "Tessera prototype"
+STUB_VERSION = "1.3.0"  # 1.3.0: table layout for packaging and production notes; title on the first line
+# 1.2.0: SME summary in plain language; product description snippets for the adviser
 # 1.1.0  # 1.1.0: supplier documents matched by supplier name + goods (revision R1)
 ILL = "[illegible]"
 
@@ -70,8 +71,9 @@ def _kv(text):
 def transcribe(documents):
     tags = []
 
-    def tag(path, status, snippet, doc_id):
-        tags.append({"field": path, "status": status, "snippet": snippet, "doc_id": doc_id})
+    def tag(path, status, snippet, doc_id, label):
+        # snippet = the value exactly as written in the document; label = plain-language name of the field
+        tags.append({"field": path, "label": label, "status": status, "snippet": snippet if snippet not in (None, "") else "—", "doc_id": doc_id})
 
     case = {"synthetic": True, "exporter": {}, "consignee": {}, "product": {}, "inputs": [], "production_steps": [],
             "packaging": [], "invoice": {}, "ex_works_price": {"amount": None, "currency": "GHS", "status": "missing"}}
@@ -82,17 +84,17 @@ def transcribe(documents):
     for d in by_type.get("exporter_profile", []):
         kv = _kv(d["text"])
         case["exporter"] = {"name": kv.get("name"), "address": kv.get("address"), "registration_no": kv.get("registration no") or None}
-        tag("exporter.registration_no", "stated" if case["exporter"]["registration_no"] else "missing", kv.get("registration no", ""), d["doc_id"])
+        tag("exporter.registration_no", "stated" if case["exporter"]["registration_no"] else "missing", kv.get("registration no", ""), d["doc_id"], "Exporter registration number")
 
     for d in by_type.get("bill_of_materials", []):
         kv = _kv(d["text"])
         case["product"].update(description=kv.get("product"), declared_hs=kv.get("declared hs"))
-        tag("product.declared_hs", "stated" if kv.get("declared hs") else "missing", f"Declared HS: {kv.get('declared hs')}", d["doc_id"])
-        tag("product.description", "stated" if kv.get("product") else "missing", f"Product: {kv.get('product')}", d["doc_id"])
+        tag("product.declared_hs", "stated" if kv.get("declared hs") else "missing", kv.get("declared hs"), d["doc_id"], "Product HS code")
+        tag("product.description", "stated" if kv.get("product") else "missing", kv.get("product"), d["doc_id"], "Product description")
         section = None
         for line in d["text"].split("\n"):
-            if line.startswith("ID |"):
-                section = "inputs"; continue
+            if line.startswith(("ID |", "Item |")):
+                section = "packaging" if section == "packaging" else "inputs"; continue
             if line.strip() == "PACKAGING":
                 section = "packaging"; continue
             cols = [c.strip() for c in line.split("|")]
@@ -112,16 +114,17 @@ def transcribe(documents):
                 from_heading = re.sub(r"\D", "", hs or "")[:4]
                 if any(c in low for c in INPUT_1901_CUES) and from_heading != "1901":
                     inp["hs_doubt"] = True
-                    tag(f"{iid}.hs_code", "inferred", f"description '{desc}' suggests heading 19.01 but coded {hs}", d["doc_id"])
-                for f, st, sn in (("customs_value", cvs, cv), ("fob_value", fs, fob), ("hs_code", inp["hs_field"]["status"], hs),
-                                  ("origin_class", "missing" if inp["origin_class"] == "unknown" else "stated", org)):
-                    tag(f"{iid}.{f}", st, f"{iid} | {desc} | … {sn}", d["doc_id"])
+                    tag(f"{iid}.hs_code", "inferred", f"{hs} – the description suggests heading 19.01", d["doc_id"], f"{desc} · HS code check")
+                for f, st, sn, lab in (("customs_value", cvs, f"{cv} {cur}", "value"), ("fob_value", fs, f"{fob} {cur}", "FOB value"),
+                                       ("hs_code", inp["hs_field"]["status"], hs, "HS code"),
+                                       ("origin_class", "missing" if inp["origin_class"] == "unknown" else "stated", org, "origin")):
+                    tag(f"{iid}.{f}", st, sn, d["doc_id"], f"{desc} · {lab}")
                 case["inputs"].append(inp)
-            elif section == "packaging" and len(cols) == 5:
-                pid, desc, ptype, hs, ctry = cols
-                case["packaging"].append({"id": pid, "description": desc, "packing_type": ptype, "hs_code": hs,
+            elif section == "packaging" and len(cols) == 4:
+                pid, desc, ptype, ctry = cols
+                case["packaging"].append({"id": pid, "description": desc, "packing_type": ptype,
                                           "origin_class": "ghana" if ctry == "Ghana" else ("unknown" if ctry in ("—", "") else "other")})
-                tag(f"{pid}.origin", "missing" if ctry in ("—", "") else "stated", line, d["doc_id"])
+                tag(f"{pid}.origin", "missing" if ctry in ("—", "") else "stated", ctry, d["doc_id"], f"{desc} · made in")
 
     def match(goods_en, supplier):
         # R1 (adapter 1.1.0): two BOM lines can share a description (e.g. two lots of malt extract
@@ -140,9 +143,9 @@ def transcribe(documents):
             goods_en = FR_GOODS.get(goods.lower(), goods)
             inp = match(goods_en, kv.get("supplier") or kv.get("fournisseur"))
             if not inp:
-                tag("supplier_document", "unmatched (ambiguous or unknown goods)", goods, d["doc_id"]); continue
+                tag("supplier_document", "unmatched (ambiguous or unknown goods)", goods, d["doc_id"], "Supplier document not linked"); continue
             inp["declaration"] = {"type": dtype, "present": True}
-            tag(f"{inp['id']}.declaration", "stated", d["text"].split("\n")[1], d["doc_id"])
+            tag(f"{inp['id']}.declaration", "stated", d["text"].split("\n")[0], d["doc_id"], f"{inp['description']} · proof of origin")
             q = kv.get("quantity") or kv.get("quantité") or ""
             m = re.match(r"([\d.,]+)\s*(\S+)", q)
             if m and inp["quantity"]["value"]:
@@ -161,19 +164,22 @@ def transcribe(documents):
                                              "sources": ["DOC-BOM", d["doc_id"]], "note": "value differs between BOM and supplier invoice"})
                 elif st == "stated" and cv["status"] in ("missing", "unreadable"):
                     inp["customs_value"] = {"amount": val, "currency": CURRENCIES.get(vm.group(2) or "GHS", "GHS"), "status": "stated"}
-                    tag(f"{inp['id']}.customs_value", "stated", f"recovered from {d['doc_id']}: {v}", d["doc_id"])
+                    tag(f"{inp['id']}.customs_value", "stated", f"{v} (from the supplier document)", d["doc_id"], f"{inp['description']} · value")
 
     for d in by_type.get("production_notes", []):
         for line in d["text"].split("\n")[1:]:
-            m = re.match(r"\s*(\d+)\.\s*(.+?)\s+–\s+[^,]+,\s*(.+)$", line)
+            cols = [c.strip() for c in line.split("|")]
+            m = (cols[0].isdigit() and len(cols) >= 3) and cols
             if m:
-                text = m.group(2); low = text.lower()
+                num, text, place = cols[0], cols[1], cols[2]
+                where = place.split(",")[-1].strip()
+                low = text.lower()
                 if low in FR_STEPS:
-                    text = FR_STEPS[low]; tag(f"S{m.group(1)}.description", "inferred", f"translated from French: {m.group(2)}", d["doc_id"])
+                    text = FR_STEPS[low]; tag(f"S{num}.description", "inferred", f"{cols[1]} → {text}", d["doc_id"], f"Step {num} · translation")
                 code = next((c for kws, c in OPS if any(k in low for k in kws)), "unspecified_processing")
-                case["production_steps"].append({"id": f"S{m.group(1)}", "description": text, "operation_code": code,
-                                                 "location_country": m.group(3).strip(), "status": "inferred"})
-                tag(f"S{m.group(1)}.operation_code", "inferred", line, d["doc_id"])
+                case["production_steps"].append({"id": f"S{num}", "description": text, "operation_code": code,
+                                                 "location_country": where, "status": "inferred"})
+                tag(f"S{num}.operation_code", "inferred", f"{cols[1]} ({place})", d["doc_id"], f"Step {num} · type of operation")
             elif line.lower().startswith(("food aid", "aide alimentaire")):
                 low = line.lower()
                 if "none" in low or "aucun" in low:
@@ -182,18 +188,18 @@ def transcribe(documents):
                 else:
                     for i in case["inputs"]:
                         i["food_aid"] = i["description"].lower() in low
-                tag("inputs.food_aid", "stated", line, d["doc_id"])
+                tag("inputs.food_aid", "stated", line.split(":", 1)[-1].strip(), d["doc_id"], "Food aid")
 
     for d in by_type.get("costing_sheet", []):
         m = re.search(r"Ex-works price[^:]*:\s*([\d,.]+|\[illegible\])\s*(\S+)?", d["text"])
         if m:
             val, st = _num(m.group(1))
             case["ex_works_price"] = {"amount": val, "currency": CURRENCIES.get(m.group(2) or "GHS", "GHS"), "status": st}
-            tag("ex_works_price", st, m.group(0), d["doc_id"])
+            tag("ex_works_price", st, f"{m.group(1)} {m.group(2) or ''}".strip(), d["doc_id"], "Ex-works price")
 
     for d in by_type.get("export_invoice", []):
         kv = _kv(d["text"])
-        tag("product.description", "stated" if kv.get("goods") else "missing", f"Goods: {kv.get('goods')}", d["doc_id"])
+        tag("product.description", "stated" if kv.get("goods") else "missing", kv.get("goods"), d["doc_id"], "Product description (export invoice)")
         case["consignee"] = {"name": kv.get("consignee"), "address": kv.get("consignee address"), "country": kv.get("destination")}
         case["destination_country"] = kv.get("destination")
         val = (kv.get("value") or "").split(" ")
@@ -210,7 +216,7 @@ def transcribe(documents):
     if desc and (not any(c in desc for c in PRODUCT_CUES) or any(c in desc for c in DOUBT_CUES)):
         case["product"]["hs_doubt"] = True
         case["product"]["hs_doubt_reason"] = "the description reads like a single ground cereal, not a food preparation"
-        tag("product.declared_hs", "inferred", "HS plausibility: doubt", "DOC-BOM")
+        tag("product.declared_hs", "inferred", "Doubt: " + case["product"]["hs_doubt_reason"], "DOC-BOM", "Product HS code · plausibility")
     return {"mode": "stub", "label": LABEL, "adapter_version": STUB_VERSION, "case": case, "field_tags": tags}
 
 
@@ -234,7 +240,7 @@ def explain(result):
         lines += [f"- {r['evidence']}" for r in good[1:3]]
     if t.get("status") == "met via 15% tolerance":
         margin = str(t['margin_pp_display']).rstrip("0").rstrip(".") or "0"
-        lines += ["", f"Note: the 15% limit is the AfCFTA tolerance rule (EX.CL/1329(XL), Annex, item 3). Your margin is {margin} percentage points. "
+        lines += ["", f"Note: the 15% limit is the AfCFTA tolerance rule. Your margin is {margin} percentage points. "
                       "A change in prices or recipe can change the result."]
     fixes = list(dict.fromkeys(f.get("sme_action") or f["fix"] for f in result["findings"] if f["severity"] in ("critical", "major")))[:3]
     lines += ["", "What to do next:"]
