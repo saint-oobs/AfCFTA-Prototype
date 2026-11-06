@@ -9,7 +9,7 @@
   "spec": {
    "case_id": "T2",
    "test": 2,
-   "case_type": "Typical",
+   "case_type": "Failure",
    "product": "millet_porridge_mix",
    "share_pct": "0",
    "exw": "50000",
