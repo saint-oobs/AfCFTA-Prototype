@@ -9,23 +9,20 @@
   "spec": {
    "case_id": "T4",
    "test": 4,
-   "case_type": "Failure",
-   "product": "millet_porridge_mix",
+   "case_type": "Edge / difficult",
+   "product": "cassava_flour",
    "share_pct": "0",
-   "exw": "50000",
+   "exw": "30000",
    "origins": {
-    "millet": "ghana",
-    "soya": "ghana",
-    "sugar": "non_state_party",
-    "milk": "non_state_party"
+    "cassava": "ghana"
    },
    "defects": [
-    "D08_simple_operations_only"
+    "D12_doubtful_product_hs"
    ],
-   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."
+   "scenario": "Cassava flour for baking (HS 1901.20). Declared as a mix for bakers' wares, but the description reads like plain ground cassava with no other ingredient, so the HS code is in doubt."
   },
   "defects": [
-   "D08_simple_operations_only"
+   "D12_doubtful_product_hs"
   ],
   "tolerance_percent_used": "15",
   "imported_1901_shares_pct": []
@@ -43,7 +40,7 @@
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "BILL OF MATERIALS\nExporter: Osei Foods Ltd\nProduct: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2670-31\nPrepared by: Production manager, Osei Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 600 | kgs | 7569.38 | 7569.38 | GHS | Nkwanta Grains Enterprise | Ghana | 1008.29 | Ghana\nI2 | Soya beans | 200 | kg | 2,852.25 | 2852.25 | GHS | Brong Agro Cooperative | Ghana | 1201.90 | Ghana\nI3 | Cane sugar | 120 | kg | 2423.03 | 2229.19 | GHS | Waikato Sugar Ltd | New Zealand | 1701.99 | Imported (non-State Party)\nI4 | Skimmed milk powder | 80 | kilos | 3220.24 | 2,962.62 | GHS | Lowlands Dairy B.V. | Netherlands | 0402.10 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed plastic pouch, 500 g | retail | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Osei Foods Ltd\nProduct: Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags\nDeclared HS: 1901.20\nBatch: 1200 bags of 1 kg\nBatch no: B-2636-14\nPrepared by: Production manager, Osei Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Dried cassava chips | 1300 | kg | 12069.38 | 12,069.38 | GHS | Nkwanta Cassava Farmers Enterprise | Ghana | 0714.10 | Ghana\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paper bag, 1 kg | retail | Ghana\nP2 | Woven polypropylene sack (25 bags) | transport | Ghana",
    "illegible_fields": []
   },
   {
@@ -52,52 +49,28 @@
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Grains Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-83484\nDate: 2026-09-05\nBuyer: Osei Foods Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 12.62 GHS\nInvoice value: 7569.38 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
-  },
-  {
-   "doc_id": "DOC-SUP-I2",
-   "type": "appendix_iii_a",
-   "input_id": "I2",
-   "language": "en",
-   "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Agro Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-18547\nDate: 2026-07-27\nBuyer: Osei Foods Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 14.26 GHS\nInvoice value: 2852.25 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
-  },
-  {
-   "doc_id": "DOC-SUP-I3",
-   "type": "supplier_invoice",
-   "input_id": "I3",
-   "language": "en",
-   "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Waikato Sugar Ltd\nCountry of origin: New Zealand\nInvoice no: WAI-40519\nDate: 2026-09-22\nBuyer: Osei Foods Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 20.19 GHS\nCustoms value: 2423.03 GHS"
-  },
-  {
-   "doc_id": "DOC-SUP-I4",
-   "type": "supplier_invoice",
-   "input_id": "I4",
-   "language": "en",
-   "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Dairy B.V.\nCountry of origin: Netherlands\nInvoice no: LOW-43916\nDate: 2026-07-21\nBuyer: Osei Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 40.25 GHS\nCustoms value: 3220.24 GHS"
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Cassava Farmers Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-58801\nDate: 2026-08-18\nBuyer: Osei Foods Ltd\nGoods: Dried cassava chips\nQuantity: 1300 kg\nUnit price: 9.28 GHS\nInvoice value: 12069.38 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "PRODUCTION PROCESS\nBatch no: B-2670-31\nStep | Description | Location | Equipment\n1 | Cleaning of millet | Factory, Ghana | vibrating sieve and destoner\n2 | Simple grinding | Factory, Ghana | hammer mill\n3 | Simple mixing with sugar and milk powder | Factory, Ghana | ribbon blender, 500 kg\n4 | Filling into pouches | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2636-14\nStep | Description | Location | Equipment\n1 | Cleaning of dried cassava chips | Factory, Ghana | vibrating sieve and destoner\n2 | Simple grinding | Factory, Ghana | hammer mill\n3 | Simple sifting of flour | Factory, Ghana | vibrating sieve\n4 | Filling into bags | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "COSTING SHEET\nBatch no: B-2670-31\nBatch: 2000 pouches\nMaterials: 16,064.90 GHS\nPackaging: 3,393.51 GHS\nDirect labour: 10,180.53 GHS\nEnergy and water: 5,090.26 GHS\nFactory overheads: 6,787.02 GHS\nMargin: 8,483.78 GHS\nEx-works price per batch: 50000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2636-14\nBatch: 1200 bags of 1 kg\nMaterials: 12,069.38 GHS\nPackaging: 1,793.06 GHS\nDirect labour: 5,379.19 GHS\nEnergy and water: 2,689.59 GHS\nFactory overheads: 3,586.12 GHS\nMargin: 4,482.66 GHS\nEx-works price per batch: 30,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "EXPORT INVOICE\nInvoice no: EXP-7100\nDate: 2026-10-15\nExporter: Osei Foods Ltd\nExporter TIN: C0035216539\nConsignee: Teranga Trading SA\nConsignee address: 39 Harbour Road, Dakar\nDestination: Senegal\nGoods: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: OF/SEN/1-2000\nPackages: 100 cartons\nTransport: Road – truck AS 4799-25, via Aflao border\nValue: 54000.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-6549\nDate: 2026-10-15\nExporter: Osei Foods Ltd\nExporter TIN: C0035216539\nConsignee: Teranga Trading SA\nConsignee address: 39 Harbour Road, Dakar\nDestination: Senegal\nGoods: Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags\nQuantity: 1200 bags of 1 kg\nGross weight: 1240 kg\nMarks: OF/SEN/1-1200\nPackages: 48 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 32400.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
   }
  ],
  "adapter": {
@@ -116,175 +89,70 @@
     "field": "product.declared_hs",
     "label": "Product HS code",
     "status": "stated",
-    "snippet": "1901.90",
+    "snippet": "1901.20",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "product.description",
     "label": "Product description",
     "status": "stated",
-    "snippet": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
+    "snippet": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.customs_value",
-    "label": "Millet grain · value",
+    "label": "Dried cassava chips · value",
     "status": "stated",
-    "snippet": "7569.38 GHS",
+    "snippet": "12069.38 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.fob_value",
-    "label": "Millet grain · FOB value",
+    "label": "Dried cassava chips · FOB value",
     "status": "stated",
-    "snippet": "7569.38 GHS",
+    "snippet": "12,069.38 GHS",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.hs_code",
-    "label": "Millet grain · HS code",
+    "label": "Dried cassava chips · HS code",
     "status": "stated",
-    "snippet": "1008.29",
+    "snippet": "0714.10",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.origin_class",
-    "label": "Millet grain · origin",
+    "label": "Dried cassava chips · origin",
     "status": "stated",
     "snippet": "Ghana",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I2.customs_value",
-    "label": "Soya beans · value",
-    "status": "stated",
-    "snippet": "2,852.25 GHS",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I2.fob_value",
-    "label": "Soya beans · FOB value",
-    "status": "stated",
-    "snippet": "2852.25 GHS",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I2.hs_code",
-    "label": "Soya beans · HS code",
-    "status": "stated",
-    "snippet": "1201.90",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I2.origin_class",
-    "label": "Soya beans · origin",
-    "status": "stated",
-    "snippet": "Ghana",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I3.customs_value",
-    "label": "Cane sugar · value",
-    "status": "stated",
-    "snippet": "2423.03 GHS",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I3.fob_value",
-    "label": "Cane sugar · FOB value",
-    "status": "stated",
-    "snippet": "2229.19 GHS",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I3.hs_code",
-    "label": "Cane sugar · HS code",
-    "status": "stated",
-    "snippet": "1701.99",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I3.origin_class",
-    "label": "Cane sugar · origin",
-    "status": "stated",
-    "snippet": "Imported (non-State Party)",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I4.customs_value",
-    "label": "Skimmed milk powder · value",
-    "status": "stated",
-    "snippet": "3220.24 GHS",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I4.fob_value",
-    "label": "Skimmed milk powder · FOB value",
-    "status": "stated",
-    "snippet": "2,962.62 GHS",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I4.hs_code",
-    "label": "Skimmed milk powder · HS code",
-    "status": "stated",
-    "snippet": "0402.10",
-    "doc_id": "DOC-BOM"
-   },
-   {
-    "field": "I4.origin_class",
-    "label": "Skimmed milk powder · origin",
-    "status": "stated",
-    "snippet": "Imported (non-State Party)",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P1.origin",
-    "label": "Printed plastic pouch, 500 g · made in",
+    "label": "Printed paper bag, 1 kg · made in",
     "status": "stated",
     "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "P2.origin",
-    "label": "Corrugated carton (20 pouches) · made in",
+    "label": "Woven polypropylene sack (25 bags) · made in",
     "status": "stated",
     "snippet": "Ghana",
     "doc_id": "DOC-BOM"
    },
    {
     "field": "I1.declaration",
-    "label": "Millet grain · proof of origin",
+    "label": "Dried cassava chips · proof of origin",
     "status": "stated",
     "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
     "doc_id": "DOC-SUP-I1"
    },
    {
-    "field": "I2.declaration",
-    "label": "Soya beans · proof of origin",
-    "status": "stated",
-    "snippet": "SUPPLIER DECLARATION (Appendix III, Part A)",
-    "doc_id": "DOC-SUP-I2"
-   },
-   {
-    "field": "I3.declaration",
-    "label": "Cane sugar · proof of origin",
-    "status": "stated",
-    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
-    "doc_id": "DOC-SUP-I3"
-   },
-   {
-    "field": "I4.declaration",
-    "label": "Skimmed milk powder · proof of origin",
-    "status": "stated",
-    "snippet": "COMMERCIAL INVOICE AND CUSTOMS ENTRY",
-    "doc_id": "DOC-SUP-I4"
-   },
-   {
     "field": "S1.operation_code",
     "label": "Step 1 · type of operation",
     "status": "inferred",
-    "snippet": "Cleaning of millet (Factory, Ghana)",
+    "snippet": "Cleaning of dried cassava chips (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
@@ -298,14 +166,14 @@
     "field": "S3.operation_code",
     "label": "Step 3 · type of operation",
     "status": "inferred",
-    "snippet": "Simple mixing with sugar and milk powder (Factory, Ghana)",
+    "snippet": "Simple sifting of flour (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
     "field": "S4.operation_code",
     "label": "Step 4 · type of operation",
     "status": "inferred",
-    "snippet": "Filling into pouches (Factory, Ghana)",
+    "snippet": "Filling into bags (Factory, Ghana)",
     "doc_id": "DOC-PROC"
    },
    {
@@ -319,15 +187,22 @@
     "field": "ex_works_price",
     "label": "Ex-works price",
     "status": "stated",
-    "snippet": "50000.00 GHS",
+    "snippet": "30,000.00 GHS",
     "doc_id": "DOC-COST"
    },
    {
     "field": "product.description",
     "label": "Product description (export invoice)",
     "status": "stated",
-    "snippet": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
+    "snippet": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
     "doc_id": "DOC-INV"
+   },
+   {
+    "field": "product.declared_hs",
+    "label": "Product HS code · plausibility",
+    "status": "inferred",
+    "snippet": "Doubt: the description reads like a single ground raw material, not a food preparation",
+    "doc_id": "DOC-BOM"
    }
   ]
  },
@@ -344,136 +219,45 @@
    "country": "Senegal"
   },
   "product": {
-   "description": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
-   "declared_hs": "1901.90",
-   "quantity": "2000",
-   "unit": "pouches",
-   "gross_weight_kg": "1080",
-   "marks": "OF/SEN/1-2000",
-   "packaging_count": "100 cartons",
-   "transport": "Road – truck AS 4799-25, via Aflao border",
-   "statistical_measure": "1080 kg"
+   "description": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
+   "declared_hs": "1901.20",
+   "quantity": "1200",
+   "unit": "bags",
+   "gross_weight_kg": "1240",
+   "marks": "OF/SEN/1-1200",
+   "packaging_count": "48 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1240 kg",
+   "hs_doubt": true,
+   "hs_doubt_reason": "the description reads like a single ground raw material, not a food preparation"
   },
   "inputs": [
    {
     "id": "I1",
-    "description": "Millet grain",
+    "description": "Dried cassava chips",
     "quantity": {
-     "value": "600",
+     "value": "1300",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "7569.38",
+     "amount": "12069.38",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "7569.38",
+     "amount": "12069.38",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Nkwanta Grains Enterprise",
+    "supplier": "Nkwanta Cassava Farmers Enterprise",
     "supplier_country": "Ghana",
     "origin_class": "ghana",
-    "hs_code": "1008.29",
+    "hs_code": "0714.10",
     "hs_field": {
      "status": "stated"
     },
     "declaration": {
      "type": "appendix_iii_a",
-     "present": true
-    },
-    "conflicts": [],
-    "food_aid": false
-   },
-   {
-    "id": "I2",
-    "description": "Soya beans",
-    "quantity": {
-     "value": "200",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "2852.25",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "2852.25",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Brong Agro Cooperative",
-    "supplier_country": "Ghana",
-    "origin_class": "ghana",
-    "hs_code": "1201.90",
-    "hs_field": {
-     "status": "stated"
-    },
-    "declaration": {
-     "type": "appendix_iii_a",
-     "present": true
-    },
-    "conflicts": [],
-    "food_aid": false
-   },
-   {
-    "id": "I3",
-    "description": "Cane sugar",
-    "quantity": {
-     "value": "120",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "2423.03",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "2229.19",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Waikato Sugar Ltd",
-    "supplier_country": "New Zealand",
-    "origin_class": "non_state_party",
-    "hs_code": "1701.99",
-    "hs_field": {
-     "status": "stated"
-    },
-    "declaration": {
-     "type": null,
-     "present": true
-    },
-    "conflicts": [],
-    "food_aid": false
-   },
-   {
-    "id": "I4",
-    "description": "Skimmed milk powder",
-    "quantity": {
-     "value": "80",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "3220.24",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "2962.62",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Lowlands Dairy B.V.",
-    "supplier_country": "Netherlands",
-    "origin_class": "non_state_party",
-    "hs_code": "0402.10",
-    "hs_field": {
-     "status": "stated"
-    },
-    "declaration": {
-     "type": null,
      "present": true
     },
     "conflicts": [],
@@ -483,7 +267,7 @@
   "production_steps": [
    {
     "id": "S1",
-    "description": "Cleaning of millet",
+    "description": "Cleaning of dried cassava chips",
     "operation_code": "cleaning_washing",
     "location_country": "Ghana",
     "status": "inferred"
@@ -497,14 +281,14 @@
    },
    {
     "id": "S3",
-    "description": "Simple mixing with sugar and milk powder",
-    "operation_code": "simple_mixing",
+    "description": "Simple sifting of flour",
+    "operation_code": "simple_sifting_sorting",
     "location_country": "Ghana",
     "status": "inferred"
    },
    {
     "id": "S4",
-    "description": "Filling into pouches",
+    "description": "Filling into bags",
     "operation_code": "simple_packaging",
     "location_country": "Ghana",
     "status": "inferred"
@@ -513,26 +297,26 @@
   "packaging": [
    {
     "id": "P1",
-    "description": "Printed plastic pouch, 500 g",
+    "description": "Printed paper bag, 1 kg",
     "packing_type": "retail",
     "origin_class": "ghana"
    },
    {
     "id": "P2",
-    "description": "Corrugated carton (20 pouches)",
+    "description": "Woven polypropylene sack (25 bags)",
     "packing_type": "transport",
     "origin_class": "ghana"
    }
   ],
   "invoice": {
-   "number": "EXP-7100",
+   "number": "EXP-6549",
    "date": "2026-10-15",
-   "value": "54000.00",
+   "value": "32400.00",
    "currency": "GHS",
    "incoterm": "EXW"
   },
   "ex_works_price": {
-   "amount": "50000.00",
+   "amount": "30000.00",
    "currency": "GHS",
    "status": "stated"
   },
@@ -546,168 +330,75 @@
   "valuation_basis": "customs_value",
   "disclaimer": "Synthetic data – prototype – indicative only. The official decision is made by GRA Customs and the National AfCFTA Approval Committee.",
   "outcome": {
-   "label": "Likely not to qualify",
-   "sub_reasons": []
+   "label": "Further information required",
+   "sub_reasons": [
+    "out_of_rule_base"
+   ]
   },
   "components": {
    "rule_1901": {
-    "status": "met",
-    "rule_id": "APPIV-1901",
-    "tolerance_rule_id": "EXCL-AN-3",
-    "tolerance_legal_status": "Draft decision text, adoption not confirmed in attached sources"
+    "status": "not assessed"
    },
    "tolerance": {
-    "basis": "customs_value",
-    "items": [],
-    "counted_ids": [],
-    "unresolved_ids": [],
-    "total": "0",
-    "limit_percent": "15",
-    "ex_works_price": "50000.00",
-    "currency": "GHS",
-    "share_display": "0.000",
-    "margin_pp_display": "15.000",
-    "comparison": "0 × 100 = 0  vs  15 × 50000.00 = 750000.00",
-    "within_limit": true,
-    "share_fraction": "0 / 50000.00",
-    "headroom": "7500.00",
-    "status": "met",
-    "alternative": {
-     "basis": "fob",
-     "status": "met",
-     "share_display": "0.000",
-     "differs": false
-    }
+    "status": "not assessed"
    },
    "article7": {
-    "steps": [
-     {
-      "id": "S1",
-      "description": "Cleaning of millet",
-      "operation_code": "cleaning_washing",
-      "map_status": "listed",
-      "art7_letter": "c",
-      "location": "Ghana"
-     },
-     {
-      "id": "S2",
-      "description": "Simple grinding",
-      "operation_code": "simple_grinding",
-      "map_status": "listed",
-      "art7_letter": "i",
-      "location": "Ghana"
-     },
-     {
-      "id": "S3",
-      "description": "Simple mixing with sugar and milk powder",
-      "operation_code": "simple_mixing",
-      "map_status": "listed",
-      "art7_letter": "m",
-      "location": "Ghana"
-     },
-     {
-      "id": "S4",
-      "description": "Filling into pouches",
-      "operation_code": "simple_packaging",
-      "map_status": "listed",
-      "art7_letter": "k",
-      "location": "Ghana"
-     }
-    ],
-    "status": "not met"
+    "status": "not assessed"
    },
    "food_aid": {
     "status": "no food-aid input declared"
    },
    "evidence": {
-    "status": "complete for the 19.01 rule",
-    "critical": 1,
-    "major": 0,
+    "status": "gaps affect the result",
+    "critical": 0,
+    "major": 1,
     "minor": 0
    },
    "hs_confidence": {
-    "declared_hs": "1901.90",
+    "declared_hs": "1901.20",
     "heading": "19.01",
-    "status": "declared 19.01, no doubt flagged (SME-declared, not verified)"
+    "status": "doubt flagged – routed to adviser"
    }
   },
   "findings": [
    {
     "id": "F1",
-    "severity": "critical",
-    "category": "article7",
-    "title": "No eligible manufacturing process under AfCFTA guidelines",
+    "severity": "major",
+    "category": "hs",
+    "title": "Doubt whether the product belongs to heading 19.01",
     "input_ref": null,
-    "explanation": "All production steps are operations listed in Article 7(1), such as mixing, grinding or packing. These operations alone are not eligible manufacturing processes under AfCFTA guidelines, even when the rule for heading 19.01 is met.",
+    "explanation": "The product description does not clearly fit heading 19.01: the description reads like a single ground raw material, not a food preparation. The tool does not select another heading.",
     "rule_ids": [
-     "A2-7-1",
-     "A2-7-1-c",
-     "A2-7-1-i",
-     "A2-7-1-k",
-     "A2-7-1-m",
-     "A2-7-1-o"
+     "APPIV-1901",
+     "APPIV-N2.1",
+     "A2-10"
     ],
     "provisions": [
-     "Annex 2, Art. 7(1)",
-     "Annex 2, Art. 7(1)(c)",
-     "Annex 2, Art. 7(1)(i)",
-     "Annex 2, Art. 7(1)(k)",
-     "Annex 2, Art. 7(1)(m)",
-     "Annex 2, Art. 7(1)(o)"
+     "Appendix IV, heading 19.01, Column 3",
+     "Appendix IV, Introductory Note 2.1",
+     "Annex 2, Art. 10"
     ],
-    "fix": "The adviser discusses with the SME if more processing in Ghana is possible.",
-    "sub_reason": null,
-    "sme_action": "Add processing in Ghana that is more than mixing, grinding or packing (for example cooking or drying), or discuss your plan with the adviser."
+    "fix": "Adviser verifies the HS classification (blueprint: 'HS-code correct?'); re-run with the confirmed code.",
+    "sub_reason": "out_of_rule_base",
+    "sme_action": "Confirm the HS code of your product with the adviser and send a full product description."
    }
   ],
   "notes": [],
   "trace": [
    {
     "step": "retrieval",
-    "detail": "declared HS '1901.90' -> heading 19.01"
-   },
-   {
-    "step": "retrieval",
-    "detail": "rule APPIV-1901 retrieved; tolerance EXCL-AN-3 (draft) attached; Art. 7 attached"
-   },
-   {
-    "step": "tolerance",
-    "detail": "basis=customs_value; 0 × 100 = 0  vs  15 × 50000.00 = 750000.00; status=met"
-   },
-   {
-    "step": "article7",
-    "detail": "status=not met"
+    "detail": "declared HS '1901.20' -> heading 19.01"
    }
   ],
   "requirements": [
    {
     "requirement": "The product is in HS heading 19.01.",
-    "evidence": "The declared HS code is 1901.90. The product description fits heading 19.01: “Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches”.",
-    "status": "met",
+    "evidence": "The declared HS code is 1901.20, but the description “Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags” does not clearly fit heading 19.01.",
+    "status": "unclear",
     "source": "Appendix IV, heading 19.01",
     "rule_ids": [
      "APPIV-1901",
      "A2-10"
-    ]
-   },
-   {
-    "requirement": "Imported ingredients of heading 19.01 are at most 15% of the ex-works price.",
-    "evidence": "No imported ingredient is classified in heading 19.01.",
-    "status": "met",
-    "source": "Appendix IV, heading 19.01; EX.CL/1329 annex (draft)",
-    "rule_ids": [
-     "APPIV-1901",
-     "EXCL-AN-3"
-    ]
-   },
-   {
-    "requirement": "The work done in Ghana includes eligible manufacturing processes under AfCFTA guidelines, not only mixing, grinding or packing.",
-    "evidence": "None of the steps is an eligible manufacturing process under AfCFTA guidelines: cleaning of millet, simple grinding, simple mixing with sugar and milk powder and filling into pouches. Such steps alone do not give origin.",
-    "status": "not met",
-    "source": "Annex 2, Art. 7",
-    "rule_ids": [
-     "A2-7-1",
-     "A2-7-3"
     ]
    },
    {
@@ -717,16 +408,6 @@
     "source": "Annex 2, Art. 7(2)",
     "rule_ids": [
      "A2-7-2"
-    ]
-   },
-   {
-    "requirement": "There is proof of origin for local and AfCFTA ingredients.",
-    "evidence": "Each ingredient from Ghana or another AfCFTA country has a supplier declaration (millet grain and soya beans).",
-    "status": "met",
-    "source": "Annex 2, Art. 31 and Appendix III",
-    "rule_ids": [
-     "A2-31-1",
-     "A2-APPIII-A"
     ]
    }
   ],
@@ -766,7 +447,7 @@
     {
      "box": 4,
      "rule_id": "APPI-BOX-4",
-     "value": "Road – truck AS 4799-25, via Aflao border",
+     "value": "Sea – MV Gulf Trader, from Tema port",
      "filled_by": "tool",
      "missing": false
     },
@@ -774,9 +455,9 @@
      "box": 5,
      "rule_id": "APPI-BOX-5",
      "value": {
-      "marks": "OF/SEN/1-2000",
-      "quantity": "2000",
-      "unit": "pouches"
+      "marks": "OF/SEN/1-1200",
+      "quantity": "1200",
+      "unit": "bags"
      },
      "filled_by": "tool",
      "missing": false
@@ -785,9 +466,9 @@
      "box": 6,
      "rule_id": "APPI-BOX-6",
      "value": {
-      "invoice_no": "EXP-7100",
+      "invoice_no": "EXP-6549",
       "date": "2026-10-15",
-      "value": "54000.00",
+      "value": "32400.00",
       "currency": "GHS",
       "incoterm": "EXW"
      },
@@ -797,35 +478,35 @@
     {
      "box": 7,
      "rule_id": "APPI-BOX-7",
-     "value": "100 cartons",
+     "value": "48 cartons",
      "filled_by": "tool",
      "missing": false
     },
     {
      "box": 8,
      "rule_id": "APPI-BOX-8",
-     "value": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
+     "value": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
      "filled_by": "tool",
      "missing": false
     },
     {
      "box": 9,
      "rule_id": "APPI-BOX-9",
-     "value": "1080",
+     "value": "1240",
      "filled_by": "tool",
      "missing": false
     },
     {
      "box": 10,
      "rule_id": "APPI-BOX-10",
-     "value": "1080 kg",
+     "value": "1240 kg",
      "filled_by": "tool",
      "missing": false
     },
     {
      "box": 11,
      "rule_id": "APPI-BOX-11",
-     "value": "1901.90",
+     "value": "1901.20",
      "filled_by": "tool",
      "missing": false
     },
@@ -835,7 +516,7 @@
      "value": null,
      "filled_by": "tool",
      "indicative": true,
-     "note": "No origin criteria code proposed while the result is 'Likely not to qualify'.",
+     "note": "No origin criteria code proposed while the result is 'Further information required'.",
      "missing": false
     },
     {
@@ -862,9 +543,9 @@
    ],
    "readiness": [
     {
-     "item": "No eligible manufacturing process under AfCFTA guidelines",
-     "status": "open (critical)",
-     "rule_id": "A2-7-1"
+     "item": "Doubt whether the product belongs to heading 19.01",
+     "status": "open (major)",
+     "rule_id": "APPIV-1901"
     },
     {
      "item": "Keep supporting documents (production, costs, origin of all materials, shipment)",
@@ -875,32 +556,35 @@
   }
  },
  "explanation": {
-  "text": "Your product is likely NOT to meet the AfCFTA rules of origin.\n\nMain reasons:\n- None of the steps is an eligible manufacturing process under AfCFTA guidelines: cleaning of millet, simple grinding, simple mixing with sugar and milk powder and filling into pouches. Such steps alone do not give origin.\n\nWhat to do next:\n- Add processing in Ghana that is more than mixing, grinding or packing (for example cooking or drying), or discuss your plan with the adviser.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
+  "text": "We cannot give a result yet. We need more information from you.\n\nMain reasons:\n- The declared HS code is 1901.20, but the description “Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags” does not clearly fit heading 19.01.\n\nWhat to do next:\n- Confirm the HS code of your product with the adviser and send a full product description.\n- You decide whether to apply. GRA Customs and the National AfCFTA Approval Committee make the official decision.",
   "label": "Tessera prototype",
   "citation_check": {
    "ok": true,
-   "valid": [],
+   "valid": [
+    "heading 19.01"
+   ],
    "rejected": []
   }
  },
  "expected": {
   "case_id": "T4",
   "test": 4,
-  "case_type": "Failure",
-  "product": "Millet porridge mix",
-  "declared_hs": "1901.90",
-  "outcome": "Likely not to qualify",
-  "sub_reasons": [],
-  "rule_1901": "met",
-  "share_percent": "0",
-  "article7": "not met",
+  "case_type": "Edge / difficult",
+  "product": "Cassava flour for baking",
+  "declared_hs": "1901.20",
+  "outcome": "Further information required",
+  "sub_reasons": [
+   "out_of_rule_base"
+  ],
+  "rule_1901": "not assessed",
+  "share_percent": null,
+  "article7": "not assessed",
   "box12": null,
-  "derivation": "No ingredient is in heading 19.01, so the heading-change rule is met. All steps are Art. 7(1) operations: cleaning (c), simple grinding (i), simple mixing (m), filling (k); combined (o). Art. 7(1) applies 'whether or not the requirements of Article 4 … are satisfied'.",
+  "derivation": "The description ('dried cassava, ground only, no other ingredient') does not read like a preparation of heading 19.01, although the SME declared 1901.20. The heading cannot be confirmed, so the 19.01 rule is not retrieved and no origin outcome is given. The adviser must confirm the HS code (Appendix IV covers heading 19.01 only; Annex 2, Art. 10 on classification). No food-aid input, so Art. 7(2) does not decide the case.",
   "rule_ids": [
    "APPIV-1901",
-   "EXCL-AN-3",
-   "A2-7-1",
-   "A2-1-y"
+   "APPIV-N2.1",
+   "A2-10"
   ],
   "checked_by_1": "",
   "checked_on_1": "",
@@ -909,27 +593,23 @@
   "checked_on_2": "",
   "verdict_2": "",
   "notes": "",
-  "expected_findings": [
-   {
-    "defect": "D08_simple_operations_only",
-    "category": "article7",
-    "severity": "critical"
-   }
-  ]
+  "expected_findings": []
  },
  "comparison": {
   "outcome_correct": true,
-  "expected_outcome": "Likely not to qualify",
-  "expected_sub_reasons": [],
-  "detected": [
-   "D08_simple_operations_only"
+  "expected_outcome": "Further information required",
+  "expected_sub_reasons": [
+   "out_of_rule_base"
   ],
+  "detected": [],
   "missed": [],
-  "false_alarms": []
+  "false_alarms": [
+   "Doubt whether the product belongs to heading 19.01"
+  ]
  },
  "transcription": {
-  "fields": 28,
-  "correct": 28,
+  "fields": 7,
+  "correct": 7,
   "flagged_unreadable": 0,
   "wrong": 0,
   "errors": []

@@ -10,10 +10,10 @@ FIXED = [
  {"case_id": "T1", "test": 1, "case_type": "Typical", "product": "malt_extract", "share_pct": "0", "exw": "40000",
   "origins": {"malt": "ghana", "glucose": "state_party"}, "countries": {"glucose": "Nigeria"},
   "scenario": "Malt extract (HS 1901.90). Malt from Ghana. Glucose syrup from Nigeria, with a supplier declaration. Mashing and evaporation in Ghana."},
- {"case_id": "T2", "test": 2, "case_type": "Typical", "product": "infant_cereal", "share_pct": "0", "exw": "60000",
-  "origins": {"millet": "ghana", "soya": "state_party", "milk": "non_state_party", "sugar": "non_state_party"},
-  "countries": {"soya": "Togo"}, "language": "fr_suppliers",
-  "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana."},
+ {"case_id": "T2", "test": 2, "case_type": "Failure", "product": "millet_porridge_mix", "share_pct": "0", "exw": "50000",
+  "origins": {"millet": "ghana", "soya": "ghana", "sugar": "non_state_party", "milk": "non_state_party"},
+  "defects": ["D08_simple_operations_only"],
+  "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."},
  {"case_id": "T3a", "test": 3, "case_type": "Edge", "product": "bread_mix", "share_pct": "14.9", "exw": "40000",
   "origins": {"wheat": "non_state_party", "malt": "ghana", "baking": "ghana", "sugar": "non_state_party"},
   "scenario": "Malted bread mix (HS 1901.20). Imported bakery premix of heading 19.01 = 14.9% of the ex-works price."},
@@ -26,10 +26,9 @@ FIXED = [
  {"case_id": "T3d", "test": 3, "case_type": "Edge", "product": "bread_mix", "split_1901": ["8.0", "8.0"], "exw": "40000",
   "origins": {"wheat": "non_state_party", "malt": "ghana", "baking": "ghana", "sugar": "non_state_party"},
   "scenario": "Malted bread mix (HS 1901.20). Two imported premix lots of heading 19.01, 8.0% each. Each lot is below 15%, together 16.0%."},
- {"case_id": "T4", "test": 4, "case_type": "Failure", "product": "millet_porridge_mix", "share_pct": "0", "exw": "50000",
-  "origins": {"millet": "ghana", "soya": "ghana", "sugar": "non_state_party", "milk": "non_state_party"},
-  "defects": ["D08_simple_operations_only"],
-  "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."},
+ {"case_id": "T4", "test": 4, "case_type": "Edge / difficult", "product": "cassava_flour", "share_pct": "0", "exw": "30000",
+  "origins": {"cassava": "ghana"}, "defects": ["D12_doubtful_product_hs"],
+  "scenario": "Cassava flour for baking (HS 1901.20). Declared as a mix for bakers' wares, but the description reads like plain ground cassava with no other ingredient, so the HS code is in doubt."},
  {"case_id": "T5a", "test": 5, "case_type": "Key assumption", "product": "infant_cereal", "share_pct": "6.0", "exw": "60000",
   "origins": {"millet": "state_party", "soya": "ghana", "milk": "non_state_party", "sugar": "non_state_party"}, "countries": {"millet": "Burkina Faso"},
   "language": "fr_mixed", "format": "handwritten", "messiness": 0.8,
@@ -53,11 +52,10 @@ EVAL = [  # curated evaluation set: SME documentation deficiencies, mainly missi
  ("E05", "malt_extract", ["D04_invoice_value_mismatch"], "fr_suppliers", "typed", "Malt extract. The bill of materials and the supplier invoice show different values for the concentrate."),
  ("E06", "bread_mix", ["D14_currency_mismatch_1901"], "en", "typed", "Bread mix. The premix value is in EUR, the ex-works price in GHS."),
  ("E07", "infant_cereal", ["D02_wrong_input_hs"], "en", "typed", "Infant cereal. The premix has the HS code of malt (1107.10)."),
- ("E08", "millet_porridge_mix", ["D12_doubtful_product_hs"], "en", "typed", "The product description reads like plain millet flour."),
- ("E09", "infant_cereal", ["D09_food_aid_input"], "fr_mixed", "typed", "Infant cereal. The millet comes from a food assistance programme."),
- ("E10", "malt_extract", ["D07_above_tolerance", "D10_packaging_unknown_origin"], "en", "typed", "Malt extract with imported concentrate above 15%. The origin of the jars is not stated."),
- ("E11", "bread_mix", ["D13_missing_exporter_registration", "D06_unstated_origin_other"], "en", "mixed_units", "Bread mix. No exporter registration number; the origin of one ingredient is not stated."),
- ("E12", "malt_extract", ["D01_missing_supplier_declaration", "D03_inconsistent_units_1901"], "en", "typed", "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree."),
+ ("E08", "infant_cereal", ["D09_food_aid_input"], "fr_mixed", "typed", "Infant cereal. The millet comes from a food assistance programme."),
+ ("E09", "malt_extract", ["D07_above_tolerance", "D10_packaging_unknown_origin"], "en", "typed", "Malt extract with imported concentrate above 15%. The origin of the jars is not stated."),
+ ("E10", "bread_mix", ["D13_missing_exporter_registration", "D06_unstated_origin_other"], "en", "mixed_units", "Bread mix. No exporter registration number; the origin of one ingredient is not stated."),
+ ("E11", "malt_extract", ["D01_missing_supplier_declaration", "D03_inconsistent_units_1901"], "en", "typed", "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree."),
 ]
 
 
@@ -80,7 +78,7 @@ def write(case, sub):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, default=2026)
-    ap.add_argument("--n", type=int, default=12)
+    ap.add_argument("--n", type=int, default=11)
     ap.add_argument("--messiness", type=float, default=0.3)
     a = ap.parse_args(argv)
     manifest = {"generator_version": GENERATOR_VERSION, "seed": a.seed, "messiness": a.messiness, "fixed": [], "eval": [],

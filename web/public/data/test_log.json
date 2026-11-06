@@ -15,14 +15,14 @@
   },
   {
    "#": "2",
-   "case_type": "Typical",
-   "product": "Infant cereal",
-   "hs": "1901.10",
+   "case_type": "Failure",
+   "product": "Millet porridge mix",
+   "hs": "1901.90",
    "cases": [
     {
      "case_id": "T2",
-     "scenario": "Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana.",
-     "expected": "Likely to qualify"
+     "scenario": "No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
+     "expected": "Likely not to qualify"
     }
    ]
   },
@@ -56,14 +56,14 @@
   },
   {
    "#": "4",
-   "case_type": "Failure",
-   "product": "Millet porridge mix",
-   "hs": "1901.90",
+   "case_type": "Edge / difficult",
+   "product": "Cassava flour for baking",
+   "hs": "1901.20",
    "cases": [
     {
      "case_id": "T4",
-     "scenario": "No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
-     "expected": "Likely not to qualify"
+     "scenario": "Declared as a mix for bakers' wares, but the description reads like plain ground cassava with no other ingredient, so the HS code is in doubt.",
+     "expected": "Further information required (HS code in doubt)"
     }
    ]
   },
@@ -98,7 +98,7 @@
    {
     "case_id": "T2",
     "set": "Test cases",
-    "result": "Likely to qualify",
+    "result": "Likely not to qualify",
     "sub_reasons": [],
     "agrees": true
    },
@@ -133,8 +133,10 @@
    {
     "case_id": "T4",
     "set": "Test cases",
-    "result": "Likely not to qualify",
-    "sub_reasons": [],
+    "result": "Further information required",
+    "sub_reasons": [
+     "out_of_rule_base"
+    ],
     "agrees": true
    },
    {
@@ -219,10 +221,8 @@
    {
     "case_id": "E08",
     "set": "Miscellaneous test logs",
-    "result": "Further information required",
-    "sub_reasons": [
-     "out_of_rule_base"
-    ],
+    "result": "Likely not to qualify",
+    "sub_reasons": [],
     "agrees": true
    },
    {
@@ -235,19 +235,12 @@
    {
     "case_id": "E10",
     "set": "Miscellaneous test logs",
-    "result": "Likely not to qualify",
-    "sub_reasons": [],
-    "agrees": true
-   },
-   {
-    "case_id": "E11",
-    "set": "Miscellaneous test logs",
     "result": "Likely to qualify",
     "sub_reasons": [],
     "agrees": true
    },
    {
-    "case_id": "E12",
+    "case_id": "E11",
     "set": "Miscellaneous test logs",
     "result": "Further information required",
     "sub_reasons": [
@@ -336,7 +329,7 @@
   },
   "confusion": {
    "Likely to qualify": {
-    "Likely to qualify": 6,
+    "Likely to qualify": 5,
     "Likely not to qualify": 0,
     "Further information required": 0
    },
@@ -361,17 +354,17 @@
     "format": "typed",
     "language": "English",
     "cases": 14,
-    "fields": 413,
-    "correct": 413,
+    "fields": 392,
+    "correct": 392,
     "flagged_unreadable": 0,
     "wrong": 0
    },
    {
     "format": "typed",
     "language": "multilingual",
-    "cases": 4,
-    "fields": 112,
-    "correct": 112,
+    "cases": 3,
+    "fields": 84,
+    "correct": 84,
     "flagged_unreadable": 0,
     "wrong": 0
    },
@@ -454,14 +447,6 @@
   },
   {
    "case_id": "E08",
-   "product": "millet_porridge_mix",
-   "scenario": "The product description reads like plain millet flour.",
-   "expected": "Further information required",
-   "observed": "Further information required",
-   "sub": "HS code in doubt"
-  },
-  {
-   "case_id": "E09",
    "product": "infant_cereal",
    "scenario": "Infant cereal. The millet comes from a food assistance programme.",
    "expected": "Likely not to qualify",
@@ -469,7 +454,7 @@
    "sub": ""
   },
   {
-   "case_id": "E10",
+   "case_id": "E09",
    "product": "malt_extract",
    "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated.",
    "expected": "Likely not to qualify",
@@ -477,7 +462,7 @@
    "sub": ""
   },
   {
-   "case_id": "E11",
+   "case_id": "E10",
    "product": "bread_mix",
    "scenario": "Bread mix. No exporter registration number; the origin of one ingredient is not stated.",
    "expected": "Likely to qualify",
@@ -485,7 +470,7 @@
    "sub": ""
   },
   {
-   "case_id": "E12",
+   "case_id": "E11",
    "product": "malt_extract",
    "scenario": "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree.",
    "expected": "Further information required",

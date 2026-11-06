@@ -29,3 +29,7 @@
 - All tables and document fields left-aligned with one label width per document.
 - Rule data shown as "AfCFTA guidelines as of 1 November 2026" (date of rules.json "compiled").
 - Proof-of-origin sentence names the ingredients. Test log: one row per case, red/orange/yellow severity palette, record-type matrix.
+
+## v4.2 (2026-11-06)
+- Test order: 1 Typical (malt extract, T1) · 2 Failure (millet porridge mix, T2, former T4) · 3 Edge (bread mix, T3a–d) · 4 Edge / difficult: HS code in doubt (cassava flour declared 1901.20, T4, replaces former E08) · 5 Key assumption (infant cereal, T5a/b).
+- Former T2 (typical infant cereal) removed; miscellaneous set renumbered E01–E11. New recipe `cassava_flour`. Fixed key updated by hand (T4 derivation).

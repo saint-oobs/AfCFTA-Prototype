@@ -8,23 +8,20 @@
   "spec": {
    "case_id": "T4",
    "test": 4,
-   "case_type": "Failure",
-   "product": "millet_porridge_mix",
+   "case_type": "Edge / difficult",
+   "product": "cassava_flour",
    "share_pct": "0",
-   "exw": "50000",
+   "exw": "30000",
    "origins": {
-    "millet": "ghana",
-    "soya": "ghana",
-    "sugar": "non_state_party",
-    "milk": "non_state_party"
+    "cassava": "ghana"
    },
    "defects": [
-    "D08_simple_operations_only"
+    "D12_doubtful_product_hs"
    ],
-   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."
+   "scenario": "Cassava flour for baking (HS 1901.20). Declared as a mix for bakers' wares, but the description reads like plain ground cassava with no other ingredient, so the HS code is in doubt."
   },
   "defects": [
-   "D08_simple_operations_only"
+   "D12_doubtful_product_hs"
   ],
   "tolerance_percent_used": "15",
   "imported_1901_shares_pct": []
@@ -47,130 +44,46 @@
   },
   "destination_country": "Senegal",
   "product": {
-   "description": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
-   "declared_hs": "1901.90",
-   "quantity": "2000",
-   "unit": "pouches",
-   "gross_weight_kg": "1080",
-   "marks": "OF/SEN/1-2000",
-   "packaging_count": "100 cartons",
-   "transport": "Road – truck AS 4799-25, via Aflao border",
-   "statistical_measure": "1080 kg"
+   "description": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
+   "declared_hs": "1901.20",
+   "quantity": "1200",
+   "unit": "bags of 1 kg",
+   "gross_weight_kg": "1240",
+   "marks": "OF/SEN/1-1200",
+   "packaging_count": "48 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1240 kg"
   },
   "ex_works_price": {
-   "amount": "50000",
+   "amount": "30000",
    "currency": "GHS",
    "status": "stated"
   },
   "inputs": [
    {
     "id": "I1",
-    "description": "Millet grain",
-    "hs_code": "1008.29",
+    "description": "Dried cassava chips",
+    "hs_code": "0714.10",
     "quantity": {
-     "value": "600",
+     "value": "1300",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "7569.38",
+     "amount": "12069.38",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "7569.38",
+     "amount": "12069.38",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Nkwanta Grains Enterprise",
+    "supplier": "Nkwanta Cassava Farmers Enterprise",
     "supplier_country": "Ghana",
     "origin_class": "ghana",
     "food_aid": false,
     "declaration": {
      "type": "appendix_iii_a",
-     "present": true
-    },
-    "conflicts": []
-   },
-   {
-    "id": "I2",
-    "description": "Soya beans",
-    "hs_code": "1201.90",
-    "quantity": {
-     "value": "200",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "2852.25",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "2852.25",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Brong Agro Cooperative",
-    "supplier_country": "Ghana",
-    "origin_class": "ghana",
-    "food_aid": false,
-    "declaration": {
-     "type": "appendix_iii_a",
-     "present": true
-    },
-    "conflicts": []
-   },
-   {
-    "id": "I3",
-    "description": "Cane sugar",
-    "hs_code": "1701.99",
-    "quantity": {
-     "value": "120",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "2423.03",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "2229.19",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Waikato Sugar Ltd",
-    "supplier_country": "New Zealand",
-    "origin_class": "non_state_party",
-    "food_aid": false,
-    "declaration": {
-     "type": "supplier_invoice",
-     "present": true
-    },
-    "conflicts": []
-   },
-   {
-    "id": "I4",
-    "description": "Skimmed milk powder",
-    "hs_code": "0402.10",
-    "quantity": {
-     "value": "80",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "3220.24",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "2962.62",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Lowlands Dairy B.V.",
-    "supplier_country": "Netherlands",
-    "origin_class": "non_state_party",
-    "food_aid": false,
-    "declaration": {
-     "type": "supplier_invoice",
      "present": true
     },
     "conflicts": []
@@ -179,7 +92,7 @@
   "production_steps": [
    {
     "id": "S1",
-    "description": "Cleaning of millet",
+    "description": "Cleaning of dried cassava chips",
     "operation_code": "cleaning_washing",
     "location_country": "Ghana"
    },
@@ -191,13 +104,13 @@
    },
    {
     "id": "S3",
-    "description": "Simple mixing with sugar and milk powder",
-    "operation_code": "simple_mixing",
+    "description": "Simple sifting of flour",
+    "operation_code": "simple_sifting_sorting",
     "location_country": "Ghana"
    },
    {
     "id": "S4",
-    "description": "Filling into pouches",
+    "description": "Filling into bags",
     "operation_code": "simple_packaging",
     "location_country": "Ghana"
    }
@@ -205,23 +118,23 @@
   "packaging": [
    {
     "id": "P1",
-    "description": "Printed plastic pouch, 500 g",
+    "description": "Printed paper bag, 1 kg",
     "packing_type": "retail",
     "origin_class": "ghana",
     "country": "Ghana"
    },
    {
     "id": "P2",
-    "description": "Corrugated carton (20 pouches)",
+    "description": "Woven polypropylene sack (25 bags)",
     "packing_type": "transport",
     "origin_class": "ghana",
     "country": "Ghana"
    }
   ],
   "invoice": {
-   "number": "EXP-7100",
+   "number": "EXP-6549",
    "date": "2026-10-15",
-   "value": "54000.00",
+   "value": "32400.00",
    "currency": "GHS",
    "incoterm": "EXW"
   }
@@ -239,7 +152,7 @@
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "BILL OF MATERIALS\nExporter: Osei Foods Ltd\nProduct: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2670-31\nPrepared by: Production manager, Osei Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 600 | kgs | 7569.38 | 7569.38 | GHS | Nkwanta Grains Enterprise | Ghana | 1008.29 | Ghana\nI2 | Soya beans | 200 | kg | 2,852.25 | 2852.25 | GHS | Brong Agro Cooperative | Ghana | 1201.90 | Ghana\nI3 | Cane sugar | 120 | kg | 2423.03 | 2229.19 | GHS | Waikato Sugar Ltd | New Zealand | 1701.99 | Imported (non-State Party)\nI4 | Skimmed milk powder | 80 | kilos | 3220.24 | 2,962.62 | GHS | Lowlands Dairy B.V. | Netherlands | 0402.10 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed plastic pouch, 500 g | retail | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Osei Foods Ltd\nProduct: Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags\nDeclared HS: 1901.20\nBatch: 1200 bags of 1 kg\nBatch no: B-2636-14\nPrepared by: Production manager, Osei Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Dried cassava chips | 1300 | kg | 12069.38 | 12,069.38 | GHS | Nkwanta Cassava Farmers Enterprise | Ghana | 0714.10 | Ghana\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paper bag, 1 kg | retail | Ghana\nP2 | Woven polypropylene sack (25 bags) | transport | Ghana",
    "illegible_fields": []
   },
   {
@@ -248,52 +161,28 @@
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Grains Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-83484\nDate: 2026-09-05\nBuyer: Osei Foods Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 12.62 GHS\nInvoice value: 7569.38 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
-  },
-  {
-   "doc_id": "DOC-SUP-I2",
-   "type": "appendix_iii_a",
-   "input_id": "I2",
-   "language": "en",
-   "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Brong Agro Cooperative\nCountry of origin: Ghana\nInvoice no: BRO-18547\nDate: 2026-07-27\nBuyer: Osei Foods Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 14.26 GHS\nInvoice value: 2852.25 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
-  },
-  {
-   "doc_id": "DOC-SUP-I3",
-   "type": "supplier_invoice",
-   "input_id": "I3",
-   "language": "en",
-   "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Waikato Sugar Ltd\nCountry of origin: New Zealand\nInvoice no: WAI-40519\nDate: 2026-09-22\nBuyer: Osei Foods Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 20.19 GHS\nCustoms value: 2423.03 GHS"
-  },
-  {
-   "doc_id": "DOC-SUP-I4",
-   "type": "supplier_invoice",
-   "input_id": "I4",
-   "language": "en",
-   "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Dairy B.V.\nCountry of origin: Netherlands\nInvoice no: LOW-43916\nDate: 2026-07-21\nBuyer: Osei Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 40.25 GHS\nCustoms value: 3220.24 GHS"
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Cassava Farmers Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-58801\nDate: 2026-08-18\nBuyer: Osei Foods Ltd\nGoods: Dried cassava chips\nQuantity: 1300 kg\nUnit price: 9.28 GHS\nInvoice value: 12069.38 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "PRODUCTION PROCESS\nBatch no: B-2670-31\nStep | Description | Location | Equipment\n1 | Cleaning of millet | Factory, Ghana | vibrating sieve and destoner\n2 | Simple grinding | Factory, Ghana | hammer mill\n3 | Simple mixing with sugar and milk powder | Factory, Ghana | ribbon blender, 500 kg\n4 | Filling into pouches | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2636-14\nStep | Description | Location | Equipment\n1 | Cleaning of dried cassava chips | Factory, Ghana | vibrating sieve and destoner\n2 | Simple grinding | Factory, Ghana | hammer mill\n3 | Simple sifting of flour | Factory, Ghana | vibrating sieve\n4 | Filling into bags | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "COSTING SHEET\nBatch no: B-2670-31\nBatch: 2000 pouches\nMaterials: 16,064.90 GHS\nPackaging: 3,393.51 GHS\nDirect labour: 10,180.53 GHS\nEnergy and water: 5,090.26 GHS\nFactory overheads: 6,787.02 GHS\nMargin: 8,483.78 GHS\nEx-works price per batch: 50000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2636-14\nBatch: 1200 bags of 1 kg\nMaterials: 12,069.38 GHS\nPackaging: 1,793.06 GHS\nDirect labour: 5,379.19 GHS\nEnergy and water: 2,689.59 GHS\nFactory overheads: 3,586.12 GHS\nMargin: 4,482.66 GHS\nEx-works price per batch: 30,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "EXPORT INVOICE\nInvoice no: EXP-7100\nDate: 2026-10-15\nExporter: Osei Foods Ltd\nExporter TIN: C0035216539\nConsignee: Teranga Trading SA\nConsignee address: 39 Harbour Road, Dakar\nDestination: Senegal\nGoods: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: OF/SEN/1-2000\nPackages: 100 cartons\nTransport: Road – truck AS 4799-25, via Aflao border\nValue: 54000.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-6549\nDate: 2026-10-15\nExporter: Osei Foods Ltd\nExporter TIN: C0035216539\nConsignee: Teranga Trading SA\nConsignee address: 39 Harbour Road, Dakar\nDestination: Senegal\nGoods: Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags\nQuantity: 1200 bags of 1 kg\nGross weight: 1240 kg\nMarks: OF/SEN/1-1200\nPackages: 48 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 32400.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
   }
  ]
 }

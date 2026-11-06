@@ -155,6 +155,31 @@ RECIPES = {
     },
 }
 
+RECIPES["cassava_flour"] = {  # v4.2: product for the HS-doubt test (declared 1901.20, description reads like plain flour)
+    "product_description": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
+    "hs_doubt_description": "Cassava flour for baking (dried cassava, ground only, no other ingredient), 1 kg bags",
+    "declared_hs": "1901.20",
+    "per_carton": 25,
+    "batch": {"quantity": "1200", "unit": "bags of 1 kg", "gross_weight_kg": "1240"},
+    "ingredients": [
+        {"key": "cassava", "description": "Dried cassava chips", "desc_fr": "Cossettes de manioc séchées", "hs": "0714.10", "qty": "1300", "unit": "kg",
+         "share": (0.35, 0.45), "origins": ["ghana"]},
+    ],
+    "imp1901": {"description": "Bakery premix preparation", "hs": "1901.20", "unit": "kg", "desc_fr": "Prémélange de boulangerie préparé"},
+    "packaging": [
+        {"description": "Printed paper bag, 1 kg", "packing_type": "retail"},
+        {"description": "Woven polypropylene sack (25 bags)", "packing_type": "transport"},
+    ],
+    "steps": {
+        "substantive": [
+            ("Cleaning of dried cassava chips", "Nettoyage des cossettes de manioc"),
+            ("Simple grinding", "Simple broyage"),
+            ("Simple sifting of flour", "Simple tamisage de la farine"),
+            ("Filling into bags", "Mise en sachets"),
+        ],
+    },
+}
+
 SUBHEADING_TEXT = {  # HS nomenclature text, NOT in the attached sources – shown as a label only
     "1901.10": "Preparations suitable for infants or young children, put up for retail sale",
     "1901.20": "Mixes and doughs for the preparation of bakers' wares of heading 19.05",

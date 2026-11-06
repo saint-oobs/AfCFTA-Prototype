@@ -173,7 +173,7 @@ def _unit(u, mess, rng):
 def _supplier(country, key, rng):
     names = SUPPLIER_NAMES.get(country) or SUPPLIER_NAMES["_other"]
     return rng.choice(names).format(item={"malt": "Malt", "glucose": "Sweeteners", "millet": "Grains", "soya": "Agro",
-                                          "sugar": "Sugar", "milk": "Dairy", "wheat": "Flour Mills", "baking": "Bakery Supplies"}.get(key, "Agro"))
+                                          "sugar": "Sugar", "milk": "Dairy", "wheat": "Flour Mills", "baking": "Bakery Supplies", "cassava": "Cassava Farmers"}.get(key, "Agro"))
 
 
 

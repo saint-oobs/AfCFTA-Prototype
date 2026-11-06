@@ -7,22 +7,26 @@
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
    "case_id": "E09",
-   "product": "infant_cereal",
+   "product": "malt_extract",
    "share_pct": "0",
    "defects": [
-    "D09_food_aid_input"
+    "D07_above_tolerance",
+    "D10_packaging_unknown_origin"
    ],
    "process": "substantive",
-   "language": "fr_mixed",
+   "language": "en",
    "format": "typed",
    "messiness": 0.3,
-   "scenario": "Infant cereal. The millet comes from a food assistance programme."
+   "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated."
   },
   "defects": [
-   "D09_food_aid_input"
+   "D07_above_tolerance",
+   "D10_packaging_unknown_origin"
   ],
   "tolerance_percent_used": "15",
-  "imported_1901_shares_pct": []
+  "imported_1901_shares_pct": [
+   "24.5"
+  ]
  },
  "truth": {
   "case_id": "E09",
@@ -42,15 +46,15 @@
   },
   "destination_country": "Togo",
   "product": {
-   "description": "Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons",
-   "declared_hs": "1901.10",
-   "quantity": "2400",
-   "unit": "cartons of 400 g",
-   "gross_weight_kg": "1050",
-   "marks": "NN/TOG/1-2400",
-   "packaging_count": "100 cartons",
-   "transport": "Road – truck GR 1719-26, from Tema",
-   "statistical_measure": "1050 kg"
+   "description": "Malt extract, liquid, in 1 kg plastic jars",
+   "declared_hs": "1901.90",
+   "quantity": "1000",
+   "unit": "jars",
+   "gross_weight_kg": "1150",
+   "marks": "NN/TOG/1-1000",
+   "packaging_count": "83 cartons",
+   "transport": "Sea – MV Gulf Trader, from Tema port",
+   "statistical_measure": "1150 kg"
   },
   "ex_works_price": {
    "amount": "20000",
@@ -60,52 +64,24 @@
   "inputs": [
    {
     "id": "I1",
-    "description": "Millet grain",
-    "hs_code": "1008.29",
+    "description": "Malt, not roasted",
+    "hs_code": "1107.10",
     "quantity": {
-     "value": "550",
+     "value": "800",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "2799.03",
+     "amount": "4132.04",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "2799.03",
+     "amount": "4132.04",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Ségou Grains SARL",
+    "supplier": "Ségou Malt SARL",
     "supplier_country": "Mali",
-    "origin_class": "state_party",
-    "food_aid": true,
-    "declaration": {
-     "type": "appendix_iii_a",
-     "present": true
-    },
-    "conflicts": []
-   },
-   {
-    "id": "I2",
-    "description": "Soya beans",
-    "hs_code": "1201.90",
-    "quantity": {
-     "value": "250",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "1492.79",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "1492.79",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Delta Agro Co.",
-    "supplier_country": "Egypt",
     "origin_class": "state_party",
     "food_aid": false,
     "declaration": {
@@ -115,25 +91,25 @@
     "conflicts": []
    },
    {
-    "id": "I3",
-    "description": "Skimmed milk powder",
-    "hs_code": "0402.10",
+    "id": "I2",
+    "description": "Glucose syrup",
+    "hs_code": "1702.30",
     "quantity": {
-     "value": "120",
+     "value": "150",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "2166.44",
+     "amount": "1457.05",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "1993.12",
+     "amount": "1340.49",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Normandie Dairy SAS",
-    "supplier_country": "France",
+    "supplier": "Southern Cross Sweeteners Ltd",
+    "supplier_country": "New Zealand",
     "origin_class": "non_state_party",
     "food_aid": false,
     "declaration": {
@@ -143,29 +119,29 @@
     "conflicts": []
    },
    {
-    "id": "I4",
-    "description": "Cane sugar",
-    "hs_code": "1701.99",
+    "id": "X1",
+    "description": "Malt extract concentrate",
+    "hs_code": "1901.90",
     "quantity": {
-     "value": "60",
+     "value": "47",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "785.27",
+     "amount": "4900.00",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "785.27",
+     "amount": "4900.00",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Thiès Sugar SA",
-    "supplier_country": "Senegal",
-    "origin_class": "state_party",
+    "supplier": "Westbrook Nutrition Ingredients GmbH",
+    "supplier_country": "India",
+    "origin_class": "non_state_party",
     "food_aid": false,
     "declaration": {
-     "type": "appendix_iii_a",
+     "type": "supplier_invoice",
      "present": true
     },
     "conflicts": []
@@ -174,69 +150,51 @@
   "production_steps": [
    {
     "id": "S1",
-    "description": "Cleaning of millet",
-    "operation_code": "cleaning_washing",
+    "description": "Mashing of malt with hot water in a mash tun (enzymatic conversion)",
+    "operation_code": "mashing_enzymatic",
     "location_country": "Ghana"
    },
    {
     "id": "S2",
-    "description": "Roasting of millet and soya",
-    "operation_code": "roasting_toasting",
+    "description": "Filtration and vacuum evaporation to a concentrate",
+    "operation_code": "evaporation_concentration",
     "location_country": "Ghana"
    },
    {
     "id": "S3",
-    "description": "Cooking by extrusion",
-    "operation_code": "cooking_extrusion",
+    "description": "Filling into jars",
+    "operation_code": "simple_packaging",
     "location_country": "Ghana"
    },
    {
     "id": "S4",
-    "description": "Drum drying of the cooked paste",
-    "operation_code": "drying_drum_spray",
-    "location_country": "Ghana"
-   },
-   {
-    "id": "S5",
-    "description": "Simple grinding",
-    "operation_code": "simple_grinding",
-    "location_country": "Ghana"
-   },
-   {
-    "id": "S6",
-    "description": "Simple mixing with milk powder and sugar",
-    "operation_code": "simple_mixing",
-    "location_country": "Ghana"
-   },
-   {
-    "id": "S7",
-    "description": "Filling into cartons",
-    "operation_code": "simple_packaging",
+    "description": "Labelling",
+    "operation_code": "labelling",
     "location_country": "Ghana"
    }
   ],
   "packaging": [
    {
     "id": "P1",
-    "description": "Printed paperboard carton with inner bag, 400 g",
+    "description": "Plastic jar with lid, 1 kg",
     "packing_type": "retail",
-    "origin_class": "ghana",
-    "country": "Ghana"
+    "origin_class": "unknown",
+    "country": null
    },
    {
     "id": "P2",
-    "description": "Corrugated carton (24 cartons)",
+    "description": "Corrugated carton (12 jars)",
     "packing_type": "transport",
     "origin_class": "ghana",
     "country": "Ghana"
    }
   ],
   "invoice": {
-   "number": "EXP-8667",
+   "number": "EXP-7646",
    "date": "2026-10-15",
    "value": "21600.00",
    "currency": "GHS",
-   "incoterm": "EXW"
+   "incoterm": "CPT"
   }
  },
  "documents": [
@@ -252,61 +210,53 @@
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "BILL OF MATERIALS\nExporter: Nkabom Nutrition Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2650-22\nPrepared by: Production manager, Nkabom Nutrition Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 550 | Kg | 2,799.03 | 2799.03 | GHS | Ségou Grains SARL | Mali | 1008.29 | AfCFTA State Party\nI2 | Soya beans | 250 | kg | 1,492.79 | 1,492.79 | GH₵ | Delta Agro Co. | Egypt | 1201.90 | AfCFTA State Party\nI3 | Skimmed milk powder | 120 | kg | 2166.44 | 1,993.12 | GHS | Normandie Dairy SAS | France | 0402.10 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kg | 785.27 | 785.27 | GHS | Thiès Sugar SA | Senegal | 1701.99 | AfCFTA State Party\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Nkabom Nutrition Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2696-77\nPrepared by: Production manager, Nkabom Nutrition Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Malt, not roasted | 800 | kg | 4,132.04 | 4132.04 | GHS | Ségou Malt SARL | Mali | 1107.10 | AfCFTA State Party\nI2 | Glucose syrup | 150 | kg | 1457.05 | 1340.49 | GHS | Southern Cross Sweeteners Ltd | New Zealand | 1702.30 | Imported (non-State Party)\nX1 | Malt extract concentrate | 47 | kilos | 4900.00 | 4900.00 | GH₵ | Westbrook Nutrition Ingredients GmbH | India | 1901.90 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Plastic jar with lid, 1 kg | retail | —\nP2 | Corrugated carton (12 jars) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
    "type": "appendix_iii_a",
    "input_id": "I1",
-   "language": "fr",
+   "language": "en",
    "format": "typed",
-   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Ségou Grains SARL\nPays d'origine : Mali\nFacture n° : SÉG-42515\nDate : 2026-09-21\nClient : Nkabom Nutrition Ltd\nMarchandises : Mil en grains\nQuantité : 550 kg\nPrix unitaire : 5.09 GHS\nValeur facturée : 2799.03 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ségou Malt SARL\nCountry of origin: Mali\nInvoice no: SÉG-37980\nDate: 2026-07-06\nBuyer: Nkabom Nutrition Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 5.17 GHS\nInvoice value: 4132.04 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Mali and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
-   "type": "appendix_iii_a",
+   "type": "supplier_invoice",
    "input_id": "I2",
    "language": "en",
    "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Delta Agro Co.\nCountry of origin: Egypt\nInvoice no: DEL-55698\nDate: 2026-08-17\nBuyer: Nkabom Nutrition Ltd\nGoods: Soya beans\nQuantity: 250 kg\nUnit price: 5.97 GHS\nInvoice value: 1492.79 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Egypt and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Southern Cross Sweeteners Ltd\nCountry of origin: New Zealand\nInvoice no: SOU-68523\nDate: 2026-07-11\nBuyer: Nkabom Nutrition Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 9.71 GHS\nCustoms value: 1457.05 GHS"
   },
   {
-   "doc_id": "DOC-SUP-I3",
+   "doc_id": "DOC-SUP-X1",
    "type": "supplier_invoice",
-   "input_id": "I3",
+   "input_id": "X1",
    "language": "en",
    "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Normandie Dairy SAS\nCountry of origin: France\nInvoice no: NOR-45209\nDate: 2026-09-16\nBuyer: Nkabom Nutrition Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 18.05 GHS\nCustoms value: 2166.44 GHS"
-  },
-  {
-   "doc_id": "DOC-SUP-I4",
-   "type": "appendix_iii_a",
-   "input_id": "I4",
-   "language": "fr",
-   "format": "typed",
-   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Thiès Sugar SA\nPays d'origine : Senegal\nFacture n° : THI-99475\nDate : 2026-07-25\nClient : Nkabom Nutrition Ltd\nMarchandises : Sucre de canne\nQuantité : 60 kg\nPrix unitaire : 13.09 GHS\nValeur facturée : 785.27 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: India\nInvoice no: WES-71477\nDate: 2026-07-25\nBuyer: Nkabom Nutrition Ltd\nGoods: Malt extract concentrate\nQuantity: 47 kg\nUnit price: 104.26 GHS\nCustoms value: 4900.00 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
-   "language": "fr",
+   "language": "en",
    "format": "typed",
-   "text": "PROCÉDÉ DE PRODUCTION\nLot : B-2650-22\nN° | Étape | Lieu | Équipement\n1 | Nettoyage du mil | Usine, Ghana | vibrating sieve and destoner\n2 | Torréfaction du mil et du soja | Usine, Ghana | rotary drum roaster, 300 kg/h\n3 | Cuisson par extrusion | Usine, Ghana | twin-screw cooking extruder\n4 | Séchage sur cylindre de la pâte cuite | Usine, Ghana | steam-heated double drum dryer\n5 | Simple broyage | Usine, Ghana | hammer mill\n6 | Simple mélange avec lait en poudre et sucre | Usine, Ghana | ribbon blender, 500 kg\n7 | Remplissage des boîtes | Usine, Ghana | semi-automatic filling and sealing machine\nAide alimentaire : Millet grain received from a food assistance programme"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2696-77\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Filtration and vacuum evaporation to a concentrate | Factory, Ghana | plate filter and single-effect vacuum evaporator\n3 | Filling into jars | Factory, Ghana | semi-automatic filling and sealing machine\n4 | Labelling | Factory, Ghana | —\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "COSTING SHEET\nBatch no: B-2650-22\nBatch: 2400 cartons of 400 g\nMaterials: 7,243.53 GHS\nPackaging: 1,275.65 GHS\nDirect labour: 3,826.94 GHS\nEnergy and water: 1,913.47 GHS\nFactory overheads: 2,551.29 GHS\nMargin: 3,189.12 GHS\nEx-works price per batch: 20,000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2696-77\nBatch: 1000 jars\nMaterials: 10,489.09 GHS\nPackaging: 951.09 GHS\nDirect labour: 2,853.27 GHS\nEnergy and water: 1,426.64 GHS\nFactory overheads: 1,902.18 GHS\nMargin: 2,377.73 GHS\nEx-works price per batch: 20,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "EXPORT INVOICE\nInvoice no: EXP-8667\nDate: 2026-10-15\nExporter: Nkabom Nutrition Ltd\nExporter TIN: C0081758405\nConsignee: Sahel Trading SA\nConsignee address: 128 Harbour Road, Lomé\nDestination: Togo\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: NN/TOG/1-2400\nPackages: 100 cartons\nTransport: Road – truck GR 1719-26, from Tema\nValue: 21600.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-7646\nDate: 2026-10-15\nExporter: Nkabom Nutrition Ltd\nExporter TIN: C0081758405\nConsignee: Sahel Trading SA\nConsignee address: 128 Harbour Road, Lomé\nDestination: Togo\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: NN/TOG/1-1000\nPackages: 83 cartons\nTransport: Sea – MV Gulf Trader, from Tema port\nValue: 21600.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ]
 }

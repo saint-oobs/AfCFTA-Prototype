@@ -7,26 +7,24 @@
   "label": "SYNTHETIC – fictional SME and fictional suppliers, generated for testing",
   "spec": {
    "case_id": "E10",
-   "product": "malt_extract",
+   "product": "bread_mix",
    "share_pct": "0",
    "defects": [
-    "D07_above_tolerance",
-    "D10_packaging_unknown_origin"
+    "D13_missing_exporter_registration",
+    "D06_unstated_origin_other"
    ],
    "process": "substantive",
    "language": "en",
-   "format": "typed",
+   "format": "mixed_units",
    "messiness": 0.3,
-   "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated."
+   "scenario": "Bread mix. No exporter registration number; the origin of one ingredient is not stated."
   },
   "defects": [
-   "D07_above_tolerance",
-   "D10_packaging_unknown_origin"
+   "D13_missing_exporter_registration",
+   "D06_unstated_origin_other"
   ],
   "tolerance_percent_used": "15",
-  "imported_1901_shares_pct": [
-   "18.3"
-  ]
+  "imported_1901_shares_pct": []
  },
  "truth": {
   "case_id": "E10",
@@ -34,27 +32,27 @@
   "exporter": {
    "name": "Akwaaba Provisions Ltd",
    "address": "Plot 19, Light Industrial Area, Kumasi, Ghana",
-   "registration_no": "GEPA/EXP/2026/4507",
+   "registration_no": null,
    "registration_status": "Registered company (Office of the Registrar of Companies)",
-   "tin": "C0010581016",
-   "phone": "+233 37 211 5992"
+   "tin": "C0038735187",
+   "phone": "+233 30 790 6449"
   },
   "consignee": {
-   "name": "Niger Delta Distribution SARL",
-   "address": "24 Avenue de la Paix, Abidjan",
+   "name": "Sahel Trading SA",
+   "address": "113 Market Road, Abidjan",
    "country": "Côte d’Ivoire"
   },
   "destination_country": "Côte d’Ivoire",
   "product": {
-   "description": "Malt extract, liquid, in 1 kg plastic jars",
-   "declared_hs": "1901.90",
-   "quantity": "1000",
-   "unit": "jars",
-   "gross_weight_kg": "1150",
-   "marks": "AP/CÔT/1-1000",
-   "packaging_count": "83 cartons",
-   "transport": "Road – truck AS 6833-25, via Aflao border",
-   "statistical_measure": "1150 kg"
+   "description": "Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags",
+   "declared_hs": "1901.20",
+   "quantity": "1500",
+   "unit": "bags of 1 kg",
+   "gross_weight_kg": "1560",
+   "marks": "AP/CÔT/1-1500",
+   "packaging_count": "150 cartons",
+   "transport": "Road – truck AS 7147-25, via Aflao border",
+   "statistical_measure": "1560 kg"
   },
   "ex_works_price": {
    "amount": "60000",
@@ -64,23 +62,79 @@
   "inputs": [
    {
     "id": "I1",
-    "description": "Malt, not roasted",
-    "hs_code": "1107.10",
+    "description": "Wheat flour",
+    "hs_code": "1101.00",
     "quantity": {
-     "value": "800",
+     "value": "1100",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "13486.10",
+     "amount": "16276.99",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "13486.10",
+     "amount": "14974.83",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Ejura Malt Traders",
+    "supplier": "Flandria Flour Mills NV",
+    "supplier_country": "Belgium",
+    "origin_class": "non_state_party",
+    "food_aid": false,
+    "declaration": {
+     "type": "supplier_invoice",
+     "present": true
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I2",
+    "description": "Malt, not roasted",
+    "hs_code": "1107.10",
+    "quantity": {
+     "value": "250",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "5322.11",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "5322.11",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Bouaké Malt SA",
+    "supplier_country": null,
+    "origin_class": "unknown",
+    "food_aid": false,
+    "declaration": {
+     "type": null,
+     "present": false
+    },
+    "conflicts": []
+   },
+   {
+    "id": "I3",
+    "description": "Baking powder",
+    "hs_code": "2102.30",
+    "quantity": {
+     "value": "40",
+     "unit": "kg"
+    },
+    "customs_value": {
+     "amount": "1041.81",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "fob_value": {
+     "amount": "1041.81",
+     "currency": "GHS",
+     "status": "stated"
+    },
+    "supplier": "Nkwanta Bakery Supplies Enterprise",
     "supplier_country": "Ghana",
     "origin_class": "ghana",
     "food_aid": false,
@@ -91,53 +145,25 @@
     "conflicts": []
    },
    {
-    "id": "I2",
-    "description": "Glucose syrup",
-    "hs_code": "1702.30",
+    "id": "I4",
+    "description": "Cane sugar",
+    "hs_code": "1701.99",
     "quantity": {
-     "value": "150",
+     "value": "80",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "4001.72",
+     "amount": "1836.36",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "4001.72",
+     "amount": "1689.45",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Faso Sweeteners SARL",
-    "supplier_country": "Burkina Faso",
-    "origin_class": "state_party",
-    "food_aid": false,
-    "declaration": {
-     "type": "appendix_iii_a",
-     "present": true
-    },
-    "conflicts": []
-   },
-   {
-    "id": "X1",
-    "description": "Malt extract concentrate",
-    "hs_code": "1901.90",
-    "quantity": {
-     "value": "36",
-     "unit": "kg"
-    },
-    "customs_value": {
-     "amount": "10980.00",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "fob_value": {
-     "amount": "10980.00",
-     "currency": "GHS",
-     "status": "stated"
-    },
-    "supplier": "Westbrook Nutrition Ingredients GmbH",
-    "supplier_country": "New Zealand",
+    "supplier": "Brabant Sugar NV",
+    "supplier_country": "Belgium",
     "origin_class": "non_state_party",
     "food_aid": false,
     "declaration": {
@@ -156,45 +182,45 @@
    },
    {
     "id": "S2",
-    "description": "Filtration and vacuum evaporation to a concentrate",
-    "operation_code": "evaporation_concentration",
+    "description": "Drum drying of the malt extract with part of the flour",
+    "operation_code": "drying_drum_spray",
     "location_country": "Ghana"
    },
    {
     "id": "S3",
-    "description": "Filling into jars",
-    "operation_code": "simple_packaging",
+    "description": "Simple mixing with flour, sugar and baking powder",
+    "operation_code": "simple_mixing",
     "location_country": "Ghana"
    },
    {
     "id": "S4",
-    "description": "Labelling",
-    "operation_code": "labelling",
+    "description": "Filling into bags",
+    "operation_code": "simple_packaging",
     "location_country": "Ghana"
    }
   ],
   "packaging": [
    {
     "id": "P1",
-    "description": "Plastic jar with lid, 1 kg",
+    "description": "Printed paper bag, 1 kg",
     "packing_type": "retail",
-    "origin_class": "unknown",
-    "country": null
+    "origin_class": "ghana",
+    "country": "Ghana"
    },
    {
     "id": "P2",
-    "description": "Corrugated carton (12 jars)",
+    "description": "Corrugated carton (10 bags)",
     "packing_type": "transport",
     "origin_class": "ghana",
     "country": "Ghana"
    }
   ],
   "invoice": {
-   "number": "EXP-5260",
+   "number": "EXP-4425",
    "date": "2026-10-15",
    "value": "64800.00",
    "currency": "GHS",
-   "incoterm": "CPT"
+   "incoterm": "EXW"
   }
  },
  "documents": [
@@ -203,60 +229,60 @@
    "type": "exporter_profile",
    "language": "en",
    "format": "typed",
-   "text": "EXPORTER PROFILE\nName: Akwaaba Provisions Ltd\nAddress: Plot 19, Light Industrial Area, Kumasi, Ghana\nPhone: +233 37 211 5992\nTIN: C0010581016\nRegistration no: GEPA/EXP/2026/4507\nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
+   "text": "EXPORTER PROFILE\nName: Akwaaba Provisions Ltd\nAddress: Plot 19, Light Industrial Area, Kumasi, Ghana\nPhone: +233 30 790 6449\nTIN: C0038735187\nRegistration no: \nStatus: Registered company (Office of the Registrar of Companies)\nActivity: manufacture of food preparations"
   },
   {
    "doc_id": "DOC-BOM",
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "BILL OF MATERIALS\nExporter: Akwaaba Provisions Ltd\nProduct: Malt extract, liquid, in 1 kg plastic jars\nDeclared HS: 1901.90\nBatch: 1000 jars\nBatch no: B-2626-62\nPrepared by: Production manager, Akwaaba Provisions Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Malt, not roasted | 800 | kgs | 13486.10 | 13486.10 | GHS | Ejura Malt Traders | Ghana | 1107.10 | Ghana\nI2 | Glucose syrup | 150 | kg | 4,001.72 | 4,001.72 | GHS | Faso Sweeteners SARL | Burkina Faso | 1702.30 | AfCFTA State Party\nX1 | Malt extract concentrate | 36 | kilos | 10980.00 | 10980.00 | GH₵ | Westbrook Nutrition Ingredients GmbH | New Zealand | 1901.90 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Plastic jar with lid, 1 kg | retail | —\nP2 | Corrugated carton (12 jars) | transport | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Akwaaba Provisions Ltd\nProduct: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nDeclared HS: 1901.20\nBatch: 1500 bags of 1 kg\nBatch no: B-2699-54\nPrepared by: Production manager, Akwaaba Provisions Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Wheat flour | 1100 | kg | 16,276.99 | 14,974.83 | GHS | Flandria Flour Mills NV | Belgium | 1101.00 | Imported (non-State Party)\nI2 | Malt, not roasted | 250 | kilos | 5322.11 | 5,322.11 | GH₵ | Bouaké Malt SA | — | 1107.10 | —\nI3 | Baking powder | 40 | kg | 1,041.81 | 1041.81 | GHS | Nkwanta Bakery Supplies Enterprise | Ghana | 2102.30 | Ghana\nI4 | Cane sugar | 80 | kgs | 1836.36 | 1,689.45 | GHS | Brabant Sugar NV | Belgium | 1701.99 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paper bag, 1 kg | retail | Ghana\nP2 | Corrugated carton (10 bags) | transport | Ghana",
    "illegible_fields": []
   },
   {
    "doc_id": "DOC-SUP-I1",
-   "type": "appendix_iii_a",
+   "type": "supplier_invoice",
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Ejura Malt Traders\nCountry of origin: Ghana\nInvoice no: EJU-76890\nDate: 2026-08-11\nBuyer: Akwaaba Provisions Ltd\nGoods: Malt, not roasted\nQuantity: 800 kg\nUnit price: 16.86 GHS\nInvoice value: 13486.10 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Flandria Flour Mills NV\nCountry of origin: Belgium\nInvoice no: FLA-13945\nDate: 2026-08-03\nBuyer: Akwaaba Provisions Ltd\nGoods: Wheat flour\nQuantity: 1100 kg\nUnit price: 14.80 GHS\nCustoms value: 16276.99 GHS"
   },
   {
-   "doc_id": "DOC-SUP-I2",
+   "doc_id": "DOC-SUP-I3",
    "type": "appendix_iii_a",
-   "input_id": "I2",
+   "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Faso Sweeteners SARL\nCountry of origin: Burkina Faso\nInvoice no: FAS-34989\nDate: 2026-07-02\nBuyer: Akwaaba Provisions Ltd\nGoods: Glucose syrup\nQuantity: 150 kg\nUnit price: 26.68 GHS\nInvoice value: 4001.72 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Burkina Faso and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Nkwanta Bakery Supplies Enterprise\nCountry of origin: Ghana\nInvoice no: NKW-75644\nDate: 2026-09-09\nBuyer: Akwaaba Provisions Ltd\nGoods: Baking powder\nQuantity: 40 kg\nUnit price: 26.05 GHS\nInvoice value: 1041.81 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
-   "doc_id": "DOC-SUP-X1",
+   "doc_id": "DOC-SUP-I4",
    "type": "supplier_invoice",
-   "input_id": "X1",
+   "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Westbrook Nutrition Ingredients GmbH\nCountry of origin: New Zealand\nInvoice no: WES-10992\nDate: 2026-07-20\nBuyer: Akwaaba Provisions Ltd\nGoods: Malt extract concentrate\nQuantity: 36 kg\nUnit price: 305.00 GHS\nCustoms value: 10980.00 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Brabant Sugar NV\nCountry of origin: Belgium\nInvoice no: BRA-49043\nDate: 2026-08-06\nBuyer: Akwaaba Provisions Ltd\nGoods: Cane sugar\nQuantity: 80 kg\nUnit price: 22.95 GHS\nCustoms value: 1836.36 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "PRODUCTION PROCESS\nBatch no: B-2626-62\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Filtration and vacuum evaporation to a concentrate | Factory, Ghana | plate filter and single-effect vacuum evaporator\n3 | Filling into jars | Factory, Ghana | semi-automatic filling and sealing machine\n4 | Labelling | Factory, Ghana | —\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2699-54\nStep | Description | Location | Equipment\n1 | Mashing of malt with hot water in a mash tun (enzymatic conversion) | Factory, Ghana | 2,000 L stainless mash tun with temperature control\n2 | Drum drying of the malt extract with part of the flour | Factory, Ghana | steam-heated double drum dryer\n3 | Simple mixing with flour, sugar and baking powder | Factory, Ghana | ribbon blender, 500 kg\n4 | Filling into bags | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "COSTING SHEET\nBatch no: B-2626-62\nBatch: 1000 jars\nMaterials: 28,467.82 GHS\nPackaging: 3,153.22 GHS\nDirect labour: 9,459.65 GHS\nEnergy and water: 4,729.83 GHS\nFactory overheads: 6,306.44 GHS\nMargin: 7,883.04 GHS\nEx-works price per batch: 60,000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2699-54\nBatch: 1500 bags of 1 kg\nMaterials: 24,477.27 GHS\nPackaging: 3,552.27 GHS\nDirect labour: 10,656.82 GHS\nEnergy and water: 5,328.41 GHS\nFactory overheads: 7,104.55 GHS\nMargin: 8,880.68 GHS\nEx-works price per batch: 60,000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "EXPORT INVOICE\nInvoice no: EXP-5260\nDate: 2026-10-15\nExporter: Akwaaba Provisions Ltd\nExporter TIN: C0010581016\nConsignee: Niger Delta Distribution SARL\nConsignee address: 24 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malt extract, liquid, in 1 kg plastic jars\nQuantity: 1000 jars\nGross weight: 1150 kg\nMarks: AP/CÔT/1-1000\nPackages: 83 cartons\nTransport: Road – truck AS 6833-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-4425\nDate: 2026-10-15\nExporter: Akwaaba Provisions Ltd\nExporter TIN: C0038735187\nConsignee: Sahel Trading SA\nConsignee address: 113 Market Road, Abidjan\nDestination: Côte d’Ivoire\nGoods: Malted bread mix (wheat flour with dried malt extract and baking powder), for home baking, 1 kg bags\nQuantity: 1500 bags of 1 kg\nGross weight: 1560 kg\nMarks: AP/CÔT/1-1500\nPackages: 150 cartons\nTransport: Road – truck AS 7147-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: EXW\nPayment: 30 days after invoice date"
   }
  ]
 }

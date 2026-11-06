@@ -23,18 +23,20 @@
   {
    "case_id": "T2",
    "set": "fixed",
-   "product": "infant_cereal",
-   "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana.",
+   "product": "millet_porridge_mix",
+   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
    "test": 2,
-   "case_type": "Typical",
-   "defects": [],
+   "case_type": "Failure",
+   "defects": [
+    "D08_simple_operations_only"
+   ],
    "outcome": {
-    "label": "Likely to qualify",
+    "label": "Likely not to qualify",
     "sub_reasons": []
    },
-   "expected": "Likely to qualify",
+   "expected": "Likely not to qualify",
    "correct": true,
-   "language": "fr_suppliers",
+   "language": "en",
    "format": "typed"
   },
   {
@@ -108,18 +110,20 @@
   {
    "case_id": "T4",
    "set": "fixed",
-   "product": "millet_porridge_mix",
-   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01.",
+   "product": "cassava_flour",
+   "scenario": "Cassava flour for baking (HS 1901.20). Declared as a mix for bakers' wares, but the description reads like plain ground cassava with no other ingredient, so the HS code is in doubt.",
    "test": 4,
-   "case_type": "Failure",
+   "case_type": "Edge / difficult",
    "defects": [
-    "D08_simple_operations_only"
+    "D12_doubtful_product_hs"
    ],
    "outcome": {
-    "label": "Likely not to qualify",
-    "sub_reasons": []
+    "label": "Further information required",
+    "sub_reasons": [
+     "out_of_rule_base"
+    ]
    },
-   "expected": "Likely not to qualify",
+   "expected": "Further information required",
    "correct": true,
    "language": "en",
    "format": "typed"
@@ -312,27 +316,6 @@
   {
    "case_id": "E08",
    "set": "eval",
-   "product": "millet_porridge_mix",
-   "scenario": "The product description reads like plain millet flour.",
-   "test": null,
-   "case_type": null,
-   "defects": [
-    "D12_doubtful_product_hs"
-   ],
-   "outcome": {
-    "label": "Further information required",
-    "sub_reasons": [
-     "out_of_rule_base"
-    ]
-   },
-   "expected": "Further information required",
-   "correct": true,
-   "language": "en",
-   "format": "typed"
-  },
-  {
-   "case_id": "E09",
-   "set": "eval",
    "product": "infant_cereal",
    "scenario": "Infant cereal. The millet comes from a food assistance programme.",
    "test": null,
@@ -350,7 +333,7 @@
    "format": "typed"
   },
   {
-   "case_id": "E10",
+   "case_id": "E09",
    "set": "eval",
    "product": "malt_extract",
    "scenario": "Malt extract with imported concentrate above 15%. The origin of the jars is not stated.",
@@ -370,7 +353,7 @@
    "format": "typed"
   },
   {
-   "case_id": "E11",
+   "case_id": "E10",
    "set": "eval",
    "product": "bread_mix",
    "scenario": "Bread mix. No exporter registration number; the origin of one ingredient is not stated.",
@@ -390,7 +373,7 @@
    "format": "mixed_units"
   },
   {
-   "case_id": "E12",
+   "case_id": "E11",
    "set": "eval",
    "product": "malt_extract",
    "scenario": "Malt extract. A supplier declaration is missing and the units of the concentrate do not agree.",

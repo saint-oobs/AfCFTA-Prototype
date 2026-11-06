@@ -215,7 +215,7 @@ def transcribe(documents):
     desc = (case["product"].get("description") or "").lower()
     if desc and (not any(c in desc for c in PRODUCT_CUES) or any(c in desc for c in DOUBT_CUES)):
         case["product"]["hs_doubt"] = True
-        case["product"]["hs_doubt_reason"] = "the description reads like a single ground cereal, not a food preparation"
+        case["product"]["hs_doubt_reason"] = "the description reads like a single ground raw material, not a food preparation"
         tag("product.declared_hs", "inferred", "Doubt: " + case["product"]["hs_doubt_reason"], "DOC-BOM", "Product HS code · plausibility")
     return {"mode": "stub", "label": LABEL, "adapter_version": STUB_VERSION, "case": case, "field_tags": tags}
 

@@ -8,23 +8,24 @@
   "spec": {
    "case_id": "T2",
    "test": 2,
-   "case_type": "Typical",
-   "product": "infant_cereal",
+   "case_type": "Failure",
+   "product": "millet_porridge_mix",
    "share_pct": "0",
-   "exw": "60000",
+   "exw": "50000",
    "origins": {
     "millet": "ghana",
-    "soya": "state_party",
-    "milk": "non_state_party",
-    "sugar": "non_state_party"
+    "soya": "ghana",
+    "sugar": "non_state_party",
+    "milk": "non_state_party"
    },
-   "countries": {
-    "soya": "Togo"
-   },
-   "language": "fr_suppliers",
-   "scenario": "Infant cereal (HS 1901.10). Imported milk powder and sugar. Soya from Togo, with a French supplier declaration. Roasting, extrusion cooking and drum drying in Ghana."
+   "defects": [
+    "D08_simple_operations_only"
+   ],
+   "scenario": "Millet porridge mix (HS 1901.90). No eligible manufacturing process: only cleaning, grinding, mixing and bagging. No imported ingredient of heading 19.01."
   },
-  "defects": [],
+  "defects": [
+   "D08_simple_operations_only"
+  ],
   "tolerance_percent_used": "15",
   "imported_1901_shares_pct": []
  },
@@ -46,18 +47,18 @@
   },
   "destination_country": "Côte d’Ivoire",
   "product": {
-   "description": "Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons",
-   "declared_hs": "1901.10",
-   "quantity": "2400",
-   "unit": "cartons of 400 g",
-   "gross_weight_kg": "1050",
-   "marks": "NF/CÔT/1-2400",
+   "description": "Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches",
+   "declared_hs": "1901.90",
+   "quantity": "2000",
+   "unit": "pouches",
+   "gross_weight_kg": "1080",
+   "marks": "NF/CÔT/1-2000",
    "packaging_count": "100 cartons",
-   "transport": "Road – truck AS 3001-25, via Aflao border",
-   "statistical_measure": "1050 kg"
+   "transport": "Road – truck GR 5362-26, from Tema",
+   "statistical_measure": "1080 kg"
   },
   "ex_works_price": {
-   "amount": "60000",
+   "amount": "50000",
    "currency": "GHS",
    "status": "stated"
   },
@@ -67,16 +68,16 @@
     "description": "Millet grain",
     "hs_code": "1008.29",
     "quantity": {
-     "value": "550",
+     "value": "600",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "8726.48",
+     "amount": "7272.07",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "8726.48",
+     "amount": "7272.07",
      "currency": "GHS",
      "status": "stated"
     },
@@ -95,22 +96,22 @@
     "description": "Soya beans",
     "hs_code": "1201.90",
     "quantity": {
-     "value": "250",
+     "value": "200",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "3167.05",
+     "amount": "3415.66",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "3167.05",
+     "amount": "3415.66",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Plateaux Agro SARL",
-    "supplier_country": "Togo",
-    "origin_class": "state_party",
+    "supplier": "Akatsi Agro Ltd",
+    "supplier_country": "Ghana",
+    "origin_class": "ghana",
     "food_aid": false,
     "declaration": {
      "type": "appendix_iii_a",
@@ -120,24 +121,24 @@
    },
    {
     "id": "I3",
-    "description": "Skimmed milk powder",
-    "hs_code": "0402.10",
+    "description": "Cane sugar",
+    "hs_code": "1701.99",
     "quantity": {
      "value": "120",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "5541.74",
+     "amount": "1812.99",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "5098.40",
+     "amount": "1667.95",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Brabant Dairy NV",
-    "supplier_country": "Belgium",
+    "supplier": "Lowlands Sugar B.V.",
+    "supplier_country": "Netherlands",
     "origin_class": "non_state_party",
     "food_aid": false,
     "declaration": {
@@ -148,23 +149,23 @@
    },
    {
     "id": "I4",
-    "description": "Cane sugar",
-    "hs_code": "1701.99",
+    "description": "Skimmed milk powder",
+    "hs_code": "0402.10",
     "quantity": {
-     "value": "60",
+     "value": "80",
      "unit": "kg"
     },
     "customs_value": {
-     "amount": "1519.49",
+     "amount": "3239.36",
      "currency": "GHS",
      "status": "stated"
     },
     "fob_value": {
-     "amount": "1397.93",
+     "amount": "2980.21",
      "currency": "GHS",
      "status": "stated"
     },
-    "supplier": "Paraná Sugar Ltda",
+    "supplier": "Minas Dairy Ltda",
     "supplier_country": "Brazil",
     "origin_class": "non_state_party",
     "food_aid": false,
@@ -184,37 +185,19 @@
    },
    {
     "id": "S2",
-    "description": "Roasting of millet and soya",
-    "operation_code": "roasting_toasting",
-    "location_country": "Ghana"
-   },
-   {
-    "id": "S3",
-    "description": "Cooking by extrusion",
-    "operation_code": "cooking_extrusion",
-    "location_country": "Ghana"
-   },
-   {
-    "id": "S4",
-    "description": "Drum drying of the cooked paste",
-    "operation_code": "drying_drum_spray",
-    "location_country": "Ghana"
-   },
-   {
-    "id": "S5",
     "description": "Simple grinding",
     "operation_code": "simple_grinding",
     "location_country": "Ghana"
    },
    {
-    "id": "S6",
-    "description": "Simple mixing with milk powder and sugar",
+    "id": "S3",
+    "description": "Simple mixing with sugar and milk powder",
     "operation_code": "simple_mixing",
     "location_country": "Ghana"
    },
    {
-    "id": "S7",
-    "description": "Filling into cartons",
+    "id": "S4",
+    "description": "Filling into pouches",
     "operation_code": "simple_packaging",
     "location_country": "Ghana"
    }
@@ -222,25 +205,25 @@
   "packaging": [
    {
     "id": "P1",
-    "description": "Printed paperboard carton with inner bag, 400 g",
+    "description": "Printed plastic pouch, 500 g",
     "packing_type": "retail",
     "origin_class": "ghana",
     "country": "Ghana"
    },
    {
     "id": "P2",
-    "description": "Corrugated carton (24 cartons)",
+    "description": "Corrugated carton (20 pouches)",
     "packing_type": "transport",
     "origin_class": "ghana",
     "country": "Ghana"
    }
   ],
   "invoice": {
-   "number": "EXP-3514",
+   "number": "EXP-7500",
    "date": "2026-10-15",
-   "value": "64800.00",
+   "value": "54000.00",
    "currency": "GHS",
-   "incoterm": "FCA"
+   "incoterm": "CPT"
   }
  },
  "documents": [
@@ -256,7 +239,7 @@
    "type": "bill_of_materials",
    "language": "en",
    "format": "typed",
-   "text": "BILL OF MATERIALS\nExporter: Nyame Foods Ltd\nProduct: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nDeclared HS: 1901.10\nBatch: 2400 cartons of 400 g\nBatch no: B-2613-76\nPrepared by: Production manager, Nyame Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 550 | kilos | 8,726.48 | 8726.48 | GHS | Akatsi Grains Ltd | Ghana | 1008.29 | Ghana\nI2 | Soya beans | 250 | kg | 3167.05 | 3167.05 | GHS | Plateaux Agro SARL | Togo | 1201.90 | AfCFTA State Party\nI3 | Skimmed milk powder | 120 | kg | 5541.74 | 5098.40 | GHS | Brabant Dairy NV | Belgium | 0402.10 | Imported (non-State Party)\nI4 | Cane sugar | 60 | kg | 1519.49 | 1397.93 | GHS | Paraná Sugar Ltda | Brazil | 1701.99 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed paperboard carton with inner bag, 400 g | retail | Ghana\nP2 | Corrugated carton (24 cartons) | transport | Ghana",
+   "text": "BILL OF MATERIALS\nExporter: Nyame Foods Ltd\nProduct: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nDeclared HS: 1901.90\nBatch: 2000 pouches\nBatch no: B-2615-70\nPrepared by: Production manager, Nyame Foods Ltd\nItem | Description | Qty | Unit | Value (customs value if imported) | FOB | Currency | Supplier | Country | HS code | Origin\nI1 | Millet grain | 600 | kg | 7,272.07 | 7,272.07 | GHS | Akatsi Grains Ltd | Ghana | 1008.29 | Ghana\nI2 | Soya beans | 200 | kg | 3415.66 | 3415.66 | GH₵ | Akatsi Agro Ltd | Ghana | 1201.90 | Ghana\nI3 | Cane sugar | 120 | kg | 1812.99 | 1667.95 | GHS | Lowlands Sugar B.V. | Netherlands | 1701.99 | Imported (non-State Party)\nI4 | Skimmed milk powder | 80 | kg | 3239.36 | 2980.21 | GHS | Minas Dairy Ltda | Brazil | 0402.10 | Imported (non-State Party)\nPACKAGING\nItem | Description | Packing type | Made in\nP1 | Printed plastic pouch, 500 g | retail | Ghana\nP2 | Corrugated carton (20 pouches) | transport | Ghana",
    "illegible_fields": []
   },
   {
@@ -265,15 +248,15 @@
    "input_id": "I1",
    "language": "en",
    "format": "typed",
-   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Grains Ltd\nCountry of origin: Ghana\nInvoice no: AKA-83197\nDate: 2026-08-07\nBuyer: Nyame Foods Ltd\nGoods: Millet grain\nQuantity: 550 kg\nUnit price: 15.87 GHS\nInvoice value: 8726.48 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Grains Ltd\nCountry of origin: Ghana\nInvoice no: AKA-70384\nDate: 2026-09-16\nBuyer: Nyame Foods Ltd\nGoods: Millet grain\nQuantity: 600 kg\nUnit price: 12.12 GHS\nInvoice value: 7272.07 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I2",
    "type": "appendix_iii_a",
    "input_id": "I2",
-   "language": "fr",
+   "language": "en",
    "format": "typed",
-   "text": "DÉCLARATION DU FOURNISSEUR (Appendice III, Partie A)\nFournisseur : Plateaux Agro SARL\nPays d'origine : Togo\nFacture n° : PLA-35232\nDate : 2026-07-16\nClient : Nyame Foods Ltd\nMarchandises : Fèves de soja\nQuantité : 250 kg\nPrix unitaire : 12.67 GHS\nValeur facturée : 3167.05 GHS\nJe soussigné déclare que les marchandises figurant sur cette facture ont été produites dans le pays d'origine indiqué ci-dessus et satisfont aux règles d'origine régissant le commerce préférentiel entre les États parties de la ZLECAf."
+   "text": "SUPPLIER DECLARATION (Appendix III, Part A)\nSupplier: Akatsi Agro Ltd\nCountry of origin: Ghana\nInvoice no: AKA-36540\nDate: 2026-09-07\nBuyer: Nyame Foods Ltd\nGoods: Soya beans\nQuantity: 200 kg\nUnit price: 17.08 GHS\nInvoice value: 3415.66 GHS\nI, the undersigned, declare that the goods listed on this invoice were produced in Ghana and satisfy the rules of origin governing preferential trade between the African Continental Free Trade Area State Parties."
   },
   {
    "doc_id": "DOC-SUP-I3",
@@ -281,7 +264,7 @@
    "input_id": "I3",
    "language": "en",
    "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Brabant Dairy NV\nCountry of origin: Belgium\nInvoice no: BRA-16040\nDate: 2026-08-01\nBuyer: Nyame Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 120 kg\nUnit price: 46.18 GHS\nCustoms value: 5541.74 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Lowlands Sugar B.V.\nCountry of origin: Netherlands\nInvoice no: LOW-31487\nDate: 2026-08-02\nBuyer: Nyame Foods Ltd\nGoods: Cane sugar\nQuantity: 120 kg\nUnit price: 15.11 GHS\nCustoms value: 1812.99 GHS"
   },
   {
    "doc_id": "DOC-SUP-I4",
@@ -289,28 +272,28 @@
    "input_id": "I4",
    "language": "en",
    "format": "typed",
-   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Paraná Sugar Ltda\nCountry of origin: Brazil\nInvoice no: PAR-73404\nDate: 2026-08-25\nBuyer: Nyame Foods Ltd\nGoods: Cane sugar\nQuantity: 60 kg\nUnit price: 25.32 GHS\nCustoms value: 1519.49 GHS"
+   "text": "COMMERCIAL INVOICE AND CUSTOMS ENTRY\nSupplier: Minas Dairy Ltda\nCountry of origin: Brazil\nInvoice no: MIN-47831\nDate: 2026-07-24\nBuyer: Nyame Foods Ltd\nGoods: Skimmed milk powder\nQuantity: 80 kg\nUnit price: 40.49 GHS\nCustoms value: 3239.36 GHS"
   },
   {
    "doc_id": "DOC-PROC",
    "type": "production_notes",
    "language": "en",
    "format": "typed",
-   "text": "PRODUCTION PROCESS\nBatch no: B-2613-76\nStep | Description | Location | Equipment\n1 | Cleaning of millet | Factory, Ghana | vibrating sieve and destoner\n2 | Roasting of millet and soya | Factory, Ghana | rotary drum roaster, 300 kg/h\n3 | Cooking by extrusion | Factory, Ghana | twin-screw cooking extruder\n4 | Drum drying of the cooked paste | Factory, Ghana | steam-heated double drum dryer\n5 | Simple grinding | Factory, Ghana | hammer mill\n6 | Simple mixing with milk powder and sugar | Factory, Ghana | ribbon blender, 500 kg\n7 | Filling into cartons | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
+   "text": "PRODUCTION PROCESS\nBatch no: B-2615-70\nStep | Description | Location | Equipment\n1 | Cleaning of millet | Factory, Ghana | vibrating sieve and destoner\n2 | Simple grinding | Factory, Ghana | hammer mill\n3 | Simple mixing with sugar and milk powder | Factory, Ghana | ribbon blender, 500 kg\n4 | Filling into pouches | Factory, Ghana | semi-automatic filling and sealing machine\nFood aid: none of the inputs was obtained from food aid"
   },
   {
    "doc_id": "DOC-COST",
    "type": "costing_sheet",
    "language": "en",
    "format": "typed",
-   "text": "COSTING SHEET\nBatch no: B-2613-76\nBatch: 2400 cartons of 400 g\nMaterials: 18,954.76 GHS\nPackaging: 4,104.52 GHS\nDirect labour: 12,313.57 GHS\nEnergy and water: 6,156.79 GHS\nFactory overheads: 8,209.05 GHS\nMargin: 10,261.31 GHS\nEx-works price per batch: 60,000.00 GHS"
+   "text": "COSTING SHEET\nBatch no: B-2615-70\nBatch: 2000 pouches\nMaterials: 15,740.08 GHS\nPackaging: 3,425.99 GHS\nDirect labour: 10,277.98 GHS\nEnergy and water: 5,138.99 GHS\nFactory overheads: 6,851.98 GHS\nMargin: 8,564.98 GHS\nEx-works price per batch: 50000.00 GHS"
   },
   {
    "doc_id": "DOC-INV",
    "type": "export_invoice",
    "language": "en",
    "format": "typed",
-   "text": "EXPORT INVOICE\nInvoice no: EXP-3514\nDate: 2026-10-15\nExporter: Nyame Foods Ltd\nExporter TIN: C0070265770\nConsignee: Sahel Wholesale Ltd\nConsignee address: 49 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Infant cereal (precooked millet and soya with milk powder), for infants and young children, 400 g cartons\nQuantity: 2400 cartons of 400 g\nGross weight: 1050 kg\nMarks: NF/CÔT/1-2400\nPackages: 100 cartons\nTransport: Road – truck AS 3001-25, via Aflao border\nValue: 64800.00 GHS\nIncoterm: FCA\nPayment: 30 days after invoice date"
+   "text": "EXPORT INVOICE\nInvoice no: EXP-7500\nDate: 2026-10-15\nExporter: Nyame Foods Ltd\nExporter TIN: C0070265770\nConsignee: Sahel Wholesale Ltd\nConsignee address: 49 Avenue de la Paix, Abidjan\nDestination: Côte d’Ivoire\nGoods: Instant millet porridge mix (precooked millet and soya flour with sugar and milk powder), 500 g pouches\nQuantity: 2000 pouches\nGross weight: 1080 kg\nMarks: NF/CÔT/1-2000\nPackages: 100 cartons\nTransport: Road – truck GR 5362-26, from Tema\nValue: 54000.00 GHS\nIncoterm: CPT\nPayment: 30 days after invoice date"
   }
  ]
 }

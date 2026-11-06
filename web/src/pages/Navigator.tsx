@@ -16,9 +16,9 @@ import { ArrowLeft, ArrowRight } from '../components/icons'
 
 const TABS = [['upload', 'Upload'], ['inputs', '1 Inputs'], ['ai', '2 AI task'], ['model', '3 Model'], ['adviser', '4 Adviser view'], ['sme', '5 SME view']] as const
 const TEST_LABEL: Record<string, string> = {
-  '1': 'Test 1 – Typical: malt extract (1901.90)', '2': 'Test 2 – Typical: infant cereal (1901.10)',
-  '3': 'Test 3 – Edge: 15% limit, bread mix (1901.20)', '4': 'Test 4 – Failure: no eligible manufacturing process (1901.90)',
-  '5': 'Test 5 – Key assumption: handwritten records (1901.10)', eval: 'Miscellaneous test logs – missing and contradictory information', manual: 'Manual entry – your own data',
+  '1': 'Test 1 – Typical: malt extract (1901.90)', '2': 'Test 2 – Failure: millet porridge mix (1901.90)',
+  '3': 'Test 3 – Edge: 15% limit, bread mix (1901.20)', '4': 'Test 4 – Edge: HS code in doubt, cassava flour (1901.20)',
+  '5': 'Test 5 – Key assumption: handwritten infant cereal records (1901.10)', eval: 'Miscellaneous test logs – missing and contradictory information', manual: 'Manual entry – your own data',
 }
 const CASE_LABEL: Record<string, string> = {
   T1: 'T1', T2: 'T2', T3a: 'T3a – 14.9%', T3b: 'T3b – exactly 15.0%', T3c: 'T3c – 15.1%', T3d: 'T3d – two lots, 16.0%', T4: 'T4',

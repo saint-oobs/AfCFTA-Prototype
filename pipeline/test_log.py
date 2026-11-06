@@ -23,8 +23,8 @@ def outcome_text(o):
 
 def main():
     fk = {c["case_id"]: c for c in json.loads((ROOT / "answer_key/fixed_key.json").read_text(encoding="utf-8"))["cases"]}
-    groups = [("1", "Typical", ["T1"]), ("2", "Typical", ["T2"]), ("3", "Edge", ["T3a", "T3b", "T3c", "T3d"]),
-              ("4", "Failure", ["T4"]), ("5", "Key assumption", ["T5a", "T5b"])]
+    groups = [("1", "Typical", ["T1"]), ("2", "Failure", ["T2"]), ("3", "Edge", ["T3a", "T3b", "T3c", "T3d"]),
+              ("4", "Edge / difficult", ["T4"]), ("5", "Key assumption", ["T5a", "T5b"])]
     tests = []
     for n, typ, ids in groups:
         first = fk[ids[0]]

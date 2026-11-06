@@ -159,28 +159,6 @@
   {
    "case_id": "E08",
    "defects": [
-    "D12_doubtful_product_hs"
-   ],
-   "expected_findings": [
-    {
-     "defect": "D12_doubtful_product_hs",
-     "severity": "major",
-     "category": "hs",
-     "effect": "out_of_rule_base",
-     "rule": "APPIV-1901"
-    }
-   ],
-   "outcome": "Further information required",
-   "sub_reasons": [
-    "out_of_rule_base"
-   ],
-   "rule_1901": "not assessed",
-   "share_percent": null,
-   "box12": null
-  },
-  {
-   "case_id": "E09",
-   "defects": [
     "D09_food_aid_input"
    ],
    "expected_findings": [
@@ -199,7 +177,7 @@
    "box12": null
   },
   {
-   "case_id": "E10",
+   "case_id": "E09",
    "defects": [
     "D07_above_tolerance",
     "D10_packaging_unknown_origin"
@@ -223,11 +201,11 @@
    "outcome": "Likely not to qualify",
    "sub_reasons": [],
    "rule_1901": "not met",
-   "share_percent": "18.3",
+   "share_percent": "24.5",
    "box12": null
   },
   {
-   "case_id": "E11",
+   "case_id": "E10",
    "defects": [
     "D13_missing_exporter_registration",
     "D06_unstated_origin_other"
@@ -255,7 +233,7 @@
    "box12": "SX"
   },
   {
-   "case_id": "E12",
+   "case_id": "E11",
    "defects": [
     "D01_missing_supplier_declaration",
     "D03_inconsistent_units_1901"
